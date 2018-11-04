@@ -1,0 +1,31 @@
+#slider{
+	position:relative;
+	margin:auto;
+	width:100%;
+	height:356px;
+    background:  linear-gradient(
+      rgba(0, 0, 0, 0.55), 
+      rgba(0, 0, 0, 0.55)
+    ),url("../images/africa-1933329_1920-ConvertImage.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+#search-barre-div{
+	position: relative;
+	margin: auto;
+	width:70%;
+	height:300px;
+}
+#search-barre-div input{
+	margin-top:20%;
+	width:78%;
+	float:right;
+}
+#search-barre-div img{
+	width:20%;
+	height:20%;
+	margin-top: 20%;
+}
+.bottom-barre{
+	background-color:black !important;
+}

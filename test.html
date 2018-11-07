@@ -14,15 +14,40 @@
     <![endif]-->
     <link rel="icon" type="image/png" href="img/favicon.jpg" />
     <link rel="stylesheet" href="css/sharedstyles.css" media="all" onload="if(media!='all')media='all'">
-    <link rel="stylesheet" href="css/animations.css" media="all" onload="if(media!='all')media='all'">
     <link rel="stylesheet" href="css/bulma.css" media="all" onload="if(media!='all')media='all'">
     <link rel="stylesheet" href="css/bulma.min.css" media="all" onload="if(media!='all')media='all'">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 <div id="container">
+  <aside id="left-menu" class="menu">
+      <p class="menu-label">
+        General
+      </p>
+      <ul class="menu-list">
+        <li><a>Dashboard</a></li>
+        <li><a>Customers</a></li>
+      </ul>
+      <p class="menu-label">
+        Administration
+      </p>
+      <ul class="menu-list">
+        <li><a>Team Settings</a></li>
+        <li>
+          <a class="is-active">Manage Your Team</a>
+          <ul>
+            <li><a>Members</a></li>
+            <li><a>Plugins</a></li>
+            <li><a>Add a member</a></li>
+          </ul>
+        </li>
+        <li><a>Invitations</a></li>
+        <li><a>Cloud Storage Environment Settings</a></li>
+        <li>
+          <a>Deconnexion</a>
+        </li>
+      </ul>
+</aside>
 </div>
-<script type="module" src="js/main.js"></script>
-<script type="module" src="js/componemts/functions/get_register_form.js"></script>
 </body>
 <html>

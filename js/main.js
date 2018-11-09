@@ -6,6 +6,7 @@ import login from './modules/login.js';
 import removeHomePage from './helpers/removeHomePage.js';
 import states from './states/states.js';
 import {get_register_form} from './componemts/functions/get_register_form.js';
+import {get_login_form} from './componemts/functions/get_login_form.js';
 
 document.addEventListener('DOMContentLoaded',()=>{
 	//We load the home page
@@ -17,6 +18,9 @@ document.addEventListener('DOMContentLoaded',()=>{
 		if(e.target.id === "login"){
 			states.removeHomePage === true?"":removeHomePage(states);
 			document.getElementById('container').innerHTML = login;
+			document.getElementById('submitLogin').addEventListener('click',()=>{
+				get_login_form();
+			},false);
 		}else if(e.target.id === "signup"){
 			states.removeHomePage === true?"":removeHomePage(states);
 			document.getElementById('container').innerHTML = register;

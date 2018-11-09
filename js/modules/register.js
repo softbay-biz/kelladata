@@ -1,4 +1,4 @@
-const register = `<div id="register">
+const register = `<div class="register">
    <div class="field">
   <label class="label">First name</label>
   <div class="control">
@@ -18,20 +18,20 @@ const register = `<div id="register">
     </span>
   </div>
 </div>
-<div class="file has-name">
-  <label class="file-label">
-    <input id="file" class="file-input" type="file" name="resume">
-    <span class="file-cta">
-      <span class="file-icon">
-        <i class="fas fa-upload"></i>
-      </span>
-      <span class="file-label">
-        Choose a file…
-      </span>
-    </span>
-    <span class="file-name">
-    </span>
-  </label>
+
+<div class="field">
+  <label class="label">Account type</label>
+  <div class="control">
+    <div class="select">
+      <select id="account_type">
+        <option data-id=6 >Client</option>
+        <option>Expert</option>
+        <option data-id=5 >Photographe</option>
+        <option data-id=4 >Anthropologues</option>
+        <option data-id=2 >Directeur de publications</option>
+      </select>
+    </div>
+  </div>
 </div>
 <div class="field">
   <label class="label">Email</label>

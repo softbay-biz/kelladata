@@ -1,3 +1,8 @@
+:root{
+  --color_1:#076737;
+  --color_2:#35b448;
+  --color_3:#58585a;
+}
 *,
 *:before,
 *:after {
@@ -16,10 +21,54 @@ body{
 	position:relative;
 	float: left;
 	height:100%;
+    min-height:600px;
 	background-color:white;
 	width:15%;
 	padding-left:1%;
 	padding-right:1%;
+  padding-top:1%;
+  border-right:1px solid #eeeeee;
+}
+.pagination{
+  position:relative;
+  width:80%;
+  top:1% !important;
+  bottom:10%;
+}
+.content-forms{
+  position:relative;
+  padding-left: 1%;
+  padding-right: 1%;
+  float:right;
+  width:85%;
+  min-height:600px;
+  height: auto;
+  background-color: white;
+}
+.content-forms-small-left{
+  float: left;
+  width:45%;
+}
+.content-forms-small-right{
+  float: right;
+  width:45%;
+}
+.q_form{
+  display:none;
+}
+.form-template{}
+#content-forms-elements{
+  position:relative;
+  width:100%;
+  height: 550px;
+  padding-left: 0.5%;
+  padding-right: 15%;
+  padding-top: 5%;
+  font-size: 0.7em !important;
+}
+#content-forms-elements h2{
+  font-size:2em;
+  opacity: 0.8;
 }
 #footer{
 	position:relative !important;
@@ -45,7 +94,7 @@ footer span:hover{
 	width:100%;
 	height:356px;
     background:  linear-gradient(
-      rgba(0, 0, 0, 0.55), 
+      rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
     ),url("../images/africa-1933329_1920-ConvertImage.jpg");
     background-repeat: no-repeat;
@@ -88,14 +137,14 @@ footer span:hover{
 	width:100%;
 	margin: auto;
 	overflow:hidden;
-	background-color: none;
 }
-#register{
+.register{
 	padding:2%;
 	width:40%;
 	height:auto;
 	margin:auto;
 	margin-top:5%;
+  font-size:0.7em !important;
 	margin-bottom: 1%;
 	border:2px solid #e5e5e5;
 	margin-bottom: 5px;
@@ -104,4 +153,14 @@ footer span:hover{
 .card{
 	margin-left: 0.8%;
 	margin-right: 0.8%;
-} 
+}
+.buttonSave{
+  background-color:var(--color_2);
+  color:white !important;
+  border:none !important;
+}
+.buttonSaveAndClose{
+  background-color:var(--color_1);
+  color:white !important;
+  border:none !important;
+}

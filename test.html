@@ -22,32 +22,125 @@
 <div id="container">
   <aside id="left-menu" class="menu">
       <p class="menu-label">
-        General
+        Dashboard
       </p>
       <ul class="menu-list">
-        <li><a>Dashboard</a></li>
-        <li><a>Customers</a></li>
+        <li><a>Profil</a></li>
       </ul>
       <p class="menu-label">
-        Administration
+        Options
       </p>
       <ul class="menu-list">
-        <li><a>Team Settings</a></li>
         <li>
-          <a class="is-active">Manage Your Team</a>
           <ul>
-            <li><a>Members</a></li>
-            <li><a>Plugins</a></li>
-            <li><a>Add a member</a></li>
+            <li><a>Questionnaires</a></li>
           </ul>
         </li>
-        <li><a>Invitations</a></li>
-        <li><a>Cloud Storage Environment Settings</a></li>
         <li>
           <a>Deconnexion</a>
         </li>
       </ul>
 </aside>
+  <div class="content-forms">
+    <nav class="pagination" id="navigation" role="navigation" aria-label="pagination">
+      <a id="prev" class="pagination-previous" title="This is the first page">Previous</a>
+      <a id="next" class="pagination-next">Next page</a>
+      <a class="pagination-next buttonSave">Save</a>
+      <a class="pagination-next buttonSaveAndClose">Close</a>
+      <ul class="pagination-list">
+        <li>
+          <a class="pagination-link is-current" data-page=1 aria-label="Page 1" aria-current="page">1</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=2 aria-label="Goto page 2">2</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=3 aria-label="Goto page 3">3</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=4 aria-label="Goto page 4">4</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=5 aria-label="Goto page 5">5</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=6 aria-label="Goto page 6">6</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=7 aria-label="Goto page 7">7</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=8 aria-label="Goto page 8">8</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=9 aria-label="Goto page 9">9</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=10 aria-label="Goto page 10">10</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=11 aria-label="Goto page 11">11</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="content-forms-elements">
+      <div class="q_form" style="display:block;" id=1>
+        <h2>SECTION A : INFORMATION SUR QUESTIONNAIRE</h2>
+        <div class="content-forms-small-left" >
+              <div class="field">
+                <label class="label">Nom ou code de la région</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Text input">
+                </div>
+              </div>
+                <div class="field">
+                  <label class="label">Nom ou code du Département</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                  </div>
+                </div>
+                  <div class="field">
+                    <label class="label">Nom ou code de l’Arrondissement</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Text input">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Nom ou code du village</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Text input">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Nom ou code du ménage</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Text input">
+                    </div>
+                  </div>
+
+              </div>
+              <div class="content-forms-small-right" >
+                <div class="field">
+                  <label class="label">Numéro du questionnaire</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Nom ou code de l’enquêteur</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="q_form" id=2>2
+      </div>
+      <div class="q_form" id=3>3
+      </div>
+    </div>
+  </div>
 </div>
+<script type="module" src="js/modules/navigation.js"></script>
 </body>
 <html>

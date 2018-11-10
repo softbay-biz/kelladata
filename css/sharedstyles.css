@@ -9,13 +9,30 @@
   box-sizing: inherit;
 }
 html, body{
-	background-color:#eeeeee;
 	margin:0 !important;
 	padding: 0 !important;
 	height:100% !important;
 }
 body{
 	min-height:100% !important;
+}
+table, td, th {
+    border: 1px solid #eeeeee;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: blue;
+}
+
+td {
+    vertical-align: bottom;
+}
+.table input{
+  height:30px;
+  min-width:125px;
+  font-size: 1.3em;
 }
 #left-menu{
 	position:relative;
@@ -64,7 +81,9 @@ body{
   padding-left: 0.5%;
   padding-right: 15%;
   padding-top: 5%;
+  top:1%;
   font-size: 0.7em !important;
+  overflow:auto;
 }
 #content-forms-elements h2{
   font-size:2em;

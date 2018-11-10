@@ -81,12 +81,29 @@
         <li>
           <a class="pagination-link" data-page=11 aria-label="Goto page 11">11</a>
         </li>
+        <li>
+          <a class="pagination-link" data-page=12 aria-label="Goto page 12">12</a>
+        </li>
+        <li>
+          <a class="pagination-link" data-page=13 aria-label="Goto page 13">13</a>
+        </li>
       </ul>
     </nav>
     <div id="content-forms-elements">
-      <div class="q_form" style="display:block;" id=1>
+      <div class="q_form"  id=1>
         <h2>SECTION A : INFORMATION SUR QUESTIONNAIRE</h2>
         <div class="content-forms-small-left" >
+              <div class="field">
+                <label class="label">Date et heure du début de l’entretien</label>
+                <div class="control">
+                  <input class="input" type="date" data-date-inline-picker="true">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="time" min="0:00" max="23:59">
+                </div>
+              </div>
               <div class="field">
                 <label class="label">Nom ou code de la région</label>
                 <div class="control">
@@ -105,21 +122,23 @@
                       <input class="input" type="text" placeholder="Text input">
                     </div>
                   </div>
-                  <div class="field">
-                    <label class="label">Nom ou code du village</label>
-                    <div class="control">
-                      <input class="input" type="text" placeholder="Text input">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <label class="label">Nom ou code du ménage</label>
-                    <div class="control">
-                      <input class="input" type="text" placeholder="Text input">
-                    </div>
-                  </div>
+
+
 
               </div>
               <div class="content-forms-small-right" >
+                <div class="field">
+                  <label class="label">Nom ou code du village</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Nom ou code du ménage</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                  </div>
+                </div>
                 <div class="field">
                   <label class="label">Numéro du questionnaire</label>
                   <div class="control">
@@ -134,9 +153,115 @@
                 </div>
               </div>
       </div>
-      <div class="q_form" id=2>2
+      <div class="q_form"  id=2>
+        <h2>SECTION B : LISTES DES MEMBRES DU MENAGE</h2>
+        <h3>NB : Les chiffres placés justes après les variables sont les codes à utiliser pour le remplissage du tableau</h3>
+          <table class="table">
+                <tr>
+                  <th>Code</th>
+                  <th>Membres du ménage</th>
+                  <th>Code B2 ( B2 : Sexe membre du ménage :M ou F)</th>
+                  <th>Code B3 (B3 : Age dernier anniversaire (en année révolu))</th>
+                  <th>Code B4 (B4 : Contribution au revenu du ménage : Oui ou Non)</th>
+                  <th title="Code B5 (B5 : Liens de parenté avec le chef de ménage : Conjoint(e) ou Fils/Fille ou Frère/Soeur ou Neveu/Nièce ou Petits- fils/filles ou Père/Mère ou Autres)">Code B5 (B5 : Liens de parenté avec le chef de ménage : Conjoint(e) ou Fils/Fille ou Frère/Soeur ou Neveu/Nièce ou Petits- fils/filles ou Père/Mère ou Autres)</th>
+                  <th>Code B6 (B6 : État matrimonial)</th>
+                  <th>Code B7 (B7 :
+Code mère de l’enfant moins de cinq ans)</th>
+                </tr>
+                <tr>
+                  <td>001</td>
+                  <td><input class="input" type="text" placeholder="Text input"></td>
+                  <td>
+                    <div class="select">
+                      <select>
+                        <option></option>
+                        <option>M</option>
+                        <option>F</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td><input class="input" type="number" placeholder="Text input"></td>
+                  <td>
+                    <div class="select">
+                        <select>
+                          <option></option>
+                          <option>Oui</option>
+                          <option>Non</option>
+                        </select>
+                      </div>
+                  </td>
+                  <td>
+                    <div class="select">
+                        <select>
+                          <option></option>
+                          <option>Conjoint(e)</option>
+                          <option>Fils</option>
+                          <option>Fille</option>
+                          <option>Frère</option>
+                          <option>Soeur</option>
+                          <option>Neveu</option>
+                          <option>Nièce</option>
+                          <option>Petit-fils</option>
+                          <option>Petite-fille</option>
+                          <option>Père</option>
+                          <option>Mère</option>
+                          <option>Autres</option>
+                        </select>
+                      </div>
+                  </td>
+                  <td>
+                    <div class="select">
+                        <select>
+                          <option></option>
+                          <option>Conjoint(e)</option>
+                          <option>Marié mono</option>
+                          <option>Marié poly</option>
+                          <option>Veuf (ve)</option>
+                          <option>Divorcé</option>
+                          <option>Séparé</option>
+                          <option>Union libre</option>
+                        </select>
+                      </div>
+                  </td>
+                  <td><input class="input" type="text" placeholder="Text input"></td>
+                </tr>
+
+        </table>
       </div>
-      <div class="q_form" id=3>3
+      <div class="q_form" style="display:block;" id=3>
+        <h2>SECTION C : EDUCATION</h2>
+        <h3>Une fois les membres du ménage identifié, les codes et les noms doivent apparaitre automatiquement à la section C en vue de leur poser les questions qui suivent.
+La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne les enfants de 10 ans et plus.</h3>
+      </div>
+      <div class="q_form" id=4>
+        <h2>SECTION D. SANTE</h2>
+      </div>
+      <div class="q_form" id=5>
+        <h2>SECTION E : EMPLOI</h2>
+      </div>
+      <div class="q_form" id=6>
+        <h2>SECTION F : AVOIRS DU MENAGE</h2>
+      </div>
+      <div class="q_form" id=7>
+        <h2>SECTION G : LOGEMENT ET CONFORT DU MENAGE</h2>
+      </div>
+      <div class="q_form" id=8>
+        <h2>SECTION H : QUESTIONS SUR LES ENFANTS AGÉS DE MOINS DE CINQ ANS</h2>
+      </div>
+      <div class="q_form" id=9>
+        <h2>MODULE I : DEPENSES RETROSPECTIVES DU MENAGE</h2>
+      </div>
+      <div class="q_form" id=10>
+        <h2>MODULE J : PRODUCTION AGRICOLE DE LA CAMPAGNE 2016/2017</h2>
+      </div>
+      <div class="q_form" id=11>
+        <h2>MODULE K : ENTREPRISES ET ACTIVITES NON AGRICOLES</h2>
+      </div>
+      <div class="q_form" id=12>
+        <h2>MODULE L : DEPENSES ALIMENTAIRES DU MENAGE</h2>
+      </div>
+      <div class="q_form" id=13>
+        <h2>MODULE O : DEPENSES NON ALIMENTAIRES DU MENAGE DES 30 JOURS</h2>
       </div>
     </div>
   </div>

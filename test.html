@@ -20,27 +20,6 @@
 </head>
 <body>
 <div id="container">
-  <aside id="left-menu" class="menu">
-      <p class="menu-label">
-        Dashboard
-      </p>
-      <ul class="menu-list">
-        <li><a>Profil</a></li>
-      </ul>
-      <p class="menu-label">
-        Options
-      </p>
-      <ul class="menu-list">
-        <li>
-          <ul>
-            <li><a>Questionnaires</a></li>
-          </ul>
-        </li>
-        <li>
-          <a>Deconnexion</a>
-        </li>
-      </ul>
-</aside>
   <div class="content-forms">
     <nav class="pagination" id="navigation" role="navigation" aria-label="pagination">
       <a id="prev" class="pagination-previous" title="This is the first page">Previous</a>
@@ -90,7 +69,7 @@
       </ul>
     </nav>
     <div id="content-forms-elements">
-      <div class="q_form"  id=1>
+      <div class="q_form" id=1>
         <h2>SECTION A : INFORMATION SUR QUESTIONNAIRE</h2>
         <div class="content-forms-small-left" >
               <div class="field">
@@ -163,7 +142,7 @@
                   <th>Code B2 ( B2 : Sexe membre du ménage :M ou F)</th>
                   <th>Code B3 (B3 : Age dernier anniversaire (en année révolu))</th>
                   <th>Code B4 (B4 : Contribution au revenu du ménage : Oui ou Non)</th>
-                  <th title="Code B5 (B5 : Liens de parenté avec le chef de ménage : Conjoint(e) ou Fils/Fille ou Frère/Soeur ou Neveu/Nièce ou Petits- fils/filles ou Père/Mère ou Autres)">Code B5 (B5 : Liens de parenté avec le chef de ménage : Conjoint(e) ou Fils/Fille ou Frère/Soeur ou Neveu/Nièce ou Petits- fils/filles ou Père/Mère ou Autres)</th>
+                  <th>Code B5 (B5 : Liens de parenté avec le chef de ménage : Conjoint(e) ou Fils/Fille ou Frère/Soeur ou Neveu/Nièce ou Petits- fils/filles ou Père/Mère ou Autres)</th>
                   <th>Code B6 (B6 : État matrimonial)</th>
                   <th>Code B7 (B7 :
 Code mère de l’enfant moins de cinq ans)</th>
@@ -228,16 +207,507 @@ Code mère de l’enfant moins de cinq ans)</th>
 
         </table>
       </div>
-      <div class="q_form" style="display:block;" id=3>
+      <div class="q_form" id=3>
         <h2>SECTION C : EDUCATION</h2>
         <h3>Une fois les membres du ménage identifié, les codes et les noms doivent apparaitre automatiquement à la section C en vue de leur poser les questions qui suivent.
 La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne les enfants de 10 ans et plus.</h3>
+        <table class="table">
+              <tr>
+                <th>Membres du ménage</th>
+                <th>C1 : langues lues et écrites des personnes de 10 et plus dans le ménage</th>
+                <th>C2 :A déjà fréquenté l’école ?</th>
+                <th>C3 : Niveau d’étude le plus élevé</th>
+                <th>C4 :A fréquenté l’école l’année dernière?</th>
+                <th>C5 : Fréquente actuellement une école ?</th>
+                <th>C6 : Type de formation</th>
+                <th>C7 : Quel est le nom de l’établissement ?</th>
+                <th>C8 : Causes d’insatisfaction avec l’école ?</th>
+                <th>C9 : Pourquoi ne va-t-il/elle pas à l’école actuellement ou n’a jamais été à l’école ?</th>
+              </tr>
+              <tr>
+                <td><div class="select">
+                  <select>
+                    <option></option>
+                  </select>
+                </div></td>
+                <td>
+                  <div class="select">
+                    <select>
+                      <option></option>
+                      <option>Bassa</option>
+                      <option>Français</option>
+                      <option>Anglais</option>
+                      <option>Anglais</option>
+                      <option>Autres</option>
+                    </select>
+                  </div>
+                </td>
+                <td><div class="select">
+                    <select>
+                      <option></option>
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div></td>
+                <td>
+                  <div class="select">
+                      <select>
+                        <option></option>
+                        <option>Primaire</option>
+                        <option>Secondaire</option>
+                        <option>Université</option>
+                        <option>Formation</option>
+                        <option>NSP 99</option>
+                      </select>
+                    </div>
+                </td>
+                <td>
+                  <div class="select">
+                      <select>
+                        <option></option>
+                        <option>Oui</option>
+                        <option>Non</option>
+                      </select>
+                    </div>
+                </td>
+                <td>
+                  <div class="select">
+                      <select>
+                        <option></option>
+                        <option>Oui</option>
+                        <option>Non</option>
+                      </select>
+                    </div>
+                </td>
+                <td>
+                  <div class="select">
+                      <select>
+                        <option></option>
+                        <option>Formation professionnelle/technique au secondaire</option>
+                        <option>Formation générale</option>
+                        <option>Formation pour enseignant : ENIET, ENIEG</option>
+                        <option>Université/ Formation professionnelle universitaire</option>
+                      </select>
+                    </div>
+                </td>
+                <td>
+                  <input class="input" type="text" placeholder="Text input">
+                </td>
+                <td>
+                  <div class="select">
+                      <select>
+                        <option></option>
+                        <option>Manque de performance scolaire</option>
+                        <option>Etat de santé</option>
+                      </select>
+                    </div>
+                </td>
+                <td>
+                  <input class="input" type="text" placeholder="Text input">
+                </td>
+              </tr>
+
+        </table>
       </div>
       <div class="q_form" id=4>
         <h2>SECTION D. SANTE</h2>
+        <table class="table">
+              <tr>
+                <th>Membres du ménage</th>
+                <th>D1 : A un enfant d’un an</th>
+                <th>D2 : A eu des soins prénatals avant l’accouchement</th>
+                <th>D3 : Handicap</th>
+                <th>D4 : Maladies/blessures comme obstacle au travail et à l’école durant les 15 derniers jours</th>
+                <th>D5 : Types de maladies/blessures durant les 15 derniers jours</th>
+                <th>D6 : Absence au travail/école durant les 15 derniers jours</th>
+                <th>D7 : Sollicitation des soins médicaux durant les 15 derniers jours</th>
+                <th>D9a : Fréquence de service durant les 15 derniers jours
+à D7</th>
+                <th>D9b : Maladies identifiées après diagnostic</th>
+                <th>D10 : Problèmes rencontrés avec ledit service</th>
+                <th>D11 : Pourquoi n’a pas consulté un service de soins</th>
+              </tr>
+              <tr>
+                <td><div class="select">
+                  <select>
+                    <option></option>
+                  </select>
+                </div></td>
+                <td>
+                  <div class="select">
+                      <select>
+                        <option></option>
+                        <option>Oui</option>
+                        <option>Non</option>
+                      </select>
+                    </div>
+                </td>
+                <td><div class="select">
+                    <select>
+                      <option></option>
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div></td>
+                <td>
+                  <div class="select">
+                      <select>
+                        <option></option>
+                        <option>Physique</option>
+                        <option>Mental</option>
+                      </select>
+                    </div>
+                </td>
+                <td>
+                  <div class="select">
+                      <select>
+                        <option></option>
+                        <option>Oui</option>
+                        <option>Non</option>
+                      </select>
+                    </div>
+                </td>
+                <td>
+                  <input class="input" type="text" placeholder="Text input">
+                </td>
+                <td>
+                  <input class="input" type="text" placeholder="Text input">
+                </td>
+                <td>
+                  <div class="select">
+                      <select>
+                        <option></option>
+                        <option>Hôpital public</option>
+                        <option>Hôpital privé</option>
+                        <option>Automédication</option>
+                        <option>Médecine traditionnelle</option>
+                      </select>
+                    </div>
+                </td>
+                <td>
+                  <input class="input" type="text" placeholder="Text input">
+                </td>
+                <td>
+                  <input class="input" type="text" placeholder="Text input">
+                </td>
+                <td>
+                  <input class="input" type="text" placeholder="Text input">
+                </td>
+                <td>
+                  <div class="select">
+                      <select>
+                        <option></option>
+                        <option>Pas nécessaire</option>
+                        <option>Manque de moyen financier</option>
+                        <option>Distance longue</option>
+                        <option>Absence de soins appropriés</option>
+                        <option>Mauvais accueil</option>
+                        <option>Autres</option>
+                      </select>
+                    </div>
+                </td>
+              </tr>
+
+        </table>
       </div>
-      <div class="q_form" id=5>
+      <div class="q_form" style="display:block;" id=5>
         <h2>SECTION E : EMPLOI</h2>
+        <div class="content-forms-small-left-third">
+                  <div class="field">
+                    <label class="label">Avez-vous travaillez la semaine dernière ?</label>
+                    <div class="control">
+                      <select>
+                        <option></option>
+                        <option>Oui</option>
+                        <option>Non</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Pourquoi n’avez-vous pas travaillé la semaine dernière ?
+(Raison principale)</label>
+                    <div class="control">
+                      <select>
+                        <option></option>
+                        <option>Etait malade</option>
+                        <option>Etait en vacances</option>
+                        <option>Etait au repos</option>
+                        <option>Est à la recherche du travail</option>
+                        <option>A eu un problème</option>
+                        <option>Autres</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Etes-vous prêt ou disponible pour travailler ?</label>
+                    <div class="control">
+                      <select>
+                        <option></option>
+                        <option>Oui</option>
+                        <option>Non</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Combien d’emploi avez-vous eu au cours des 07 derniers jours ?</label>
+                    <div class="control">
+                      <input class="input" type="number" placeholder="Text input">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Quel est l’emploi qui vous a le plus occupé ces 07 derniers jours
+(Une seule modalité est possible)</label>
+                    <div class="control">
+                      <select>
+                        <option></option>
+                        <option>Electricien</option>
+                        <option>Commerçant</option>
+                        <option>Agriculteur</option>
+                        <option>Eleveur</option>
+                        <option>Domestique</option>
+                        <option>Ménagère</option>
+                        <option>Chasseur</option>
+                        <option>Bûcheron</option>
+                        <option>Couturier</option>
+                        <option>Maçon</option>
+                        <option>Secrétaire</option>
+                        <option>Autres</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Quelle était la nature du paiement de cet emploi ?</label>
+                    <div class="control">
+                      <select>
+                        <option></option>
+                        <option>Salaire</option>
+                        <option>Paiement en nature</option>
+                        <option>Paiement jour/heure</option>
+                        <option>Aide familiale rémunéré</option>
+                        <option>A mon compte</option>
+                        <option>Autres</option>
+                      </select>
+                    </div>
+                  </div>
+              </div>
+              <div class="content-forms-small-left-third">
+                <div class="field">
+                  <label class="label">Ou travaillez-vous ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Privé</option>
+                      <option>Public</option>
+                      <option>Parapublic</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Quelle est la branche de l’activité principale que vous occupé ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Agropastorale</option>
+                      <option>Enseignement</option>
+                      <option>Administration</option>
+                      <option>Construction</option>
+                      <option>Action sociale</option>
+                      <option>Ingénierie</option>
+                      <option>Autre</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Avez-vous cherché à augmenter vos revenus ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Comment avez cherché à augmenter vos revenus au cours de la semaine précédente ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>En prenant un travail supplémentaire</option>
+                      <option>En augmentant les heures et les jours de travail</option>
+                      <option>En réduisant les dépenses</option>
+                      <option>Autres</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Etes-vous encore prêts à prendre un travail supplémentaire dans les 04 semaines à venir ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Pourquoi n’avez-vous donc pas cherché du travail au cours de ces 04 dernières semaines ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Pas nécessaire</option>
+                      <option>Cas de maladie</option>
+                      <option>Absence de temps</option>
+                      <option>Autres</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="content-forms-small-left-third">
+                <div class="field">
+                  <label class="label">Est occupée, toute personne ayant travaillé au moins 03 mois de façon continue au cours des 12 derniers mois. Est-ce votre cas ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Quelle est la nature de cet emploi que vous avez occupé ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Emploi permanent</option>
+                      <option>Emploi saisonnier</option>
+                      <option>Emploi journalier</option>
+                      <option>Autre</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Quel est l’emploi qui vous a le plus occupé au cours des 07 derniers jours ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Agriculture, élevage, Pêche</option>
+                      <option>Administration (cadres supérieurs, moyens, subalternes, employés,ouvriers, manoeuvres, professions libérales)</option>
+                      <option>Commerce</option>
+                      <option>Artisanat</option>
+                      <option>Services domestiques</option>
+                      <option>Forces armées et sécurités</option>
+                      <option>Autres</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Avez-vous droit à une pension de retraite dans ce travail ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Quel type de sécurité sociale avez-vous ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>CNPS Assurance</option>
+                      <option>CNPS</option>
+                      <option>Autres</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Avez-vous droit à des congés payés dans ce travail ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="content-forms-small-left-third">
+                <div class="field">
+                  <label class="label">Quel est l’avantage que vous avez tiré de ce travail ?</label>
+                  <div class="control">
+                    <input class="input" type="number" placeholder="Text input">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Combien de mois avez-vous exercé dans ce travail ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>(1-3 mois)</option>
+                      <option>(3-6 mois)</option>
+                      <option>(6-9mois)</option>
+                      <option>(9-12 mois)</option>
+                      <option>Autres</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Votre condition de vie a-t-elle changée dans cette profession ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Quelle est l’emploi qui vous a le plus occupé au cours des douze derniers mois ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Electricien</option>
+                      <option>Commerçant</option>
+                      <option>Agriculteur/Eleveur</option>
+                      <option>Domestique/Ménagère</option>
+                      <option>Chasseur</option>
+                      <option>Bûcheron</option>
+                      <option>Couturier</option>
+                      <option>Maçon</option>
+                      <option>Secrétaire</option>
+                      <option>Forces armé et sécurité</option>
+                      <option>Artisanat/Boulanger</option>
+                      <option>Cadres supérieurs, moyens, subalternes, employés, manoeuvres, professions libérales)</option>
+                      <option>Enseignant</option>
+                      <option>Autres</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Dans quelle branche d’activité avez-vous exercé au cours des 12 derniers mois ?</label>
+                  <div class="control">
+                    <select>
+                      <option></option>
+                      <option>Agropastorale</option>
+                      <option>Education</option>
+                      <option>Administration</option>
+                      <option>Construction</option>
+                      <option>Action sociale</option>
+                      <option>Ingénierie</option>
+                      <option>Fabrication</option>
+                      <option>Réparation</option>
+                      <option>Autres</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Quel a été votre revenu tiré de cet emploi durant les 30 derniers jours ?</label>
+                  <div class="control">
+                    <input class="input" type="number" placeholder="Text input">
+                  </div>
+                </div>
+              </div>
       </div>
       <div class="q_form" id=6>
         <h2>SECTION F : AVOIRS DU MENAGE</h2>

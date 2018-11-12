@@ -1,6 +1,6 @@
 document.getElementById("navigation").addEventListener('click',(e)=>{
 
-  const pagesNumber = 13;
+  const pagesNumber = 14;
   let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
   const pagesArray = document.getElementsByClassName('pagination-link');
   const survey = document.getElementById("content-forms-elements");

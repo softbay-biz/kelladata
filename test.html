@@ -78,30 +78,30 @@
               <div class="field">
                 <label class="label">Date et heure du début de l’entretien</label>
                 <div class="control">
-                  <input class="input" type="date" data-date-inline-picker="true">
+                  <input class="input" id="date" type="date" data-date-inline-picker="true">
                 </div>
               </div>
               <div class="field">
                 <div class="control">
-                  <input class="input" type="time" min="0:00" max="23:59">
+                  <input class="input" id="time" type="time" min="0:00" max="23:59">
                 </div>
               </div>
               <div class="field">
                 <label class="label">Nom ou code de la région</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Text input">
+                  <input class="input" id="a2" type="text" placeholder="Text input">
                 </div>
               </div>
                 <div class="field">
                   <label class="label">Nom ou code du Département</label>
                   <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
+                    <input class="input" id="a3" type="text" placeholder="Text input">
                   </div>
                 </div>
                   <div class="field">
                     <label class="label">Nom ou code de l’Arrondissement</label>
                     <div class="control">
-                      <input class="input" type="text" placeholder="Text input">
+                      <input class="input" id="a4" type="text" placeholder="Text input">
                     </div>
                   </div>
 
@@ -112,60 +112,58 @@
                 <div class="field">
                   <label class="label">Nom ou code du village</label>
                   <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
+                    <input class="input" id="a5" type="text" placeholder="Text input">
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Nom ou code du ménage</label>
                   <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
+                    <input class="input" id="a6" type="text" placeholder="Text input">
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Numéro du questionnaire</label>
                   <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
+                    <input class="input" id="a7" type="text" placeholder="Text input">
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">Nom ou code de l’enquêteur</label>
                   <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
+                    <input class="input" id="a8" type="text" placeholder="Text input">
                   </div>
                 </div>
               </div>
       </div>
-      <div class="q_form"  id=2>
+      <div class="q_form" style="display:block;" id=2>
         <h2>SECTION B : LISTES DES MEMBRES DU MENAGE</h2>
         <h3>NB : Les chiffres placés justes après les variables sont les codes à utiliser pour le remplissage du tableau</h3>
           <table class="table">
                 <tr>
-                  <th>Code</th>
                   <th>Membres du ménage</th>
                   <th>Code B2 ( B2 : Sexe membre du ménage :M ou F)</th>
                   <th>Code B3 (B3 : Age dernier anniversaire (en année révolu))</th>
                   <th>Code B4 (B4 : Contribution au revenu du ménage : Oui ou Non)</th>
-                  <th>Code B5 (B5 : Liens de parenté avec le chef de ménage : Conjoint(e) ou Fils/Fille ou Frère/Soeur ou Neveu/Nièce ou Petits- fils/filles ou Père/Mère ou Autres)</th>
+                  <th>Code B5 (B5 : Liens de parenté avec le chef de ménage :<br/> Conjoint(e) ou Fils/Fille ou Frère/Soeur ou Neveu/Nièce ou Petits- fils/filles ou Père/Mère ou Autres)</th>
                   <th>Code B6 (B6 : État matrimonial)</th>
                   <th>Code B7 (B7 :
 Code mère de l’enfant moins de cinq ans)</th>
                 </tr>
                 <tr>
-                  <td>001</td>
-                  <td><input class="input" type="text" placeholder="Text input"></td>
+                  <td><input id="b1" class="input" type="text" placeholder="Text input"></td>
                   <td>
                     <div class="select">
-                      <select>
+                      <select id="b2">
                         <option></option>
                         <option>M</option>
                         <option>F</option>
                       </select>
                     </div>
                   </td>
-                  <td><input class="input" type="number" placeholder="Text input"></td>
+                  <td><input id="b3" class="input" type="number" placeholder="Text input"></td>
                   <td>
                     <div class="select">
-                        <select>
+                        <select id="b4">
                           <option></option>
                           <option>Oui</option>
                           <option>Non</option>
@@ -174,7 +172,7 @@ Code mère de l’enfant moins de cinq ans)</th>
                   </td>
                   <td>
                     <div class="select">
-                        <select>
+                        <select id="b5">
                           <option></option>
                           <option>Conjoint(e)</option>
                           <option>Fils</option>
@@ -193,7 +191,7 @@ Code mère de l’enfant moins de cinq ans)</th>
                   </td>
                   <td>
                     <div class="select">
-                        <select>
+                        <select id="b6">
                           <option></option>
                           <option>Conjoint(e)</option>
                           <option>Marié mono</option>
@@ -205,7 +203,11 @@ Code mère de l’enfant moins de cinq ans)</th>
                         </select>
                       </div>
                   </td>
-                  <td><input class="input" type="text" placeholder="Text input"></td>
+                  <td><input id="b7" class="input" type="text" placeholder="Text input"></td>
+                  <td><div class="control">
+                        <button id="b_submit" class="button is-primary">Ajouter</button>
+                      </div>
+                </td>
                 </tr>
 
         </table>
@@ -1253,7 +1255,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           </div>
         </div>
       </div>
-      <div class="q_form" style="display:block;"  id=8>
+      <div class="q_form" id=8>
         <h2>SECTION G : LOGEMENT ET CONFORT DU MENAGE</h2>
         <div class="content-forms-small-left-third">
           <div class="field">
@@ -1342,13 +1344,237 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </select>
             </div>
           </div>
+          <div class="field">
+            <label class="label">Quel est le temps mis pour atteindre les installations les plus proches de votre ménage ?</label>
+            <div class="control">
+              <select>
+                <option></option>
+                <option>Marchés des produits alimentaires</option>
+                <option>Marchés des produits cosmétiques</option>
+                <option>Ecole primaire</option>
+                <option>Ecole secondaire</option>
+                <option>Ecole universitaire</option>
+                <option>Structures de formations</option>
+                <option>Structure sanitaire</option>
+                <option>Structures administratives</option>
+                <option>Points d’eau</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="label">Précisez ce temps en heures et minutes</label>
+              <div class="control">
+                <input class="input" type="time" placeholder="Text input">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Quel est le principal moyen habituellement utilisé ?</label>
+              <div class="control">
+                <select>
+                  <option></option>
+                  <option>Moto</option>
+                  <option>Marche à pied</option>
+                  <option>Taxi</option>
+                  <option>Car</option>
+                  <option>Vélo</option>
+                  <option>Voiture personnelle</option>
+                  <option>Train</option>
+                  <option>Bus de ligne</option>
+                  <option>Autres</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">En faites-vous usage ?</label>
+              <div class="control">
+                <select>
+                  <option></option>
+                  <option>Oui</option>
+                  <option>Non</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Pourquoi n’en faites-vous pas usage ?</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Text input">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Quel est votre zone de résidence ?</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Text input">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-forms-small-left-third">
+          <div class="field">
+            <label class="label">Quel est le matériau principal de construction du sol de votre ménage ?</label>
+            <div class="control">
+              <select>
+                <option></option>
+                <option>Sable+ciment (non lissé)</option>
+                <option>Sable+ciment (lissé)</option>
+                <option>Carreaux</option>
+                <option>Terre nue</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Quel est le type de logement dans lequel vous habitez ?</label>
+            <div class="control">
+              <select>
+                <option></option>
+                <option>Immeuble à appartement</option>
+                <option>Villa</option>
+                <option>Maison individuel simple</option>
+                <option>Maison traditionnel ou case</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Quel est le système d’évacuation des ordures dans le ménage ?</label>
+            <div class="control">
+              <select>
+                <option></option>
+                <option>Poubelle</option>
+                <option>Existence d’un service de ramassage/collecte</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
       <div class="q_form" id=9>
         <h2>SECTION H : QUESTIONS SUR LES ENFANTS AGÉS DE MOINS DE CINQ ANS</h2>
+        <table class="table">
+              <tr>
+                <th>Nom enfant</th>
+                <th>Code mère de l’enfant</th>
+                <th>H2 : Date de naissance de l’enfant ?</th>
+                <th>H3 : Lieu de naissance de l’enfant ?</th>
+                <th>Poids enfant (en Kg)</th>
+                <th>Taille enfant (en cm)</th>
+                <th>H5 : Participation au programme de santé et de nutrition des enfants ?</th>
+                <th>H6 : Personne ayant assisté à l’accouchement de l’enfant?</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="select">
+                    <select>
+                      <option></option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="select">
+                    <select>
+                      <option></option>
+                    </select>
+                  </div>
+                </td>
+                <td><input class="input" type="date" placeholder="Text input"></td>
+                <td>
+                    <input class="input" type="text" placeholder="Text input">
+                </td>
+                <td>
+                  <input class="input" type="number" placeholder="Text input">
+                </td>
+                <td>
+                  <input class="input" type="number" placeholder="Text input">
+                </td>
+                <td>
+                  <div class="select">
+                    <select>
+                      <option></option>
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <div class="select">
+                    <select>
+                      <option></option>
+                      <option>Membre ménage</option>
+                      <option>Famille</option>
+                      <option>Proche</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+
+      </table>
       </div>
-      <div class="q_form" id=10>
+      <div class="q_form"  id=10>
         <h2>MODULE I : DEPENSES RETROSPECTIVES DU MENAGE</h2>
+        <div class="content-forms-small-left-third">
+          <div class="field">
+            <label class="label">Quels ont les dépenses scolaires du ménage pour l’année 2016/2017 ?</label>
+            <div class="control">
+              <select>
+                <option></option>
+                <option>Frais de scolarité</option>
+                <option>Livres et fournitures scolaires</option>
+                <option>Uniformes scolaires</option>
+                <option>Frais de transport scolaire</option>
+                <option>Cotisation des parents d’élèves (APE)</option>
+                <option>Autres cotisation scolaires</option>
+                <option>Frais de transport scolaire</option>
+              </select>
+              <label class="label">Précisez ces frais</label>
+              <input class="input" type="number" placeholder="Text input">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Quels sont les dépenses scolaires du ménage pour l’année en cours ?</label>
+            <div class="control">
+              <select>
+                <option></option>
+                <option>Frais de scolarité</option>
+                <option>Livres et fournitures scolaires</option>
+                <option>Uniformes scolaires</option>
+                <option>Frais de transport scolaire</option>
+                <option>Cotisations des parents d’élève (APE)</option>
+                <option>Autres cotisations scolaires</option>
+              </select>
+              <label class="label">Précisez ces frais</label>
+              <input class="input" type="number" placeholder="Text input">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Quels sont les dépenses de santé du ménage au cours des 30 derniers jours ?</label>
+            <div class="control">
+              <select>
+                <option></option>
+                <option>Frais d’analyse médicale</option>
+                <option>Frais de consultation médicale</option>
+                <option>Médicaments</option>
+                <option>Frais d’hospitalisation</option>
+                <option>Autres services médicaux</option>
+              </select>
+              <label class="label">Précisez ces frais</label>
+              <input class="input" type="number" placeholder="Text input">
+            </div>
+          </div>
+        </div>
+        <div class="content-forms-small-left-third">
+            <div class="field">
+              <label class="label">Quelles sont les dépenses d’intrants agricoles du ménage pour l’année 2016/2017 ?</label>
+              <div class="control">
+                <select>
+                  <option></option>
+                  <option>Semences</option>
+                  <option>Engrais</option>
+                  <option>Produits phytosanitaires</option>
+                  <option>Mains d’oeuvres</option>
+                  <option>Réparation de matériels agricole</option>
+                  <option>Location/achat du matériel agricole</option>
+                </select>
+                <label class="label">Précisez ces frais</label>
+                <input class="input" type="number" placeholder="Text input">
+              </div>
+            </div>
+          </div>
       </div>
       <div class="q_form" id=11>
         <h2>MODULE J : PRODUCTION AGRICOLE DE LA CAMPAGNE 2016/2017</h2>
@@ -1366,5 +1592,6 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
   </div>
 </div>
 <script type="module" src="js/modules/navigation.js"></script>
+<script type="module" src="js/modules/forms_handler.js"></script>
 </body>
 <html>

@@ -359,6 +359,70 @@ document.getElementById("e3").addEventListener("change",(e)=>{
     document.getElementById("e10").style.visibility = "visible";
   }
 },false);
+document.getElementById("e9").addEventListener("change",(e)=>{
+  if(e.target.value === "Non"){
+    document.getElementById("e10").style.visibility = "hidden";
+    document.getElementById("e11").style.visibility = "hidden";
+  }else{
+    document.getElementById("e10").style.visibility = "visible";
+    document.getElementById("e11").style.visibility = "visible";
+  }
+},false);
+document.getElementById("e11").addEventListener("change",(e)=>{
+  if(e.target.value === "Non"){
+    document.getElementById("e12").style.visibility = "hidden";
+  }else{
+    document.getElementById("e12").style.visibility = "visible";
+  }
+},false);
+document.getElementById("e13").addEventListener("change",(e)=>{
+  if(e.target.value === "Non"){
+    document.getElementById("e14").style.visibility = "hidden";
+  }else{
+    document.getElementById("e14").style.visibility = "visible";
+  }
+},false);
+document.getElementById("e16").addEventListener("change",(e)=>{
+  if(e.target.value === "Non"){
+    document.getElementById("e17").style.visibility = "hidden";
+  }else{
+    document.getElementById("e17").style.visibility = "visible";
+  }
+},false);
+document.getElementById("e26").addEventListener("change",(e)=>{
+  if(e.target.value === "Non"){
+    document.getElementById("e27").style.visibility = "hidden";
+    document.getElementById("e28").style.visibility = "hidden";
+    document.getElementById("e29").style.visibility = "hidden";
+    document.getElementById("e30").style.visibility = "hidden";
+    document.getElementById("e31").style.visibility = "hidden";
+  }else{
+    document.getElementById("e27").style.visibility = "visible";
+    document.getElementById("e28").style.visibility = "visible";
+    document.getElementById("e29").style.visibility = "visible";
+    document.getElementById("e30").style.visibility = "visible";
+    document.getElementById("e31").style.visibility = "visible";
+  }
+},false);
+document.getElementById("e32").addEventListener("change",(e)=>{
+  if(e.target.value === "Non"){
+    document.getElementById("e33").style.visibility = "hidden";
+    document.getElementById("e34").style.visibility = "hidden";
+    document.getElementById("e35").style.visibility = "hidden";
+    document.getElementById("e36").style.visibility = "hidden";
+    document.getElementById("e37").style.visibility = "hidden";
+    document.getElementById("e38").style.visibility = "hidden";
+    document.getElementById("e39").style.visibility = "hidden";
+  }else{
+    document.getElementById("e33").style.visibility = "visible";
+    document.getElementById("e34").style.visibility = "visible";
+    document.getElementById("e35").style.visibility = "visible";
+    document.getElementById("e36").style.visibility = "visible";
+    document.getElementById("e37").style.visibility = "visible";
+    document.getElementById("e38").style.visibility = "visible";
+    document.getElementById("e39").style.visibility = "visible";
+  }
+},false);
 document.getElementById("e2").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){
     addNewSelectOption(document.getElementById("e2"));
@@ -467,6 +531,43 @@ document.getElementById("e33").addEventListener("change",(e)=>{
 document.getElementById("e35").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){
     addNewSelectOption(document.getElementById("e35"));
+  }
+},false);
+document.getElementById("f8").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("f8"));
+  }
+},false);
+document.getElementById("f9").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("f9"));
+  }
+},false);
+document.getElementById("f10").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("f10"));
+  }
+},false);
+document.getElementById("f11").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("f11"));
+  }
+},false);
+document.getElementById("f13").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("f13"));
+  }
+},false);
+document.getElementById("f17").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("f17"));
+  }
+},false);
+document.getElementById("f18").addEventListener("change",(e)=>{
+  if(e.target.value === "Non"){
+    document.getElementById("f19").style.visibility = "hidden";
+  }else{
+    document.getElementById("f19").style.visibility = "visible";
   }
 },false);
 //

@@ -531,7 +531,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                       <option>Construction</option>
                       <option>Action sociale</option>
                       <option>Ingénierie</option>
-                      <option>Autre</option>
+                      <option>Autres</option>
                     </select>
                   </div>
                 </div>
@@ -599,7 +599,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                       <option>Emploi permanent</option>
                       <option>Emploi saisonnier</option>
                       <option>Emploi journalier</option>
-                      <option>Autre</option>
+                      <option>Autres</option>
                     </select>
                   </div>
                 </div>
@@ -844,7 +844,15 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             </div>
           </div>
           <div class="field">
-            <label class="label">Vous avez exercé cet emploi pendant combien de temps ?</label>
+            <label class="label">Vous avez exercé cet emploi pendant combien de temps ? (Nombre en mois)</label>
+            <div class="control">
+              <input id="e34" class="input" type="number" placeholder="Text input">
+            </div>
+          </div>
+        </div>
+        <div class="content-forms-small-left-third">
+          <div class="field">
+            <label class="label">Dans quelle branche d’activité avez-vous exercé cet emploi ?</label>
             <div class="control">
               <select id="e35">
                 <option></option>
@@ -858,8 +866,6 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </select>
             </div>
           </div>
-        </div>
-        <div class="content-forms-small-left-third">
           <div class="field">
             <label class="label">Dans cette activité, avez-vous droit à une pension retraite ?</label>
             <div class="control">
@@ -871,7 +877,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             </div>
           </div>
           <div class="field">
-            <label class="label">Dans cette activité, avez-vous droit à une pension retraite ?</label>
+            <label class="label">Quelle était votre condition de vie dans cette activité ?</label>
             <div class="control">
               <select id="e37">
                 <option></option>
@@ -908,7 +914,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Propriété du logement : êtes-vous ?</label>
             <div class="control">
-              <select>
+              <select id="f1">
                 <option></option>
                 <option>Locataire (Paye le argent ou en nature)</option>
                 <option>Propriétaire avec titre foncier</option>
@@ -920,7 +926,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Votre logement dispose de combien de pièces ?</label>
             <div class="control">
-              <select>
+              <select id="f2a">
                 <option></option>
                 <option>Chambres à coucher</option>
                 <option>Cuisines</option>
@@ -932,7 +938,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Existe-t-il une pièce aménagée pour la cuisine ?</label>
             <div class="control">
-              <select>
+              <select id="f2b">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -942,13 +948,13 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Quelles sont les superficies de vos terres ayant un titre de propriété coutumier ou légal ? (Superficie en hectare ou en décimale)</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Text input">
+              <input id="f3" class="input" type="text" placeholder="Text input">
             </div>
           </div>
           <div class="field">
             <label class="label">Comparaison des superficies des terres possédées actuellement à celles possédées (s) il y’a un an ?</label>
             <div class="control">
-              <select>
+              <select id="f4">
                 <option></option>
                 <option>Identique</option>
                 <option>Pas eu de terre il y’a un an</option>
@@ -961,7 +967,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">En dehors des terres qui sont votre propriété avec droit coutumier ou légal, est ce que vous :</label>
             <div class="control">
-              <select>
+              <select id="f5">
                 <option></option>
                 <option>Exploitez les terres louées</option>
                 <option>Exploitez des terres empruntées</option>
@@ -976,14 +982,14 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Quelle est la superficie de ces terres qui ne sont pas votre propriété ?</label>
             <div class="control">
-              <input class="input" type="test" placeholder="Text input">
+              <input id="f6" class="input" type="test" placeholder="Text input">
             </div>
           </div>
           <div class="field">
             <label class="label">Comparaison des superficies de ces terres à celles donc vous disposez il y’a une année ?
   Nb : Ecrire la superficie à l’espace indiqué</label>
             <div class="control">
-              <select>
+              <select id="f7">
                 <option></option>
                 <option>Identique</option>
                 <option>Pas eu de terre il y’a un an</option>
@@ -996,7 +1002,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Combien de gros bétail et grand troupeau possédez-vous actuellement ?</label>
             <div class="control">
-              <select>
+              <select id="f8">
                 <option></option>
                 <option>Boeufs</option>
                 <option>Chevaux</option>
@@ -1008,7 +1014,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Combien de têtes de gros bétail possédez-vous il y’a un an ?</label>
             <div class="control">
-              <select>
+              <select id="f9">
                 <option></option>
                 <option>Vaches</option>
                 <option>Chevaux</option>
@@ -1020,7 +1026,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Combien de têtes de bétails moyens possédez-vous actuellement ?</label>
             <div class="control">
-              <select>
+              <select id="f10">
                 <option></option>
                 <option>Moutons</option>
                 <option>Chèvres</option>
@@ -1033,7 +1039,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Combien de têtes de bétails moyens avez-vous possédez il y’a un an ?</label>
             <div class="control">
-              <select>
+              <select id="f11">
                 <option></option>
                 <option>Moutons</option>
                 <option>Chèvres</option>
@@ -1050,123 +1056,62 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             <div class="control">
                 <label class="radio">
                   <label class="label">Télévision</label>
-                  <input type="radio" name="answer">
-                  Oui
-                </label>
-                <label class="radio">
-                  <input type="radio" name="answer">
-                  Non
+                  <input id="f12" type="checkbox">
                 </label>
                 <div class="control">
                     <label class="radio">
                       <label class="label">Poste radio</label>
-                      <input type="radio" name="answer">
-                      Oui
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="answer">
-                      Non
+                      <input id="f13" type="checkbox">
                     </label>
                 </div>
                 <div class="control">
                     <label class="radio">
                       <label class="label">Cuisinière à Gaz</label>
-                      <input type="radio" name="answer">
-                      Oui
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="answer">
-                      Non
-                    </label>
+                      <input id="f14" type="checkbox">
                 </div>
                 <div class="control">
                     <label class="radio">
                       <label class="label">Réchaud à pétrole</label>
-                      <input type="radio" name="answer">
-                      Oui
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="answer">
-                      Non
-                    </label>
+                      <input id="f15" type="checkbox">
                 </div>
                 <div class="control">
                     <label class="radio">
                       <label class="label">Mixeur</label>
-                      <input type="radio" name="answer">
-                      Oui
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="answer">
-                      Non
-                    </label>
+                    <input id="f16" type="checkbox">
                 </div>
                 <div class="control">
                     <label class="radio">
                       <label class="label">Congélateur/frigo</label>
-                      <input type="radio" name="answer">
-                      Oui
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="answer">
-                      Non
-                    </label>
+                    <input id="f17" type="checkbox">
                 </div>
                 <div class="control">
                     <label class="radio">
                       <label class="label">Moto</label>
-                      <input type="radio" name="answer">
-                      Oui
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="answer">
-                      Non
-                    </label>
+                    <input id="f18" type="checkbox">
                 </div>
                 <div class="control">
                     <label class="radio">
                       <label class="label">Pousse-pousse/brouette</label>
-                      <input type="radio" name="answer">
-                      Oui
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="answer">
-                      Non
-                    </label>
+                      <input id="f19" type="checkbox">
                 </div>
             </div>
           </div>
           <div class="control">
               <label class="radio">
                 <label class="label">Antenne Canalsat</label>
-                <input type="radio" name="answer">
-                Oui
-              </label>
-              <label class="radio">
-                <input type="radio" name="answer">
-                Non
+                <input id="f20" type="checkbox">
               </label>
           </div>
           <div class="control">
-              <label class="radio">
+            <label class="radio">
                 <label class="label">Téléphone fixe/ portable</label>
-                <input type="radio" name="answer">
-                Oui
-              </label>
-              <label class="radio">
-                <input type="radio" name="answer">
-                Non
-              </label>
+                <input id="f21" type="checkbox">
+                </label>
           </div>
           <div class="control">
               <label class="radio">
                 <label class="label">Micro-onde</label>
-                <input type="radio" name="answer">
-                Oui
-              </label>
-              <label class="radio">
-                <input type="radio" name="answer">
-                Non
+                <input type="checkbox">
               </label>
           </div>
         </div>
@@ -1174,24 +1119,14 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="control">
               <label class="radio">
                 <label class="label">Pousse-pousse/brouette</label>
-                <input type="radio" name="answer">
-                Oui
-              </label>
-              <label class="radio">
-                <input type="radio" name="answer">
-                Non
-              </label>
+                <input type="checkbox">
+                </label>
           </div>
           <div class="control">
               <label class="radio">
                 <label class="label">Autres</label>
-                <input type="radio" name="answer">
-                Oui
-              </label>
-              <label class="radio">
-                <input type="radio" name="answer">
-                Non
-              </label>
+                <input type="checkbox">
+                </label>
           </div>
           <div class="field">
             <label class="label">Quel est le système d’énergie propre <br/>au ménage qui fonctionne actuellement ?</label>

@@ -14,7 +14,7 @@ let survey = {
 };
 document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
-  let actualPage = 1;
+  let actualPage = 6;
   let stay_or_leave_page = 0;//1 leave 0 stay
   if(actualPage == 1){
     let date = document.getElementById("date").value;
@@ -110,6 +110,44 @@ document.getElementById("next").addEventListener("click",()=>{
           survey.section_e.e22 = e22;
           survey.section_e.e23 = e23;
           survey.section_e.e24 = e24;
+          stay_or_leave_page = 1;
+        }
+  }else if(actualPage == 6){
+    let e25 = document.getElementById("e25").value;
+    let e26 = document.getElementById("e26").value;
+    let e27 = document.getElementById("e27").value;
+    let e28 = document.getElementById("e28").value;
+    let e29 = document.getElementById("e29").value;
+    let e30 = document.getElementById("e30").value;
+    let e31 = document.getElementById("e31").value;
+    let e32 = document.getElementById("e32").value;
+    let e33 = document.getElementById("e33").value;
+    let e34 = document.getElementById("e34").value;
+    let e35 = document.getElementById("e35").value;
+    let e36 = document.getElementById("e36").value;
+    let e37 = document.getElementById("e37").value;
+    let e38 = document.getElementById("e38").value;
+    let e39 = document.getElementById("e39").value;
+    console.log(survey);
+        if(e25 === "" || e26 === "" || e32 === ""){
+          alert("Veuillez au moins remplir les champs : e25,e26 et e32");
+          stay_or_leave_page = 0;
+        }else{
+          survey.section_e.e25 = e25;
+          survey.section_e.e26 = e26;
+          survey.section_e.e27 = e27;
+          survey.section_e.e28 = e28;
+          survey.section_e.e29 = e29;
+          survey.section_e.e30 = e30;
+          survey.section_e.e31 = e31;
+          survey.section_e.e32 = e32;
+          survey.section_e.e33 = e33;
+          survey.section_e.e34 = e34;
+          survey.section_e.e35 = e35;
+          survey.section_e.e36 = e36;
+          survey.section_e.e37 = e37;
+          survey.section_e.e38 = e38;
+          survey.section_e.e39= e39;
           stay_or_leave_page = 1;
         }
   }
@@ -321,6 +359,26 @@ document.getElementById("e3").addEventListener("change",(e)=>{
     document.getElementById("e10").style.visibility = "visible";
   }
 },false);
+document.getElementById("e2").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e2"));
+  }
+},false);
+document.getElementById("e5").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e5"));
+  }
+},false);
+document.getElementById("e6").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e6"));
+  }
+},false);
+document.getElementById("e8").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e8"));
+  }
+},false);
 document.getElementById("e9").addEventListener("change",(e)=>{
   if(e.target.value === "Non"){
     document.getElementById("e10").style.visibility = "hidden";
@@ -330,11 +388,21 @@ document.getElementById("e9").addEventListener("change",(e)=>{
     document.getElementById("e11").style.visibility = "visible";
   }
 },false);
+document.getElementById("e10").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e10"));
+  }
+},false);
 document.getElementById("e11").addEventListener("change",(e)=>{
   if(e.target.value === "Non"){
     document.getElementById("e12").style.visibility = "hidden";
   }else{
     document.getElementById("e12").style.visibility = "visible";
+  }
+},false);
+document.getElementById("e12").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e12"));
   }
 },false);
 document.getElementById("e13").addEventListener("change",(e)=>{
@@ -344,6 +412,16 @@ document.getElementById("e13").addEventListener("change",(e)=>{
     document.getElementById("e14").style.visibility = "visible";
   }
 },false);
+document.getElementById("e14").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e14"));
+  }
+},false);
+document.getElementById("e15").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e15"));
+  }
+},false);
 document.getElementById("e16").addEventListener("change",(e)=>{
   if(e.target.value === "Non"){
     document.getElementById("e17").style.visibility = "hidden";
@@ -351,3 +429,49 @@ document.getElementById("e16").addEventListener("change",(e)=>{
     document.getElementById("e17").style.visibility = "visible";
   }
 },false);
+document.getElementById("e17").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e17"));
+  }
+},false);
+document.getElementById("e20").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e20"));
+  }
+},false);
+document.getElementById("e22").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e22"));
+  }
+},false);
+document.getElementById("e23").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e23"));
+  }
+},false);
+document.getElementById("e27").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e27"));
+  }
+},false);
+document.getElementById("e28").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e28"));
+  }
+},false);
+document.getElementById("e33").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e33"));
+  }
+},false);
+document.getElementById("e35").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("e35"));
+  }
+},false);
+//
+function addNewSelectOption(select){
+  let option = document.createElement("option");
+  option.text = prompt("Entrez le nouveau choix :");
+  return select.add(option);
+}

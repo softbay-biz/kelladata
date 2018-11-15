@@ -13,11 +13,28 @@ let survey = {
   section_e:{},
   section_f:{
     f12:{}
+  },
+  section_g:{
+    g6a:{
+      g6a1:"",
+      g6a2:"",
+      g6a3:"",
+      g6a4:"",
+      g6a5:"",
+      g6a6:"",
+      g6a7:"",
+      g6a8:"",
+      g6a9:""
+    },
+    g3a:{
+      g3a1:"",
+      g3a2:"",
+    }
   }
 };
 document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
-  let actualPage = 7;
+  let actualPage = 8;
   let stay_or_leave_page = 0;//1 leave 0 stay
   if(actualPage == 1){
     let date = document.getElementById("date").value;
@@ -216,6 +233,30 @@ document.getElementById("next").addEventListener("click",()=>{
     survey.section_f.f18 = f18;
     survey.section_f.f19 = f19;
     stay_or_leave_page = 1;
+  }else if(actualPage == 8){
+    let g1 = document.getElementById("g1").value;
+    let g2 = document.getElementById("g2").value;
+    let g3b = document.getElementById("g3b").value;
+    let g4 = document.getElementById("g4").value;
+    let g5 = document.getElementById("g5").value;
+    let g6b = document.getElementById("g6b").value;
+    let g6c = document.getElementById("g6c").value;
+    let g6d = document.getElementById("g6d").value;
+    let g7 = document.getElementById("g7").value;
+    let g8 = document.getElementById("g8").value;
+    let g9 = document.getElementById("g9").value;
+    let g10 = document.getElementById("g10").value;
+    survey.section_g.g1 = g1;
+    survey.section_g.g2 = g2;
+    survey.section_g.g3b = g3b;
+    survey.section_g.g4 = g4;
+    survey.section_g.g6b = g6b;
+    survey.section_g.g6c = g6c;
+    survey.section_g.g6d = g6d;
+    survey.section_g.g7 = g7;
+    survey.section_g.g8 = g8;
+    survey.section_g.g9 = g9;
+    survey.section_g.g10 = g10;
     console.log(survey);
   }
 },false);
@@ -634,6 +675,75 @@ document.getElementById("f18").addEventListener("change",(e)=>{
     document.getElementById("f19").style.visibility = "hidden";
   }else{
     document.getElementById("f19").style.visibility = "visible";
+  }
+},false);
+document.getElementById("g2").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("g2"));
+  }
+},false);
+document.getElementById("g3a1").addEventListener("change",(e)=>{
+  survey.section_g.g3a.g3a1 = e.target.value;
+  if(e.target.value !== ""){
+    document.getElementById("g3a2").style.visibility = "hidden";
+  }else{
+    document.getElementById("g3a2").style.visibility = "visible";
+  }
+},false);
+document.getElementById("g3a2").addEventListener("change",(e)=>{
+  survey.section_g.g3a.g3a2 = e.target.value;
+  let temp = document.getElementById("g3b");
+  temp.selectedIndex = 2;
+  if(e.target.value !== ""){
+    document.getElementById("g3a1").style.visibility = "hidden";
+  }else{
+    document.getElementById("g3a1").style.visibility = "visible";
+  }
+},false);
+document.getElementById("g6a").addEventListener("change",(e)=>{
+  if(e.target.value !== ""){
+    let hours = parseInt(prompt("Le nombre d'heures:"))*60;
+    let minutes = parseInt(prompt("Le nombre de minutes:"));
+    hours = parseInt(hours)+parseInt(minutes);
+    hours = isNaN(hours)?0:hours;
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "g6a1"){
+      survey.section_g.g6a.g6a1 = hours;
+    }else if(option === "g6a2"){
+      survey.section_g.g6a.g6a2 = hours;
+    }else if(option === "g6a3"){
+      survey.section_g.g6a.g6a3 = hours;
+    }
+    else if(option === "g6a4"){
+      survey.section_g.g6a.g6a4 = hours;
+    }
+    else if(option === "g6a5"){
+      survey.section_g.g6a.g6a5 = hours;
+    }
+    else if(option === "g6a6"){
+      survey.section_g.g6a.g6a6 = hours;
+    }
+    else if(option === "g6a7"){
+      survey.section_g.g6a.g6a7 = hours;
+    }
+    else if(option === "g6a8"){
+      survey.section_g.g6a.g6a8 = hours;
+    }
+    else if(option === "g6a9"){
+      survey.section_g.g6a.g6a9 = hours;
+    }
+  }
+},false);
+document.getElementById("g6b").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("g6b"));
+  }
+},false);
+document.getElementById("g6c").addEventListener("change",(e)=>{
+  if(e.target.value === "Oui"){
+    document.getElementById("g6d").style.visibility = "hidden";
+  }else{
+    document.getElementById("g6d").style.visibility = "visible";
   }
 },false);
 //

@@ -1210,7 +1210,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             <label class="label">Quel est le type principal de matériau du toit utilisé pour la couverture de votre habitation ?
 (Notez le matériau principal)</label>
             <div class="control">
-              <select>
+              <select id="g1">
                 <option></option>
                 <option>Tôles</option>
                 <option>Tuiles</option>
@@ -1221,7 +1221,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Quel est le matériau principal utilisé pour la construction De votre logement ?</label>
             <div class="control">
-              <select>
+              <select id="g2">
                 <option></option>
                 <option>Parpaing</option>
                 <option>Brique de terre</option>
@@ -1236,7 +1236,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
 (Si A, allez à G3b. Si B écrivez automatiquement NON G3b)</label>
 <label class="label">A) Sources d’eau salubre</label>
           <div class="control">
-            <select>
+            <select id="g3a1">
               <option></option>
               <option>Robinet</option>
               <option>Forage</option>
@@ -1247,7 +1247,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           </div>
           <label class="label">B) Sources d’eau non salubre</label>
           <div class="control">
-            <select>
+            <select id="g3a2">
               <option></option>
               <option>Sources ouvertes/non aménagées</option>
               <option>Puits ouverts</option>
@@ -1258,7 +1258,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Existe-t-elle dans votre ménage ?</label>
             <div class="control">
-              <select>
+              <select id="g3b">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1268,7 +1268,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Quel est le type de toilette principal utilisé dans le ménage ?</label>
             <div class="control">
-              <select>
+              <select id="g4">
                 <option></option>
                 <option>WC avec chasse d’eau et fosse septique</option>
                 <option>Latrines ordinaires</option>
@@ -1281,7 +1281,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Quelle est la principale source de combustible pour la cuisine ?</label>
             <div class="control">
-              <select>
+              <select id="g5">
                 <option></option>
                 <option>Electricité</option>
                 <option>Energie solaire</option>
@@ -1295,29 +1295,23 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Quel est le temps mis pour atteindre les installations les plus proches de votre ménage ?</label>
             <div class="control">
-              <select>
+              <select id="g6a">
                 <option></option>
-                <option>Marchés des produits alimentaires</option>
-                <option>Marchés des produits cosmétiques</option>
-                <option>Ecole primaire</option>
-                <option>Ecole secondaire</option>
-                <option>Ecole universitaire</option>
-                <option>Structures de formations</option>
-                <option>Structure sanitaire</option>
-                <option>Structures administratives</option>
-                <option>Points d’eau</option>
+                <option id="g6a1">Marchés des produits alimentaires</option>
+                <option id="g6a2">Marchés des produits cosmétiques</option>
+                <option id="g6a3">Ecole primaire</option>
+                <option id="g6a4">Ecole secondaire</option>
+                <option id="g6a5">Ecole universitaire</option>
+                <option id="g6a6">Structures de formations</option>
+                <option id="g6a7">Structure sanitaire</option>
+                <option id="g6a8">Structures administratives</option>
+                <option id="g6a9">Points d’eau</option>
               </select>
-            </div>
-            <div class="field">
-              <label class="label">Précisez ce temps en heures et minutes</label>
-              <div class="control">
-                <input class="input" type="time" placeholder="Text input">
-              </div>
             </div>
             <div class="field">
               <label class="label">Quel est le principal moyen habituellement utilisé ?</label>
               <div class="control">
-                <select>
+                <select id="g6b">
                   <option></option>
                   <option>Moto</option>
                   <option>Marche à pied</option>
@@ -1334,7 +1328,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             <div class="field">
               <label class="label">En faites-vous usage ?</label>
               <div class="control">
-                <select>
+                <select id="g6c">
                   <option></option>
                   <option>Oui</option>
                   <option>Non</option>
@@ -1344,13 +1338,13 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             <div class="field">
               <label class="label">Pourquoi n’en faites-vous pas usage ?</label>
               <div class="control">
-                <input class="input" type="text" placeholder="Text input">
+                <input id="g6d" class="input" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
               <label class="label">Quel est votre zone de résidence ?</label>
               <div class="control">
-                <input class="input" type="text" placeholder="Text input">
+                <input id="g7" class="input" type="text" placeholder="Text input">
               </div>
             </div>
           </div>
@@ -1359,7 +1353,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Quel est le matériau principal de construction du sol de votre ménage ?</label>
             <div class="control">
-              <select>
+              <select id="g8">
                 <option></option>
                 <option>Sable+ciment (non lissé)</option>
                 <option>Sable+ciment (lissé)</option>
@@ -1371,7 +1365,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Quel est le type de logement dans lequel vous habitez ?</label>
             <div class="control">
-              <select>
+              <select id="g9">
                 <option></option>
                 <option>Immeuble à appartement</option>
                 <option>Villa</option>
@@ -1383,7 +1377,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Quel est le système d’évacuation des ordures dans le ménage ?</label>
             <div class="control">
-              <select>
+              <select id="g10">
                 <option></option>
                 <option>Poubelle</option>
                 <option>Existence d’un service de ramassage/collecte</option>

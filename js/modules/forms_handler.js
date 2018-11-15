@@ -10,11 +10,14 @@ let survey = {
   section_d:{d0:[],d1:[],d2:[],d3:[],d4:[],d5:[],d6:[],d7:[],d9a:[],d9b:[],d10:[],
   d11:[]
   },
-  section_e:{}
+  section_e:{},
+  section_f:{
+    f12:{}
+  }
 };
 document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
-  let actualPage = 6;
+  let actualPage = 7;
   let stay_or_leave_page = 0;//1 leave 0 stay
   if(actualPage == 1){
     let date = document.getElementById("date").value;
@@ -128,7 +131,6 @@ document.getElementById("next").addEventListener("click",()=>{
     let e37 = document.getElementById("e37").value;
     let e38 = document.getElementById("e38").value;
     let e39 = document.getElementById("e39").value;
-    console.log(survey);
         if(e25 === "" || e26 === "" || e32 === ""){
           alert("Veuillez au moins remplir les champs : e25,e26 et e32");
           stay_or_leave_page = 0;
@@ -150,6 +152,71 @@ document.getElementById("next").addEventListener("click",()=>{
           survey.section_e.e39= e39;
           stay_or_leave_page = 1;
         }
+  }else if(actualPage == 7){
+    let f1 = document.getElementById("f1").value;
+    let f2a = document.getElementById("f2a").value;
+    let f2b = document.getElementById("f2b").value;
+    let f3 = document.getElementById("f3").value;
+    let f4 = document.getElementById("f4").value;
+    let f5 = document.getElementById("f5").value;
+    let f6 = document.getElementById("f6").value;
+    let f7 = document.getElementById("f7").value;
+    let f8 = document.getElementById("f8").value;
+    let f9 = document.getElementById("f9").value;
+    let f10 = document.getElementById("f10").value;
+    let f11 = document.getElementById("f11").value;
+    let f1201 = document.getElementById("f1201").checked;
+    let f1202 = document.getElementById("f1202").checked;
+    let f1203= document.getElementById("f1203").checked;
+    let f1204 = document.getElementById("f1204").checked;
+    let f1205 = document.getElementById("f1205").checked;
+    let f1206 = document.getElementById("f1206").checked;
+    let f1207 = document.getElementById("f1207").checked;
+    let f1208 = document.getElementById("f1208").checked;
+    let f1209 = document.getElementById("f1209").checked;
+    let f1210 = document.getElementById("f1210").checked;
+    let f1211 = document.getElementById("f1211").checked;
+    let f1212 = document.getElementById("f1212").checked;
+    let f1213 = document.getElementById("f1213").checked;
+    let f13 = document.getElementById("f13").value;
+    let f14 = document.getElementById("f14").value;
+    let f15 = document.getElementById("f15").value;
+    let f17 = document.getElementById("f17").value;
+    let f18 = document.getElementById("f18").value;
+    let f19 = document.getElementById("f19").value;
+    survey.section_f.f1 = f1;
+    survey.section_f.f2a = f2a;
+    survey.section_f.f2b = f2b;
+    survey.section_f.f3 = f3;
+    survey.section_f.f4 = f4;
+    survey.section_f.f5 = f5;
+    survey.section_f.f6 = f6;
+    survey.section_f.f7 = f7;
+    survey.section_f.f8 = f8;
+    survey.section_f.f9 = f9;
+    survey.section_f.f10 = f10;
+    survey.section_f.f11 = f11;
+    survey.section_f.f12.f1 = turnBoolToFrench(f1201);
+    survey.section_f.f12.f2 = turnBoolToFrench(f1202);
+    survey.section_f.f12.f3 = turnBoolToFrench(f1203);
+    survey.section_f.f12.f4 = turnBoolToFrench(f1204);
+    survey.section_f.f12.f5 = turnBoolToFrench(f1205);
+    survey.section_f.f12.f6 = turnBoolToFrench(f1206);
+    survey.section_f.f12.f7 = turnBoolToFrench(f1207);
+    survey.section_f.f12.f8 = turnBoolToFrench(f1208);
+    survey.section_f.f12.f9 = turnBoolToFrench(f1209);
+    survey.section_f.f12.f10 = turnBoolToFrench(f1210);
+    survey.section_f.f12.f11 = turnBoolToFrench(f1211);
+    survey.section_f.f12.f12 = turnBoolToFrench(f1212);
+    survey.section_f.f12.f13 = turnBoolToFrench(f1213);
+    survey.section_f.f13 = f13;
+    survey.section_f.f14 = f14;
+    survey.section_f.f15 = f15;
+    survey.section_f.f17 = f17;
+    survey.section_f.f18 = f18;
+    survey.section_f.f19 = f19;
+    stay_or_leave_page = 1;
+    console.log(survey);
   }
 },false);
 //Add people on the family list
@@ -229,7 +296,6 @@ document.getElementById("c_submit").addEventListener('click',()=>{
     document.getElementById("c8").value ="";
     document.getElementById("c9").value ="";
     alert('Informations du membre ajoutees!');
-    console.log(survey);
   }
 },false);
 document.getElementById("c2").addEventListener("change",(e)=>{
@@ -575,4 +641,7 @@ function addNewSelectOption(select){
   let option = document.createElement("option");
   option.text = prompt("Entrez le nouveau choix :");
   return select.add(option);
+}
+function turnBoolToFrench(bool){
+  return bool===true?"Oui":"Non";
 }

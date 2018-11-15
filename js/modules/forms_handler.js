@@ -1,4 +1,5 @@
 let survey = {
+  validity:0,
   section_a:{
   },
   section_b:{
@@ -30,6 +31,16 @@ let survey = {
       g3a1:"",
       g3a2:"",
     }
+  },
+  section_h:{
+    h1:[],
+    h2:[],
+    h3:[],
+    h4:[],
+    h5:[],
+    h6:[],
+    h7:[],
+    h8:[]
   }
 };
 document.getElementById("next").addEventListener("click",()=>{
@@ -285,8 +296,18 @@ document.getElementById("b_submit").addEventListener('click',()=>{
         option1.text = b1;
         let option2 = document.createElement("option");
         option2.text = b1;
+        let option3 = document.createElement("option");
+        option3.text = b1;
+        let option4 = document.createElement("option");
+        option4.text = b1;
         if(parseInt(b3)>=10){
           document.getElementById("c0").add(option1);
+        }
+        else if(parseInt(b3)<5){
+          document.getElementById("h1").add(option3);
+        }
+        if(b2 === "F"){
+          document.getElementById("h2").add(option4);
         }
           document.getElementById("d0").add(option2);
 
@@ -337,6 +358,41 @@ document.getElementById("c_submit").addEventListener('click',()=>{
     document.getElementById("c8").value ="";
     document.getElementById("c9").value ="";
     alert('Informations du membre ajoutees!');
+  }
+},false);
+document.getElementById("h_submit").addEventListener('click',()=>{
+  let h1 = document.getElementById("h1").value;
+  let h2 = document.getElementById("h2").value;
+  let h3 = document.getElementById("h3").value;
+  let h4 = document.getElementById("h4").value;
+  let h5 = document.getElementById("h5").value;
+  let h6 = document.getElementById("h6").value;
+  let h7 = document.getElementById("h7").value;
+  let h8 = document.getElementById("h8").value;
+  if(h1 === "" || h2 === "" || h3 === "" || h4 === "" || h5 === ""
+    || h6 === "" || h7 === "" || h8 === ""){
+    alert("Veuillez remplir au moins h1, h2, h3, h4, h5, h6, h7, h8 et h9!");
+  }else{
+    survey.section_h.h1.push(h1);
+    survey.section_h.h2.push(h2);
+    survey.section_h.h3.push(h3);
+    survey.section_h.h4.push(h4);
+    survey.section_h.h5.push(h5);
+    survey.section_h.h6.push(h6);
+    survey.section_h.h7.push(h7);
+    survey.section_h.h8.push(h8);
+    document.getElementById("h1").remove(document.getElementById("h1").selectedIndex);
+    //We clear value
+    document.getElementById("h1").value ="";
+    document.getElementById("h2").value ="";
+    document.getElementById("h3").value ="";
+    document.getElementById("h4").value ="";
+    document.getElementById("h5").value ="";
+    document.getElementById("h6").value ="";
+    document.getElementById("h7").value ="";
+    document.getElementById("h8").value ="";
+    alert('Informations du membre ajoutees!');
+    console.log(survey);
   }
 },false);
 document.getElementById("c2").addEventListener("change",(e)=>{
@@ -409,7 +465,6 @@ document.getElementById("d_submit").addEventListener('click',()=>{
     document.getElementById("d10").value ="";
     document.getElementById("d11").value ="";
     alert('Informations du membre ajoutees!');
-    console.log(survey);
   }
 },false);
 document.getElementById("d1").addEventListener("change",(e)=>{

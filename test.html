@@ -134,7 +134,7 @@
                 </div>
               </div>
       </div>
-      <div class="q_form" id=2>
+      <div class="q_form" style="display:block;" id=2>
         <h2>SECTION B : LISTES DES MEMBRES DU MENAGE</h2>
         <h3>NB : Les chiffres placés justes après les variables sont les codes à utiliser pour le remplissage du tableau</h3>
           <table class="table">
@@ -1203,7 +1203,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           </div>
         </div>
       </div>
-      <div class="q_form" style="display:block;" id=8>
+      <div class="q_form" id=8>
         <h2>SECTION G : LOGEMENT ET CONFORT DU MENAGE</h2>
         <div class="content-forms-small-left-third">
           <div class="field">
@@ -1386,7 +1386,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           </div>
         </div>
       </div>
-      <div class="q_form" id=9>
+      <div class="q_form" style="display:block;" id=9>
         <h2>SECTION H : QUESTIONS SUR LES ENFANTS AGÉS DE MOINS DE CINQ ANS</h2>
         <table class="table">
               <tr>
@@ -1396,37 +1396,37 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                 <th>H3 : Lieu de naissance de l’enfant ?</th>
                 <th>Poids enfant (en Kg)</th>
                 <th>Taille enfant (en cm)</th>
-                <th>H5 : Participation au programme de santé et de nutrition des enfants ?</th>
-                <th>H6 : Personne ayant assisté à l’accouchement de l’enfant?</th>
+                <th>H5 : Participation au programme <br/> de santé et de nutrition des enfants ?</th>
+                <th>H6 : Personne ayant assisté à  l’accouchement de l’enfant?</th>
               </tr>
               <tr>
                 <td>
                   <div class="select">
-                    <select>
+                    <select id="h1">
                       <option></option>
                     </select>
                   </div>
                 </td>
                 <td>
                   <div class="select">
-                    <select>
+                    <select id="h2">
                       <option></option>
                     </select>
                   </div>
                 </td>
-                <td><input class="input" type="date" placeholder="Text input"></td>
+                <td><input id="h3" class="input" type="date" placeholder="Text input"></td>
                 <td>
-                    <input class="input" type="text" placeholder="Text input">
+                    <input id="h4" class="input" type="text" placeholder="Text input">
                 </td>
                 <td>
-                  <input class="input" type="number" placeholder="Text input">
+                  <input id="h5" class="input" type="number" placeholder="Text input">
                 </td>
                 <td>
-                  <input class="input" type="number" placeholder="Text input">
+                  <input id="h6" class="input" type="number" placeholder="Text input">
                 </td>
                 <td>
                   <div class="select">
-                    <select>
+                    <select id="h7">
                       <option></option>
                       <option>Oui</option>
                       <option>Non</option>
@@ -1435,13 +1435,18 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                 </td>
                 <td>
                   <div class="select">
-                    <select>
+                    <select id="h8">
                       <option></option>
                       <option>Membre ménage</option>
                       <option>Famille</option>
                       <option>Proche</option>
                     </select>
                   </div>
+                </td>
+                <td>
+                  <div class="control">
+                        <button id="h_submit" class="button is-primary">Ajouter</button>
+                      </div>
                 </td>
               </tr>
 

@@ -134,7 +134,7 @@
                 </div>
               </div>
       </div>
-      <div class="q_form" style="display:block;" id=2>
+      <div class="q_form" id=2>
         <h2>SECTION B : LISTES DES MEMBRES DU MENAGE</h2>
         <h3>NB : Les chiffres placés justes après les variables sont les codes à utiliser pour le remplissage du tableau</h3>
           <table class="table">
@@ -192,7 +192,7 @@ Code mère de l’enfant moins de cinq ans)</th>
                     <div class="select">
                         <select id="b6">
                           <option></option>
-                          <option>Conjoint(e)</option>
+                          <option>Célibataire</option>
                           <option>Marié mono</option>
                           <option>Marié poly</option>
                           <option>Veuf (ve)</option>
@@ -1386,7 +1386,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           </div>
         </div>
       </div>
-      <div class="q_form" style="display:block;" id=9>
+      <div class="q_form" id=9>
         <h2>SECTION H : QUESTIONS SUR LES ENFANTS AGÉS DE MOINS DE CINQ ANS</h2>
         <table class="table">
               <tr>
@@ -1452,55 +1452,48 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
 
       </table>
       </div>
-      <div class="q_form"  id=10>
+      <div class="q_form" style="display:block;" id=10>
         <h2>MODULE I : DEPENSES RETROSPECTIVES DU MENAGE</h2>
         <div class="content-forms-small-left-third">
           <div class="field">
             <label class="label">Quels ont les dépenses scolaires du ménage pour l’année 2016/2017 ?</label>
             <div class="control">
-              <select>
+              <select id="i1">
                 <option></option>
-                <option>Frais de scolarité</option>
-                <option>Livres et fournitures scolaires</option>
-                <option>Uniformes scolaires</option>
-                <option>Frais de transport scolaire</option>
-                <option>Cotisation des parents d’élèves (APE)</option>
-                <option>Autres cotisation scolaires</option>
-                <option>Frais de transport scolaire</option>
+                <option id="i11">Frais de scolarité</option>
+                <option id="i12">Livres et fournitures scolaires</option>
+                <option id="i13">Uniformes scolaires</option>
+                <option id="i14">Frais de transport scolaire</option>
+                <option id="i15">Cotisation des parents d’élèves (APE)</option>
+                <option id="i16">Autres cotisation scolaires</option>
               </select>
-              <label class="label">Précisez ces frais</label>
-              <input class="input" type="number" placeholder="Text input">
             </div>
           </div>
           <div class="field">
             <label class="label">Quels sont les dépenses scolaires du ménage pour l’année en cours ?</label>
             <div class="control">
-              <select>
+              <select id="i2">
                 <option></option>
-                <option>Frais de scolarité</option>
-                <option>Livres et fournitures scolaires</option>
-                <option>Uniformes scolaires</option>
-                <option>Frais de transport scolaire</option>
-                <option>Cotisations des parents d’élève (APE)</option>
-                <option>Autres cotisations scolaires</option>
+                <option id="i21">Frais de scolarité</option>
+                <option id="i22">Livres et fournitures scolaires</option>
+                <option id="i23">Uniformes scolaires</option>
+                <option id="i24">Frais de transport scolaire</option>
+                <option id="i25">Cotisations des parents d’élève (APE)</option>
+                <option id="i26">Autres cotisations scolaires</option>
               </select>
-              <label class="label">Précisez ces frais</label>
-              <input class="input" type="number" placeholder="Text input">
             </div>
           </div>
           <div class="field">
             <label class="label">Quels sont les dépenses de santé du ménage au cours des 30 derniers jours ?</label>
             <div class="control">
-              <select>
+              <select id="i3">
                 <option></option>
-                <option>Frais d’analyse médicale</option>
-                <option>Frais de consultation médicale</option>
-                <option>Médicaments</option>
-                <option>Frais d’hospitalisation</option>
-                <option>Autres services médicaux</option>
+                <option id="i31">Frais d’analyse médicale</option>
+                <option id="i32">Frais de consultation médicale</option>
+                <option id="i33">Médicaments</option>
+                <option id="i34">Frais d’hospitalisation</option>
+                <option id="i35">Autres services médicaux</option>
               </select>
-              <label class="label">Précisez ces frais</label>
-              <input class="input" type="number" placeholder="Text input">
             </div>
           </div>
         </div>
@@ -1508,17 +1501,15 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             <div class="field">
               <label class="label">Quelles sont les dépenses d’intrants agricoles du ménage pour l’année 2016/2017 ?</label>
               <div class="control">
-                <select>
+                <select id="i4">
                   <option></option>
-                  <option>Semences</option>
-                  <option>Engrais</option>
-                  <option>Produits phytosanitaires</option>
-                  <option>Mains d’oeuvres</option>
-                  <option>Réparation de matériels agricole</option>
-                  <option>Location/achat du matériel agricole</option>
+                  <option id="i41">Semences</option>
+                  <option id="i42">Engrais</option>
+                  <option id="i43">Produits phytosanitaires</option>
+                  <option id="i44">Mains d’oeuvres</option>
+                  <option id="i45">Réparation de matériels agricole</option>
+                  <option id="i46">Location/achat du matériel agricole</option>
                 </select>
-                <label class="label">Précisez ces frais</label>
-                <input class="input" type="number" placeholder="Text input">
               </div>
             </div>
           </div>

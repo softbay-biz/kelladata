@@ -41,7 +41,41 @@ let survey = {
     h6:[],
     h7:[],
     h8:[]
+  },
+  section_i:{
+      i1:{
+          i11:0,
+          i12:0,
+          i13:0,
+          i14:0,
+          i15:0,
+          i16:0
+        },
+      i2:{
+          i21:0,
+          i22:0,
+          i23:0,
+          i24:0,
+          i25:0,
+          i26:0
+        },
+        i3:{
+            i31:0,
+            i32:0,
+            i33:0,
+            i34:0,
+            i35:0
+          },
+          i4:{
+              i41:0,
+              i42:0,
+              i43:0,
+              i44:0,
+              i45:0,
+              i46:0
+            }
   }
+
 };
 document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
@@ -788,6 +822,90 @@ document.getElementById("g6a").addEventListener("change",(e)=>{
       survey.section_g.g6a.g6a9 = hours;
     }
   }
+},false);
+document.getElementById("i1").addEventListener("change",(e)=>{
+  if(e.target.value !== ""){
+    let prix= parseInt(prompt("Entrez le prix:"));
+    prix = isNaN(prix)?0:prix;
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "i11"){
+      survey.section_i.i1.i11 = prix;
+    }else if(option === "i12"){
+      survey.section_i.i1.i12 = prix;
+    }else if(option === "i13"){
+      survey.section_i.i1.i13 = prix;
+    }
+    else if(option === "i14"){
+      survey.section_i.i1.i14 = prix;
+    }else if(option === "i15"){
+      survey.section_i.i1.i15 = prix;
+    }else if(option === "i16"){
+      survey.section_i.i1.i16 = prix;
+    }
+  }
+},false);
+document.getElementById("i2").addEventListener("change",(e)=>{
+  if(e.target.value !== ""){
+    let prix= parseInt(prompt("Entrez le prix:"));
+    prix = isNaN(prix)?0:prix;
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "i21"){
+      survey.section_i.i2.i21 = prix;
+    }else if(option === "i22"){
+      survey.section_i.i2.i22 = prix;
+    }else if(option === "i23"){
+      survey.section_i.i2.i23 = prix;
+    }
+    else if(option === "i24"){
+      survey.section_i.i2.i24 = prix;
+    }else if(option === "i25"){
+      survey.section_i.i2.i25 = prix;
+    }else if(option === "i26"){
+      survey.section_i.i2.i26 = prix;
+    }
+  }
+},false);
+document.getElementById("i3").addEventListener("change",(e)=>{
+  if(e.target.value !== ""){
+    let prix= parseInt(prompt("Entrez le prix:"));
+    prix = isNaN(prix)?0:prix;
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "i31"){
+      survey.section_i.i3.i31 = prix;
+    }else if(option === "i32"){
+      survey.section_i.i3.i32 = prix;
+    }else if(option === "i33"){
+      survey.section_i.i3.i33 = prix;
+    }
+    else if(option === "i34"){
+      survey.section_i.i3.i34 = prix;
+    }else if(option === "i35"){
+      survey.section_i.i3.i35 = prix;
+    }else if(option === "i36"){
+      survey.section_i.i3.i36 = prix;
+    }
+  }
+},false);
+document.getElementById("i4").addEventListener("change",(e)=>{
+  if(e.target.value !== ""){
+    let prix= parseInt(prompt("Entrez le prix:"));
+    prix = isNaN(prix)?0:prix;
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "i41"){
+      survey.section_i.i4.i41 = prix;
+    }else if(option === "i42"){
+      survey.section_i.i4.i42 = prix;
+    }else if(option === "i43"){
+      survey.section_i.i4.i43 = prix;
+    }
+    else if(option === "i44"){
+      survey.section_i.i4.i44 = prix;
+    }else if(option === "i45"){
+      survey.section_i.i4.i45 = prix;
+    }else if(option === "i46"){
+      survey.section_i.i4.i46 = prix;
+    }
+  }console.log(survey);
 },false);
 document.getElementById("g6b").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){

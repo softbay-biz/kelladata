@@ -905,7 +905,7 @@ document.getElementById("i4").addEventListener("change",(e)=>{
     }else if(option === "i46"){
       survey.section_i.i4.i46 = prix;
     }
-  }console.log(survey);
+  }
 },false);
 document.getElementById("g6b").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){

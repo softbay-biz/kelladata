@@ -74,12 +74,34 @@ let survey = {
               i45:0,
               i46:0
             }
+  },
+  section_j:{
+    j1:{
+      j101:{cultive:0,vendu:0,benefice:0},
+      j102:{cultive:0,vendu:0,benefice:0},
+      j103:{cultive:0,vendu:0,benefice:0},
+      j104:{cultive:0,vendu:0,benefice:0},
+      j105:{cultive:0,vendu:0,benefice:0},
+      j106:{cultive:0,vendu:0,benefice:0},
+      j107:{cultive:0,vendu:0,benefice:0},
+      j108:{cultive:0,vendu:0,benefice:0},
+      j109:{cultive:0,vendu:0,benefice:0},
+      j110:{cultive:0,vendu:0,benefice:0},
+      j111:{cultive:0,vendu:0,benefice:0},
+      j112:{cultive:0,vendu:0,benefice:0},
+      j113:{cultive:0,vendu:0,benefice:0},
+      j114:{cultive:0,vendu:0,benefice:0},
+      j115:{cultive:0,vendu:0,benefice:0},
+      j116:{cultive:0,vendu:0,benefice:0},
+      j117:{cultive:0,vendu:0,benefice:0}
+    },
+    j2:"",j3:"",j4:"",j5:"",j6:"",j7:"",j8:"",j9:"",j10:0,j11:""
   }
 
 };
 document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
-  let actualPage = 8;
+  let actualPage = 11;
   let stay_or_leave_page = 0;//1 leave 0 stay
   if(actualPage == 1){
     let date = document.getElementById("date").value;
@@ -302,7 +324,28 @@ document.getElementById("next").addEventListener("click",()=>{
     survey.section_g.g8 = g8;
     survey.section_g.g9 = g9;
     survey.section_g.g10 = g10;
-    console.log(survey);
+  }else if(actualPage == 11){
+    let j2 = document.getElementById("j2").value;
+    let j3 = document.getElementById("j3").value;
+    let j4 = document.getElementById("j4").value;
+    let j5 = document.getElementById("j5").value;
+    let j6 = document.getElementById("j6").value;
+    let j7 = document.getElementById("j7").value;
+    let j8 = document.getElementById("j8").value;
+    let j9 = document.getElementById("j9").value;
+    let j10 = document.getElementById("j10").value;
+    let j11 = document.getElementById("j11").value;
+    survey.section_j.j2 = j2;
+    survey.section_j.j3 = j3;
+    survey.section_j.j4 = j4;
+    survey.section_j.j5 = j5;
+    survey.section_j.j6 = j6;
+    survey.section_j.j7 = j7;
+    survey.section_j.j8 = j8;
+    survey.section_j.j9 = j9;
+    survey.section_j.j10 = parseInt(j10);
+    survey.section_j.j11 = j11;
+    stay_or_leave_page = 1;
   }
 },false);
 //Add people on the family list
@@ -426,7 +469,6 @@ document.getElementById("h_submit").addEventListener('click',()=>{
     document.getElementById("h7").value ="";
     document.getElementById("h8").value ="";
     alert('Informations du membre ajoutees!');
-    console.log(survey);
   }
 },false);
 document.getElementById("c2").addEventListener("change",(e)=>{
@@ -917,6 +959,116 @@ document.getElementById("g6c").addEventListener("change",(e)=>{
     document.getElementById("g6d").style.visibility = "hidden";
   }else{
     document.getElementById("g6d").style.visibility = "visible";
+  }
+},false);
+document.getElementById("j1").addEventListener("change",(e)=>{
+  let cultive= parseInt(prompt("1 si lui même cultive 0 sinon:"));
+  let vendu= parseInt(prompt("1 si il vend 0 sinon:"));
+  let benefice= parseInt(prompt("Entrez le benefice , mettre 0 sinon:"));
+  cultive = isNaN(cultive)?0:cultive;
+  vendu = isNaN(vendu)?0:vendu;
+  benefice = isNaN(benefice)?0:benefice;
+  if(e.target.value !== ""){
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "j101"){
+      survey.section_j.j1.j101.cultive = cultive;
+      survey.section_j.j1.j101.vendu = vendu;
+      survey.section_j.j1.j101.benefice = benefice;
+    }else if(option === "j102"){
+      survey.section_j.j1.j102.cultive = cultive;
+      survey.section_j.j1.j102.vendu = vendu;
+      survey.section_j.j1.j102.benefice = benefice;
+    }else if(option === "j103"){
+      survey.section_j.j1.j103.cultive = cultive;
+      survey.section_j.j1.j103.vendu = vendu;
+      survey.section_j.j1.j103.benefice = benefice;
+    }else if(option === "j104"){
+      survey.section_j.j1.j104.cultive = cultive;
+      survey.section_j.j1.j104.vendu = vendu;
+      survey.section_j.j1.j104.benefice = benefice;
+    }else if(option === "j105"){
+      survey.section_j.j1.j105.cultive = cultive;
+      survey.section_j.j1.j105.vendu = vendu;
+      survey.section_j.j1.j105.benefice = benefice;
+    }else if(option === "j106"){
+      survey.section_j.j1.j106.cultive = cultive;
+      survey.section_j.j1.j106.vendu = vendu;
+      survey.section_j.j1.j106.benefice = benefice;
+    }else if(option === "j107"){
+      survey.section_j.j1.j107.cultive = cultive;
+      survey.section_j.j1.j107.vendu = vendu;
+      survey.section_j.j1.j107.benefice = benefice;
+    }else if(option === "j108"){
+      survey.section_j.j1.j108.cultive = cultive;
+      survey.section_j.j1.j108.vendu = vendu;
+      survey.section_j.j1.j108.benefice = benefice;
+    }else if(option === "j109"){
+      survey.section_j.j1.j109.cultive = cultive;
+      survey.section_j.j1.j109.vendu = vendu;
+      survey.section_j.j1.j109.benefice = benefice;
+    }else if(option === "j110"){
+      survey.section_j.j1.j110.cultive = cultive;
+      survey.section_j.j1.j110.vendu = vendu;
+      survey.section_j.j1.j110.benefice = benefice;
+    }else if(option === "j111"){
+      survey.section_j.j1.j111.cultive = cultive;
+      survey.section_j.j1.j111.vendu = vendu;
+      survey.section_j.j1.j111.benefice = benefice;
+    }else if(option === "j112"){
+      survey.section_j.j1.j112.cultive = cultive;
+      survey.section_j.j1.j112.vendu = vendu;
+      survey.section_j.j1.j112.benefice = benefice;
+    }else if(option === "j113"){
+      survey.section_j.j1.j113.cultive = cultive;
+      survey.section_j.j1.j113.vendu = vendu;
+      survey.section_j.j1.j113.benefice = benefice;
+    }else if(option === "j114"){
+      survey.section_j.j1.j114.cultive = cultive;
+      survey.section_j.j1.j114.vendu = vendu;
+      survey.section_j.j1.j114.benefice = benefice;
+    }else if(option === "j115"){
+      survey.section_j.j1.j115.cultive = cultive;
+      survey.section_j.j1.j115.vendu = vendu;
+      survey.section_j.j1.j115.benefice = benefice;
+    }else if(option === "j116"){
+      survey.section_j.j1.j116.cultive = cultive;
+      survey.section_j.j1.j116.vendu = vendu;
+      survey.section_j.j1.j116.benefice = benefice;
+    }else if(option === "j117"){
+      survey.section_j.j1.j117.cultive = cultive;
+      survey.section_j.j1.j117.vendu = vendu;
+      survey.section_j.j1.j117.benefice = benefice;
+    }
+
+  }
+},false);
+document.getElementById("j5").addEventListener("change",(e)=>{
+  if(e.target.value == "Oui"){
+    document.getElementById("j6").style.visibility = "hidden";
+  }else{
+    document.getElementById("j6").style.visibility = "visible";
+  }
+},false);
+document.getElementById("j7").addEventListener("change",(e)=>{
+  if(e.target.value == "Non"){
+    document.getElementById("j8").style.visibility = "hidden";
+  }else{
+    document.getElementById("j8").style.visibility = "visible";
+  }
+},false);
+document.getElementById("j2").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("j2"));
+  }
+},false);
+document.getElementById("j6").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("j6"));
+  }
+},false);
+document.getElementById("j9").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("j9"));
   }
 },false);
 //

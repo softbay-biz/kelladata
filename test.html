@@ -1514,38 +1514,38 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             </div>
           </div>
       </div>
-      <div class="q_form" id=11>
+      <div class="q_form" style="display:block;" id=11>
         <h2>MODULE J : PRODUCTION AGRICOLE DE LA CAMPAGNE 2016/2017</h2>
         <div class="content-forms-small-left-third">
           <div class="field">
-            <label class="label">Quels sont les produits agricoles que vous avez cultivés pour l’année 2016-2017 ?</label>
+            <label class="label">Quels sont les produits agricoles que vous avez cultivés pour l’année 2017-2018 ?</label>
             <div class="control">
-              <select>
+              <select id="j1">
                 <option></option>
-                <option>Mais</option>
-                <option>Manioc</option>
-                <option>Banane plantain</option>
-                <option>Macabo</option>
-                <option>Taro</option>
-                <option>Ignames</option>
-                <option>Patates</option>
-                <option>Piments</option>
-                <option>Pistaches</option>
-                <option>Haricots</option>
-                <option>Cacao</option>
-                <option>Palmier à huile</option>
-                <option>Café</option>
-                <option>Okok</option>
-                <option>Tomates</option>
-                <option>Carottes</option>
-                <option>Autres</option>
+                <option id="j101">Mais</option>
+                <option id="j102">Manioc</option>
+                <option id="j103">Banane plantain</option>
+                <option id="j104">Macabo</option>
+                <option id="j105">Taro</option>
+                <option id="j106">Ignames</option>
+                <option id="j107">Patates</option>
+                <option id="j108">Piments</option>
+                <option id="j109">Pistaches</option>
+                <option id="j110">Haricots</option>
+                <option id="j111">Cacao</option>
+                <option id="j112">Palmier à huile</option>
+                <option id="j113">Café</option>
+                <option id="j114">Okok</option>
+                <option id="j115">Tomates</option>
+                <option id="j116">Carottes</option>
+                <option id="j117">Autres</option>
               </select>
             </div>
           </div>
           <div class="field">
             <label class="label">Quels ont été les facilitateurs pour la vente de ces produits ?</label>
             <div class="control">
-              <select>
+              <select id="j2">
                 <option></option>
                 <option>Marché</option>
                 <option>Négociants</option>
@@ -1558,7 +1558,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Avez-vous utilisé les semences sélectionnées ?</label>
             <div class="control">
-              <select>
+              <select id="j3">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1568,7 +1568,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Avez-vous reçu les services d’encadrements pour vos produits agricoles 2016/2017 ?</label>
             <div class="control">
-              <select>
+              <select id="j4">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1578,7 +1578,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="field">
             <label class="label">Avez-vous utilisé les engrais pour vos produits agricoles ?</label>
             <div class="control">
-              <select>
+              <select id="j5">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1589,7 +1589,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             <label class="label">Pourquoi n’avez-vous pas utilisé de l’engrais pour vos produits agricoles ?
 Nb : Choisir la raison principale)</label>
             <div class="control">
-              <select>
+              <select id="j6">
                 <option></option>
                 <option>Manque de moyens financiers</option>
                 <option>Cherté des engrais</option>
@@ -1603,7 +1603,7 @@ Nb : Choisir la raison principale)</label>
           <div class="field">
             <label class="label">Avez-vous sollicité un crédit agricole pour vos produits agricoles ?</label>
             <div class="control">
-              <select>
+              <select id="j7">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1613,7 +1613,7 @@ Nb : Choisir la raison principale)</label>
           <div class="field">
             <label class="label">Avez-vous obtenu ce crédit agricole ?</label>
             <div class="control">
-              <select>
+              <select id="j8">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1623,7 +1623,7 @@ Nb : Choisir la raison principale)</label>
           <div class="field">
             <label class="label">Pourquoi n’avez-vous pas sollicité de crédit agricole ?</label>
             <div class="control">
-              <select>
+              <select id="j9">
                 <option></option>
                 <option>Pas besoin</option>
                 <option>As déjà les moyens</option>
@@ -1635,13 +1635,13 @@ Nb : Choisir la raison principale)</label>
           <div class="field">
             <label class="label">Quel est le nombre d’employé que vous avez utilisé pour le programme agricole 2016/2017 ?</label>
             <div class="control">
-              <input class="input" type="number" placeholder="Text input">
+              <input id="j10" class="input" type="number" placeholder="Text input">
             </div>
           </div>
           <div class="field">
             <label class="label">Quels sont les matériels que vous avez utilisés pour la production agricole 2016/2017 ?</label>
             <div class="control">
-              <select>
+              <select id="j11">
                 <option></option>
                 <option>Machette</option>
                 <option>Houe</option>
@@ -1866,7 +1866,7 @@ des 15 derniers jours ?
           </div>
         </div>
       </div>
-      <div class="q_form" style="display:block;" id=14>
+      <div class="q_form" id=14>
         <h2>MODULE O : DEPENSES NON ALIMENTAIRES DU MENAGE DES 30 JOURS</h2>
         <div class="content-forms-small-left-third">
           <div class="field">

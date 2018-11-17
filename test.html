@@ -1514,7 +1514,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             </div>
           </div>
       </div>
-      <div class="q_form" style="display:block;" id=11>
+      <div class="q_form" id=11>
         <h2>MODULE J : PRODUCTION AGRICOLE DE LA CAMPAGNE 2016/2017</h2>
         <div class="content-forms-small-left-third">
           <div class="field">
@@ -1654,13 +1654,13 @@ Nb : Choisir la raison principale)</label>
           </div>
         </div>
       </div>
-      <div class="q_form" id=12>
+      <div class="q_form" style="display:block;" id=12>
         <h2>MODULE K : ENTREPRISES ET ACTIVITES NON AGRICOLES</h2>
         <div class="content-forms-small-left-third">
           <div class="field">
             <label class="label">Le ménage/membre possède-t-il une activité/entreprise non agricole ?</label>
             <div class="control">
-              <select>
+              <select id="k1">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1670,7 +1670,7 @@ Nb : Choisir la raison principale)</label>
           <div class="field">
             <label class="label">Quelles sont ces activités non agricoles que possède le ménage/membre ?(Trois entreprises principales sont notées ici)</label>
             <div class="control">
-              <select>
+              <select id="k2">
                 <option></option>
                 <option>Elevage</option>
                 <option>Chasse</option>
@@ -1692,7 +1692,7 @@ Nb : Choisir la raison principale)</label>
           <div class="field">
             <label class="label">Quel est le membre du ménage responsable de l’entreprise ?</label>
             <div class="control">
-              <select>
+              <select id="k3">
                 <option></option>
               </select>
             </div>
@@ -1700,13 +1700,13 @@ Nb : Choisir la raison principale)</label>
           <div class="field">
             <label class="label">L’entreprise fonctionne depuis combien d’année ?(A écrire à la colonne code le nombre d’année, si moins d’un an, écrire 00)</label>
             <div class="control">
-              <input class="input" type="number" placeholder="Text input">
+              <input id="k4" class="input" type="number" placeholder="Text input">
             </div>
           </div>
           <div class="field">
             <label class="label">Quel est le nombre de mois durant lesquels l’entreprise a fonctionnée ?(A écrire à la colonne code le nombre de mois)</label>
             <div class="control">
-              <input class="input" type="number" placeholder="Text input">
+              <input id="k5" class="input" type="number" placeholder="Text input">
             </div>
           </div>
         </div>
@@ -1714,7 +1714,7 @@ Nb : Choisir la raison principale)</label>
           <div class="field">
             <label class="label">Cette entreprise est-elle en activité actuellement ?</label>
             <div class="control">
-              <select>
+              <select id="k6">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1724,7 +1724,7 @@ Nb : Choisir la raison principale)</label>
           <div class="field">
             <label class="label">Quel est l’effectif des personnes qui travaille actuellement dans l’entreprise ?</label>
             <div class="control">
-              <input class="input" type="number" placeholder="Text input">
+              <input id="k7" class="input" type="number" placeholder="Text input">
             </div>
           </div>
           <div class="field">
@@ -1732,29 +1732,36 @@ Nb : Choisir la raison principale)</label>
               (A écrire à la colonne code le nombre de personnes, si elle n’existe pas il y’a 12 mois, écrire 88)
             </label>
             <div class="control">
-              <input class="input" type="number" placeholder="Text input">
+              <input id="k8" class="input" type="number" placeholder="Text input">
             </div>
           </div>
           <div class="field">
             <label class="label">Quelle est la dépense totale de l’entreprise par mois ?
             </label>
             <div class="control">
-              <input class="input" type="number" placeholder="Text input">
+              <input id="k9" class="input" type="number" placeholder="Text input">
             </div>
           </div>
           <div class="field">
-            <label class="label">Combien avez-vous payez aux impôts et aux taxes par an ?
+            <label class="label">Quelle est la dépense totale de l’entreprise par mois ?
             </label>
             <div class="control">
-              <input class="input" type="number" placeholder="Text input">
+              <input id="k10" class="input" type="number" placeholder="Text input">
             </div>
           </div>
         </div>
         <div class="content-forms-small-left-third">
           <div class="field">
+            <label class="label">Combien avez-vous payez aux impôts et aux taxes par an ?
+            </label>
+            <div class="control">
+              <input id="k11" class="input" type="number" placeholder="Text input">
+            </div>
+          </div>
+          <div class="field">
             <label class="label">Le revenu de votre entreprise a-t-il évolué au cours des 02 dernières années ?</label>
             <div class="control">
-              <select>
+              <select id="k12">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1765,13 +1772,13 @@ Nb : Choisir la raison principale)</label>
             <label class="label">Si oui, de combien ?
             </label>
             <div class="control">
-              <input class="input" type="number" placeholder="Text input">
+              <input id="k13" class="input" type="number" placeholder="Text input">
             </div>
           </div>
           <div class="field">
             <label class="label">Quelle est la raison principale de cette évolution ?</label>
             <div class="control">
-              <select>
+              <select id="k14">
                 <option></option>
                 <option>Augmentation des capitaux</option>
                 <option>Augmentation des partenaires</option>
@@ -1782,9 +1789,9 @@ Nb : Choisir la raison principale)</label>
             </div>
           </div>
           <div class="field">
-            <label class="label">Quels sont les autres sources de revenus que vous disposez ?</label>
+            <label class="label">Quelless sont les autres sources de revenus que vous disposez ?</label>
             <div class="control">
-              <select>
+              <select id="k15">
                 <option></option>
                 <option>Jeux du hasard (Pari-foot et PMUC)</option>
                 <option>Primes</option>

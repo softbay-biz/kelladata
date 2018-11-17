@@ -96,12 +96,16 @@ let survey = {
       j117:{cultive:0,vendu:0,benefice:0}
     },
     j2:"",j3:"",j4:"",j5:"",j6:"",j7:"",j8:"",j9:"",j10:0,j11:""
+  },
+  section_k:{
+    k1:"",k2:"",k3:"",k4:0,k5:0,k6:"",k7:0,k8:0,k9:0,k10:0,k11:0,
+    k12:"",k13:0,k14:"",k15:""
   }
 
 };
 document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
-  let actualPage = 11;
+  let actualPage = 12;
   let stay_or_leave_page = 0;//1 leave 0 stay
   if(actualPage == 1){
     let date = document.getElementById("date").value;
@@ -346,6 +350,38 @@ document.getElementById("next").addEventListener("click",()=>{
     survey.section_j.j10 = parseInt(j10);
     survey.section_j.j11 = j11;
     stay_or_leave_page = 1;
+  }else if(actualPage == 12){
+    let k1 = document.getElementById("k1").value;
+    let k2 = document.getElementById("k2").value;
+    let k3 = document.getElementById("k3").value;
+    let k4 = document.getElementById("k4").value;
+    let k5 = document.getElementById("k5").value;
+    let k6 = document.getElementById("k6").value;
+    let k7 = document.getElementById("k7").value;
+    let k8 = document.getElementById("k8").value;
+    let k9 = document.getElementById("k9").value;
+    let k10 = document.getElementById("k10").value;
+    let k11 = document.getElementById("k11").value;
+    let k12 = document.getElementById("k12").value;
+    let k13 = document.getElementById("k13").value;
+    let k14 = document.getElementById("k14").value;
+    let k15 = document.getElementById("k15").value;
+    survey.section_k.k1 = k1;
+    survey.section_k.k2 = k2;
+    survey.section_k.k3 = k3;
+    survey.section_k.k4 = k4;
+    survey.section_k.k5 = k5;
+    survey.section_k.k6 = k6;
+    survey.section_k.k7 = k7;
+    survey.section_k.k8 = k8;
+    survey.section_k.k9 = k9;
+    survey.section_k.k10 = k10;
+    survey.section_k.k11 = k11;
+    survey.section_k.k12 = k12;
+    survey.section_k.k13 = k13;
+    survey.section_k.k14 = k14;
+    survey.section_k.k15 = k15;
+    console.log(survey);
   }
 },false);
 //Add people on the family list
@@ -377,6 +413,8 @@ document.getElementById("b_submit").addEventListener('click',()=>{
         option3.text = b1;
         let option4 = document.createElement("option");
         option4.text = b1;
+        let option5 = document.createElement("option");
+        option5.text = b1;
         if(parseInt(b3)>=10){
           document.getElementById("c0").add(option1);
         }
@@ -387,6 +425,7 @@ document.getElementById("b_submit").addEventListener('click',()=>{
           document.getElementById("h2").add(option4);
         }
           document.getElementById("d0").add(option2);
+          document.getElementById("k3").add(option5);
 
     //We clear value
     document.getElementById("b1").value ="";
@@ -1069,6 +1108,72 @@ document.getElementById("j6").addEventListener("change",(e)=>{
 document.getElementById("j9").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){
     addNewSelectOption(document.getElementById("j9"));
+  }
+},false);
+document.getElementById("k1").addEventListener("change",(e)=>{
+  if(e.target.value == "Non"){
+    document.getElementById("k2").style.visibility = "hidden";
+    document.getElementById("k3").style.visibility = "hidden";
+    document.getElementById("k4").style.visibility = "hidden";
+    document.getElementById("k5").style.visibility = "hidden";
+    document.getElementById("k6").style.visibility = "hidden";
+    document.getElementById("k7").style.visibility = "hidden";
+    document.getElementById("k8").style.visibility = "hidden";
+    document.getElementById("k9").style.visibility = "hidden";
+    document.getElementById("k10").style.visibility = "hidden";
+    document.getElementById("k11").style.visibility = "hidden";
+    document.getElementById("k12").style.visibility = "hidden";
+    document.getElementById("k13").style.visibility = "hidden";
+    document.getElementById("k14").style.visibility = "hidden";
+    document.getElementById("k15").style.visibility = "hidden";
+  }else{
+    document.getElementById("k2").style.visibility = "visible";
+    document.getElementById("k3").style.visibility = "visible";
+    document.getElementById("k4").style.visibility = "visible";
+    document.getElementById("k5").style.visibility = "visible";
+    document.getElementById("k6").style.visibility = "visible";
+    document.getElementById("k7").style.visibility = "visible";
+    document.getElementById("k8").style.visibility = "visible";
+    document.getElementById("k9").style.visibility = "visible";
+    document.getElementById("k10").style.visibility = "visible";
+    document.getElementById("k11").style.visibility = "visible";
+    document.getElementById("k12").style.visibility = "visible";
+    document.getElementById("k13").style.visibility = "visible";
+    document.getElementById("k14").style.visibility = "visible";
+    document.getElementById("k15").style.visibility = "visible";
+  }
+},false);
+document.getElementById("k2").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("k2"));
+  }
+},false);
+document.getElementById("k12").addEventListener("change",(e)=>{
+  if(e.target.value == "Non"){
+    document.getElementById("k13").style.visibility = "hidden";
+    document.getElementById("k14").style.visibility = "hidden";
+    document.getElementById("k15").style.visibility = "hidden";
+  }else{
+    document.getElementById("k13").style.visibility = "visible";
+    document.getElementById("k14").style.visibility = "visible";
+    document.getElementById("k15").style.visibility = "visible";
+  }
+},false);
+document.getElementById("k6").addEventListener("change",(e)=>{
+  if(e.target.value == "Non"){
+    document.getElementById("k7").style.visibility = "hidden";
+  }else{
+    document.getElementById("k7").style.visibility = "visible";
+  }
+},false);
+document.getElementById("k14").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("k14"));
+  }
+},false);
+document.getElementById("k15").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("k15"));
   }
 },false);
 //

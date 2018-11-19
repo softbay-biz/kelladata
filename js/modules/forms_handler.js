@@ -16,63 +16,21 @@ let survey = {
     f12:{}
   },
   section_g:{
-    g6a:{
-      g6a1:"",
-      g6a2:"",
-      g6a3:"",
-      g6a4:"",
-      g6a5:"",
-      g6a6:"",
-      g6a7:"",
-      g6a8:"",
-      g6a9:""
+    g6a:{g6a1:"",g6a2:"",g6a3:"",g6a4:"",g6a5:"",g6a6:"",g6a7:"",g6a8:"",g6a9:""
     },
-    g3a:{
-      g3a1:"",
-      g3a2:"",
+    g3a:{g3a1:"",g3a2:"",
     }
   },
-  section_h:{
-    h1:[],
-    h2:[],
-    h3:[],
-    h4:[],
-    h5:[],
-    h6:[],
-    h7:[],
-    h8:[]
+  section_h:{h1:[],h2:[],h3:[],h4:[],h5:[],h6:[],h7:[],h8:[]
   },
   section_i:{
-      i1:{
-          i11:0,
-          i12:0,
-          i13:0,
-          i14:0,
-          i15:0,
-          i16:0
+      i1:{i11:0,i12:0,i13:0,i14:0,i15:0,i16:0
         },
-      i2:{
-          i21:0,
-          i22:0,
-          i23:0,
-          i24:0,
-          i25:0,
-          i26:0
+      i2:{i21:0,i22:0,i23:0,i24:0,i25:0,i26:0
         },
-        i3:{
-            i31:0,
-            i32:0,
-            i33:0,
-            i34:0,
-            i35:0
+        i3:{i31:0,i32:0,i33:0,i34:0,i35:0
           },
-          i4:{
-              i41:0,
-              i42:0,
-              i43:0,
-              i44:0,
-              i45:0,
-              i46:0
+          i4:{i41:0,i42:0,i43:0,i44:0,i45:0,i46:0
             }
   },
   section_j:{
@@ -100,12 +58,65 @@ let survey = {
   section_k:{
     k1:"",k2:"",k3:"",k4:0,k5:0,k6:"",k7:0,k8:0,k9:0,k10:0,k11:0,
     k12:"",k13:0,k14:"",k15:""
+  },
+  section_l:{
+    l1:"",
+    l2:{
+      l201:{payer:-1,venir_du_champ:-1},
+      l202:{payer:-1,venir_du_champ:-1},
+      l203:{payer:-1,venir_du_champ:-1},
+      l204:{payer:-1,venir_du_champ:-1},
+      l205:{payer:-1,venir_du_champ:-1},
+      l206:{payer:-1,venir_du_champ:-1},
+      l207:{payer:-1,venir_du_champ:-1},
+      l208:{payer:-1,venir_du_champ:-1},
+      l209:{payer:-1,venir_du_champ:-1},
+      l210:{payer:-1,venir_du_champ:-1},
+      l211:{payer:-1,venir_du_champ:-1},
+      l212:{payer:-1,venir_du_champ:-1},
+      l213:{payer:-1,venir_du_champ:-1},
+      l214:{payer:-1,venir_du_champ:-1},
+      l215:{payer:-1,venir_du_champ:-1},
+    },
+    l3:{
+      l301:{recu:-1,consomme:-1},
+      l302:{recu:-1,consomme:-1},
+      l303:{recu:-1,consomme:-1},
+      l304:{recu:-1,consomme:-1},
+      l305:{recu:-1,consomme:-1},
+      l306:{recu:-1,consomme:-1},
+      l307:{recu:-1,consomme:-1},
+      l308:{recu:-1,consomme:-1},
+      l309:{recu:-1,consomme:-1},
+      l310:{recu:-1,consomme:-1},
+      l311:{recu:-1,consomme:-1},
+      l312:{recu:-1,consomme:-1},
+      l313:{recu:-1,consomme:-1},
+      l314:{recu:-1,consomme:-1},
+      l315:{recu:-1,consomme:-1},
+    },
+    l4:0
+  },
+  section_o:{
+    o1:"",
+    o2:{
+      o201:{payer:-1},o202:{payer:-1},o203:{payer:-1},o204:{payer:-1},
+      o205:{payer:-1},o206:{payer:-1},o207:{payer:-1},o208:{payer:-1}
+    },
+    o3:"",
+    o4:{
+      o401:{payer:-1},o402:{payer:-1},o403:{payer:-1},o404:{payer:-1},
+      o405:{payer:-1},o406:{payer:-1},o407:{payer:-1},o408:{payer:-1},
+      o409:{payer:-1}
+    },
+    o5:-1,
+    o6:""
   }
 
 };
 document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
-  let actualPage = 12;
+  let actualPage = 1;
   let stay_or_leave_page = 0;//1 leave 0 stay
   if(actualPage == 1){
     let date = document.getElementById("date").value;
@@ -381,6 +392,20 @@ document.getElementById("next").addEventListener("click",()=>{
     survey.section_k.k13 = k13;
     survey.section_k.k14 = k14;
     survey.section_k.k15 = k15;
+  }else if(actualPage == 13){
+    let l1 = document.getElementById("l1").value;
+    let l4 = document.getElementById("l4").value;
+    survey.section_l.l1 = l1;
+    survey.section_l.l4 = l4;
+  }else if(actualPage == 14){
+    let o1 = document.getElementById("o1").value;
+    let o3 = document.getElementById("o3").value;
+    let o5 = document.getElementById("o5").value;
+    let o6 = document.getElementById("o6").value;
+    survey.section_o.o1 = o1;
+    survey.section_o.o3 = o3;
+    survey.section_o.o5 = o5;
+    survey.section_o.o6 = o6;
     console.log(survey);
   }
 },false);
@@ -1081,6 +1106,116 @@ document.getElementById("j1").addEventListener("change",(e)=>{
 
   }
 },false);
+document.getElementById("l2").addEventListener("change",(e)=>{
+  let payer= parseInt(prompt("Entrez la somme:"));
+  let venir_du_champ= parseInt(prompt("Si le produit du ménage vient du champ, inscrire 1 si le produit n’a pas été acheté, inscrire 0):"));
+  payer = isNaN(payer)?0:payer;
+  venir_du_champ = isNaN(venir_du_champ)?0:venir_du_champ;
+  if(e.target.value !== ""){
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "l201"){
+      survey.section_l.l2.l201.payer = payer;
+      survey.section_l.l2.l201.venir_du_champ = venir_du_champ;
+    }else if(option === "l202"){
+      survey.section_l.l2.l202.payer = payer;
+      survey.section_l.l2.l202.venir_du_champ = venir_du_champ;
+    }else if(option === "l203"){
+      survey.section_l.l2.l203.payer = payer;
+      survey.section_l.l2.l203.venir_du_champ = venir_du_champ;
+    }else if(option === "l204"){
+      survey.section_l.l2.l204.payer = payer;
+      survey.section_l.l2.l204.venir_du_champ = venir_du_champ;
+    }else if(option === "l205"){
+      survey.section_l.l2.l205.payer = payer;
+      survey.section_l.l2.l205.venir_du_champ = venir_du_champ;
+    }else if(option === "l206"){
+      survey.section_l.l2.l206.payer = payer;
+      survey.section_l.l2.l206.venir_du_champ = venir_du_champ;
+    }else if(option === "l207"){
+      survey.section_l.l2.l207.payer = payer;
+      survey.section_l.l2.l207.venir_du_champ = venir_du_champ;
+    }else if(option === "l208"){
+      survey.section_l.l2.l208.payer = payer;
+      survey.section_l.l2.l208.venir_du_champ = venir_du_champ;
+    }else if(option === "l209"){
+      survey.section_l.l2.l209.payer = payer;
+      survey.section_l.l2.l209.venir_du_champ = venir_du_champ;
+    }else if(option === "l210"){
+      survey.section_l.l2.l210.payer = payer;
+      survey.section_l.l2.l210.venir_du_champ = venir_du_champ;
+    }else if(option === "l211"){
+      survey.section_l.l2.l211.payer = payer;
+      survey.section_l.l2.l211.venir_du_champ = venir_du_champ;
+    }else if(option === "l212"){
+      survey.section_l.l2.l212.payer = payer;
+      survey.section_l.l2.l212.venir_du_champ = venir_du_champ;
+    }else if(option === "l213"){
+      survey.section_l.l2.l213.payer = payer;
+      survey.section_l.l2.l213.venir_du_champ = venir_du_champ;
+    }else if(option === "l214"){
+      survey.section_l.l2.l214.payer = payer;
+      survey.section_l.l2.l214.venir_du_champ = venir_du_champ;
+    }else if(option === "l215"){
+      survey.section_l.l2.l215.payer = payer;
+      survey.section_l.l2.l215.venir_du_champ = venir_du_champ;
+    }
+  }
+},false);
+document.getElementById("l3").addEventListener("change",(e)=>{
+  let recu= parseInt(prompt("Entrez 1 si recu ou 2 sinon:"));
+  let consomme= parseInt(prompt("Entrez 1 si consommés ou 2 sinon:"));
+  recu = isNaN(recu)?0:recu;
+  consomme = isNaN(consomme)?0:consomme;
+  if(e.target.value !== ""){
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "l301"){
+      survey.section_l.l3.l301.recu = recu;
+      survey.section_l.l3.l301.consomme = consomme;
+    }else if(option === "l302"){
+      survey.section_l.l3.l302.recu = recu;
+      survey.section_l.l3.l302.consomme = consomme;
+    }else if(option === "l303"){
+      survey.section_l.l3.l303.recu = recu;
+      survey.section_l.l3.l303.consomme = consomme;
+    }else if(option === "l304"){
+      survey.section_l.l3.l304.recu = recu;
+      survey.section_l.l3.l304.consomme = consomme;
+    }else if(option === "l305"){
+      survey.section_l.l3.l305.recu = recu;
+      survey.section_l.l3.l305.consomme = consomme;
+    }else if(option === "l306"){
+      survey.section_l.l3.l306.recu = recu;
+      survey.section_l.l3.l306.consomme = consomme;
+    }else if(option === "l307"){
+      survey.section_l.l3.l307.recu = recu;
+      survey.section_l.l3.l307.consomme = consomme;
+    }else if(option === "l308"){
+      survey.section_l.l3.l308.recu = recu;
+      survey.section_l.l3.l308.consomme = consomme;
+    }else if(option === "l309"){
+      survey.section_l.l3.l309.recu = recu;
+      survey.section_l.l3.l309.consomme = consomme;
+    }else if(option === "l310"){
+      survey.section_l.l3.l310.recu = recu;
+      survey.section_l.l3.l310.consomme = consomme;
+    }else if(option === "l311"){
+      survey.section_l.l3.l311.recu = recu;
+      survey.section_l.l3.l311.consomme = consomme;
+    }else if(option === "l312"){
+      survey.section_l.l3.l312.recu = recu;
+      survey.section_l.l3.l312.consomme = consomme;
+    }else if(option === "l313"){
+      survey.section_l.l3.l313.recu = recu;
+      survey.section_l.l3.l313.consomme = consomme;
+    }else if(option === "l314"){
+      survey.section_l.l3.l314.recu = recu;
+      survey.section_l.l3.l314.consomme = consomme;
+    }else if(option === "l315"){
+      survey.section_l.l3.l315.recu = recu;
+      survey.section_l.l3.l315.consomme = consomme;
+    }
+  }
+},false);
 document.getElementById("j5").addEventListener("change",(e)=>{
   if(e.target.value == "Oui"){
     document.getElementById("j6").style.visibility = "hidden";
@@ -1093,6 +1228,13 @@ document.getElementById("j7").addEventListener("change",(e)=>{
     document.getElementById("j8").style.visibility = "hidden";
   }else{
     document.getElementById("j8").style.visibility = "visible";
+  }
+},false);
+document.getElementById("l1").addEventListener("change",(e)=>{
+  if(e.target.value == "Non"){
+    document.getElementById("l2").style.visibility = "hidden";
+  }else{
+    document.getElementById("l2").style.visibility = "visible";
   }
 },false);
 document.getElementById("j2").addEventListener("change",(e)=>{
@@ -1166,6 +1308,15 @@ document.getElementById("k6").addEventListener("change",(e)=>{
     document.getElementById("k7").style.visibility = "visible";
   }
 },false);
+document.getElementById("o1").addEventListener("change",(e)=>{
+  if(e.target.value == "Non"){
+    document.getElementById("o2").style.visibility = "hidden";
+    document.getElementById("o3").style.visibility = "hidden";
+  }else{
+    document.getElementById("o2").style.visibility = "visible";
+    document.getElementById("o3").style.visibility = "visible";
+  }
+},false);
 document.getElementById("k14").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){
     addNewSelectOption(document.getElementById("k14"));
@@ -1175,6 +1326,56 @@ document.getElementById("k15").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){
     addNewSelectOption(document.getElementById("k15"));
   }
+},false);
+document.getElementById("o2").addEventListener("change",(e)=>{
+  if(e.target.value !== ""){
+    let prix= parseInt(prompt("Entrez le prix:"));
+    prix = isNaN(prix)?-1:prix;
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "o201"){
+      survey.section_o.o2.o201.payer = prix;
+    }else if(option === "o202"){
+      survey.section_o.o2.o202.payer = prix;
+    }else if(option === "o203"){
+      survey.section_o.o2.o203.payer = prix;
+    }else if(option === "o204"){
+      survey.section_o.o2.o204.payer = prix;
+    }else if(option === "o205"){
+      survey.section_o.o2.o205.payer = prix;
+    }else if(option === "o206"){
+      survey.section_o.o2.o206.payer = prix;
+    }else if(option === "o207"){
+      survey.section_o.o2.o207.payer = prix;
+    }else if(option === "o208"){
+      survey.section_o.o2.o208.payer = prix;
+    }
+  }console.log(survey);
+},false);
+document.getElementById("o4").addEventListener("change",(e)=>{
+  if(e.target.value !== ""){
+    let prix= parseInt(prompt("Entrez le prix:"));
+    prix = isNaN(prix)?-1:prix;
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "o401"){
+      survey.section_o.o4.o401.payer = prix;
+    }else if(option === "o402"){
+      survey.section_o.o4.o402.payer = prix;
+    }else if(option === "o403"){
+      survey.section_o.o4.o403.payer = prix;
+    }else if(option === "o404"){
+      survey.section_o.o4.o404.payer = prix;
+    }else if(option === "o405"){
+      survey.section_o.o4.o405.payer = prix;
+    }else if(option === "o406"){
+      survey.section_o.o4.o406.payer = prix;
+    }else if(option === "o407"){
+      survey.section_o.o4.o407.payer = prix;
+    }else if(option === "o408"){
+      survey.section_o.o4.o408.payer = prix;
+    }else if(option === "o409"){
+      survey.section_o.o4.o409.payer = prix;
+    }
+  }console.log(survey);
 },false);
 //
 function addNewSelectOption(select){

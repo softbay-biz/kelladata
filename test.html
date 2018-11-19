@@ -71,7 +71,7 @@
       </ul>
     </nav>
     <div id="content-forms-elements">
-      <div class="q_form" id=1>
+      <div class="q_form" style="display:block;" id=1>
         <h2>SECTION A : INFORMATION SUR QUESTIONNAIRE</h2>
         <div class="content-forms-small-left" >
               <div class="field">
@@ -1654,7 +1654,7 @@ Nb : Choisir la raison principale)</label>
           </div>
         </div>
       </div>
-      <div class="q_form" style="display:block;" id=12>
+      <div class="q_form" id=12>
         <h2>MODULE K : ENTREPRISES ET ACTIVITES NON AGRICOLES</h2>
         <div class="content-forms-small-left-third">
           <div class="field">
@@ -1809,7 +1809,7 @@ Nb : Choisir la raison principale)</label>
           <div class="field">
             <label class="label">Avez-vous fait les dépenses alimentaires du ménage au cours des 15 derniers mois ?</label>
             <div class="control">
-              <select>
+              <select id="l1">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1821,46 +1821,46 @@ Nb : Choisir la raison principale)</label>
 des 15 derniers jours ?
 (Nb : Si le produit du ménage vient du champ, inscrire 1, par contre si le produit n’a pas été acheté, inscrire 0)</label>
             <div class="control">
-              <select>
+              <select id="l2">
                 <option></option>
-                <option>Macabo</option>
-                <option>Manioc</option>
-                <option>Igname</option>
-                <option>Patate</option>
-                <option>Taro</option>
-                <option>Plantains</option>
-                <option>Poissons</option>
-                <option>Viandes</option>
-                <option>Gombo</option>
-                <option>Arachides</option>
-                <option>Mais</option>
-                <option>Haricots</option>
-                <option>Pistache</option>
-                <option>Légumes</option>
-                <option>Autres</option>
+                <option id="l201">Macabo</option>
+                <option id="l202">Manioc</option>
+                <option id="l203">Igname</option>
+                <option id="l204">Patate</option>
+                <option id="l205">Taro</option>
+                <option id="l206">Plantains</option>
+                <option id="l207">Poissons</option>
+                <option id="l208">Viandes</option>
+                <option id="l209">Gombo</option>
+                <option id="l210">Arachides</option>
+                <option id="l211">Mais</option>
+                <option id="l212">Haricots</option>
+                <option id="l213">Pistache</option>
+                <option id="l214">Légumes</option>
+                <option id="l215">Autres</option>
               </select>
             </div>
           </div>
           <div class="field">
             <label class="label">Au cours des 15 derniers jours, quels sont les cadeaux alimentaires que vous avez reçus et consommés ?</label>
             <div class="control">
-              <select>
+              <select id="l3">
                 <option></option>
-                <option>Macabo</option>
-                <option>Manioc</option>
-                <option>Igname</option>
-                <option>Patate</option>
-                <option>Taro</option>
-                <option>Plantains</option>
-                <option>Poissons</option>
-                <option>Viandes</option>
-                <option>Gombo</option>
-                <option>Arachides</option>
-                <option>Mais</option>
-                <option>Haricots</option>
-                <option>Pistache</option>
-                <option>Légumes</option>
-                <option>Autres</option>
+                <option id="l301">Macabo</option>
+                <option id="l302">Manioc</option>
+                <option id="l303">Igname</option>
+                <option id="l304">Patate</option>
+                <option id="l305">Taro</option>
+                <option id="l306">Plantains</option>
+                <option id="l307">Poissons</option>
+                <option id="l308">Viandes</option>
+                <option id="l309">Gombo</option>
+                <option id="l310">Arachides</option>
+                <option id="l311">Mais</option>
+                <option id="l312">Haricots</option>
+                <option id="l313">Pistache</option>
+                <option id="l314">Légumes</option>
+                <option id="l315">Autres</option>
               </select>
             </div>
           </div>
@@ -1868,7 +1868,7 @@ des 15 derniers jours ?
             <label class="label">Ligne pour ménage ne maitrisant pas ses dépenses alimentaires au cours des 15 derniers jours (inscrire 140 à la colonne code)
             </label>
             <div class="control">
-              <input class="input" type="number" placeholder="Text input">
+              <input id="l4" class="input" type="number" placeholder="Text input">
             </div>
           </div>
         </div>
@@ -1879,7 +1879,7 @@ des 15 derniers jours ?
           <div class="field">
             <label class="label">Avez-vous dépensé de l’argent au cours des 30 derniers jours autre que l’alimentation ?</label>
             <div class="control">
-              <select>
+              <select id="o1">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1889,23 +1889,23 @@ des 15 derniers jours ?
           <div class="field">
             <label class="label">Quelles sont les dépenses non alimentaires du ménage au cours des 30 derniers jours ?</label>
             <div class="control">
-              <select>
+              <select id="o2">
                 <option></option>
-                <option>Transport</option>
-                <option>Scolarisation</option>
-                <option>Vestimentaire</option>
-                <option>Factures (Eau, électricité)</option>
-                <option>Outils ménagers</option>
-                <option>Intrant/Matériels agricoles</option>
-                <option>Santé</option>
-                <option>Autres</option>
+                <option id="o201">Transport</option>
+                <option id="o202">Scolarisation</option>
+                <option id="o203">Vestimentaire</option>
+                <option id="o204">Factures (Eau, électricité)</option>
+                <option id="o205">Outils ménagers</option>
+                <option id="o206">Intrant/Matériels agricoles</option>
+                <option id="o207">Santé</option>
+                <option id="o208">Autres</option>
               </select>
             </div>
           </div>
           <div class="field">
             <label class="label">Est-ce que ces dépenses ont évolué ?</label>
             <div class="control">
-              <select>
+              <select id="o3">
                 <option></option>
                 <option>Oui</option>
                 <option>Non</option>
@@ -1915,17 +1915,17 @@ des 15 derniers jours ?
           <div class="field">
             <label class="label">Avez-vous utilisé les éléments ci-après au cours des 30 derniers jours (autoconsommation) ?</label>
             <div class="control">
-              <select>
+              <select id="o4">
                 <option></option>
-                <option>Bois</option>
-                <option>Charbon</option>
-                <option>Loyer</option>
-                <option>Eau</option>
-                <option>Electricité</option>
-                <option>Gaz</option>
-                <option>Pétrole</option>
-                <option>Achat de piles</option>
-                <option>Autres</option>
+                <option id="o401">Bois</option>
+                <option id="o402">Charbon</option>
+                <option id="o403">Loyer</option>
+                <option id="o404">Eau</option>
+                <option id="o405">Electricité</option>
+                <option id="o406">Gaz</option>
+                <option id="o407">Pétrole</option>
+                <option id="o408">Achat de piles</option>
+                <option id="o409">Autres</option>
               </select>
             </div>
           </div>
@@ -1933,7 +1933,7 @@ des 15 derniers jours ?
             <label class="label">Combien envoyez-vous hors du ménage au cours des trente derniers jours ?
             </label>
             <div class="control">
-              <input class="input" type="number" placeholder="Text input">
+              <input id="o5" class="input" type="number" placeholder="Text input">
             </div>
           </div>
         </div>
@@ -1942,7 +1942,7 @@ des 15 derniers jours ?
             <label class="label">Heure de fin de l’entretien
             </label>
             <div class="control">
-              <input class="input" type="time" placeholder="Text input">
+              <input id="o6" class="input" type="time" placeholder="Text input">
             </div>
           </div>
         </div>

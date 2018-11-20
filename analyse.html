@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Kelladata</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="theme-color" id="statusBar" content="#212121">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="author" content="Kelladata">
+    <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, initial-scale=1, maximum-scale=3 user-scalable=no">
+    <!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/againstie.css" />
+    <![endif]-->
+    <link rel="icon" type="image/png" href="img/favicon.jpg" />
+    <link rel="stylesheet" href="css/sharedstyles.css" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/bulma.css" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/bulma.min.css" media="all" onload="if(media!='all')media='all'">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+  <nav class="panel">
+  <p class="panel-heading">
+    Dashboard
+  </p>
+  <a class="panel-block is-active">
+    <select id="section_list">
+      <option>Sections</option>
+      <option id="section_a">Section A</option>
+      <option id="section_b">Section B</option>
+      <option id="section_c">Section C</option>
+      <option id="section_d">Section D</option>
+      <option id="section_e">Section E</option>
+      <option id="section_f">Section F</option>
+      <option id="section_g">Section G</option>
+      <option id="section_h">Section H</option>
+      <option id="section_i">Section I</option>
+      <option id="section_j">Section J</option>
+      <option id="section_k">Section K</option>
+      <option id="section_l">Section L</option>
+      <option id="section_o">Section L</option>
+      <option>Section O</option>
+    </select>
+    <select id="variable_list">
+      <option>Varaibles</option>
+    </select>
+  </a>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Filtre par match
+  </a>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Filtre approfondie
+  </a>
+  <div class="panel-block">
+    <button id="execute" class="button is-link is-outlined is-fullwidth">
+      Executer la commande
+    </button>
+  </div>
+</nav>
+<div id="diplay_graph">
+</div>
+</div>
+<script type="module" src="js/modules/analyse.js"></script>
+</body>
+<html>

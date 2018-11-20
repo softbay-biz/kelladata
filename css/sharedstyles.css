@@ -166,6 +166,27 @@ footer span:hover{
 	margin: auto;
 	overflow:hidden;
 }
+#container2{
+	padding-bottom:1%;
+	display: flex;
+	flex-wrap: wrap;
+	width:100%;
+  min-height:500px;
+	margin: auto;
+	overflow:hidden;
+}
+.panel select{
+  display: block !important;
+  font-size: 1.1em;
+}
+#diplay_graph{
+  position:relative;
+  loat:right;
+  width:80%;
+  height:100%;
+  min-height:600px;
+  overflow:auto;
+}
 .register{
 	padding:2%;
 	width:40%;

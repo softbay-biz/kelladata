@@ -1,11 +1,13 @@
-document.getElementById("navigation").addEventListener('click',(e)=>{
+import tab_temp_survey from './../modules/temp_survey.js';
+import survey from './../helpers/form_modele.js';
 
-  const pagesNumber = 1;
+document.getElementById("navigation").addEventListener('click',(e)=>{
+  const pagesNumber = 14;
   let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
   const pagesArray = document.getElementsByClassName('pagination-link');
   const survey = document.getElementById("content-forms-elements");
   let current_form = document.getElementById(actualPage);
-  console.log(current_form);
+
   if(e.target.id === "next"){
     if(actualPage<pagesNumber){
       pagesArray[actualPage-1].classList.remove("is-current");
@@ -20,5 +22,12 @@ document.getElementById("navigation").addEventListener('click',(e)=>{
       current_form.style.display = "none";
       document.getElementById((parseInt(actualPage)-1)).style.display = "block";
     }
+  }else if(e.target.id === "close"){
+    push_survey_to_temp(survey);
+    console.log(tab_temp_survey);
   }
 },false);
+
+function push_survey_to_temp(s){
+  tab_temp_survey.push(s);
+}

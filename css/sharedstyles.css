@@ -181,10 +181,9 @@ footer span:hover{
 }
 #diplay_graph{
   position:relative;
-  loat:right;
+  float:right;
   width:80%;
-  height:100%;
-  min-height:600px;
+  height:600px;
   overflow:auto;
 }
 .register{

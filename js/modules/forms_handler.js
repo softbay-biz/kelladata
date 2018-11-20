@@ -1,4 +1,5 @@
 import survey from './../helpers/form_modele.js';
+import tab_temp_survey from './../modules/temp_survey.js';
 
 document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;

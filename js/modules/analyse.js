@@ -1,4 +1,4 @@
-import survey from './../helpers/form_modele.js';
+import survey from './../modules/form_modele.js';
 
 document.addEventListener("DOMContentLoaded",()=>{
   document.getElementById("execute").addEventListener("click",()=>{

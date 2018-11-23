@@ -183,7 +183,9 @@ footer span:hover{
   position:relative;
   float:right;
   width:80%;
-  height:600px;
+  margin-top:-17%;
+  margin-left:17%;
+  height:550px;
   overflow:auto;
 }
 .register{

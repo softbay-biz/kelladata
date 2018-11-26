@@ -430,6 +430,7 @@ document.getElementById("c2").addEventListener("change",(e)=>{
     document.getElementById("c6").style.visibility = "hidden";
     document.getElementById("c7").style.visibility = "hidden";
     document.getElementById("c8").style.visibility = "hidden";
+    document.getElementById("c9").style.visibility = "visible";
   }else{
     document.getElementById("c3").style.visibility = "visible";
     document.getElementById("c4").style.visibility = "visible";
@@ -437,6 +438,7 @@ document.getElementById("c2").addEventListener("change",(e)=>{
     document.getElementById("c6").style.visibility = "visible";
     document.getElementById("c7").style.visibility = "visible";
     document.getElementById("c8").style.visibility = "visible";
+    document.getElementById("c9").style.visibility = "hidden";
   }
 },false);
 document.getElementById("c5").addEventListener("change",(e)=>{
@@ -753,7 +755,7 @@ document.getElementById("f17").addEventListener("change",(e)=>{
   }
 },false);
 document.getElementById("f18").addEventListener("change",(e)=>{
-  if(e.target.value === "Non"){
+  if(e.target.value === "Oui"){
     document.getElementById("f19").style.visibility = "hidden";
   }else{
     document.getElementById("f19").style.visibility = "visible";
@@ -1236,7 +1238,7 @@ document.getElementById("o2").addEventListener("change",(e)=>{
     }else if(option === "o208"){
       survey.section_o.o2.o208.payer = prix;
     }
-  }console.log(survey);
+  }
 },false);
 document.getElementById("o4").addEventListener("change",(e)=>{
   if(e.target.value !== ""){
@@ -1262,7 +1264,7 @@ document.getElementById("o4").addEventListener("change",(e)=>{
     }else if(option === "o409"){
       survey.section_o.o4.o409.payer = prix;
     }
-  }console.log(survey);
+  }
 },false);
 //
 function addNewSelectOption(select){

@@ -83,6 +83,9 @@ td {
   display:none;
 }
 .form-template{}
+#variable_list{
+  width:100px;
+}
 #content-forms-elements{
   position:relative;
   width:100%;
@@ -213,4 +216,8 @@ footer span:hover{
   background-color:var(--color_1);
   color:white !important;
   border:none !important;
+}
+.small-chart{
+  width:900px !important;
+  height:500px !important;
 }

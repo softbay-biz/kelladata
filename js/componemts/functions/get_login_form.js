@@ -1,4 +1,7 @@
 import {sendData} from './../../helpers/sendData.js';
+import removeHeader from './../../helpers/removeHeader.js';
+import states from './../../states/states.js';
+import anthropologue from './../../modules/anthropologue.js';
 
 function get_login_form(){
 
@@ -16,7 +19,10 @@ function get_login_form(){
 			let register_promise = sendData(form);
 			 return register_promise.then((response)=>{
 				 if(response.error === false){
-					 alert('Connexion avec l adress : '+response.message.email);
+					 states.removeHeader === true?"":removeHeader(states);
+					 if(1){
+						 document.getElementById('container').innerHTML = anthropologue;
+					 }
 				 }else{
 					 alert(response.message);
 				 }

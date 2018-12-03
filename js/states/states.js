@@ -1,4 +1,5 @@
 let states = {
-	removeHomePage : false
+	removeHomePage : false,
+	removeHeader : false,
 };
 export default states;

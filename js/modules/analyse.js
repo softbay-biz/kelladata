@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     ["Parle Bassa'a","Parle Français","Parle Anglais","Autre langue","Primaire","Secondaire","Université","Formation",
                 "NSP","Ont fréquentés","Fréquentent actuellement","Formation professionnelle/technique au secondaire","Formation générale",
                 "Formation pour enseignant : ENIET, ENIEG","Université/ Formation professionnelle universitaire","Manque de performance scolaire",
-              "Etat de santé"]
+              "Etat de santé"],
+              ["A un enfant d’un an","A eu des soins prénatals avant l’accouchement","Handicap Physique","Handicap Mental",
+            "Maladies/blessures comme obstacle au travail et à l’école durant les 15 derniers jours","D5","D6","D7"]
   ];
   document.getElementById("execute").addEventListener("click",()=>{
     let section = section_list.options[section_list.selectedIndex].id;
@@ -42,16 +44,14 @@ function addVariablesToList(section,ordonnees,variable_list){
       //alert(variable_list.options[variable_list.selectedIndex].id);
     }else{
       let tabVal = [5,6];
-      addGraphs("graph_a",tabVal,[1,3],"bar","");
+      addGraphs("graph_a",tabVal,ordonnees[0],"bar","");
     }
   }else if(section === "section_b"){
         let tabVal = [5,6,62,14,56,2,3,9,7,69,36,21,45,23,25];
         addGraphs("graph_b",tabVal,ordonnees[1],"bar","");
   }else if(section === "section_c"){
       let tabVal = [5,6,62,14,56,2,3,9,7,69,36,21,45,23,25,0,5,3];
-      for(let i=0;i<ordonnees[1].length;i++){
-        addGraphs(i,tabVal,ordonnees[1],"bar",ordonnees[1]);
-      }
+        addTable("graph_c",tabVal,ordonnees[2],"bar","");
   }
   else if(section === "section_d"){
     console.log(Object.keys(survey.section_d));
@@ -90,6 +90,31 @@ function addGraphs(id,x,y,type,label,single=false){
     identifier = "graph"+id;
     chart(identifier,type,x,y,label);
   });
+}
+function addTable(id,x,y,type,label,single=false){
+  let container = document.getElementById("diplay_graph");
+  let table = `<table class="table">
+  <thead>
+      <tr>
+      <th><abbr title="Position">Variables</abbr></th>
+      <th><abbr title="Played">Effectif</abbr></th>
+      <th><abbr title="Won">Pourcentage</abbr></th>
+      </tr>
+      </thead>
+      <tfoot>
+      </tfoot>
+        </thead><tbody>
+  `;
+  for(let i=0;i<y.length;i++){
+      table += `
+    <tr>
+      <td>${y[i]}</td>
+      <td>38</td>
+      <td>23</td>
+    </tr>`;
+  }
+  table += `</tbody></table>`;
+  container.insertAdjacentHTML("beforeend",table);
 }
 function chart(identifier,type,x,y,label){
   let ctx = document.getElementById(identifier).getContext('2d');
@@ -140,6 +165,7 @@ function addOptionsToSelect(select,tab){
   for(let i=0;i<taille;i++){
     let option = document.createElement("option");
     option.text = tab[i];
+    option.id = tab[i];
     select.add(option);
   }
 }

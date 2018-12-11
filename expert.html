@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Kelladata</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="theme-color" id="statusBar" content="#212121">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="author" content="Kelladata">
+    <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, initial-scale=1, maximum-scale=3 user-scalable=no">
+    <!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/againstie.css" />
+    <![endif]-->
+    <link rel="icon" type="image/png" href="img/favicon.jpg" />
+    <link rel="stylesheet" href="css/sharedstyles.css" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/bulma.css" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/bulma.min.css" media="all" onload="if(media!='all')media='all'">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div id="container">
+  <nav class="panel" class="dashboard">
+  <p class="panel-heading">
+    Dashboard
+  </p>
+  <div class="panel-block">
+    <button id="execute" class="button is-link is-fullwidth">
+      + New article
+    </button>
+  </div>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    <img class="icone-li" src="images/book.svg"> Overview
+  </a>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    <img class="icone-li" src="images/download.svg"> Submitted
+  </a>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    <img class="icone-li" src="images/reload.svg"> Analyse stats
+  </a>
+  <nav class="panel">
+    <a class="panel-block">
+      <span class="panel-icon">
+        <i class="fas fa-book" aria-hidden="true"></i>
+      </span>
+      <figure class="image is-128x128">
+  <img src="images/user.png">
+</figure>
+    </a>
+    <div class="panel-block">
+      <button id="execute" class="button is-link is-outlined is-fullwidth">
+        Deconnexion
+      </button>
+    </div>
+  </nav>
+</nav>
+<div class="data-account-display">
+  <div id="article-left-part">
+    <nav class="article-block-header">
+      <center>Articles list</center>
+    </nav>
+        <div id="articles-list">
+              <div class="card">
+                <div class="card-content">
+
+                  <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <br>
+                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                  </div>
+                </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+
+          <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+            <a href="#">#css</a> <a href="#">#responsive</a>
+            <br>
+            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+
+      <div class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+        <a href="#">#css</a> <a href="#">#responsive</a>
+        <br>
+        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      </div>
+    </div>
+</div></div>
+  </div>
+  <div id="article-right-part">
+    <nav class="article-block-header">
+      <center>Text editor</center>
+    </nav>
+      <input class="input" type="text" placeholder="Article title"></input>
+<br/>
+    <div id="summernote"></div>
+    <br/>
+      <button class="button is-primary">Add the article</button>
+  </div>
+</div>
+</div>
+<nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+</nav>
+<script type="module" src="js/modules/analyse.js"></script>
+<script type="module" src="js/vendors/Chart.js"></script>
+<script type="module" src="js/vendors/Chart.bundle.min.js"></script>
+<script type="module" src="js/vendors/Chart.bundle.js"></script>
+<script type="module" src="js/vendors/Chart.min.js"></script>
+<script type="module" src="js/modules/graph.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.js"></script>
+<script>
+      $('#summernote').summernote({
+        placeholder: 'Write article here...',
+        tabsize: 2,
+        height: 100
+      });
+    </script>
+</body>
+<html>

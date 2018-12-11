@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Kelladata</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="theme-color" id="statusBar" content="#212121">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="author" content="Kelladata">
+    <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, initial-scale=1, maximum-scale=3 user-scalable=no">
+    <!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/againstie.css" />
+    <![endif]-->
+    <link rel="icon" type="image/png" href="img/favicon.jpg" />
+    <link rel="stylesheet" href="css/sharedstyles.css" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/bulma.css" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/bulma.min.css" media="all" onload="if(media!='all')media='all'">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div id="container">
+  <nav class="panel dashboard">
+  <p class="panel-heading">
+    Dashboard
+  </p>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    <img class="icone-li" src="images/book.svg"> Overview
+  </a>
+
+  <nav class="panel">
+    <a class="panel-block">
+      <span class="panel-icon">
+        <i class="fas fa-book" aria-hidden="true"></i>
+      </span>
+      <figure class="image is-128x128">
+  <img src="images/user.png">
+</figure>
+    </a>
+    <div class="panel-block">
+      <button id="execute" class="button is-link is-outlined is-fullwidth">
+        Deconnexion
+      </button>
+    </div>
+  </nav>
+</nav>
+<div class="data-account-display">
+          <table class="table">
+          <thead>
+            <tr>
+              <th><abbr title="User">Total User</abbr></th>
+              <th><abbr title="Email">Total Photographs</abbr></th>
+              <th><abbr title="Phone">Total Anthropologues</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a>0</a></td>
+              <td>0</td>
+              <td>0</td>
+        </tr>
+
+          </tbody>
+        </table>
+          <table class="table">
+          <thead>
+            <tr>
+              <th><abbr title="User">User</abbr></th>
+              <th><abbr title="Email">Email</abbr></th>
+              <th><abbr title="Phone">Phone</abbr></th>
+              <th><abbr title="Address">Address</abbr></th>
+              <th><abbr title="Action">Action</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a>Bernard</a>
+              </td>
+              <td>test1@gmailc.com</td>
+              <td>23</td>
+              <td>12</td>
+              <td>
+                  <a class="button is-link">Accept</a>
+                  <a class="button is-danger">Reject</a>
+                  <a class="button is-outlined">Contact</a>
+              </td>
+            </tr>
+            <tr>
+              <td><a>Stephy</a></td>
+              <td>test2@gmailc.com</td>
+              <td>20</td>
+              <td>11</td>
+              <td>
+                <a class="button is-link">Accept</a>
+                <a class="button is-danger">Reject</a>
+                <a class="button is-outlined">Contact</a>
+              </td>
+        </tr>
+
+          </tbody>
+        </table>
+</div>
+</div>
+
+<script type="module" src="js/modules/analyse.js"></script>
+<script type="module" src="js/vendors/Chart.js"></script>
+<script type="module" src="js/vendors/Chart.bundle.min.js"></script>
+<script type="module" src="js/vendors/Chart.bundle.js"></script>
+<script type="module" src="js/vendors/Chart.min.js"></script>
+<script type="module" src="js/modules/graph.js"></script>
+</body>
+<html>

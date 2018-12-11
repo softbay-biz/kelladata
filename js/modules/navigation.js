@@ -23,8 +23,11 @@ document.getElementById("navigation").addEventListener('click',(e)=>{
       document.getElementById((parseInt(actualPage)-1)).style.display = "block";
     }
   }else if(e.target.id === "close"){
-    push_survey_to_temp(survey);
-    console.log(tab_temp_survey);
+    const adapter = new FileSync('db.json')
+    // With lowdb/FileAsync
+    db.read()
+      .then(() => console.log('Content of my_project/db.json is loaded'));
+    console.log(adapter);
   }
 },false);
 

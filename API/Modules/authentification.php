@@ -15,7 +15,7 @@ function authentification($data){
 									  FROM type_account,members
 									  WHERE members.email = ? and
 									        members.password = ? and
-									        type_account.id_type_account = members.account_type									         ');
+									        type_account.id_type_account = members.account_type	and members.activation = 1								         ');
 	        $request->execute([$email,$mdp]);
 			}catch(Exception $e){
 				return json_encode(array('message' => 'Database connection error!','error'=>true));

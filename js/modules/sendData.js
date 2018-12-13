@@ -1,8 +1,8 @@
-function sendData(formDataToSend){return alert("hello");
+function sendData(formDataToSend){
 	let urlToSend = "API/entryPoint.php";
               let xhrSendAnnonce = new XMLHttpRequest();
                   xhrSendAnnonce.addEventListener("loadstart", () =>
-                   {    
+                   {
                    });
                   xhrSendAnnonce.addEventListener("load", () =>
                    {

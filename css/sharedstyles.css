@@ -182,7 +182,7 @@ footer span:hover{
   margin-left: 15%;
 	width:85%;
   height:650px;
-	overflow:hidden;
+	overflow:auto;
 }
 .article-list{
   height:80px !important;
@@ -291,4 +291,8 @@ footer span:hover{
 }
 .card:hover{
   background-color:#e5e5e5;
+}
+.member_elt_list:hover{
+  background-color: #e5e5e5;
+  cursor:pointer;
 }

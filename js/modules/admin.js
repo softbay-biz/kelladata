@@ -36,9 +36,9 @@ const admin = `<nav class="panel dashboard" id="dashboard">
         </thead>
         <tbody>
           <tr>
-            <td><a>0</a></td>
-            <td>0</td>
-            <td>0</td>
+            <td><strong id="total_actif_user"></strong></td>
+            <td><strong id="total_actif_photograph"></strong></td>
+            <td><strong id="total_actif_anthropologue"></strong></td>
       </tr>
 
         </tbody>
@@ -46,40 +46,14 @@ const admin = `<nav class="panel dashboard" id="dashboard">
         <table class="table">
         <thead>
           <tr>
-            <th><abbr title="User">User</abbr></th>
-            <th><abbr title="User">Role</abbr></th>
+            <th><abbr title="User">First name</abbr></th>
+            <th><abbr title="User">Last name</abbr></th>
+            <th><abbr title="Role">Role</abbr></th>
             <th><abbr title="Email">Email</abbr></th>
-            <th><abbr title="Phone">Phone</abbr></th>
-            <th><abbr title="Address">Address</abbr></th>
             <th><abbr title="Action">Action</abbr></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><a>Bernard</a>
-            </td>
-            <td><a>Client</a>
-            </td>
-            <td>test1@gmailc.com</td>
-            <td>23</td>
-            <td>12</td>
-            <td>
-                <a class="button is-link">Accept</a>
-                <a class="button is-danger">Reject</a>
-            </td>
-          </tr>
-          <tr>
-            <td><a>Stephy</a></td>
-            <td><a>Client</a>
-            </td>
-            <td>test2@gmailc.com</td>
-            <td>20</td>
-            <td>11</td>
-            <td>
-              <a class="button is-link">Accept</a>
-              <a class="button is-danger">Reject</a>
-            </td>
-      </tr>
+        <tbody id="admin_members_list">
 
         </tbody>
       </table>

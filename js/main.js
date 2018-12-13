@@ -1,6 +1,7 @@
 import header from './componemts/header.js';
 import bottom from './componemts/bottom.js';
 import home from './modules/home.js';
+import {admin_handler} from './modules/admin_handler.js';
 import register from './modules/register.js';
 import login from './modules/login.js';
 import admin from './modules/admin.js';
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 		switch (atob(atob(localStorage.getItem("role")))) {
 			case "1":
 				document.getElementById('container').innerHTML = admin;
+				admin_handler();							
 				break;
 			case "4":
 				document.getElementById('container').innerHTML = anthropologue;
@@ -38,6 +40,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 function callHomepage(){
 	states.removeHomePage === false;
 	//We load the home page
+	document.getElementById("container").innerHTML = "";
 	document.getElementById("container").insertAdjacentHTML("beforebegin",header);
 	document.getElementById("container").insertAdjacentHTML("afterbegin",home);
 	document.getElementById("container").insertAdjacentHTML("afterend",bottom);

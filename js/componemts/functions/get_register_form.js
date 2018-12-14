@@ -1,4 +1,4 @@
-import login from './../../modules/login.js';
+import home from './../../modules/home.js';
 import {sendData} from './../../helpers/sendData.js';
 
 function get_register_form(){
@@ -31,7 +31,8 @@ function get_register_form(){
 			 return register_promise.then((response)=>{
 				 if(response.error === false){
 					 console.log(response.message);
-					  document.getElementById('container').innerHTML = login;
+					  document.getElementById('container').innerHTML = home;
+						alert("Vous serrez notifier par mail apres l'activation de votre compte par l'administrateur.");
 				 }else{
 					 alert(response.message);
 				 }

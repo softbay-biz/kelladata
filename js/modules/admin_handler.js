@@ -1,5 +1,6 @@
 import {sendData} from './../../js/helpers/sendData.js';
 import {display_members_list} from './../../js/helpers/display_members_list.js';
+import {dashboard_handler} from './../helpers/dashboard_handler.js';
 
 const admin_handler = ()=>{
   let table_list = document.getElementById("admin_members_list");
@@ -8,6 +9,7 @@ const admin_handler = ()=>{
     data:{
     }
   };
+  dashboard_handler(document.getElementById("dashboard"));
   table_list.addEventListener("click",(e)=>{
       if(e.target.id == "admin_action_member"){
         let temp_activation = parseInt(e.target.dataset.activation)==0?1:0;

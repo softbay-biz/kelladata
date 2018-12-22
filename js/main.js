@@ -9,6 +9,8 @@ import admin from './modules/admin.js';
 import {sup_code_editor} from './vendors/sup_code_editor.js';
 import publication from './modules/publication.js';
 import anthropologue from './modules/anthropologue.js';
+import {forms_handler} from './modules/forms_handler.js';
+import {navigation} from './modules/navigation.js';
 import removeHomePage from './helpers/removeHomePage.js';
 import {callHomepage} from './helpers/callHomepage.js';
 import states from './states/states.js';
@@ -29,6 +31,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 				break;
 			case "4":
 				document.getElementById('container').innerHTML = anthropologue;
+				forms_handler();
+				navigation();
 				break;
 			default:
 

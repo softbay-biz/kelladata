@@ -1,7 +1,9 @@
+import states from './../states/states.js';
 import survey from './../helpers/form_modele.js';
 import tab_temp_survey from './../modules/temp_survey.js';
 
-document.getElementById("next").addEventListener("click",()=>{
+const forms_handler = ()=>{
+    document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
   let actualPage = 1;
   let stay_or_leave_page = 0;//1 leave 0 stay
@@ -29,6 +31,7 @@ document.getElementById("next").addEventListener("click",()=>{
           survey.section_a.a7 = a7;
           survey.section_a.a8 = a8;
           stay_or_leave_page = 1;
+          states.contrainte_page = true;
         }
   }else if(actualPage == 2){
     if(survey.section_b.b1.length <1){
@@ -293,7 +296,6 @@ document.getElementById("next").addEventListener("click",()=>{
     survey.section_o.o3 = o3;
     survey.section_o.o5 = o5;
     survey.section_o.o6 = o6;
-    console.log(survey);
   }
 },false);
 //Add people on the family list
@@ -304,9 +306,8 @@ document.getElementById("b_submit").addEventListener('click',()=>{
   let b4 = document.getElementById("b4").value;
   let b5 = document.getElementById("b5").value;
   let b6 = document.getElementById("b6").value;
-  let b7 = document.getElementById("b7").value;
   if(b1 === "" || b2 === "" || b3 === "" || b4 === ""
-  || b5 === "" || b6 === "" || b7 === ""){
+  || b5 === "" || b6 === ""){
     alert("Veuillez remplir tout les champs");
   }else{
     survey.section_b.b1.push(b1);
@@ -315,7 +316,17 @@ document.getElementById("b_submit").addEventListener('click',()=>{
     survey.section_b.b4.push(b4);
     survey.section_b.b5.push(b5);
     survey.section_b.b6.push(b6);
-    survey.section_b.b7.push(b7);
+    let temp_table = `
+      <tr>
+        <td>${b1}</td>
+        <td>${b2}</td>
+        <td>${b3}</td>
+        <td>${b4}</td>
+        <td>${b5}</td>
+        <td>${b6}</td>
+      </tr>
+    `;
+    document.getElementById("table_temp_family").insertAdjacentHTML("afterbegin",temp_table);
     //We add option on section case   while(i>0){
         let option1 = document.createElement("option");
         option1.text = b1;
@@ -1265,7 +1276,7 @@ document.getElementById("o4").addEventListener("change",(e)=>{
       survey.section_o.o4.o409.payer = prix;
     }
   }
-},false);
+},false)};
 //
 function addNewSelectOption(select){
   let option = document.createElement("option");
@@ -1275,3 +1286,5 @@ function addNewSelectOption(select){
 function turnBoolToFrench(bool){
   return bool===true?"Oui":"Non";
 }
+
+export {forms_handler};

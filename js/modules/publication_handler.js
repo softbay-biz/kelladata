@@ -7,6 +7,7 @@ const publication_handler = ()=>{
   document.getElementById('publication_send').addEventListener("click",(e)=>{
     let title = document.getElementById("publication_title");
     let content = document.getElementById("summernote");
+    let articles_list = document.getElementById('articles-list');
     if(title.value != "" && content.value != ""){
         let form = {
           requestName:btoa(btoa(btoa("add_article"))),
@@ -17,7 +18,7 @@ const publication_handler = ()=>{
           }
         };
         sendData(form).then((response)=>{
-          console.log(response);
+          alert('Article enreistré avec succès!');
           title.value = "";
           content.value = "";
         }).catch((error)=>{

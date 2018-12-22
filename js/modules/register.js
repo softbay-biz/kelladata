@@ -27,7 +27,7 @@ const register = `<div class="register">
         <option data-id=6 >Client</option>
         <option data-id=3>Expert</option>
         <option data-id=5 >Photographe</option>
-        <option data-id=4 >Anthropologues</option>
+        <option data-id=4 >Anthropologue</option>
         <option data-id=2 >Directeur de publications</option>
       </select>
     </div>

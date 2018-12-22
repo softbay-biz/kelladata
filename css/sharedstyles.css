@@ -253,13 +253,13 @@ footer span:hover{
   margin-right:10px;
 }
 #article-left-part{
-  width:40%;
+  width:50%;
   float:left;
   height: 100%;
   padding-left: .5%;
 }
 #article-right-part{
-  width:60%;
+  width:50%;
   float:right;
   height: 100%;
   padding-left: .5%;
@@ -295,4 +295,7 @@ footer span:hover{
 .member_elt_list:hover{
   background-color: #e5e5e5;
   cursor:pointer;
+}
+#editor_content{
+  height:500px;
 }

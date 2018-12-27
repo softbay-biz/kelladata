@@ -7,6 +7,10 @@ const dashboard_handler = (dashboard)=>{
           localStorage.setItem("connected","false");
           callHomepage();
           return alert("Vous êtes déconnectés!");
+        }else if(e.target.id === "new_media"){
+          document.getElementById("media_pop_up").classList.toggle("is-active");
+        }else{
+          e.stopPropagation();
         }
   },{passive:true,capture:false});
 }

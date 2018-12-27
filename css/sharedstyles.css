@@ -136,6 +136,11 @@ footer span:hover{
 	width:70%;
 	height:300px;
 }
+.search-barre-custom{
+  border-radius: 20px !important;
+  height:80% !important;
+  margin-top:1% !important;
+}
 #search-barre-div input{
 	margin-top:18%;
 	width:78%;

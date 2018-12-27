@@ -5,6 +5,7 @@ import header from './../componemts/header.js';
 import bottom from './../componemts/bottom.js';
 import removeHomePage from './removeHomePage.js';
 import home from './../modules/home.js';
+import {home_handler} from './../modules/home_handler.js';
 import {get_register_form} from './../componemts/functions/get_register_form.js';
 import {get_login_form} from './../componemts/functions/get_login_form.js';
 const callHomepage = ()=>{
@@ -14,6 +15,7 @@ const callHomepage = ()=>{
 	document.getElementById("container").insertAdjacentHTML("beforebegin",header);
 	document.getElementById("container").insertAdjacentHTML("afterbegin",home);
 	document.getElementById("container").insertAdjacentHTML("afterend",bottom);
+	home_handler();
 	//Event on the top barre
 	document.getElementById('navbar-top').addEventListener('click',(e)=>{
 		if(e.target.id === "login"){
@@ -31,6 +33,19 @@ const callHomepage = ()=>{
 		}else if(e.target.id === "home"){
 			states.removeHomePage === false;
 			document.getElementById('container').innerHTML = home;
+			home_handler();
+		}else if(e.target.id === "menu_elt_all"){
+			alert('Not available!');
+		}else if(e.target.id === "menu_elt_images"){
+			alert('Not available!');
+		}else if(e.target.id === "menu_elt_videos"){
+			alert('Not available!');
+		}else if(e.target.id === "menu_elt_journal"){
+			alert('Not available!');
+		}else if(e.target.id === "menu_elt_articles"){
+			alert('Not available!');
+		}else if(e.target.id === "menu_elt_report"){
+			alert('Not available!');
 		}else{
 			e.stopPropagation();
 		}

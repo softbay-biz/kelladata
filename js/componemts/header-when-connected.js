@@ -33,7 +33,7 @@ const header = `<nav id="navbar-top" class="navbar is-fixed-on-top top-barre" ro
       </a>
 
     </div>
-
+    
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">

@@ -2,8 +2,6 @@ const home = `<section id="slider">
        <section>
         <div id="search-barre-div">
                             <div class="control has-icons-left has-icons-right">
-
-                                <input class="input is-large" type="search"/>
                                 <span><img src="images/kelladata_white-1.png"/></span>
                                 <span class="icon is-medium is-left">
                                     <i class="fa fa-search"></i>

@@ -9,9 +9,6 @@ const login = `<div class="register">
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
-    </span>
   </div>
 </div>
 <div class="field">
@@ -20,9 +17,6 @@ const login = `<div class="register">
     <input class="input" id="password" type="password" placeholder="password">
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
     </span>
   </div>
 </div>

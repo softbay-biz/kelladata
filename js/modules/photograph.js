@@ -34,7 +34,30 @@ const photograph = `
   </div>
 </nav>
 </nav>
-<div class="data-account-display">
+<div class="data-account-display content-for-flex-box">
+          <div class="card media-card-custom">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="images/africa-1933329_1920.jpg" alt="Placeholder image">
+              </figure>
+            </div>
+          </div>
+
+          <div class="card media-card-custom">
+          <div class="card-image">
+            <iframe width="100%" height="100%"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+          </div>
+          </div>
+          <div class="card media-card-custom">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img class="media-card-custom" src="images/speaker.svg" alt="Placeholder image">
+            </figure>
+          </div>
+          </div>
+
 </div>
 </div>
 <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">

@@ -146,6 +146,13 @@ footer span:hover{
 	width:78%;
 	float:right;
 }
+.content-for-flex-box{
+  display: flex;
+	flex-wrap: wrap;
+}
+.media-card-custom{
+  max-height:100px !important;
+}
 #search-barre-div img{
 	width:20%;
 	height:20%;
@@ -251,6 +258,9 @@ footer span:hover{
 }
 .small-chart{
   width:900px !important;
+  height:500px !important;
+}
+.card-image-media-custom{
   height:500px !important;
 }
 .icone-li{

@@ -28,35 +28,13 @@ const photograph = `
 </figure>
   </a>
   <div class="panel-block">
-    <button id="execute" class="button is-link is-outlined is-fullwidth">
+    <button id="deconnexion" class="button is-link is-outlined is-fullwidth">
       Deconnexion
     </button>
   </div>
 </nav>
 </nav>
 <div class="data-account-display content-for-flex-box">
-          <div class="card media-card-custom">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="images/africa-1933329_1920.jpg" alt="Placeholder image">
-              </figure>
-            </div>
-          </div>
-
-          <div class="card media-card-custom">
-          <div class="card-image">
-            <iframe width="100%" height="100%"
-              src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-          </div>
-          </div>
-          <div class="card media-card-custom">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img class="media-card-custom" src="images/speaker.svg" alt="Placeholder image">
-            </figure>
-          </div>
-          </div>
 
 </div>
 </div>
@@ -90,10 +68,10 @@ const photograph = `
       <label class="label">Choose the media type</label>
       <div class="control">
         <div class="select">
-          <select>
-            <option>Image</option>
-            <option>Video</option>
-            <option>Audio</option>
+          <select id="media_type">
+            <option data-id_type=1 >Image</option>
+            <option data-id_type=2 >Video</option>
+            <option data-id_type=3 >Audio</option>
           </select>
         </div>
       </div>
@@ -102,15 +80,34 @@ const photograph = `
       <div class="field">
       <label class="label">Description</label>
       <div class="control">
-        <textarea class="textarea" placeholder="Make a description"></textarea>
+        <textarea id="media_description" class="textarea" placeholder="Make a description"></textarea>
       </div>
       </div>
-      <center><figure class="image is-128x128">
-        <img src="https://bulma.io/images/placeholders/256x256.png">
-      </figure></center>
+      <div class="file has-name">
+      <label class="file-label">
+        <input class="file-input" id="upload_file" type="file" name="resume">
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+          <span class="file-label">
+            Choose a file…
+          </span>
+        </span>
+        <span class="file-name" id="media_name">
+        </span>
+      </label>
+      </div>
+      <div class="field">
+      <div class="control">
+        <figure class="image is-128x128">
+          <img id="media_image_preview" src="" />
+        </figure>
+      </div>
+      </div>
   </section>
   <footer class="modal-card-foot">
-    <button class="button is-success">Add the media</button>
+    <button class="button is-success" id="add_media">Add the media</button>
     <button class="button" id="close_pop_up_button">Cancel</button>
   </footer>
 </div>`;

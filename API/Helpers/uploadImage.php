@@ -1,14 +1,14 @@
 <?php
-function uploadFile($imagesList){
+function uploadImage($imagesList){
 		$tab_nom = [];
-			foreach($imagesList as $val){																																			
-					array_push($tab_nom,imageFromString($val));								  																					  								  
+			foreach($imagesList as $val){
+					array_push($tab_nom,imageFromString($val));
 
 				}
 	return $tab_nom;
 }
 function imageFromString($data){
-	     $repertoireUpload = '../images/';
+	     $repertoireUpload = '../media/';
 	     list($type, $data) = explode(';base64,', $data, 2);
 	     $data = str_replace(' ', '+', $data);
 	     $source = imagecreatefromstring(base64_decode($data));
@@ -18,11 +18,10 @@ function imageFromString($data){
 	     $imageName = openssl_digest($salt,'sha512').'.jpeg';
 	     file_put_contents($repertoireUpload.$imageName,$data);
 	     $imageSaved = imagejpeg($rotate,$repertoireUpload.$imageName,100);
-	     fct_redim_image(1300,1300,'','','',$repertoireUpload.$imageName);																			  
-		 copy($repertoireUpload.$imageName,$repertoireUpload.'/dish_image_1300px/'.$imageName);											  
-		 fct_redim_image(800,800,'','','',$repertoireUpload.$imageName);
-		 copy($repertoireUpload.$imageName,$repertoireUpload.'/dish_image_800px/'.$imageName);
-		 imagedestroy($source);    
+		 	 copy($repertoireUpload.$imageName,$repertoireUpload.'/image_original/'.$imageName);
+		   fct_redim_image(800,800,'','','',$repertoireUpload.$imageName);
+		   copy($repertoireUpload.$imageName,$repertoireUpload.'/image_800px/'.$imageName);
+		   imagedestroy($source);
 	     unlink($repertoireUpload.$imageName);
      return $imageName;
 }
@@ -36,9 +35,9 @@ function imageFromString($data){
 		   if ($Hmax == '') { $Hmax = 0; }
 		  // ------------------------------------------------------------------
 		  // si le fichier existe dans le répertoire, on continue...
-		 if (file_exists($rep_Src.$img_Src) && ($Wmax!=0 || $Hmax!=0)) { 
+		 if (file_exists($rep_Src.$img_Src) && ($Wmax!=0 || $Hmax!=0)) {
 		    // ----------------------------------------------------------------
-		    // extensions acceptées : 
+		    // extensions acceptées :
 		   $ExtfichierOK = '" jpg jpeg png JPG PNG JPEG"';  // (l espace avant jpg est important)
 		    // extension
 		   $tabimage = explode('.',$img_Src);
@@ -61,7 +60,7 @@ function imageFromString($data){
 		         $ratioy = $H_Src / $Hmax;  // ratio en hauteur
 		         $ratio = max($ratiox,$ratioy);  // le plus grand
 		         $W = $W_Src/$ratio;
-		         $H = $H_Src/$ratio;   
+		         $H = $H_Src/$ratio;
 		         $condition = ($W_Src>$W) || ($W_Src>$H);  // 1 si vrai (true)
 		      }
 		       // -------------------------------------------------------------
@@ -75,7 +74,7 @@ function imageFromString($data){
 		       // C- HAUTEUR maxi fixe
 		      if ($Wmax != 0 && $Hmax == 0) {
 		         $W = $Wmax;
-		         $H = $W * ($H_Src / $W_Src);         
+		         $H = $W * ($H_Src / $W_Src);
 		         $condition = $W_Src > $Wmax;  // 1 si vrai (true)
 		      }
 		       // -------------------------------------------------------------
@@ -101,10 +100,10 @@ function imageFromString($data){
 		         }
 		          // ----------------------------------------------------------
 		          // REDIMENSIONNEMENT (copie, redimensionne, ré-echantillonne)
-		         ImageCopyResampled($Ress_Dst, $Ress_Src, 0, 0, 0, 0, $W, $H, $W_Src, $H_Src); 
+		         ImageCopyResampled($Ress_Dst, $Ress_Src, 0, 0, 0, 0, $W, $H, $W_Src, $H_Src);
 		          // ----------------------------------------------------------
 		          // ENREGISTREMENT dans le répertoire (avec la fonction appropriée)
-		         switch ($extension) { 
+		         switch ($extension) {
 		         case 'jpg':
 		         case 'jpeg':
 		           ImageJpeg ($Ress_Dst, $rep_Dst.$img_Dst);

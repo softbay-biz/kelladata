@@ -7,7 +7,7 @@ if(1/*domainOrigin() === true*/){
 	$dataReceive = json_decode(file_get_contents('php://input'));
 	$data = $dataReceive->data;
 	$requestName = base64_decode(base64_decode(base64_decode(strip_tags($dataReceive->requestName))));
-	$allowedModules = ['registration','authentification','membersPendingValidation','updateDetails','add_article'];
+	$allowedModules = ['registration','authentification','membersPendingValidation','updateDetails','add_article','add_media'];
 	//Switching following the type of the request
 	if(in_array($requestName,$allowedModules,true) === true){
 		include "Modules/{$requestName}.php";

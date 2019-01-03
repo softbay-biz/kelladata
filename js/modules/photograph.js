@@ -60,7 +60,7 @@ const photograph = `
     <div class="field">
       <label class="label">Name of the media</label>
       <div class="control">
-        <input class="input" type="text" placeholder="Text input">
+        <input class="input" id="media_name" type="text" placeholder="Text input">
       </div>
       </div>
 
@@ -94,7 +94,7 @@ const photograph = `
             Choose a file…
           </span>
         </span>
-        <span class="file-name" id="media_name">
+        <span class="file-name">
         </span>
       </label>
       </div>

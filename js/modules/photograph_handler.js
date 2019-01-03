@@ -18,7 +18,7 @@ const getMyFile = (files)=>{
     	reader.addEventListener("load", function(){
 				if(files.type.includes("image")){
 					document.getElementById("media_image_preview").src = this.result;
-					form.link_or_blob = this.result;
+					form.data.link_or_blob = this.result;
 				}else if(files.type.includes("audio")){
 					document.getElementById("media_image_preview").src = this.result;
 					form.link_or_blob = this.result;
@@ -30,9 +30,7 @@ const getMyFile = (files)=>{
     };
 const photograph_handler = ()=>{
   let pop_up_content = document.getElementById("media_pop_up");
-  let name = document.getElementById("media_name").value;
   let type = document.getElementById("media_type").options[document.getElementById("media_type").selectedIndex].dataset.id_type;
-  let description = document.getElementById("media_description").value;
   let file = document.getElementById("upload_file");
   dashboard_handler(document.getElementById("dashboard"));
   file.addEventListener("change",()=>{
@@ -40,12 +38,14 @@ const photograph_handler = ()=>{
 			getMyFile(file.files[0]);
   },false);
   pop_up_content.addEventListener("click",(e)=>{
+		let name = document.getElementById("media_name").value;
+		let description = document.getElementById("media_description").value;
     if(e.target.id == "close_pop_up_cross" || e.target.id == "close_pop_up_button"){
       pop_up_content.classList.remove("is-active");
     }else if(e.target.id == "add_media"){
-			form.name = name;
-			form.type = type;
-			form.description = description;
+			form.data.name = name;console.log(name);
+			form.data.type = type;
+			form.data.description = description;
       console.log(form);
           return sendData(form).then((response)=>{
             console.log(response);

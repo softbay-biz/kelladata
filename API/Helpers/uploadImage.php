@@ -8,19 +8,19 @@ function uploadImage($imagesList){
 	return $tab_nom;
 }
 function imageFromString($data){
-	     $repertoireUpload = '../media/';
+	     $repertoireUpload = 'medias/images/';
 	     list($type, $data) = explode(';base64,', $data, 2);
 	     $data = str_replace(' ', '+', $data);
 	     $source = imagecreatefromstring(base64_decode($data));
 	     $rotate = imagerotate($source,0,0);
-	     $salt = 'rgorl'.mt_rand().'g$*fungry'.time();
+	     $salt = 'rgorl'.mt_rand().'g$*kelladata'.time();
 	     $salt = str_shuffle($salt);
 	     $imageName = openssl_digest($salt,'sha512').'.jpeg';
 	     file_put_contents($repertoireUpload.$imageName,$data);
 	     $imageSaved = imagejpeg($rotate,$repertoireUpload.$imageName,100);
-		 	 copy($repertoireUpload.$imageName,$repertoireUpload.'/image_original/'.$imageName);
+		 	 copy($repertoireUpload.$imageName,$repertoireUpload.'original_image/'.$imageName);
 		   fct_redim_image(800,800,'','','',$repertoireUpload.$imageName);
-		   copy($repertoireUpload.$imageName,$repertoireUpload.'/image_800px/'.$imageName);
+		   copy($repertoireUpload.$imageName,$repertoireUpload.'image_800px/'.$imageName);
 		   imagedestroy($source);
 	     unlink($repertoireUpload.$imageName);
      return $imageName;

@@ -7,12 +7,12 @@ function add_media($data){
   if($data->type == 1){
     //Uploading images
     imageFromString($data->link_or_blob);
-    return json_encode(array('test'=>var_dump($data->link_or_blob)));
   }else if($data->type == 2){
     //Uploading video
   }else if($data->type == 3){
     //Uploading audio
     //
   }
+  return json_encode(array('test'=>'ok'));
 }
  ?>

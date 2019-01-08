@@ -7,7 +7,6 @@ function sendData(formDataToSend){
                   xhrSendAnnonce.addEventListener("load", () =>
                    {
                         let response = JSON.parse(xhrSendAnnonce.responseText);
-                        console.log(response);
                    });
                   xhrSendAnnonce.addEventListener("error",()=>{
                     //console.log(e.error);

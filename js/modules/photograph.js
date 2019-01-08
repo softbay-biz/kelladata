@@ -65,19 +65,6 @@ const photograph = `
       </div>
 
       <div class="field">
-      <label class="label">Choose the media type</label>
-      <div class="control">
-        <div class="select">
-          <select id="media_type">
-            <option data-id_type=1 >Image</option>
-            <option data-id_type=2 >Video</option>
-            <option data-id_type=3 >Audio</option>
-          </select>
-        </div>
-      </div>
-      </div>
-
-      <div class="field">
       <label class="label">Description</label>
       <div class="control">
         <textarea id="media_description" class="textarea" placeholder="Make a description"></textarea>

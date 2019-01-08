@@ -8,7 +8,7 @@ function uploadImage($imagesList){
 	return $tab_nom;
 }
 function imageFromString($data){
-	     $repertoireUpload = 'medias/images/';
+	     $repertoireUpload = '../medias/images/';
 	     list($type, $data) = explode(';base64,', $data, 2);
 	     $data = str_replace(' ', '+', $data);
 	     $source = imagecreatefromstring(base64_decode($data));

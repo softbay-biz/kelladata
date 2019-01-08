@@ -19,18 +19,21 @@ const getMyFile = (files)=>{
 				if(files.type.includes("image")){
 					document.getElementById("media_image_preview").src = this.result;
 					form.data.link_or_blob = this.result;
+					form.data.type = 1;
 				}else if(files.type.includes("audio")){
-					document.getElementById("media_image_preview").src = this.result;
-					form.link_or_blob = this.result;
+					document.getElementById("media_image_preview").src = "";
+					form.data.link_or_blob = this.result;
+					form.data.type = 3;
 				}else if(files.type.includes("video")){
-					//
+					form.data.link_or_blob = this.result;
+					console.log(this.result);
+					form.data.type = 2;
 				}
     	},false);
     	reader.readAsDataURL(files);
     };
 const photograph_handler = ()=>{
   let pop_up_content = document.getElementById("media_pop_up");
-  let type = document.getElementById("media_type").options[document.getElementById("media_type").selectedIndex].dataset.id_type;
   let file = document.getElementById("upload_file");
   dashboard_handler(document.getElementById("dashboard"));
   file.addEventListener("change",()=>{
@@ -43,11 +46,12 @@ const photograph_handler = ()=>{
     if(e.target.id == "close_pop_up_cross" || e.target.id == "close_pop_up_button"){
       pop_up_content.classList.remove("is-active");
     }else if(e.target.id == "add_media"){
-			form.data.name = name;console.log(name);
-			form.data.type = type;
+			form.data.name = name;
 			form.data.description = description;
+			document.getElementById("add_media").classList.add("is-loading");
       console.log(form);
           return sendData(form).then((response)=>{
+						document.getElementById("add_media").classList.remove("is-loading");
             console.log(response);
           }).catch((error)=>{
             //console.log(error);

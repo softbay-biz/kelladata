@@ -74,6 +74,11 @@ td {
 .radio{
   font-size: .7em !important;
 }
+.media_main_loader{
+  width:100px;
+  height:100px;
+  margin:auto;
+}
 .content-forms-small-right{
   float: right;
   width:45%;
@@ -152,6 +157,10 @@ footer span:hover{
 }
 .media-card-custom{
   max-height:100px !important;
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+  background-color: blue;
+  border:none !important;
 }
 #search-barre-div img{
 	width:20%;
@@ -305,7 +314,7 @@ footer span:hover{
   font-size:1.5em;
 }
 .card:hover{
-  background-color:#e5e5e5;
+  cursor: pointer;
 }
 .member_elt_list:hover{
   background-color: #e5e5e5;

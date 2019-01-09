@@ -12,6 +12,35 @@ const form = {
 		link_or_blob:""
 	}
 };
+const getMedias = ()=>{
+	let form0 = {
+		requestName:btoa(btoa(btoa("getMedias"))),
+		data:{
+			owner:localStorage.getItem("id"),
+		}
+	};
+	return sendData(form0).then((response)=>{
+		if(response.error == false){
+			document.getElementById("data-account-display").innerHTML = "";
+			displayMedia(response.message);
+		}else{
+		}
+	}).catch((error)=>{
+		//console.log(error);
+	});
+};
+const displayMedia = (data)=>{
+	for (let i = 0; i < data.length; i++){
+		requestAnimationFrame(()=>{
+			document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(data[i].type,data[i]));
+		});
+	}
+};
+const resetForm = ()=>{
+	document.getElementById("media_name").value = "";
+	document.getElementById("media_description").value = "";
+	document.getElementById("upload_file").src = "";
+};
 const getMyFile = (files)=>{
 	 	let elt = "";
 		let reader = new FileReader();
@@ -33,6 +62,9 @@ const getMyFile = (files)=>{
     	reader.readAsDataURL(files);
     };
 const photograph_handler = ()=>{
+	//We display medias
+	getMedias();
+	//
   let pop_up_content = document.getElementById("media_pop_up");
   let file = document.getElementById("upload_file");
   dashboard_handler(document.getElementById("dashboard"));
@@ -45,18 +77,28 @@ const photograph_handler = ()=>{
 		let description = document.getElementById("media_description").value;
     if(e.target.id == "close_pop_up_cross" || e.target.id == "close_pop_up_button"){
       pop_up_content.classList.remove("is-active");
-    }else if(e.target.id == "add_media"){
+			resetForm();
+    }else if(e.target.id == "add_media" && name != "" && description != "" && form.data.link_or_blob != "" &&
+							document.getElementById("add_media").classList.value.indexOf("rfdd") == -1){
 			form.data.name = name;
 			form.data.description = description;
 			document.getElementById("add_media").classList.add("is-loading");
-      console.log(form);
           return sendData(form).then((response)=>{
 						document.getElementById("add_media").classList.remove("is-loading");
             console.log(response);
+						if(response.error == false){
+							resetForm();
+							alert("New media added!");
+							pop_up_content.classList.remove("is-active");
+						}else{
+							alert("Erreur from server : media not saved!")
+						}
           }).catch((error)=>{
             //console.log(error);
           });
-    }
+    }else if(e.target.id == "add_media" && (name == "" || description == "" || form.data.link_or_blob != "")){
+			alert("All fileds should not be empty!");
+		}
   },false);
 
 

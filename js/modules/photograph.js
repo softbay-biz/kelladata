@@ -34,8 +34,11 @@ const photograph = `
   </div>
 </nav>
 </nav>
-<div class="data-account-display content-for-flex-box">
-
+<div id="data-account-display" class="data-account-display content-for-flex-box">
+    <div id="media_main_loader" class="media_main_loader"> <figure class="image is-128x128">
+              <img src="images/Reload-1s-200px.svg">
+          </figure>
+    </div>
 </div>
 </div>
 <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">

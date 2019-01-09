@@ -157,10 +157,13 @@ footer span:hover{
 }
 .media-card-custom{
   max-height:100px !important;
-  margin-top:0 !important;
-  margin-bottom:0 !important;
-  background-color: blue;
+  max-width:200px !important;
+  margin-bottom:0px !important;
   border:none !important;
+}
+.card{
+  border:none !important;
+  box-shadow:none !important;
 }
 #search-barre-div img{
 	width:20%;
@@ -200,6 +203,8 @@ footer span:hover{
 	overflow:hidden;
 }
 .data-account-display{
+  display: flex;
+  flex-wrap: wrap;
   margin-left: 15%;
 	width:85%;
   height:650px;

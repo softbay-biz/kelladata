@@ -52,6 +52,15 @@ const photograph = `
 </div>
 
 </nav>
+<div class="modal" id="media_display_image">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p class="image is-4by3">
+      <img src="" alt="">
+    </p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
 <div class="modal" id="media_pop_up">
 <div class="modal-background"></div>
 <div class="modal-card">

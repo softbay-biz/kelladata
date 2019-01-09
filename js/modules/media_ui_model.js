@@ -10,7 +10,7 @@ const media_ui_model = (type,infos)=>{
   }else if(type == 2){
     return `<div class="card media-card-custom">
               <div class="card-image">
-              <video controls width="250">
+              <video controls>
                 <source src="medias/videos/${infos.link_or_blob}"
                         type="video/mp4">
               </video>
@@ -18,17 +18,13 @@ const media_ui_model = (type,infos)=>{
             </div>`;
   }else if(type == 3){
     return `<div class="card media-card-custom">
-              <div class="card-image">
               <figure>
                 <figcaption>${infos.name}</figcaption>
-                  <audio
-                      controls
-                      src="medias/audios/${infos.link_or_blob}">
-                          ${infos.name}
-                          <code>audio</code> element.
-                  </audio>
+                <audio autoplay="autoplay" controls="controls">
+                 <source src="music.ogg" />
+                 <source src="music.mp3" />
+                </audio>
               </figure>
-              </div>
             </div>`;
   }
 };

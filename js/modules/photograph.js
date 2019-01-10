@@ -8,16 +8,16 @@ const photograph = `
     + New media
   </button>
 </div>
-<a class="panel-block">
+<a class="panel-block" id="photograph_my_media">
   <img class="icone-li" src="images/book.svg"> My medias
 </a>
-<a class="panel-block">
+<a class="panel-block" id="photograph_validated">
   <img class="icone-li" src="images/download.svg"> Validaded
 </a>
-<a class="panel-block">
+<a class="panel-block" id="photograph_pending">
   <img class="icone-li" src="images/reload.svg"> Pending
 </a>
-<a class="panel-block">
+<a class="panel-block" id="photograph_rejected">
   <img class="icone-li" src="images/reject.svg"> Rejected
 </a>
 
@@ -34,7 +34,7 @@ const photograph = `
   </div>
 </nav>
 </nav>
-<div id="data-account-display" class="data-account-display content-for-flex-box">
+<div id="data-account-display" class="data-account-display">
     <div id="media_main_loader" class="media_main_loader"> <figure class="image is-128x128">
               <img src="images/Reload-1s-200px.svg">
           </figure>

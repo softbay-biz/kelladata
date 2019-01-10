@@ -18,7 +18,7 @@ const publication_handler = ()=>{
           }
         };
         sendData(form).then((response)=>{
-          alert('Article enreistré avec succès!');
+          alert('Article enregistré avec succès!');
           title.value = "";
           content.value = "";
         }).catch((error)=>{

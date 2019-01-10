@@ -1,4 +1,5 @@
 import {sendData} from './../../js/helpers/sendData.js';
+import all_medias from './../../js/helpers/all_medias.js';
 import {dashboard_handler} from './../helpers/dashboard_handler.js';
 import {media_ui_model} from './../modules/media_ui_model.js';
 
@@ -12,6 +13,7 @@ const form = {
 		link_or_blob:""
 	}
 };
+
 const getMedias = ()=>{
 	let form0 = {
 		requestName:btoa(btoa(btoa("getMedias"))),
@@ -31,6 +33,7 @@ const getMedias = ()=>{
 };
 const displayMedia = (data)=>{
 	for (let i = 0; i < data.length; i++){
+		all_medias.push(data[i])
 		requestAnimationFrame(()=>{
 			document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(data[i].type,data[i]));
 		});
@@ -85,11 +88,12 @@ const photograph_handler = ()=>{
 			document.getElementById("add_media").classList.add("is-loading");
           return sendData(form).then((response)=>{
 						document.getElementById("add_media").classList.remove("is-loading");
-            console.log(response);
 						if(response.error == false){
 							resetForm();
 							alert("New media added!");
 							pop_up_content.classList.remove("is-active");
+							document.getElementById("data-account-display").insertAdjacentHTML('afterbegin',medias_ui_model(form.data.type,form.data));
+							all_medias.push(form.data);
 						}else{
 							alert("Erreur from server : media not saved!")
 						}

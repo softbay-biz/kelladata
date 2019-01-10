@@ -152,18 +152,16 @@ footer span:hover{
 	float:right;
 }
 .content-for-flex-box{
-  display: flex;
-	flex-wrap: wrap;
+
 }
 .media-card-custom{
-  max-height:100px !important;
   max-width:200px !important;
-  margin-bottom:0px !important;
   border:none !important;
 }
 .card{
   border:none !important;
   box-shadow:none !important;
+  margin-bottom:20px !important;
 }
 #search-barre-div img{
 	width:20%;
@@ -208,7 +206,7 @@ footer span:hover{
   margin-left: 15%;
 	width:85%;
   height:650px;
-	overflow:auto;
+	overflow:auto !important;
 }
 .article-list{
   height:80px !important;

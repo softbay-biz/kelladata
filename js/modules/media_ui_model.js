@@ -20,9 +20,8 @@ const media_ui_model = (type,infos)=>{
     return `<div class="card media-card-custom">
               <figure>
                 <figcaption>${infos.name}</figcaption>
-                <audio autoplay="autoplay" controls="controls">
-                 <source src="music.ogg" />
-                 <source src="music.mp3" />
+                <audio autoplay="autoplay" controls="controls>
+                 <source src="medias/audios/${infos.link_or_blob}" />
                 </audio>
               </figure>
             </div>`;

@@ -25,6 +25,18 @@ const media_ui_model = (type,infos)=>{
                 </audio>
               </figure>
             </div>`;
+  }else if(type == 4){
+    return `<div class="tile is-ancestor preview_home_article_elt">
+              <div class="tile is-parent">
+                <article class="tile is-child box">
+                  <p class="title">Article</p>
+                  <p class="subtitle"><h4>${infos.date_publication}</h4></p>
+                  <div class="content">
+                    <p>${infos.titre}</p>
+                  </div>
+                </article>
+              </div>
+            </div>`;
   }
 };
 

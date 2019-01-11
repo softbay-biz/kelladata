@@ -9,7 +9,6 @@ const form = {
 		name:"",
 		type:0,
 		description:"",
-		owner:localStorage.getItem("id"),
 		link_or_blob:""
 	}
 };
@@ -32,11 +31,23 @@ const getMedias = ()=>{
 	});
 };
 const displayMedia = (data)=>{
-	for (let i = 0; i < data.length; i++){
-		all_medias.push(data[i])
-		requestAnimationFrame(()=>{
-			document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(data[i].type,data[i]));
-		});
+	if(all_medias.length === 0){
+		for (let i = 0; i < data.length; i++){
+			all_medias.push(data[i]);
+			if(data[i].owner == localStorage.getItem("id")){
+				requestAnimationFrame(()=>{
+					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(data[i].type,data[i]));
+				});
+			}
+		}
+	}else{
+		for (let i = 0; i < all_medias.length; i++){
+			if(all_medias[i].owner == localStorage.getItem("id")){
+				requestAnimationFrame(()=>{
+					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i]));
+				});
+			}
+		}
 	}
 };
 const resetForm = ()=>{

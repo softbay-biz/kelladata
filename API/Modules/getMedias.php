@@ -3,8 +3,8 @@ function getMedias($data){
   include 'Helpers/bd.php';
 	$bd = bd();
 	 try{
-			$request = $bd->prepare('SELECT * FROM media WHERE owner = ?');
-	        $request->execute([$data->owner]);
+			$request = $bd->prepare('SELECT * FROM media');
+	        $request->execute();
 			}catch(Exception $e){
 				return json_encode(array('message' => 'Database connection error!','error'=>true));
 			}
@@ -21,6 +21,7 @@ function getMedias($data){
 																		"type" => $infos["type"],
 																		"link_or_blob" => $infos["link_or_blob"],
 																		"statut" => $infos["statut"],
+                                    "owner" => $infos["owner"],
 																		"date_ajout" => $infos["date_ajout"]
 																));
 				}

@@ -15,6 +15,7 @@ const form_medias = {
   }
 };
 const home_handler = ()=>{
+  let navbar = document.getElementById("navbar-top");
   let preview_home_article = document.getElementById("preview_home_article");
   preview_home_article.addEventListener("click",(e)=>{
     if(e.target != e.currentTarget){

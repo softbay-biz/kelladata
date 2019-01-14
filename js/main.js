@@ -18,6 +18,8 @@ import states from './states/states.js';
 import {get_register_form} from './componemts/functions/get_register_form.js';
 import {get_login_form} from './componemts/functions/get_login_form.js';
 import photograph from './modules/photograph.js';
+import client from './modules/client.js';
+import {client_handler} from './modules/client_handler.js';
 
 document.addEventListener('DOMContentLoaded',()=>{
 	if(localStorage.getItem("connected") != null && localStorage.getItem("connected") == "true"){
@@ -39,6 +41,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 			case "5":
 				document.getElementById('container').innerHTML = photograph;
 				photograph_handler();
+				break;
+			case "6":
+				document.getElementById('container').innerHTML = client;
+				client_handler();
 				break;
 			default:
 

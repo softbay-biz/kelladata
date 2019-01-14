@@ -9,7 +9,8 @@ const form = {
 		name:"",
 		type:0,
 		description:"",
-		link_or_blob:""
+		link_or_blob:"",
+		owner:localStorage.getItem("id")
 	}
 };
 

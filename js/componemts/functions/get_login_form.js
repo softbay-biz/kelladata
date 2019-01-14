@@ -4,6 +4,7 @@ import {sup_code_editor} from './../../vendors/sup_code_editor.js';
 import {display_members_list} from './../../helpers/display_members_list.js';
 import {photograph_handler} from './../../modules/photograph_handler.js';
 import {navigation} from './../../modules/navigation.js';
+import {client_handler} from './../../modules/client_handler.js';
 import removeHeader from './../../helpers/removeHeader.js';
 import states from './../../states/states.js';
 import {admin_handler} from './../../modules/admin_handler.js';
@@ -12,6 +13,7 @@ import anthropologue from './../../modules/anthropologue.js';
 import {forms_handler} from './../../modules/forms_handler.js';
 import admin from './../../modules/admin.js';
 import publication from './../../modules/publication.js';
+import client from './../../modules/client.js';
 import photograph from './../../modules/photograph.js';
 
 function get_login_form(){
@@ -63,6 +65,10 @@ function get_login_form(){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = photograph;
 						 photograph_handler();
+					 }else if(response.message.account_type == 6){
+						 persist_data_user(response.message);
+						 document.getElementById('container').innerHTML = client;
+						 client_handler();
 					 }else{
 						 console.log("Account type not found!");
 

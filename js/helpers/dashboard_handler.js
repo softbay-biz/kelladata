@@ -15,7 +15,6 @@ const displayMedia = (data,statut=11)=>{
           if(data[i].statut == statut ){
               requestAnimationFrame(()=>{
                 document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(data[i].type,data[i]));
-                console.log("fdvx");
               });
           }
     }

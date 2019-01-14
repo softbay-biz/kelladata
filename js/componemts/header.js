@@ -22,19 +22,16 @@ const header = `<nav id="navbar-top" class="navbar is-fixed-on-top top-barre" ro
       <a class="navbar-item" id="menu_elt_videos">
         Vidéos
       </a>
-      <a class="navbar-item" id="menu_elt_journal">
-        Journal
+      <a class="navbar-item" id="menu_elt_audios">
+        Audios
       </a>
       <a class="navbar-item" id="menu_elt_articles">
         Articles
       </a>
-      <a class="navbar-item" id="menu_elt_report">
-        Report
-      </a>
 
     </div>
     <div class="control has-icons-left has-icons-right">
-        <input class="input is-medium search-barre-custom"  type="search"/>
+        <input id="search-barre-landing-page" class="input is-medium search-barre-custom"  type="search"/>
         <span class="icon is-medium is-left">
             <i class="fa fa-search"></i>
         </span>

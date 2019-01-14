@@ -1,6 +1,8 @@
 import states from './../states/states.js';
 import login from './../modules/login.js';
 import register from './../modules/register.js';
+import landing_page_search_result from './../modules/landing_page_search_result.js';
+import {landing_page_search_result_handler} from './../modules/landing_page_search_result_handler.js';
 import header from './../componemts/header.js';
 import bottom from './../componemts/bottom.js';
 import removeHomePage from './removeHomePage.js';
@@ -35,21 +37,39 @@ const callHomepage = ()=>{
 			document.getElementById('container').innerHTML = home;
 			home_handler();
 		}else if(e.target.id === "menu_elt_all"){
-			alert('Not available!');
+			states.removeHomePage === true?"":removeHomePage(states);
+			document.getElementById('container').innerHTML = landing_page_search_result;
+			return landing_page_search_result_handler("all");
 		}else if(e.target.id === "menu_elt_images"){
-			alert('Not available!');
+			states.removeHomePage === true?"":removeHomePage(states);
+			document.getElementById('container').innerHTML = landing_page_search_result;
+			return landing_page_search_result_handler("images");
 		}else if(e.target.id === "menu_elt_videos"){
-			alert('Not available!');
-		}else if(e.target.id === "menu_elt_journal"){
-			alert('Not available!');
+			states.removeHomePage === true?"":removeHomePage(states);
+			document.getElementById('container').innerHTML = landing_page_search_result;
+			return landing_page_search_result_handler("videos");
+		}else if(e.target.id === "menu_elt_audios"){
+			states.removeHomePage === true?"":removeHomePage(states);
+			document.getElementById('container').innerHTML = landing_page_search_result;
+			return landing_page_search_result_handler("audios");
 		}else if(e.target.id === "menu_elt_articles"){
-			alert('Not available!');
-		}else if(e.target.id === "menu_elt_report"){
-			alert('Not available!');
+			states.removeHomePage === true?"":removeHomePage(states);
+			document.getElementById('container').innerHTML = landing_page_search_result;
+			return landing_page_search_result_handler("articles");
 		}else{
 			e.stopPropagation();
 		}
 	},{passive:true,capture:false});
+	//Event on the landing page search barre
+	let search_barre_landing_page = document.getElementById("search-barre-landing-page");
+	search_barre_landing_page.addEventListener("keydown",(e)=>{
+		if(e.keyCode == 13 && e.target.value.length > 0){
+			states.removeHomePage === true?"":removeHomePage(states);
+			document.getElementById('container').innerHTML = landing_page_search_result;
+			return landing_page_search_result_handler("all");
+		}
+	},
+	false);
 };
 
 export {callHomepage};

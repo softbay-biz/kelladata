@@ -74,6 +74,12 @@ td {
 .radio{
   font-size: .7em !important;
 }
+.media_main_loader_main{
+  position:relative;
+  width:100px;
+  height:100px;
+  left:30%;
+}
 .media_main_loader{
   width:100px;
   height:100px;
@@ -175,6 +181,9 @@ footer span:hover{
 }
 .preview_home_article_elt{
   margin-left:.5% !important;
+  width:200px;
+  height:200px;
+  font-size: 1em;
 }
 .preview_home_article_elt:hover{
   cursor:pointer;
@@ -224,6 +233,13 @@ footer span:hover{
   height:650px;
 	overflow:auto !important;
 }
+.data-account-display-large{
+  display: flex;
+  flex-wrap: wrap;
+	width:100%;
+  background-color: blue;
+  height:auto;
+}
 .article-list{
   height:80px !important;
   font-size:.9em;
@@ -257,6 +273,18 @@ footer span:hover{
   margin-left:15%;
   height:550px;
   overflow:auto;
+}
+.landing_page_search_result{
+  position:relative;
+  padding-top:1%;
+  width:100%;
+  height:auto;
+  height:100%;
+  margin:auto;
+  margin-top:3%;
+  font-size:0.7em !important;
+  display: flex;
+  flex-wrap: wrap;
 }
 .register{
 	padding:2%;

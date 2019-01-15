@@ -1,6 +1,8 @@
 import {callHomepage} from './callHomepage.js';
-import all_medias from './all_medias.js';
+import all_medias from './../helpers/all_medias.js';
+import articles_list from './../helpers/articles_list.js';
 import {media_ui_model} from './../modules/media_ui_model.js';
+import {displayMediaClient} from './../modules/displayMediaClient.js';
 
 const displayMedia = (data,statut=11)=>{
   document.getElementById("data-account-display").innerHTML = "";
@@ -37,6 +39,16 @@ const dashboard_handler = (dashboard)=>{
           displayMedia(all_medias,0);
         }else if(e.target.id === "photograph_rejected"){
           displayMedia(all_medias,-1);
+        }else if(e.target.id === "client_media_display_all"){
+          displayMediaClient(document.getElementById("data-account-display"),"all");
+        }else if(e.target.id === "client_media_display_images"){
+          displayMediaClient(document.getElementById("data-account-display"),"images");
+        }else if(e.target.id === "client_media_display_audios"){
+          displayMediaClient(document.getElementById("data-account-display"),"audios");
+        }else if(e.target.id === "client_media_display_videos"){
+          displayMediaClient(document.getElementById("data-account-display"),"videos");
+        }else if(e.target.id === "client_media_display_articles"){
+          displayMediaClient(document.getElementById("data-account-display"),"articles");
         }else{
           e.stopPropagation();
         }

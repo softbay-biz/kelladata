@@ -34,7 +34,7 @@ function get_login_form(){
 				 if(response.error === false){
 					 removeHeader(states);
 					 states.removeHeader == true;
-					 if(response.message.account_type == 6){
+					 if(response.message.account_type == 4){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = anthropologue;
 						 states.removeHeader === true?"":removeHeader(states);

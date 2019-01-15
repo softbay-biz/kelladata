@@ -1,8 +1,8 @@
 const media_ui_model = (type,infos)=>{
   if(type == 1){
-    return `<div class="card media-card-custom">
+    return `<div  class="card media-card-custom">
               <div class="card-image">
-                <figure class="image is-4by3">
+                <figure class="image is-4by3" data-type=${infos.type}>
                   <img src="medias/images/image_800px/${infos.link_or_blob}" alt="Placeholder image">
                 </figure>
               </div>
@@ -10,17 +10,17 @@ const media_ui_model = (type,infos)=>{
   }else if(type == 2){
     return `<div class="card media-card-custom">
               <div class="card-image">
-              <video controls>
+              <video controls data-type=${infos.type}>
                 <source src="medias/videos/${infos.link_or_blob}"
                         type="video/mp4">
               </video>
               </div>
             </div>`;
   }else if(type == 3){
-    return `<div class="card media-card-custom">
-              <figure>
+    return `<div  class="card media-card-custom">
+              <figure data-type=${infos.type}>
                 <figcaption>${infos.name}</figcaption>
-                <audio autoplay="autoplay" controls="controls>
+                <audio controls="controls">
                  <source src="medias/audios/${infos.link_or_blob}" />
                 </audio>
               </figure>
@@ -28,11 +28,11 @@ const media_ui_model = (type,infos)=>{
   }else if(type == 4){
     return `<div class="tile is-ancestor preview_home_article_elt">
               <div class="tile is-parent">
-                <article class="tile is-child box">
-                  <p class="title">Article</p>
-                  <p class="subtitle"><h4>${infos.date_publication}</h4></p>
-                  <div class="content">
-                    <p>${infos.titre}</p>
+                <article data-type=4 data-type=${infos.id_article} class="tile is-child box">
+                  <p data-type=4 data-type=${infos.id_article} class="title">Article</p>
+                  <p class="subtitle"><h4 data-type=4 data-type=${infos.id_article} >${infos.date_publication}</h4></p>
+                  <div data-type=4 data-type=${infos.id_article} ${infos.titre} class="content">
+                    <p data-type=4 data-type=${infos.id_article}> ${infos.titre}</p>
                   </div>
                 </article>
               </div>

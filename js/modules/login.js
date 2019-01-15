@@ -5,7 +5,7 @@ const login = `<div class="register">
 <div class="field">
   <label class="label">Email</label>
   <div class="control has-icons-right">
-    <input class="input" id="email" type="email" placeholder="address@email.com">
+    <input class="input" id="email" type="email" placeholder="address@gmail.com">
   </div>
 </div>
 <div class="field">

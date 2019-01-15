@@ -66,7 +66,7 @@ const callHomepage = ()=>{
 		if(e.keyCode == 13 && e.target.value.length > 0){
 			states.removeHomePage === true?"":removeHomePage(states);
 			document.getElementById('container').innerHTML = landing_page_search_result;
-			return landing_page_search_result_handler("all");
+			return landing_page_search_result_handler(e.target.value);
 		}
 	},
 	false);

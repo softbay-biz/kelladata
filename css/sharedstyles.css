@@ -181,8 +181,8 @@ footer span:hover{
 }
 .preview_home_article_elt{
   margin-left:.5% !important;
-  width:200px;
-  height:200px;
+  width:200px !important;
+  height:200px !important;
   font-size: 1em;
 }
 .preview_home_article_elt:hover{
@@ -232,6 +232,12 @@ footer span:hover{
 	width:85%;
   height:650px;
 	overflow:auto !important;
+}
+.data-account-display-header{
+  margin-left: 15%;
+	width:85%;
+  height:50px;
+  margin-bottom: .8%;
 }
 .data-account-display-large{
   display: flex;

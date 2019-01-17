@@ -49,6 +49,12 @@ const dashboard_handler = (dashboard)=>{
           displayMediaClient(document.getElementById("data-account-display"),"videos");
         }else if(e.target.id === "client_media_display_articles"){
           displayMediaClient(document.getElementById("data-account-display"),"articles");
+        }else if(e.target.id === "publication_articles"){
+          alert('publication_articles');
+        }else if(e.target.id === "publication_articles_published"){
+          alert('publication_articles_published');
+        }else if(e.target.id === "publication_articles_rejected"){
+          alert('publication_articles_rejected');
         }else{
           e.stopPropagation();
         }

@@ -4,15 +4,18 @@ const publication = `
     Dashboard
   </p>
   <div class="panel-block">
-    <button id="execute" class="button is-link is-fullwidth">
+    <button id="publication_new_article" class="button is-link is-fullwidth">
       + New article
     </button>
   </div>
-  <a class="panel-block">
-    <span class="panel-icon">
-      <i class="fas fa-book" aria-hidden="true"></i>
-    </span>
-    <img class="icone-li" src="images/book.svg"> Overview
+  <a class="panel-block" id="publication_articles">
+     My articles
+  </a>
+  <a class="panel-block" id="publication_articles_published">
+     Published
+  </a>
+  <a class="panel-block" id="publication_articles_rejected">
+     Rejected
   </a>
 
   <nav class="panel">
@@ -27,19 +30,32 @@ const publication = `
       </button>
     </div>
   </nav>
+
 </nav>
+<div class="modal" id="publication_new_article_modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">New article</p>
+        <button class="delete" aria-label="publication_pop_up_close" id="publication_pop_up_close"></button>
+      </header>
+      <section class="modal-card-body">
+      <div id="editor_content">
+          <nav class="article-block-header">
+            <center>Text editor</center>
+          </nav>
+            <input class="input" type="text" id="publication_title" placeholder="Article title"></input>
+          <textarea id="summernote" name="editordata"></textarea>
+
+    </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-primary" id="publication_send">Add the article</button>
+        <button class="button" id="publication_pop_up_cancel">Cancel</button>
+      </footer>
+    </div>
+</div>
 <div class="data-account-display">
-    <div id="editor_content">
-        <nav class="article-block-header">
-          <center>Text editor</center>
-        </nav>
-          <input class="input" type="text" id="publication_title" placeholder="Article title"></input>
-    <br/>
-        <textarea id="summernote" name="editordata"></textarea>
-        <br/>
-          <button class="button is-primary" id="publication_send">Add the article</button>
-  </div>
-  </div>
 </div>
 <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">

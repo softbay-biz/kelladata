@@ -1,6 +1,9 @@
-import {sendData} from './../../js/helpers/sendData.js';
-import {display_members_list} from './../../js/helpers/display_members_list.js';
+import {sendData} from './../helpers/sendData.js';
+import {display_members_list} from './../helpers/display_members_list.js';
 import {dashboard_handler} from './../helpers/dashboard_handler.js';
+import {displayArticles} from './../helpers/display_articles.js';
+import all_medias from './../helpers/all_medias.js';
+import articles_list from './../helpers/articles_list.js';
 
 let title = document.getElementById("publication_title");
 let content = document.getElementById("summernote");
@@ -12,6 +15,8 @@ const resetForm = ()=>{
 const publication_handler = ()=>{
   dashboard_handler(document.getElementById("dashboard"));
   let new_article = document.getElementById('publication_new_article');
+  document.getElementById('data-account-display').innerHTML = "";
+  displayArticles(articles_list,localStorage.getItem("id"));
   new_article.addEventListener('click',(e)=>{
     publication_new_article_modal.classList.add("is-active");
   },false);

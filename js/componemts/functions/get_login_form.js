@@ -56,11 +56,12 @@ function get_login_form(){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = publication;
 						 publication_handler();
+						 sup_code_editor();
 					 }else if(response.message.account_type == 4){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = anthropologue;
 						 forms_handler();
-						 navigation();
+		 			   navigation();
 					 }else if(response.message.account_type == 5){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = photograph;

@@ -55,7 +55,11 @@ const publication = `
       </footer>
     </div>
 </div>
-<div class="data-account-display">
+<div class="data-account-display" id="data-account-display">
+    <div id="media_main_loader" class="media_main_loader"> <figure class="image is-128x128">
+              <img src="images/Reload-1s-200px.svg">
+          </figure>
+    </div>
 </div>
 <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">

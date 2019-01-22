@@ -3,7 +3,6 @@ function registration($data){
 	include 'Helpers/isEmailExist.php';
 	include 'Helpers/encrypt_password.php';
 	include 'Helpers/bd.php';
-	include 'Helpers/uploadFile.php';
 	$bd = bd();
 	//We check the kind of account for registration
 if(isset($data->first_name) AND isset($data->account_type) AND isset($data->last_name) AND isset($data->email) AND isset($data->password)){

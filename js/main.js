@@ -1,5 +1,9 @@
 import header from './componemts/header.js';
 import bottom from './componemts/bottom.js';
+import {sendData} from './helpers/sendData.js';
+import {media_ui_model} from './modules/media_ui_model.js';
+import articles_list from './helpers/articles_list.js';
+import all_medias from './helpers/all_medias.js';
 import home from './modules/home.js';
 import {admin_handler} from './modules/admin_handler.js';
 import {photograph_handler} from './modules/photograph_handler.js';
@@ -21,7 +25,49 @@ import photograph from './modules/photograph.js';
 import client from './modules/client.js';
 import {client_handler} from './modules/client_handler.js';
 
+const form_articles = {
+  requestName:btoa(btoa(btoa("getArticles"))),
+  data:{
+  }
+};
+const form_medias = {
+  requestName:btoa(btoa(btoa("getMedias"))),
+  data:{
+  }
+};
+const root_data = ()=>{
+  //Here we get some
+		sendData(form_articles).then((response)=>{
+			if(response.error == false){
+				if(articles_list.length === 0){
+					for(let i = 0; i < response.message.length; i++){
+						articles_list.push(response.message[i]);
+					}
+				}
+        preview_home_article.innerHTML = "";
+				for(let i = 0; i < 4; i++){
+						preview_home_article.insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i]));
+				}
+			}else{
+			}
+		}).catch((error)=>{
+			//console.log(error);
+		});
+		sendData(form_medias).then((response)=>{
+			if(response.error == false){
+				if(all_medias.length === 0){
+					for(let i = 0; i < response.message.length; i++){
+						all_medias.push(response.message[i]);
+					}
+				}
+			}else{
+			}
+		}).catch((error)=>{
+			//console.log(error);
+		});
+};
 document.addEventListener('DOMContentLoaded',()=>{
+  root_data();
 	if(localStorage.getItem("connected") != null && localStorage.getItem("connected") == "true"){
 		switch (atob(atob(localStorage.getItem("role")))) {
 			case "1":

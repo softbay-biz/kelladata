@@ -3,7 +3,7 @@ function updateDetails($data){
 	include 'Helpers/isEmailExist.php';
 	include 'Helpers/bd.php';
 	include 'Helpers/encrypt_password.php';
-	include 'Helpers/uploadFile.php';
+	
 	$bd = bd();
 	$response = array();
 	$email = $data->email;

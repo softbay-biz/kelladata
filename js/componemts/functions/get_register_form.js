@@ -18,18 +18,18 @@ function get_register_form(){
 	if(form.data.first_name === "" || form.data.last_name === "" || form.data.email === ""
 		|| form.data.password === "" || form.data.account_type === ""){
 			if(form.data.account_type == 0){
-				return alert("Veuillez choisir un type e compte!");
+				return alert("Veuillez choisir un type de compte!");
 			}
 			else{
 				return alert("Veuillez remplir tout les champs!");
 			}
 	}else{
 		if(form.data.password != form.data.confirm_password){
-			return alert("Les deux mots de passes ne se remssemble pas!");
+			return alert("Les deux mots de passe ne se remssemble pas!");
 		}else{
 			let register_promise = sendData(form);
-			 return register_promise.then((response)=>{
-				 if(response.error === false){
+			 return register_promise.then((response)=>{console.log(response);
+				 if(response.error == false){
 					 console.log(response.message);
 					  document.getElementById('container').innerHTML = home;
 						alert("Vous serrez notifier par mail apres l'activation de votre compte par l'administrateur.");

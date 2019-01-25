@@ -17,6 +17,7 @@ const forms_handler = ()=>{
     let a6 = document.getElementById("a6").value;
     let a7 = document.getElementById("a7").value;
     let a8 = document.getElementById("a8").value;
+    let a9 = document.getElementById("a9").value;
         if(date === "" || time === "" || a2 === "" || a3 === "" || a4 === "" || a5 === ""
       || a6 === "" || a7 === "" || a8 === ""){
           alert("Veuillez remplir tout les champs");
@@ -30,8 +31,10 @@ const forms_handler = ()=>{
           survey.section_a.a6 = a6;
           survey.section_a.a7 = a7;
           survey.section_a.a8 = a8;
+          survey.section_a.a9 = a9;
           stay_or_leave_page = 1;
           states.contrainte_page = true;
+          console.log(survey);
         }
   }else if(actualPage == 2){
     if(survey.section_b.b1.length <1){
@@ -306,8 +309,11 @@ document.getElementById("b_submit").addEventListener('click',()=>{
   let b4 = document.getElementById("b4").value;
   let b5 = document.getElementById("b5").value;
   let b6 = document.getElementById("b6").value;
+  let b7 = document.getElementById("b7").value;
+  let b8 = document.getElementById("b8").value;
+  let b9 = document.getElementById("b9").value;
   if(b1 === "" || b2 === "" || b3 === "" || b4 === ""
-  || b5 === "" || b6 === ""){
+  || b5 === "" || b6 === "" || b8 === ""){
     alert("Veuillez remplir tout les champs");
   }else{
     survey.section_b.b1.push(b1);
@@ -316,6 +322,9 @@ document.getElementById("b_submit").addEventListener('click',()=>{
     survey.section_b.b4.push(b4);
     survey.section_b.b5.push(b5);
     survey.section_b.b6.push(b6);
+    survey.section_b.b7.push(b7);
+    survey.section_b.b8.push(b8);
+    survey.section_b.b9.push(b9);
     let temp_table = `
       <tr>
         <td>${b1}</td>
@@ -324,6 +333,9 @@ document.getElementById("b_submit").addEventListener('click',()=>{
         <td>${b4}</td>
         <td>${b5}</td>
         <td>${b6}</td>
+        <td>${b7}</td>
+        <td>${b8}</td>
+        <td>${b9}</td>
       </tr>
     `;
     document.getElementById("table_temp_family").insertAdjacentHTML("afterbegin",temp_table);
@@ -358,6 +370,8 @@ document.getElementById("b_submit").addEventListener('click',()=>{
     document.getElementById("b5").value ="";
     document.getElementById("b6").value ="";
     document.getElementById("b7").value ="";
+    document.getElementById("b8").value ="";
+    document.getElementById("b9").value ="";
     alert('Nouveau membre ajoute!');
   }
 },false);
@@ -449,7 +463,7 @@ document.getElementById("c2").addEventListener("change",(e)=>{
     document.getElementById("c6").style.visibility = "visible";
     document.getElementById("c7").style.visibility = "visible";
     document.getElementById("c8").style.visibility = "visible";
-    document.getElementById("c9").style.visibility = "hidden";
+    document.getElementById("c9").style.visibility = "visible";
   }
 },false);
 document.getElementById("c5").addEventListener("change",(e)=>{
@@ -623,6 +637,16 @@ document.getElementById("e32").addEventListener("change",(e)=>{
     document.getElementById("e37").style.visibility = "visible";
     document.getElementById("e38").style.visibility = "visible";
     document.getElementById("e39").style.visibility = "visible";
+  }
+},false);
+document.getElementById("b5").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("b5"));
+  }
+},false);
+document.getElementById("b7").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("b7"));
   }
 },false);
 document.getElementById("e2").addEventListener("change",(e)=>{

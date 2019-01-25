@@ -53,7 +53,7 @@ const anthropologue = `
     </ul>
   </nav>
   <div id="content-forms-elements">
-    <div class="q_form" style="display:block;" id=1>
+    <div class="q_form" id=1>
       <h2>SECTION A : INFORMATION SUR QUESTIONNAIRE</h2>
       <div class="content-forms-small-left" >
             <div class="field">
@@ -109,9 +109,15 @@ const anthropologue = `
                 </div>
               </div>
               <div class="field">
-                <label class="label">Nom ou code de l’enquêteur</label>
+                <label class="label">Numéro de téléphone du chef du ménage</label>
                 <div class="control">
                   <input class="input" id="a8" type="text" placeholder="Text input">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Nom ou code du groupe de collecte</label>
+                <div class="control">
+                  <input class="input" id="a9" type="text" placeholder="Text input">
                 </div>
               </div>
             </div>
@@ -127,6 +133,9 @@ const anthropologue = `
                 <th>Code B4 (B4 : Contribution au revenu du ménage : Oui ou Non)</th>
                 <th>Code B5 (B5 : Liens de parenté avec le chef de ménage :<br/> Conjoint(e) ou Fils/Fille ou Frère/Soeur ou Neveu/Nièce ou Petits- fils/filles ou Père/Mère ou Autres)</th>
                 <th>Code B6 (B6 : État matrimonial)</th>
+                <th>Code B7 (Handicap du membre du ménage)</th>
+                <th>Code B8 (avez-vous une activité ?)</th>
+                <th>Code B9 (Code mère de l’enfant de 0 à 4 ans) « ne rien écrire pour les non-concernés »</th>
               </tr>
               <tr>
                 <td><input id="b1" class="input" type="text" placeholder="Text input"></td>
@@ -154,16 +163,11 @@ const anthropologue = `
                       <select id="b5">
                         <option></option>
                         <option>Conjoint(e)</option>
-                        <option>Fils</option>
-                        <option>Fille</option>
-                        <option>Frère</option>
-                        <option>Soeur</option>
-                        <option>Neveu</option>
-                        <option>Nièce</option>
-                        <option>Petit-fils</option>
-                        <option>Petite-fille</option>
-                        <option>Père</option>
-                        <option>Mère</option>
+                        <option>Fils/Fille</option>
+                        <option>Frère/Soeur</option>
+                        <option>Neveu/Niece</option>
+                        <option>Petit-fils/fille</option>
+                        <option>Père/Mère</option>
                         <option>Autres</option>
                       </select>
                     </div>
@@ -182,6 +186,28 @@ const anthropologue = `
                       </select>
                     </div>
                 </td>
+                <td>
+                  <div class="select">
+                      <select id="b7">
+                        <option></option>
+                        <option>Kyste</option>
+                        <option>Lipome</option>
+                        <option>Hernie</option>
+                        <option>Pas de handicap</option>
+                        <option>Autres</option>
+                      </select>
+                    </div>
+                </td>
+                <td>
+                  <div class="select">
+                    <select id="b8">
+                      <option></option>
+                      <option>Oui</option>
+                      <option>Non</option>
+                    </select>
+                  </div>
+                </td>
+                <td><input id="b9" class="input" placeholder="Code mère" type="text"></td>
                 <td><div class="control">
                       <button id="b_submit" class="button is-primary">Ajouter</button>
                     </div>
@@ -193,7 +219,7 @@ const anthropologue = `
 
     </table>
     </div>
-    <div class="q_form" id=3>
+    <div class="q_form" style="display:block;" id=3>
       <h2>SECTION C : EDUCATION</h2>
       <h3>Une fois les membres du ménage identifié, les codes et les noms doivent apparaitre automatiquement à la section C en vue de leur poser les questions qui suivent.
 La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne les enfants de 10 ans et plus.</h3>

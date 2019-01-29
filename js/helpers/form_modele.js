@@ -8,11 +8,13 @@ let survey = {
   section_c:{c0:[],c1:[],c2:[],c3:[],c4:[],
   c5:[],c6:[],c7:[],c8:[],c9:[]
   },
-  section_d:{d0:[],d1:[],d2:[],d3:[],d4:[],d5:[],d6:[],d7:[],d9a:[],d9b:[],d10:[],
-  d11:[]
+  section_d:{d0:[],d1:[],d2:[],d3:[],d4:[],d5a:[],d5b:[],d6:[],d7:[]
   },
   section_e:{},
   section_f:{
+    f2a:{
+      f2a1:"",f2a2:"",f2a3:"",f2a4:""
+    },
     f12:{}
   },
   section_g:{

@@ -207,7 +207,13 @@ const anthropologue = `
                     </select>
                   </div>
                 </td>
-                <td><input id="b9" class="input" placeholder="Code mère" type="text"></td>
+                <td>
+                <div class="select">
+                  <select id="b9">
+                    <option></option>
+                  </select>
+                </div>
+                </td>
                 <td><div class="control">
                       <button id="b_submit" class="button is-primary">Ajouter</button>
                     </div>
@@ -219,14 +225,14 @@ const anthropologue = `
 
     </table>
     </div>
-    <div class="q_form" style="display:block;" id=3>
+    <div class="q_form" id=3>
       <h2>SECTION C : EDUCATION</h2>
       <h3>Une fois les membres du ménage identifié, les codes et les noms doivent apparaitre automatiquement à la section C en vue de leur poser les questions qui suivent.
 La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne les enfants de 10 ans et plus.</h3>
       <table class="table">
             <tr>
               <th>C0 :Membres du ménage</th>
-              <th>C1 : langues lues et écrites des personnes de 10 et plus dans le ménage</th>
+              <th>C1 : « langues lues et écrites des personnes de 10 et 20 ans dans le ménage » </th>
               <th>C2 :A déjà fréquenté l’école ?</th>
               <th>C3 : Niveau d’étude le plus élevé</th>
               <th>C4 :A fréquenté l’école l’année dernière?</th>
@@ -326,15 +332,15 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
       </table>
     </div>
     <div class="q_form" id=4>
-      <h2>SECTION D. SANTE</h2>
+      <h2>SECTION D : SANTE</h2>
       <table class="table">
         <tr>
-          <th>Membres du ménage</th>
-          <th>D1 : A un enfant d’un an</th>
-          <th>D2 : A eu des soins prénatals avant l’accouchement</th>
-          <th>D3 : Handicap</th>
-          <th>D4 : Maladies/blessures comme obstacle au travail et à l’école durant les 15 derniers jours</th>
-          <th>D5 : Types de maladies/blessures durant les 15 derniers jours</th>
+          <th>Membres du ménage âgés de plus de 4 ans  identifiés à B1</th>
+          <th>D1 : Maladies/blessures comme obstacle au travail et à l’école durant les 15 derniers jours</th>
+          <th>D2 : Types de maladies/blessures durant les 15 derniers jours</th>
+          <th>D3 : Absence au travail/école durant les 15 derniers jours</th>
+          <th>D4 : Sollicitation des soins médicaux durant les 15 derniers jours</th>
+          <th>D5a : Fréquence  de service durant les 15 derniers jours à D4 
         </tr>
         <tr>
           <td><div class="select">
@@ -350,88 +356,65 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                 </select>
               </div>
           </td>
-          <td><div class="select">
-              <select id="d2">
-                <option></option>
-                <option>Oui</option>
-                <option>Non</option>
-              </select>
-            </div></td>
           <td>
-            <div class="select">
-                <select id="d3">
-                  <option></option>
-                  <option>Physique</option>
-                  <option>Mental</option>
-                </select>
-              </div>
+            <input id="d2" class="input" type="text" placeholder="Text input">
+          </td>
+          <td>
+            <input id="d3" class="input" type="text" placeholder="Text input">
           </td>
           <td>
             <div class="select">
                 <select id="d4">
                   <option></option>
-                  <option>Oui</option>
-                  <option>Non</option>
+                  <option>Hôpital public</option>
+                  <option>Hôpital privé</option>
+                  <option>Automédication</option>
+                  <option>Médecine traditionnelle</option>
                 </select>
               </div>
           </td>
           <td>
-            <input id="d5" class="input" type="text" placeholder="Text input">
+          <select id="d5a">
+            <option></option>
+            <option>Plus</option>
+            <option>Moins</option>
+            <option>Moyen</option>
+          </select>
+          </td>
+
+          <td>
+            <div class="control">
+                  <button id="d_submit" class="button is-primary">Ajouter</button>
+                </div>
           </td>
         </tr>
       </table>
       <table class="table">
             <tr>
-              <th>D6 : Absence au travail/école durant les 15 derniers jours</th>
-              <th>D7 : Sollicitation des soins médicaux durant les 15 derniers jours</th>
-              <th>D9a : Fréquence de service durant les 15 derniers jours
-à D7</th>
-              <th>D9b : Maladies identifiées après diagnostic</th>
-              <th>D10 : Problèmes rencontrés avec ledit service</th>
-              <th>D11 : Pourquoi n’a pas consulté un service de soins</th>
+              <th>D5b: Maladies identifiées après diagnostic</th>
+              <th>D6: Problèmes rencontrés avec ledit service</th>
+              <th>D7 : Pourquoi n’a pas consulté un service de soins</th>
             </tr>
             <tr>
-              <td>
-                <input id="d6" class="input" type="text" placeholder="Text input">
-              </td>
-              <td>
-                <div class="select">
-                    <select id="d7">
-                      <option></option>
-                      <option>Hôpital public</option>
-                      <option>Hôpital privé</option>
-                      <option>Automédication</option>
-                      <option>Médecine traditionnelle</option>
-                    </select>
-                  </div>
-              </td>
-              <td>
-                <input id="d9a" class="input" type="text" placeholder="Text input">
-              </td>
-              <td>
-                <input id="d9b" class="input" type="text" placeholder="Text input">
-              </td>
-              <td>
-                <input id="d10" class="input" type="text" placeholder="Text input">
-              </td>
-              <td>
-                <div class="select">
-                    <select id="d11">
-                      <option></option>
-                      <option>Pas nécessaire</option>
-                      <option>Manque de moyen financier</option>
-                      <option>Distance longue</option>
-                      <option>Absence de soins appropriés</option>
-                      <option>Mauvais accueil</option>
-                      <option>Autres</option>
-                    </select>
-                  </div>
-              </td>
-              <td>
-                <div class="control">
-                      <button id="d_submit" class="button is-primary">Ajouter</button>
-                    </div>
-              </td>
+            <td>
+              <input id="d5b" class="input" type="text" placeholder="Text input">
+            </td>
+            <td>
+              <input id="d6" class="input" type="text" placeholder="Text input">
+            </td>
+            <td>
+              <div class="select">
+                  <select id="d7">
+                    <option></option>
+                    <option>Pas nécessaire</option>
+                    <option>Manque de moyen financier</option>
+                    <option>Distance longue</option>
+                    <option>Absence de soins appropriés</option>
+                    <option>Mauvais accueil</option>
+                    <option>Autres</option>
+                  </select>
+                </div>
+            </td>
             </tr>
 
       </table>
@@ -735,7 +718,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
     </div>
-    <div class="q_form"  id=6>
+    <div class="q_form" id=6>
       <h2>SECTION E : EMPLOI (Suite)</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
@@ -917,29 +900,31 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
       </div>
     </div>
     <div class="q_form" id=7>
-      <h2>SECTION F : AVOIRS DU MENAGE</h2>
+      <h2>SECTION F : AVOIRS DU MENAGE « cette section concerne le chef du ménage »</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
-          <label class="label">Propriété du logement : êtes-vous ?</label>
+          <label class="label">Quelle est votre situation dans ce terrain ?</label>
           <div class="control">
             <select id="f1">
               <option></option>
-              <option>Locataire (Paye le argent ou en nature)</option>
+              <option>Locataire (Paye en argent ou en nature)</option>
               <option>Propriétaire avec titre foncier</option>
-              <option>Propriétaire sans titre foncier</option>
+              <option>Propriétaire avec certificat de propriété</option>
               <option>Propriétaire avec droit coutumier</option>
+              <option>Propriétaire avec abandon du droit coutumier</option>
+              <option>Propriétaire avec certificat d’achat</option>
             </select>
           </div>
         </div>
         <div class="field">
-          <label class="label">Votre logement dispose de combien de pièces ?</label>
+          <label class="label">Est-ce que votre logement dispose des pièces suivantes ?</label>
           <div class="control">
             <select id="f2a">
               <option></option>
-              <option>Chambres à coucher</option>
-              <option>Cuisines</option>
-              <option>Salle de bain</option>
-              <option>Salle à manger/Salon</option>
+              <option id="f2a1">Chambres à coucher</option>
+              <option id="f2a2">Cuisines</option>
+              <option id="f2a3">Salle de bain</option>
+              <option id="f2a4">Salle à manger/Salon</option>
             </select>
           </div>
         </div>
@@ -956,7 +941,11 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         <div class="field">
           <label class="label">Quelles sont les superficies de vos terres ayant un titre de propriété coutumier ou légal ? (Superficie en hectare ou en décimale)</label>
           <div class="control">
-            <input id="f3" class="input" type="text" placeholder="Text input">
+            <select id="f3">
+              <option></option>
+              <option>Supérieur à 1 Ha</option>
+              <option>Inférieur à 1 Ha</option>
+            </select>
           </div>
         </div>
         <div class="field">
@@ -966,9 +955,8 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               <option></option>
               <option>Identique</option>
               <option>Pas eu de terre il y’a un an</option>
-              <option>Superficie supérieur à 1 hectare</option>
-              <option>Superficie inférieur à 1 hectare</option>
-              <option>Superficie en mètre carré</option>
+              <option>Plus d’un Ha</option>
+              <option>Moins d’un Ha</option>
             </select>
           </div>
         </div>
@@ -985,14 +973,14 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
             </select>
           </div>
         </div>
-      </div>
-      <div class="content-forms-small-left-third">
         <div class="field">
           <label class="label">Quelle est la superficie de ces terres qui ne sont pas votre propriété ?</label>
           <div class="control">
             <input id="f6" class="input" type="test" placeholder="Text input">
           </div>
         </div>
+      </div>
+      <div class="content-forms-small-left-third">
         <div class="field">
           <label class="label">Comparaison des superficies de ces terres à celles donc vous disposez il y’a une année ?
 Nb : Ecrire la superficie à l’espace indiqué</label>
@@ -1008,7 +996,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
           </div>
         </div>
         <div class="field">
-          <label class="label">Combien de gros bétail et grand troupeau possédez-vous actuellement ?</label>
+          <label class="label">Combien de gros bétail et grand troupeau possédez-vous actuellement ? « voire code 0001 » </label>
           <div class="control">
             <select id="f8">
               <option></option>
@@ -1020,7 +1008,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
           </div>
         </div>
         <div class="field">
-          <label class="label">Combien de têtes de gros bétail possédez-vous il y’a un an ?</label>
+          <label class="label">Combien de têtes de gros bétail possédiez-vous il y’a un an ?</label>
           <div class="control">
             <select id="f9">
               <option></option>
@@ -1132,8 +1120,20 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
         <div class="control">
             <label class="radio">
-              <label class="label">Autres</label>
+              <label class="label">Voiture</label>
               <input id="f1213" type="checkbox">
+              </label>
+        </div>
+        <div class="control">
+            <label class="radio">
+              <label class="label">Vélo</label>
+              <input id="f1214" type="checkbox">
+              </label>
+        </div>
+        <div class="control">
+            <label class="radio">
+              <label class="label">Autres</label>
+              <input id="f1215" type="checkbox">
               </label>
         </div>
         <div class="field">
@@ -1194,7 +1194,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
           </div>
         </div>
         <div class="field">
-          <label class="label">Le ménage dispose-t-il d’un stock de céréale jusqu’à la prochaine récolte ?</label>
+          <label class="label">Le ménage dispose-t-il d’un stock de céréales jusqu’à la prochaine récolte ?</label>
           <div class="control">
             <select id="f18">
               <option></option>
@@ -1211,23 +1211,25 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
     </div>
-    <div class="q_form" id=8>
-      <h2>SECTION G : LOGEMENT ET CONFORT DU MENAGE</h2>
+    <div class="q_form" style="display:block;" id=8>
+      <h2>SECTION G : LOGEMENT ET CONFORT DU MENAGE « cette section concerne le chef du ménage »</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
           <label class="label">Quel est le type principal de matériau du toit utilisé pour la couverture de votre habitation ?
-(Notez le matériau principal)</label>
+(Notez le matériau principal) et à observer</label>
           <div class="control">
             <select id="g1">
               <option></option>
               <option>Tôles</option>
               <option>Tuiles</option>
               <option>Pailles</option>
+              <option>Feuilles tissées</option>
+              <option>Autres</option>
             </select>
           </div>
         </div>
         <div class="field">
-          <label class="label">Quel est le matériau principal utilisé pour la construction De votre logement ?</label>
+          <label class="label">Quel est le matériau principal utilisé pour la construction De votre logement ? (et à observer)</label>
           <div class="control">
             <select id="g2">
               <option></option>
@@ -1240,7 +1242,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
           </div>
         </div>
         <div class="field">
-          <label class="label">Quelle est la principale source d’eau de boisson ?
+          <label class="label">Quelle est la principale source d’eau de boisson ?(une seule modalité est possible)
 (Si A, allez à G3b. Si B écrivez automatiquement NON G3b)</label>
 <label class="label">A) Sources d’eau salubre</label>
         <div class="control">
@@ -1249,6 +1251,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
             <option>Robinet</option>
             <option>Forage</option>
             <option>Puits fermé</option>
+            <option>Puits fermé et aménagé</option>
             <option>Bonne fontaine</option>
             <option>Sources aménagées</option>
           </select>
@@ -1260,6 +1263,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
             <option>Sources ouvertes/non aménagées</option>
             <option>Puits ouverts</option>
             <option>Lacs</option>
+            <option>Rivière</option>
           </select>
         </div>
         </div>
@@ -1274,13 +1278,14 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
           </div>
         </div>
         <div class="field">
-          <label class="label">Quel est le type de toilette principal utilisé dans le ménage ?</label>
+          <label class="label">Quel est le type de toilette principal utilisé dans le ménage ? (une seule modalité est possible)</label>
           <div class="control">
             <select id="g4">
               <option></option>
               <option>WC avec chasse d’eau et fosse septique</option>
               <option>Latrines ordinaires</option>
               <option>Latrines à fosse ventilée</option>
+              <option>Fosse artisanal/canon</option>
             </select>
           </div>
         </div>

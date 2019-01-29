@@ -350,6 +350,8 @@ document.getElementById("b_submit").addEventListener('click',()=>{
         option4.text = b1;
         let option5 = document.createElement("option");
         option5.text = b1;
+        let option6 = document.createElement("option");
+        option6.text = b1;
         if(parseInt(b3)>=10){
           document.getElementById("c0").add(option1);
         }
@@ -358,6 +360,9 @@ document.getElementById("b_submit").addEventListener('click',()=>{
         }
         if(b2 === "F"){
           document.getElementById("h2").add(option4);
+        }
+        if(b2 === "F"){
+          document.getElementById("b9").add(option6);
         }
           document.getElementById("d0").add(option2);
           document.getElementById("k3").add(option5);
@@ -483,14 +488,11 @@ document.getElementById("d_submit").addEventListener('click',()=>{
   let d2 = document.getElementById("d2").value;
   let d3 = document.getElementById("d3").value;
   let d4 = document.getElementById("d4").value;
-  let d5 = document.getElementById("d5").value;
+  let d5a = document.getElementById("d5a").value;
+  let d5b = document.getElementById("d5b").value;
   let d6 = document.getElementById("d6").value;
   let d7 = document.getElementById("d7").value;
-  let d9a = document.getElementById("d9a").value;
-  let d9b = document.getElementById("d9b").value;
-  let d10 = document.getElementById("d10").value;
-  let d11 = document.getElementById("d11").value;
-  if(d0 === "" || d1 === "" || d3 === "" || d4 === ""){
+  if(d0 === ""){
     alert("Veuillez remplir au moins d0, d1, d3 et d4!");
   }else{
     survey.section_d.d0.push(d0);
@@ -498,53 +500,40 @@ document.getElementById("d_submit").addEventListener('click',()=>{
     survey.section_d.d2.push(d2);
     survey.section_d.d3.push(d3);
     survey.section_d.d4.push(d4);
-    survey.section_d.d5.push(d5);
+    survey.section_d.d5a.push(d5a);
+    survey.section_d.d5b.push(d5b);
     survey.section_d.d6.push(d6);
     survey.section_d.d7.push(d7);
-    survey.section_d.d9a.push(d9a);
-    survey.section_d.d9b.push(d9b);
-    survey.section_d.d10.push(d10);
-    survey.section_d.d11.push(d11);
     document.getElementById("d0").remove(document.getElementById("d0").selectedIndex);
     //We clear value
     document.getElementById("d1").value ="";
     document.getElementById("d2").value ="";
     document.getElementById("d3").value ="";
     document.getElementById("d4").value ="";
-    document.getElementById("d5").value ="";
+    document.getElementById("d5a").value ="";
+    document.getElementById("d5b").value ="";
     document.getElementById("d6").value ="";
     document.getElementById("d7").value ="";
-    document.getElementById("d9a").value ="";
-    document.getElementById("d9b").value ="";
-    document.getElementById("d10").value ="";
-    document.getElementById("d11").value ="";
     alert('Informations du membre ajoutees!');
   }
 },false);
 document.getElementById("d1").addEventListener("change",(e)=>{
   if(e.target.value === "Non"){
     document.getElementById("d2").style.visibility = "hidden";
-  }else{
-    document.getElementById("d2").style.visibility = "visible";
-  }
-},false);
-document.getElementById("d4").addEventListener("change",(e)=>{
-  if(e.target.value === "Non"){
-    document.getElementById("d5").style.visibility = "hidden";
+    document.getElementById("d3").style.visibility = "hidden";
+    document.getElementById("d4").style.visibility = "hidden";
+    document.getElementById("d5a").style.visibility = "hidden";
+    document.getElementById("d5b").style.visibility = "hidden";
     document.getElementById("d6").style.visibility = "hidden";
     document.getElementById("d7").style.visibility = "hidden";
-    document.getElementById("d9a").style.visibility = "hidden";
-    document.getElementById("d9b").style.visibility = "hidden";
-    document.getElementById("d10").style.visibility = "hidden";
-    document.getElementById("d11").style.visibility = "hidden";
   }else{
-    document.getElementById("d5").style.visibility = "visible";
+    document.getElementById("d2").style.visibility = "visible";
+    document.getElementById("d3").style.visibility = "visible";
+    document.getElementById("d4").style.visibility = "visible";
+    document.getElementById("d5a").style.visibility = "visible";
+    document.getElementById("d5b").style.visibility = "visible";
     document.getElementById("d6").style.visibility = "visible";
     document.getElementById("d7").style.visibility = "visible";
-    document.getElementById("d9a").style.visibility = "visible";
-    document.getElementById("d9b").style.visibility = "visible";
-    document.getElementById("d10").style.visibility = "visible";
-    document.getElementById("d11").style.visibility = "visible";
   }
 },false);
 document.getElementById("e1").addEventListener("change",(e)=>{
@@ -647,6 +636,11 @@ document.getElementById("b5").addEventListener("change",(e)=>{
 document.getElementById("b7").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){
     addNewSelectOption(document.getElementById("b7"));
+  }
+},false);
+document.getElementById("d7").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("d7"));
   }
 },false);
 document.getElementById("e2").addEventListener("change",(e)=>{
@@ -796,6 +790,11 @@ document.getElementById("f18").addEventListener("change",(e)=>{
     document.getElementById("f19").style.visibility = "visible";
   }
 },false);
+document.getElementById("g1").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("g1"));
+  }
+},false);
 document.getElementById("g2").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){
     addNewSelectOption(document.getElementById("g2"));
@@ -817,6 +816,21 @@ document.getElementById("g3a2").addEventListener("change",(e)=>{
     document.getElementById("g3a1").style.visibility = "hidden";
   }else{
     document.getElementById("g3a1").style.visibility = "visible";
+  }
+},false);
+document.getElementById("f2a").addEventListener("change",(e)=>{
+  if(e.target.value !== ""){
+    let reponse = prompt("Répondre par oui ou non:");
+    let option = e.target.options[e.target.selectedIndex].id;
+    if(option === "f2a1"){
+      survey.section_f.f2a.f2a1 = reponse;
+    }else if(option === "f2a2"){
+      survey.section_f.f2a.f2a2 = reponse;
+    }else if(option === "f2a3"){
+      survey.section_f.f2a.f2a3 = reponse;
+    }else if(option === "f2a4"){
+      survey.section_f.f2a.f2a4 = reponse;
+    }
   }
 },false);
 document.getElementById("g6a").addEventListener("change",(e)=>{

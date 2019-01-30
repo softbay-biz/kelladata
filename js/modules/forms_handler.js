@@ -215,8 +215,6 @@ const forms_handler = ()=>{
     let g4 = document.getElementById("g4").value;
     let g5 = document.getElementById("g5").value;
     let g6b = document.getElementById("g6b").value;
-    let g6c = document.getElementById("g6c").value;
-    let g6d = document.getElementById("g6d").value;
     let g7 = document.getElementById("g7").value;
     let g8 = document.getElementById("g8").value;
     let g9 = document.getElementById("g9").value;
@@ -226,8 +224,6 @@ const forms_handler = ()=>{
     survey.section_g.g3b = g3b;
     survey.section_g.g4 = g4;
     survey.section_g.g6b = g6b;
-    survey.section_g.g6c = g6c;
-    survey.section_g.g6d = g6d;
     survey.section_g.g7 = g7;
     survey.section_g.g8 = g8;
     survey.section_g.g9 = g9;
@@ -795,6 +791,21 @@ document.getElementById("g1").addEventListener("change",(e)=>{
     addNewSelectOption(document.getElementById("g1"));
   }
 },false);
+document.getElementById("g8").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("g8"));
+  }
+},false);
+document.getElementById("g9").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("g9"));
+  }
+},false);
+document.getElementById("g10").addEventListener("change",(e)=>{
+  if(e.target.value === "Autres"){
+    addNewSelectOption(document.getElementById("g10"));
+  }
+},false);
 document.getElementById("g2").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){
     addNewSelectOption(document.getElementById("g2"));
@@ -954,13 +965,6 @@ document.getElementById("i4").addEventListener("change",(e)=>{
 document.getElementById("g6b").addEventListener("change",(e)=>{
   if(e.target.value === "Autres"){
     addNewSelectOption(document.getElementById("g6b"));
-  }
-},false);
-document.getElementById("g6c").addEventListener("change",(e)=>{
-  if(e.target.value === "Oui"){
-    document.getElementById("g6d").style.visibility = "hidden";
-  }else{
-    document.getElementById("g6d").style.visibility = "visible";
   }
 },false);
 document.getElementById("j1").addEventListener("change",(e)=>{

@@ -1322,16 +1322,17 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
             </select>
           </div>
           <div class="field">
-            <label class="label">Quel est le principal moyen habituellement utilisé ?</label>
+            <label class="label">Quel est le principal moyen de déplacement le plus utilisé ?</label>
             <div class="control">
               <select id="g6b">
                 <option></option>
                 <option>Moto</option>
-                <option>Marche à pied</option>
+                <option>Marche</option>
                 <option>Taxi</option>
                 <option>Car</option>
                 <option>Vélo</option>
                 <option>Voiture personnelle</option>
+                <option>Voiture de transport</option>
                 <option>Train</option>
                 <option>Bus de ligne</option>
                 <option>Autres</option>
@@ -1339,23 +1340,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
             </div>
           </div>
           <div class="field">
-            <label class="label">En faites-vous usage ?</label>
-            <div class="control">
-              <select id="g6c">
-                <option></option>
-                <option>Oui</option>
-                <option>Non</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Pourquoi n’en faites-vous pas usage ?</label>
-            <div class="control">
-              <input id="g6d" class="input" type="text" placeholder="Text input">
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Quel est votre zone de résidence ?</label>
+            <label class="label">Comment appelle-t-on votre lieu de résidence ?</label>
             <div class="control">
               <input id="g7" class="input" type="text" placeholder="Text input">
             </div>
@@ -1364,7 +1349,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
       </div>
       <div class="content-forms-small-left-third">
         <div class="field">
-          <label class="label">Quel est le matériau principal de construction du sol de votre ménage ?</label>
+          <label class="label">Quel est le matériau principal de construction du sol de votre ménage ?  (une seule modalité est possible) et à observer</label>
           <div class="control">
             <select id="g8">
               <option></option>
@@ -1372,6 +1357,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
               <option>Sable+ciment (lissé)</option>
               <option>Carreaux</option>
               <option>Terre nue</option>
+              <option>Autres</option>
             </select>
           </div>
         </div>
@@ -1384,6 +1370,8 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
               <option>Villa</option>
               <option>Maison individuel simple</option>
               <option>Maison traditionnel ou case</option>
+              <option>Hutte</option>
+              <option>Autres</option>
             </select>
           </div>
         </div>
@@ -1394,6 +1382,8 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
               <option></option>
               <option>Poubelle</option>
               <option>Existence d’un service de ramassage/collecte</option>
+              <option>Dans la rivière</option>
+              <option>Autres</option>
             </select>
           </div>
         </div>

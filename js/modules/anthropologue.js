@@ -1211,7 +1211,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
     </div>
-    <div class="q_form" style="display:block;" id=8>
+    <div class="q_form" id=8>
       <h2>SECTION G : LOGEMENT ET CONFORT DU MENAGE « cette section concerne le chef du ménage »</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
@@ -1390,7 +1390,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
       </div>
     </div>
     <div class="q_form" id=9>
-      <h2>SECTION H : QUESTIONS SUR LES ENFANTS AGÉS DE MOINS DE CINQ ANS</h2>
+      <h2>SECTION H : QUESTIONS SUR LES ENFANTS AGÉS DE MOINS DE CINQ ANS << cette section concerne tous les enfants âgés de 0 à 4 ans et de leurs mères. >></h2>
       <table class="table">
             <tr>
               <th>Nom enfant</th>
@@ -1455,11 +1455,11 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
 
     </table>
     </div>
-    <div class="q_form" id=10>
-      <h2>MODULE I : DEPENSES RETROSPECTIVES DU MENAGE</h2>
+    <div class="q_form" style="display:block;" id=10>
+      <h2>MODULE I : DEPENSES RETROSPECTIVES DU MENAGE « cette section concerne le chef du ménage »</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
-          <label class="label">Quels ont les dépenses scolaires du ménage pour l’année 2016/2017 ?</label>
+          <label class="label">Quels ont les dépenses scolaires du ménage pour l’année 2017/2018 ?</label>
           <div class="control">
             <select id="i1">
               <option></option>
@@ -1487,7 +1487,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
           </div>
         </div>
         <div class="field">
-          <label class="label">Quels sont les dépenses de santé du ménage au cours des 30 derniers jours ?</label>
+          <label class="label">Quelles ont été les dépenses de santé du ménage au cours des 30 derniers jours ?</label>
           <div class="control">
             <select id="i3">
               <option></option>
@@ -1502,7 +1502,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
       </div>
       <div class="content-forms-small-left-third">
           <div class="field">
-            <label class="label">Quelles sont les dépenses d’intrants agricoles du ménage pour l’année 2016/2017 ?</label>
+            <label class="label">Quelles sont les dépenses d’intrants agricoles du ménage pour l’année 2017/2018 ?</label>
             <div class="control">
               <select id="i4">
                 <option></option>

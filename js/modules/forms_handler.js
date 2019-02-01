@@ -5,7 +5,7 @@ import tab_temp_survey from './../modules/temp_survey.js';
 const forms_handler = ()=>{
     document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
-  let actualPage = 1;
+  let actualPage = 14;
   let stay_or_leave_page = 0;//1 leave 0 stay
   if(actualPage == 1){
     let date = document.getElementById("date").value;
@@ -34,7 +34,6 @@ const forms_handler = ()=>{
           survey.section_a.a9 = a9;
           stay_or_leave_page = 1;
           states.contrainte_page = true;
-          console.log(survey);
         }
   }else if(actualPage == 2){
     if(survey.section_b.b1.length <1){
@@ -265,7 +264,11 @@ const forms_handler = ()=>{
     let k12 = document.getElementById("k12").value;
     let k13 = document.getElementById("k13").value;
     let k14 = document.getElementById("k14").value;
-    let k15 = document.getElementById("k15").value;
+    let k1501 = document.getElementById("k1501").checked;
+    let k1502 = document.getElementById("k1502").checked;
+    let k1503 = document.getElementById("k1503").checked;
+    let k1504 = document.getElementById("k1504").checked;
+    let k1505 = document.getElementById("k1505").checked;
     survey.section_k.k1 = k1;
     survey.section_k.k2 = k2;
     survey.section_k.k3 = k3;
@@ -280,22 +283,42 @@ const forms_handler = ()=>{
     survey.section_k.k12 = k12;
     survey.section_k.k13 = k13;
     survey.section_k.k14 = k14;
-    survey.section_k.k15 = k15;
+    survey.section_k.k1501 = turnBoolToFrench(k1501);
+    survey.section_k.k1502 = turnBoolToFrench(k1502);
+    survey.section_k.k1503 = turnBoolToFrench(k1503);
+    survey.section_k.k1504 = turnBoolToFrench(k1504);
+    survey.section_k.k1505 = turnBoolToFrench(k1505);
   }else if(actualPage == 13){
     let l1 = document.getElementById("l1").value;
     let l4 = document.getElementById("l4").value;
     survey.section_l.l1 = l1;
     survey.section_l.l4 = l4;
   }else if(actualPage == 14){
-    let o1 = document.getElementById("o1").value;
-    let o3 = document.getElementById("o3").value;
-    let o5 = document.getElementById("o5").value;
-    let o6 = document.getElementById("o6").value;
-    survey.section_o.o1 = o1;
-    survey.section_o.o3 = o3;
-    survey.section_o.o5 = o5;
-    survey.section_o.o6 = o6;
-  }
+    let m1 = document.getElementById("m1").value;
+    let m3 = document.getElementById("m3").value;
+    let m5 = document.getElementById("m5").value;
+    let m6 = document.getElementById("m6").value;
+    let m201 = document.getElementById("m201").value;
+    let m202 = document.getElementById("m202").value;
+    let m203 = document.getElementById("m203").value;
+    let m204 = document.getElementById("m204").value;
+    let m205 = document.getElementById("m205").value;
+    let m206 = document.getElementById("m206").value;
+    let m207 = document.getElementById("m207").value;
+    let m208 = document.getElementById("m208").value;
+    survey.section_m.m1 = m1;
+    survey.section_m.m3 = m3;
+    survey.section_m.m5 = m5;
+    survey.section_m.m6 = m6;
+    survey.section_m.m2.m201 = m201;
+    survey.section_m.m2.m202 = m202;
+    survey.section_m.m2.m203 = m203;
+    survey.section_m.m2.m204 = m204;
+    survey.section_m.m2.m205 = m205;
+    survey.section_m.m2.m206 = m206;
+    survey.section_m.m2.m207 = m207;
+    survey.section_m.m2.m208 = m208;
+  }console.log(survey.section_m);
 },false);
 //Add people on the family list
 document.getElementById("b_submit").addEventListener('click',()=>{
@@ -1209,7 +1232,11 @@ document.getElementById("k1").addEventListener("change",(e)=>{
     document.getElementById("k12").style.visibility = "hidden";
     document.getElementById("k13").style.visibility = "hidden";
     document.getElementById("k14").style.visibility = "hidden";
-    document.getElementById("k15").style.visibility = "hidden";
+    document.getElementById("k1501").style.visibility = "hidden";
+    document.getElementById("k1502").style.visibility = "hidden";
+    document.getElementById("k1503").style.visibility = "hidden";
+    document.getElementById("k1504").style.visibility = "hidden";
+    document.getElementById("k1505").style.visibility = "hidden";
   }else{
     document.getElementById("k2").style.visibility = "visible";
     document.getElementById("k3").style.visibility = "visible";
@@ -1224,7 +1251,11 @@ document.getElementById("k1").addEventListener("change",(e)=>{
     document.getElementById("k12").style.visibility = "visible";
     document.getElementById("k13").style.visibility = "visible";
     document.getElementById("k14").style.visibility = "visible";
-    document.getElementById("k15").style.visibility = "visible";
+    document.getElementById("k1501").style.visibility = "visible";
+    document.getElementById("k1502").style.visibility = "visible";
+    document.getElementById("k1503").style.visibility = "visible";
+    document.getElementById("k1504").style.visibility = "visible";
+    document.getElementById("k1505").style.visibility = "visible";
   }
 },false);
 document.getElementById("k2").addEventListener("change",(e)=>{
@@ -1250,13 +1281,27 @@ document.getElementById("k6").addEventListener("change",(e)=>{
     document.getElementById("k7").style.visibility = "visible";
   }
 },false);
-document.getElementById("o1").addEventListener("change",(e)=>{
+document.getElementById("m1").addEventListener("change",(e)=>{
   if(e.target.value == "Non"){
-    document.getElementById("o2").style.visibility = "hidden";
-    document.getElementById("o3").style.visibility = "hidden";
+    document.getElementById("m201").style.visibility = "hidden";
+    document.getElementById("m202").style.visibility = "hidden";
+    document.getElementById("m203").style.visibility = "hidden";
+    document.getElementById("m204").style.visibility = "hidden";
+    document.getElementById("m205").style.visibility = "hidden";
+    document.getElementById("m206").style.visibility = "hidden";
+    document.getElementById("m207").style.visibility = "hidden";
+    document.getElementById("m208").style.visibility = "hidden";
+    document.getElementById("m3").style.visibility = "hidden";
   }else{
-    document.getElementById("o2").style.visibility = "visible";
-    document.getElementById("o3").style.visibility = "visible";
+    document.getElementById("m201").style.visibility = "visible";
+    document.getElementById("m202").style.visibility = "visible";
+    document.getElementById("m203").style.visibility = "visible";
+    document.getElementById("m204").style.visibility = "visible";
+    document.getElementById("m205").style.visibility = "visible";
+    document.getElementById("m206").style.visibility = "visible";
+    document.getElementById("m207").style.visibility = "visible";
+    document.getElementById("m208").style.visibility = "visible";
+    document.getElementById("m3").style.visibility = "visible";
   }
 },false);
 document.getElementById("k14").addEventListener("change",(e)=>{
@@ -1269,53 +1314,30 @@ document.getElementById("k15").addEventListener("change",(e)=>{
     addNewSelectOption(document.getElementById("k15"));
   }
 },false);
-document.getElementById("o2").addEventListener("change",(e)=>{
+
+document.getElementById("m4").addEventListener("change",(e)=>{console.log(survey.section_m);
   if(e.target.value !== ""){
     let prix= parseInt(prompt("Entrez le prix:"));
     prix = isNaN(prix)?-1:prix;
     let option = e.target.options[e.target.selectedIndex].id;
-    if(option === "o201"){
-      survey.section_o.o2.o201.payer = prix;
-    }else if(option === "o202"){
-      survey.section_o.o2.o202.payer = prix;
-    }else if(option === "o203"){
-      survey.section_o.o2.o203.payer = prix;
-    }else if(option === "o204"){
-      survey.section_o.o2.o204.payer = prix;
-    }else if(option === "o205"){
-      survey.section_o.o2.o205.payer = prix;
-    }else if(option === "o206"){
-      survey.section_o.o2.o206.payer = prix;
-    }else if(option === "o207"){
-      survey.section_o.o2.o207.payer = prix;
-    }else if(option === "o208"){
-      survey.section_o.o2.o208.payer = prix;
-    }
-  }
-},false);
-document.getElementById("o4").addEventListener("change",(e)=>{
-  if(e.target.value !== ""){
-    let prix= parseInt(prompt("Entrez le prix:"));
-    prix = isNaN(prix)?-1:prix;
-    let option = e.target.options[e.target.selectedIndex].id;
-    if(option === "o401"){
-      survey.section_o.o4.o401.payer = prix;
-    }else if(option === "o402"){
-      survey.section_o.o4.o402.payer = prix;
-    }else if(option === "o403"){
-      survey.section_o.o4.o403.payer = prix;
-    }else if(option === "o404"){
-      survey.section_o.o4.o404.payer = prix;
-    }else if(option === "o405"){
-      survey.section_o.o4.o405.payer = prix;
-    }else if(option === "o406"){
-      survey.section_o.o4.o406.payer = prix;
-    }else if(option === "o407"){
-      survey.section_o.o4.o407.payer = prix;
-    }else if(option === "o408"){
-      survey.section_o.o4.o408.payer = prix;
-    }else if(option === "o409"){
-      survey.section_o.o4.o409.payer = prix;
+    if(option === "m401"){
+      survey.section_m.m4.m401.payer = prix;
+    }else if(option === "m402"){
+      survey.section_m.m4.m402.payer = prix;
+    }else if(option === "m403"){
+      survey.section_m.m4.m403.payer = prix;
+    }else if(option === "m404"){
+      survey.section_m.m4.m404.payer = prix;
+    }else if(option === "m405"){
+      survey.section_m.m4.m405.payer = prix;
+    }else if(option === "m406"){
+      survey.section_m.m4.m406.payer = prix;
+    }else if(option === "m407"){
+      survey.section_m.m4.m407.payer = prix;
+    }else if(option === "m408"){
+      survey.section_m.m4.m408.payer = prix;
+    }else if(option === "m409"){
+      survey.section_m.m4.m409.payer = prix;
     }
   }
 },false)};

@@ -59,7 +59,13 @@ let survey = {
   },
   section_k:{
     k1:"",k2:"",k3:"",k4:0,k5:0,k6:"",k7:0,k8:0,k9:0,k10:0,k11:0,
-    k12:"",k13:0,k14:"",k15:""
+    k12:"",k13:0,k14:"",k15:{
+      k1501:"",
+      k1502:"",
+      k1503:"",
+      k1504:"",
+      k1505:""
+    }
   },
   section_l:{
     l1:"",
@@ -99,20 +105,20 @@ let survey = {
     },
     l4:0
   },
-  section_o:{
-    o1:"",
-    o2:{
-      o201:{payer:-1},o202:{payer:-1},o203:{payer:-1},o204:{payer:-1},
-      o205:{payer:-1},o206:{payer:-1},o207:{payer:-1},o208:{payer:-1}
+  section_m:{
+    m1:"",
+    m2:{
+      m201:{payer:-1},m202:{payer:-1},m203:{payer:-1},m204:{payer:-1},
+      m205:{payer:-1},m206:{payer:-1},m207:{payer:-1},m208:{payer:-1}
     },
-    o3:"",
-    o4:{
-      o401:{payer:-1},o402:{payer:-1},o403:{payer:-1},o404:{payer:-1},
-      o405:{payer:-1},o406:{payer:-1},o407:{payer:-1},o408:{payer:-1},
-      o409:{payer:-1}
+    m3:"",
+    m4:{
+      m401:{payer:-1},m402:{payer:-1},m403:{payer:-1},m404:{payer:-1},
+      m405:{payer:-1},m406:{payer:-1},m407:{payer:-1},m408:{payer:-1},
+      m409:{payer:-1}
     },
-    o5:-1,
-    o6:""
+    m5:-1,
+    m6:""
   }
 
 };

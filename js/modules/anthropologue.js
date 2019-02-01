@@ -1455,7 +1455,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
 
     </table>
     </div>
-    <div class="q_form" style="display:block;" id=10>
+    <div class="q_form" id=10>
       <h2>MODULE I : DEPENSES RETROSPECTIVES DU MENAGE « cette section concerne le chef du ménage »</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
@@ -1518,7 +1518,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
     </div>
     <div class="q_form" id=11>
-      <h2>MODULE J : PRODUCTION AGRICOLE DE LA CAMPAGNE 2016/2017</h2>
+      <h2>MODULE J : PRODUCTION AGRICOLE DE LA CAMPAGNE 2017/2018 « cette section concerne le chef du ménage. »</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
           <label class="label">Quels sont les produits agricoles que vous avez cultivés pour l’année 2017-2018 ?</label>
@@ -1658,10 +1658,10 @@ Nb : Choisir la raison principale)</label>
       </div>
     </div>
     <div class="q_form" id=12>
-      <h2>MODULE K : ENTREPRISES ET ACTIVITES NON AGRICOLES</h2>
+      <h2>MODULE K : ENTREPRISES ET ACTIVITES NON AGRICOLES « cette section concerne le chef du ménage. »</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
-          <label class="label">Le ménage/membre possède-t-il une activité/entreprise non agricole ?</label>
+          <label class="label">Le ménage/membre possède-t-il les activités/entreprises non agricoles ?</label>
           <div class="control">
             <select id="k1">
               <option></option>
@@ -1725,28 +1725,28 @@ Nb : Choisir la raison principale)</label>
           </div>
         </div>
         <div class="field">
-          <label class="label">Quel est l’effectif des personnes qui travaille actuellement dans l’entreprise ?</label>
+          <label class="label">Quel est l’effectif des personnes qui travaillent actuellement dans l’entreprise ?</label>
           <div class="control">
             <input id="k7" class="input" type="number" placeholder="Text input">
           </div>
         </div>
         <div class="field">
-          <label class="label">Quel est le nombre de personnes qui travaillaient régulièrement dans cette entreprise il y a 12 mois ?
-            (A écrire à la colonne code le nombre de personnes, si elle n’existe pas il y’a 12 mois, écrire 88)
+          <label class="label">Quel etait le nombre de personnes qui travaillaient régulièrement dans cette entreprise il y a 12 mois ?
+            (A écrire à la colonne code le nombre de personnes, si elles n’existent pas il y’a 12 mois, écrire 88)
           </label>
           <div class="control">
             <input id="k8" class="input" type="number" placeholder="Text input">
           </div>
         </div>
         <div class="field">
-          <label class="label">Quelle est la dépense totale de l’entreprise par mois ?
+          <label class="label">Quelle était la dépense totale de l’entreprise par mois ?
           </label>
           <div class="control">
             <input id="k9" class="input" type="number" placeholder="Text input">
           </div>
         </div>
         <div class="field">
-          <label class="label">Quelle est la dépense totale de l’entreprise par mois ?
+          <label class="label">Quelle était la dépense totale de l’entreprise par mois ?
           </label>
           <div class="control">
             <input id="k10" class="input" type="number" placeholder="Text input">
@@ -1755,7 +1755,7 @@ Nb : Choisir la raison principale)</label>
       </div>
       <div class="content-forms-small-left-third">
         <div class="field">
-          <label class="label">Combien avez-vous payez aux impôts et aux taxes par an ?
+          <label class="label">Combien aviez-vous payez aux impôts et aux taxes par an ?
           </label>
           <div class="control">
             <input id="k11" class="input" type="number" placeholder="Text input">
@@ -1779,7 +1779,7 @@ Nb : Choisir la raison principale)</label>
           </div>
         </div>
         <div class="field">
-          <label class="label">Quelle est la raison principale de cette évolution ?</label>
+          <label class="label">Quelle était la raison principale de cette évolution ?</label>
           <div class="control">
             <select id="k14">
               <option></option>
@@ -1792,25 +1792,46 @@ Nb : Choisir la raison principale)</label>
           </div>
         </div>
         <div class="field">
-          <label class="label">Quelless sont les autres sources de revenus que vous disposez ?</label>
-          <div class="control">
-            <select id="k15">
-              <option></option>
-              <option>Jeux du hasard (Pari-foot et PMUC)</option>
-              <option>Primes</option>
-              <option>Cotisations/Tontines</option>
-              <option>Heures supplémentaires</option>
-              <option>Autres</option>
-            </select>
+          <label class="label">Quelles étaient les autres sources de revenus que vous disposez ?</label>
+          <div class="control" id="k15">
+            <div class="control">
+                <label class="radio">
+                  <label class="label">Jeux du hasard (Pari-foot et PMUC)</label>
+                  <input id="k1501" type="checkbox">
+                </label>
+            </div>
+            <div class="control">
+                <label class="radio">
+                  <label class="label">Primes</label>
+                  <input id="k1502" type="checkbox">
+                </label>
+            </div>
+            <div class="control">
+                <label class="radio">
+                  <label class="label">Cotisations/Tontines</label>
+                  <input id="k1503" type="checkbox">
+                </label>
+            </div>
+            <div class="control">
+                <label class="radio">
+                  <label class="label">Heures supplémentaires</label>
+                  <input id="k1504" type="checkbox">
+                </label>
+            </div
+            <div class="control">
+                <label class="radio">
+                  <label class="label">Autres</label>
+                  <input id="k1505" type="checkbox">
+                </label>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     <div class="q_form" id=13>
-      <h2>MODULE L : DEPENSES ALIMENTAIRES DU MENAGE</h2>
+      <h2>MODULE L : DEPENSES ALIMENTAIRES DU MENAGE « cette section concerne le chef du ménage. »</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
-          <label class="label">Avez-vous fait les dépenses alimentaires du ménage au cours des 15 derniers mois ?</label>
+          <label class="label">Avez-vous fait les dépenses alimentaires du ménage au cours des 15 derniers jours ?</label>
           <div class="control">
             <select id="l1">
               <option></option>
@@ -1868,7 +1889,7 @@ des 15 derniers jours ?
           </div>
         </div>
         <div class="field">
-          <label class="label">Ligne pour ménage ne maitrisant pas ses dépenses alimentaires au cours des 15 derniers jours (inscrire 140 à la colonne code)
+          <label class="label">Ligne pour ménage ne maitrisant pas ses dépenses alimentaires au cours des 15 derniers jours (inscrire 99 à la colonne code)
           </label>
           <div class="control">
             <input id="l4" class="input" type="number" placeholder="Text input">
@@ -1876,13 +1897,13 @@ des 15 derniers jours ?
         </div>
       </div>
     </div>
-    <div class="q_form" id=14>
-      <h2>MODULE O : DEPENSES NON ALIMENTAIRES DU MENAGE DES 30 JOURS</h2>
+    <div class="q_form" style="display:block;" id=14>
+      <h2>MODULE M : DEPENSES NON ALIMENTAIRES DU MENAGE DES 30 JOURS «cette section concerne le chef du ménage.»</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
           <label class="label">Avez-vous dépensé de l’argent au cours des 30 derniers jours autre que l’alimentation ?</label>
           <div class="control">
-            <select id="o1">
+            <select id="m1">
               <option></option>
               <option>Oui</option>
               <option>Non</option>
@@ -1890,64 +1911,93 @@ des 15 derniers jours ?
           </div>
         </div>
         <div class="field">
-          <label class="label">Quelles sont les dépenses non alimentaires du ménage au cours des 30 derniers jours ?</label>
+          <label class="label">Quelles sont les dépenses non alimentaires du ménage au cours des 30 derniers jours ? «plusieurs modalités sont possibles»</label>
           <div class="control">
-            <select id="o2">
-              <option></option>
-              <option id="o201">Transport</option>
-              <option id="o202">Scolarisation</option>
-              <option id="o203">Vestimentaire</option>
-              <option id="o204">Factures (Eau, électricité)</option>
-              <option id="o205">Outils ménagers</option>
-              <option id="o206">Intrant/Matériels agricoles</option>
-              <option id="o207">Santé</option>
-              <option id="o208">Autres</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Est-ce que ces dépenses ont évolué ?</label>
-          <div class="control">
-            <select id="o3">
-              <option></option>
-              <option>Oui</option>
-              <option>Non</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Avez-vous utilisé les éléments ci-après au cours des 30 derniers jours (autoconsommation) ?</label>
-          <div class="control">
-            <select id="o4">
-              <option></option>
-              <option id="o401">Bois</option>
-              <option id="o402">Charbon</option>
-              <option id="o403">Loyer</option>
-              <option id="o404">Eau</option>
-              <option id="o405">Electricité</option>
-              <option id="o406">Gaz</option>
-              <option id="o407">Pétrole</option>
-              <option id="o408">Achat de piles</option>
-              <option id="o409">Autres</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Combien envoyez-vous hors du ménage au cours des trente derniers jours ?
-          </label>
-          <div class="control">
-            <input id="o5" class="input" type="number" placeholder="Text input">
+              <label class="radio">
+                <label class="label">Transport</label>
+                <input id="m201" class="input" type="number" placeholder="Valeur">
+              </label>
+              <br/>
+              <label class="radio">
+                <label class="label">Scolarisation</label>
+                <input id="m202" class="input" type="number" placeholder="Valeur">
+              </label>
+              <br/>
+              <label class="radio">
+                <label class="label">Vestimentaire</label>
+                <input id="m203" class="input" type="number" placeholder="Valeur">
+              </label>
+              <br/>
+              <label class="radio">
+                <label class="label">Factures (Eau, électricité)</label>
+                <input id="m204" class="input" type="number" placeholder="Valeur">
+              </label>
+              <br/>
+              <label class="radio">
+                <label class="label">Outils ménagers</label>
+                <input id="m205" class="input" type="number" placeholder="Valeur">
+              </label>
+              <br/>
+              <label class="radio">
+                <label class="label">Intrant/Matériels agricoles</label>
+                <input id="m206" class="input" type="number" placeholder="Valeur">
+              </label>
+              <br/>
+              <label class="radio">
+                <label class="label">Santé</label>
+                <input id="m207" class="input" type="number" placeholder="Valeur">
+              </label>
+              <br/>
+              <label class="radio">
+                <label class="label">Autres</label>
+                <input id="m208" class="input" type="number" placeholder="Valeur">
+              </label>
           </div>
         </div>
       </div>
       <div class="content-forms-small-left-third">
+      <div class="field">
+        <label class="label">Est-ce que ces dépenses ont évolué ?</label>
+        <div class="control">
+          <select id="m3">
+            <option></option>
+            <option>Oui</option>
+            <option>Non</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Avez-vous utilisé les éléments ci-après au cours des 30 derniers jours (autoconsommation) ?</label>
+        <div class="control">
+          <select id="m4">
+            <option></option>
+            <option id="m401">Bois</option>
+            <option id="m402">Charbon</option>
+            <option id="m403">Loyer</option>
+            <option id="m404">Eau</option>
+            <option id="m405">Electricité</option>
+            <option id="m406">Gaz</option>
+            <option id="m407">Pétrole</option>
+            <option id="m408">Achat de piles</option>
+            <option id="m409">Autres</option>
+          </select>
+        </div>
+      </div>
         <div class="field">
-          <label class="labl">Heure de fin de l’entretien
+          <label class="label">Combien envoyez-vous hors du ménage au cours des trente derniers jours ?
           </label>
           <div class="control">
-            <input id="o6" class="input" type="time" placeholder="Text input">
+            <input id="m5" class="input" type="number" placeholder="Text input">
           </div>
         </div>
+        <div class="field">
+          <label class="label">Heure de fin de l’entretien
+          </label>
+          <div class="control">
+            <input id="m6" class="input" type="time" placeholder="Text input">
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@ import states from './../states/states.js';
 import {callHomepage} from './../helpers/callHomepage.js';
 
   const navigation = ()=>{ document.getElementById("navigation").addEventListener('click',(e)=>{
-  const pagesNumber = 14;
+  const pagesNumber = 16;
   let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
   const pagesArray = document.getElementsByClassName('pagination-link');
   const survey = document.getElementById("content-forms-elements");

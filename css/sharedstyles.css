@@ -40,8 +40,11 @@ td {
 .pagination{
   position:relative;
   width:80%;
-  top:1% !important;
-  bottom:10%;
+  top:.5% !important;
+  bottom:1%;
+}
+.pagination-link{
+  font-size: .8em !important;
 }
 .content-forms{
   position:relative;

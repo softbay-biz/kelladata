@@ -8,9 +8,9 @@ const anthropologue = `
     <a id="close" class="pagination-next buttonSaveAndClose">Close</a>
     <a id="deconnexion" class="pagination-next">Deconnexion</a>
     <ul class="pagination-list">
-      <li>
-        <a class="pagination-link is-current" data-page=1 aria-label="Page 1" aria-current="page">1</a>
-      </li>
+    <li>
+      <a class="pagination-link is-current" data-page=1 aria-label="Page 1" aria-current="page">1</a>
+    </li>
       <li>
         <a class="pagination-link" data-page=2 aria-label="Goto page 2">2</a>
       </li>
@@ -50,9 +50,16 @@ const anthropologue = `
       <li>
         <a class="pagination-link" data-page=14 aria-label="Goto page 14">14</a>
       </li>
+      <li>
+        <a class="pagination-link" data-page=15 aria-label="Goto page 15">15</a>
+      </li>
+      <li>
+        <a class="pagination-link" data-page=15 aria-label="Goto page 16">16</a>
+      </li>
     </ul>
   </nav>
   <div id="content-forms-elements">
+  <h2>ETUDE PILOTE PROGRAMME KELLEWANDA : INDICATEURS DE SUIVI DU PROGRAMME KELLEWANDA AU CAMEROUN</h2>
     <div class="q_form" id=1>
       <h2>SECTION A : INFORMATION SUR QUESTIONNAIRE</h2>
       <div class="content-forms-small-left" >
@@ -423,6 +430,14 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
       <h2>SECTION E : EMPLOI</h2>
       <div class="content-forms-small-left-third">
                 <div class="field">
+                  <label class="label">Membres du ménage</label>
+                  <div class="control">
+                    <select id="e0">
+                      <option></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
                   <label class="label">Avez-vous travaillez la semaine dernière ?</label>
                   <div class="control">
                     <select id="e1">
@@ -718,7 +733,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
     </div>
-    <div class="q_form" id=6>
+    <div class="q_form" style="display:block;" id=6>
       <h2>SECTION E : EMPLOI (Suite)</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
@@ -896,6 +911,11 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           <div class="control">
             <input id="e39" class="input" type="text" placeholder="Text input">
           </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                  <button id="e_submit" class="button is-primary">Ajouter</button>
+            </div>
         </div>
       </div>
     </div>
@@ -1897,7 +1917,7 @@ des 15 derniers jours ?
         </div>
       </div>
     </div>
-    <div class="q_form" style="display:block;" id=14>
+    <div class="q_form" id=14>
       <h2>MODULE M : DEPENSES NON ALIMENTAIRES DU MENAGE DES 30 JOURS «cette section concerne le chef du ménage.»</h2>
       <div class="content-forms-small-left-third">
         <div class="field">
@@ -1990,15 +2010,205 @@ des 15 derniers jours ?
             <input id="m5" class="input" type="number" placeholder="Text input">
           </div>
         </div>
+      </div>
+      </div>
+      <div class="q_form" id=15>
+        <h2>MODULE N : SUGGESTIONS POUR AMELIORER LES CONDITIONS DE VIE DE LA POPULATION DE BIYOUHA SELON LES SECTEURS D’ACTIVITES
+        </h2><h2>cette section concerne le chef du ménage.</h2>
+        <div class="content-forms-small-left-third">
         <div class="field">
-          <label class="label">Heure de fin de l’entretien
-          </label>
-          <div class="control">
-            <input id="m6" class="input" type="time" placeholder="Text input">
+          <label class="label">Qu’est-ce que vous pouvez suggérer pour améliorer le secteur de la santé ? (à ne pas lire les modalités de réponses))</label>
+            <div class="control">
+            <label class="radio">
+              <label class="label">Création des services de soins spécialisés pour enfants, adultes et personnes de troisième âge</label>
+              <input id="n101" type="checkbox">
+            </label>
+            <label class="radio">
+              <label class="label">Rapprochement des services de soins de la population</label>
+              <input id="n102" type="checkbox">
+            </label>
+            <label class="radio">
+              <label class="label">Fluidifier de la qualité du service dans les soins de santé</label>
+              <input id="n103" type="checkbox">
+            </label>
+            <label class="radio">
+              <label class="label">Rapprochement des services de soins de la population</label>
+              <input id="n104" type="checkbox">
+            </label>
+            <label class="radio">
+              <label class="label">Autres</label>
+              <input id="n105" type="text">
+            </label>
           </div>
         </div>
-      </div>
-      </div>
+        </div>
+        <div class="content-forms-small-left-third">
+        <div class="field">
+          <label class="label">Que pouvons-nous faire pour améliorer le secteur de l’éducation dans votre village ?</label>
+            <div class="control">
+            <label class="radio">
+              <label class="label">Insertion socioprofessionnelle des jeunes après leurs formations</label>
+              <input id="n201" type="checkbox">
+            </label>
+            <label class="radio">
+              <label class="label">Création des structures éducatives répondant aux besoins et à la demande de la population</label>
+              <input id="n202" type="checkbox">
+            </label>
+            <label class="radio">
+              <label class="label">Pour les personnes désoeuvrées et qui désirent poursuivre les études, faciliter leur inscription dans les écoles appropriées</label>
+              <input id="n203" type="checkbox">
+            </label>
+            <label class="radio">
+              <label class="label">Ouverture d’un centre pour apprentissage en langue locale pour les jeunes</label>
+              <input id="n204" type="checkbox">
+            </label>
+            <label class="radio">
+              <label class="label">Mettre en place une bibliothèque fonctionnelle pour les apprenants</label>
+              <input id="n205" type="checkbox">
+            </label>
+            <label class="radio">
+              <label class="label">Autres</label>
+              <input id="n206" type="text">
+            </label>
+          </div>
+        </div>
+        </div>
+        <div class="content-forms-small-left-third">
+        <div class="field">
+          <label class="label">Dans quel secteur d’activités souhaiteriez-vous exercer ? (Une seule réponse est possible)</label>
+            <div class="control">
+            <select id="n3">
+              <option></option>
+              <option id="">Agro-pastorale</option>
+              <option id="">Enseignement</option>
+              <option id="">Commerce</option>
+              <option id="">Recyclage et gestion des ordures</option>
+              <option id="">Administration</option>
+              <option id="">Construction</option>
+              <option id="">Action sociale</option>
+              <option id="">Ingénierie</option>
+              <option id="">Communication</option>
+              <option id="">Autres</option>
+            </select>
+            </div>
+        </div>
+            <div class="field">
+              <label class="label">Que pensez-vous qu’on puisse faire pour mieux améliorer ce secteur d’activité ?</label>
+                <div class="control">
+                <label class="radio">
+                  <label class="label">Assurance d’une sécurité sociale</label>
+                  <input id="n401" type="checkbox">
+                </label>
+                <label class="radio">
+                  <label class="label">Disposition pour payer les congés annuels</label>
+                  <input id="n402" type="checkbox">
+                </label>
+                <label class="radio">
+                  <label class="label">Eviter les licenciements abusifs</label>
+                  <input id="n403" type="checkbox">
+                </label>
+                <label class="radio">
+                  <label class="label">Organiser les concours du meilleur projet par secteur d’activité</label>
+                  <input id="n404" type="checkbox">
+                </label>
+                <label class="radio">
+                  <label class="label">Mettre en place les meilleurs projets d’activité</label>
+                  <input id="n405" type="checkbox">
+                </label><br/>
+                <label class="radio">
+                  <label class="label">Autres</label>
+                  <input id="n406" type="text">
+                </label>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="q_form" id=16>
+          <h2>MODULE L : DEPENSES ALIMENTAIRES DU MENAGE « cette section concerne le chef du ménage. »</h2>
+          <div class="content-forms-small-left-third">
+          <div class="field">
+            <label class="label">Quelles sont les actions qui peuvent être menées pour aider les agriculteurs dans votre village ?</label>
+              <div class="control">
+              <label class="radio">
+                <label class="label">Création d’une école d’agricultures</label>
+                <input id="n501" type="checkbox">
+              </label>
+              <label class="radio">
+                <label class="label">Faciliter la procédure d’obtention du titre foncier pour les terres détenues</label>
+                <input id="n502" type="checkbox">
+              </label>
+              <label class="radio">
+                <label class="label">Application directe et reconnaissance de la décision du tribunal coutumier en matière de règlement de litige foncier</label>
+                <input id="n503" type="checkbox">
+              </label>
+              <label class="radio">
+                <label class="label">Mettre les agriculteurs en coopérative</label>
+                <input id="n504" type="checkbox">
+              </label>
+              <label class="radio">
+                <label class="label">Faciliter et promouvoir l’obtention des intrants naturels des produits agricoles</label>
+                <input id="n505" type="checkbox">
+              </label>
+              <label class="radio">
+                <label class="label">Campagne de sensibilisation sur la météorologie</label>
+                <input id="n506" type="checkbox">
+              </label>
+              <label class="radio">
+                <label class="label">Aménager les routes pour faciliter le déplacement dans les installations les plus proches</label>
+                <input id="n507" type="checkbox">
+              </label>
+            </div>
+          </div>
+          </div>
+          <div class="content-forms-small-left-third">
+            <div class="field">
+              <div class="control">
+              <label class="radio">
+                <label class="label">Transformation des produits agricoles sur place</label>
+                <input id="n508" type="checkbox">
+              </label>
+              <label class="radio">
+                <label class="label">Mettre sur pied un système de conservation des produits agricoles jusqu’à la prochaine récolte</label>
+                <input id="n509" type="checkbox">
+              </label>
+              <label class="radio">
+                <label class="label">Autres-</label>
+                <input id="n510" type="text">
+              </label>
+              </div>
+            </div>
+            <hr/>
+                <div class="field">
+                  <label class="label">Que pouvons-nous faire pour améliorer la qualité des logements dans votre village ?</label>
+                    <div class="control">
+                    <label class="radio">
+                      <label class="label">Construction des logements avec les matériaux locaux</label>
+                      <input id="n601" type="checkbox">
+                    </label>
+                    <label class="radio">
+                      <label class="label">Construction des logements avec des matériaux contemporains</label>
+                      <input id="n602" type="checkbox">
+                    </label>
+                    <label class="radio">
+                      <label class="label">Construction des logements écologiques et durables</label>
+                      <input id="n603" type="checkbox">
+                    </label>
+                    <label class="label">Autres</label>
+                    <input id="n604" type="text">
+                    </label>
+                    </div>
+                </div>
+          </div>
+          <div class="content-forms-small-left-third">
+            <div class="field">
+            <div class="field">
+              <div class="control">
+              <label class="label">Heure de fin de l’entretien</label>
+                <input class="input" id="z1" type="time" min="0:00" max="23:59">
+              </div>
+            </div>
+            </div>
+          </div>
     </div>
   </div>
 </div>

@@ -5,7 +5,7 @@ import tab_temp_survey from './../modules/temp_survey.js';
 const forms_handler = ()=>{
     document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
-  let actualPage = 14;
+  let actualPage = 1;
   let stay_or_leave_page = 0;//1 leave 0 stay
   if(actualPage == 1){
     let date = document.getElementById("date").value;
@@ -50,99 +50,9 @@ const forms_handler = ()=>{
     */
   }
   else if(actualPage == 5){
-    let e1 = document.getElementById("e1").value;
-    let e2 = document.getElementById("e2").value;
-    let e3 = document.getElementById("e3").value;
-    let e4 = document.getElementById("e4").value;
-    let e5 = document.getElementById("e5").value;
-    let e6 = document.getElementById("e6").value;
-    let e7 = document.getElementById("e7").value;
-    let e8 = document.getElementById("e8").value;
-    let e9 = document.getElementById("e9").value;
-    let e10 = document.getElementById("e10").value;
-    let e11 = document.getElementById("e11").value;
-    let e12 = document.getElementById("e12").value;
-    let e13 = document.getElementById("e13").value;
-    let e14 = document.getElementById("e14").value;
-    let e15 = document.getElementById("e15").value;
-    let e16 = document.getElementById("e16").value;
-    let e17 = document.getElementById("e17").value;
-    let e18 = document.getElementById("e18").value;
-    let e19 = document.getElementById("e19").value;
-    let e20 = document.getElementById("e20").value;
-    let e21 = document.getElementById("e21").value;
-    let e22 = document.getElementById("e22").value;
-    let e23 = document.getElementById("e23").value;
-    let e24 = document.getElementById("e24").value;
-        if(e1 === "" || e4 === "" || e11 === "" || e13 === "" || e15 === "" || e16 === ""
-      || e18 === "" || e19 === "" || e20 === "" || e21 === "" || e22 === "" || e23 === ""
-    || e24 === ""){
-          alert("Veuillez au moins remplir les champs : e1,e4,e11,e13,e15,e16,e18...e24");
-          stay_or_leave_page = 0;
-        }else{
-          survey.section_e.e1 = e1;
-          survey.section_e.e2 = e2;
-          survey.section_e.e3 = e3;
-          survey.section_e.e4 = e4;
-          survey.section_e.e5 = e5;
-          survey.section_e.e6 = e6;
-          survey.section_e.e7 = e7;
-          survey.section_e.e8 = e8;
-          survey.section_e.e9 = e9;
-          survey.section_e.e10 = e10;
-          survey.section_e.e11 = e11;
-          survey.section_e.e12 = e12;
-          survey.section_e.e13 = e13;
-          survey.section_e.e14 = e14;
-          survey.section_e.e15 = e15;
-          survey.section_e.e16 = e16;
-          survey.section_e.e17 = e17;
-          survey.section_e.e18 = e18;
-          survey.section_e.e19 = e19;
-          survey.section_e.e20 = e20;
-          survey.section_e.e21 = e21;
-          survey.section_e.e22 = e22;
-          survey.section_e.e23 = e23;
-          survey.section_e.e24 = e24;
-          stay_or_leave_page = 1;
-        }
+
   }else if(actualPage == 6){
-    let e25 = document.getElementById("e25").value;
-    let e26 = document.getElementById("e26").value;
-    let e27 = document.getElementById("e27").value;
-    let e28 = document.getElementById("e28").value;
-    let e29 = document.getElementById("e29").value;
-    let e30 = document.getElementById("e30").value;
-    let e31 = document.getElementById("e31").value;
-    let e32 = document.getElementById("e32").value;
-    let e33 = document.getElementById("e33").value;
-    let e34 = document.getElementById("e34").value;
-    let e35 = document.getElementById("e35").value;
-    let e36 = document.getElementById("e36").value;
-    let e37 = document.getElementById("e37").value;
-    let e38 = document.getElementById("e38").value;
-    let e39 = document.getElementById("e39").value;
-        if(e25 === "" || e26 === "" || e32 === ""){
-          alert("Veuillez au moins remplir les champs : e25,e26 et e32");
-          stay_or_leave_page = 0;
-        }else{
-          survey.section_e.e25 = e25;
-          survey.section_e.e26 = e26;
-          survey.section_e.e27 = e27;
-          survey.section_e.e28 = e28;
-          survey.section_e.e29 = e29;
-          survey.section_e.e30 = e30;
-          survey.section_e.e31 = e31;
-          survey.section_e.e32 = e32;
-          survey.section_e.e33 = e33;
-          survey.section_e.e34 = e34;
-          survey.section_e.e35 = e35;
-          survey.section_e.e36 = e36;
-          survey.section_e.e37 = e37;
-          survey.section_e.e38 = e38;
-          survey.section_e.e39= e39;
-          stay_or_leave_page = 1;
-        }
+
   }else if(actualPage == 7){
     let f1 = document.getElementById("f1").value;
     let f2a = document.getElementById("f2a").value;
@@ -297,7 +207,6 @@ const forms_handler = ()=>{
     let m1 = document.getElementById("m1").value;
     let m3 = document.getElementById("m3").value;
     let m5 = document.getElementById("m5").value;
-    let m6 = document.getElementById("m6").value;
     let m201 = document.getElementById("m201").value;
     let m202 = document.getElementById("m202").value;
     let m203 = document.getElementById("m203").value;
@@ -309,7 +218,6 @@ const forms_handler = ()=>{
     survey.section_m.m1 = m1;
     survey.section_m.m3 = m3;
     survey.section_m.m5 = m5;
-    survey.section_m.m6 = m6;
     survey.section_m.m2.m201 = m201;
     survey.section_m.m2.m202 = m202;
     survey.section_m.m2.m203 = m203;
@@ -318,7 +226,75 @@ const forms_handler = ()=>{
     survey.section_m.m2.m206 = m206;
     survey.section_m.m2.m207 = m207;
     survey.section_m.m2.m208 = m208;
-  }console.log(survey.section_m);
+  }else if(actualPage == 15){
+    let n101 = document.getElementById("n101").checked;
+    let n102 = document.getElementById("n102").checked;
+    let n103 = document.getElementById("n103").checked;
+    let n104 = document.getElementById("n104").checked;
+    let n105 = document.getElementById("n105").value;
+    let n201 = document.getElementById("n201").checked;
+    let n202 = document.getElementById("n202").checked;
+    let n203 = document.getElementById("n203").checked;
+    let n204 = document.getElementById("n204").checked;
+    let n205 = document.getElementById("n205").checked;
+    let n206 = document.getElementById("n206").value;
+    let n3 = document.getElementById("n3").value;
+    let n401 = document.getElementById("n401").checked;
+    let n402 = document.getElementById("n402").checked;
+    let n403 = document.getElementById("n403").checked;
+    let n404 = document.getElementById("n404").checked;
+    let n405 = document.getElementById("n405").checked;
+    let n406 = document.getElementById("n406").value;
+    survey.section_n.n1.n101 = turnBoolToFrench(n101);
+    survey.section_n.n1.n102 = turnBoolToFrench(n102);
+    survey.section_n.n1.n103 = turnBoolToFrench(n103);
+    survey.section_n.n1.n104 = turnBoolToFrench(n104);
+    survey.section_n.n1.n105 = n105;
+    survey.section_n.n2.n201 = turnBoolToFrench(n201);
+    survey.section_n.n2.n202 = turnBoolToFrench(n202);
+    survey.section_n.n2.n203 = turnBoolToFrench(n203);
+    survey.section_n.n2.n204 = turnBoolToFrench(n204);
+    survey.section_n.n2.n205 = turnBoolToFrench(n205);
+    survey.section_n.n2.n206 = n206;
+    survey.section_n.n3 = n3;
+    survey.section_n.n4.n401 = turnBoolToFrench(n401);
+    survey.section_n.n4.n402 = turnBoolToFrench(n402);
+    survey.section_n.n4.n403 = turnBoolToFrench(n403);
+    survey.section_n.n4.n404 = turnBoolToFrench(n404);
+    survey.section_n.n4.n405 = turnBoolToFrench(n405);
+    survey.section_n.n4.n406 = n406;
+  }else if(actualPage == 16){
+    let n501 = document.getElementById("n501").checked;
+    let n502 = document.getElementById("n502").checked;
+    let n503 = document.getElementById("n503").checked;
+    let n504 = document.getElementById("n504").checked;
+    let n505 = document.getElementById("n505").checked;
+    let n506 = document.getElementById("n506").checked;
+    let n507 = document.getElementById("n507").checked;
+    let n508 = document.getElementById("n508").checked;
+    let n509 = document.getElementById("n509").checked;
+    let n510 = document.getElementById("n510").value;
+    let n601 = document.getElementById("n601").checked;
+    let n602 = document.getElementById("n602").checked;
+    let n603 = document.getElementById("n603").checked;
+    let n604 = document.getElementById("n604").value;
+    let z1 = document.getElementById("z1").value;
+    survey.section_n.n5.n501 = turnBoolToFrench(n501);
+    survey.section_n.n5.n502 = turnBoolToFrench(n502);
+    survey.section_n.n5.n503 = turnBoolToFrench(n503);
+    survey.section_n.n5.n504 = turnBoolToFrench(n504);
+    survey.section_n.n5.n505 = turnBoolToFrench(n505);
+    survey.section_n.n5.n506 = turnBoolToFrench(n506);
+    survey.section_n.n5.n507 = turnBoolToFrench(n507);
+    survey.section_n.n5.n508 = turnBoolToFrench(n508);
+    survey.section_n.n5.n509 = turnBoolToFrench(n509);
+    survey.section_n.n5.n510 = n510;
+    survey.section_n.n6.n601 = turnBoolToFrench(n601);
+    survey.section_n.n6.n602 = turnBoolToFrench(n602);
+    survey.section_n.n6.n603 = turnBoolToFrench(n603);
+    survey.section_n.n6.n604 = n604;
+    survey.section_z.z1 = z1;
+  }
 },false);
 //Add people on the family list
 document.getElementById("b_submit").addEventListener('click',()=>{
@@ -371,6 +347,8 @@ document.getElementById("b_submit").addEventListener('click',()=>{
         option5.text = b1;
         let option6 = document.createElement("option");
         option6.text = b1;
+        let option7 = document.createElement("option");
+        option7.text = b1;
         if(parseInt(b3)>=10){
           document.getElementById("c0").add(option1);
         }
@@ -382,6 +360,9 @@ document.getElementById("b_submit").addEventListener('click',()=>{
         }
         if(b2 === "F"){
           document.getElementById("b9").add(option6);
+        }
+        if(b8 === "Oui" || b8 === "oui"){
+          document.getElementById("e0").add(option7);
         }
           document.getElementById("d0").add(option2);
           document.getElementById("k3").add(option5);
@@ -470,6 +451,101 @@ document.getElementById("h_submit").addEventListener('click',()=>{
     document.getElementById("h8").value ="";
     alert('Informations du membre ajoutees!');
   }
+},false);
+document.getElementById("e_submit").addEventListener('click',()=>{
+  let e0 = document.getElementById("e0").value;
+  let e1 = document.getElementById("e1").value;
+  let e2 = document.getElementById("e2").value;
+  let e3 = document.getElementById("e3").value;
+  let e4 = document.getElementById("e4").value;
+  let e5 = document.getElementById("e5").value;
+  let e6 = document.getElementById("e6").value;
+  let e7 = document.getElementById("e7").value;
+  let e8 = document.getElementById("e8").value;
+  let e9 = document.getElementById("e9").value;
+  let e10 = document.getElementById("e10").value;
+  let e11 = document.getElementById("e11").value;
+  let e12 = document.getElementById("e12").value;
+  let e13 = document.getElementById("e13").value;
+  let e14 = document.getElementById("e14").value;
+  let e15 = document.getElementById("e15").value;
+  let e16 = document.getElementById("e16").value;
+  let e17 = document.getElementById("e17").value;
+  let e18 = document.getElementById("e18").value;
+  let e19 = document.getElementById("e19").value;
+  let e20 = document.getElementById("e20").value;
+  let e21 = document.getElementById("e21").value;
+  let e22 = document.getElementById("e22").value;
+  let e23 = document.getElementById("e23").value;
+  let e24 = document.getElementById("e24").value;
+  let e25 = document.getElementById("e25").value;
+  let e26 = document.getElementById("e26").value;
+  let e27 = document.getElementById("e27").value;
+  let e28 = document.getElementById("e28").value;
+  let e29 = document.getElementById("e29").value;
+  let e30 = document.getElementById("e30").value;
+  let e31 = document.getElementById("e31").value;
+  let e32 = document.getElementById("e32").value;
+  let e33 = document.getElementById("e33").value;
+  let e34 = document.getElementById("e34").value;
+  let e35 = document.getElementById("e35").value;
+  let e36 = document.getElementById("e36").value;
+  let e37 = document.getElementById("e37").value;
+  let e38 = document.getElementById("e38").value;
+  let e39 = document.getElementById("e39").value;
+  if(e1 === "" || e4 === "" || e11 === "" || e13 === "" || e15 === "" || e16 === ""
+|| e18 === "" || e19 === "" || e20 === "" || e21 === "" || e22 === "" || e23 === ""
+|| e24 === ""){
+    alert("Veuillez au moins remplir les champs : e1,e4,e11,e13,e15,e16,e18...e24");
+    stay_or_leave_page = 0;
+  }else{
+    survey.section_e.e1 = e1;
+    survey.section_e.e2 = e2;
+    survey.section_e.e3 = e3;
+    survey.section_e.e4 = e4;
+    survey.section_e.e5 = e5;
+    survey.section_e.e6 = e6;
+    survey.section_e.e7 = e7;
+    survey.section_e.e8 = e8;
+    survey.section_e.e9 = e9;
+    survey.section_e.e10 = e10;
+    survey.section_e.e11 = e11;
+    survey.section_e.e12 = e12;
+    survey.section_e.e13 = e13;
+    survey.section_e.e14 = e14;
+    survey.section_e.e15 = e15;
+    survey.section_e.e16 = e16;
+    survey.section_e.e17 = e17;
+    survey.section_e.e18 = e18;
+    survey.section_e.e19 = e19;
+    survey.section_e.e20 = e20;
+    survey.section_e.e21 = e21;
+    survey.section_e.e22 = e22;
+    survey.section_e.e23 = e23;
+    survey.section_e.e24 = e24;
+    stay_or_leave_page = 1;
+  }
+      if(e25 === "" || e26 === "" || e32 === ""){
+        alert("Veuillez au moins remplir les champs : e25,e26 et e32");
+        stay_or_leave_page = 0;
+      }else{
+        survey.section_e.e25 = e25;
+        survey.section_e.e26 = e26;
+        survey.section_e.e27 = e27;
+        survey.section_e.e28 = e28;
+        survey.section_e.e29 = e29;
+        survey.section_e.e30 = e30;
+        survey.section_e.e31 = e31;
+        survey.section_e.e32 = e32;
+        survey.section_e.e33 = e33;
+        survey.section_e.e34 = e34;
+        survey.section_e.e35 = e35;
+        survey.section_e.e36 = e36;
+        survey.section_e.e37 = e37;
+        survey.section_e.e38 = e38;
+        survey.section_e.e39= e39;
+        stay_or_leave_page = 1;
+      }
 },false);
 document.getElementById("c2").addEventListener("change",(e)=>{
   if(e.target.value === "Non"){

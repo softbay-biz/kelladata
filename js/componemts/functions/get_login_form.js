@@ -38,6 +38,7 @@ function get_login_form(){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = anthropologue;
 						 states.removeHeader === true?"":removeHeader(states);
+						 navigation();
 					 }else if(response.message.account_type == 1){
 													 let form0 = {
 												     requestName:btoa(btoa(btoa("membersPendingValidation"))),
@@ -57,11 +58,6 @@ function get_login_form(){
 						 document.getElementById('container').innerHTML = publication;
 						 publication_handler();
 						 sup_code_editor();
-					 }else if(response.message.account_type == 4){
-						 persist_data_user(response.message);
-						 document.getElementById('container').innerHTML = anthropologue;
-						 forms_handler();
-		 			   navigation();
 					 }else if(response.message.account_type == 5){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = photograph;

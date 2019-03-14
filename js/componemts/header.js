@@ -32,12 +32,7 @@ const header = `<nav id="navbar-top" class="navbar is-fixed-on-top top-barre" ro
     </div>
     <div class="control has-icons-left has-icons-right">
         <input id="search-barre-landing-page" class="input is-medium search-barre-custom"  type="search"/>
-        <span class="icon is-medium is-left">
-            <i class="fa fa-search"></i>
-        </span>
-        <span class="icon is-medium is-right">
-            <i class="fa fa-empire"></i>
-        </span>
+       
     </div>
     <div class="navbar-end">
       <div class="navbar-item">

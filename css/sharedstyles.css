@@ -29,7 +29,7 @@ td {
     vertical-align: bottom;
 }
 .table input{
-  height:30px;
+  height:36px;
   min-width:100px;
   max-width:110px;
   font-size: 1.3em;
@@ -102,9 +102,9 @@ td {
 #content-forms-elements{
   position:relative;
   width:100%;
-  height: 550px;
+  /*height: 550px;  Modified by Manug 15/02/2019*/
   padding-left: 0.5%;
-  padding-right: 0.5;
+  padding-right: 0.5%; /*Modified by Manug 15/02/2019*/
   padding-top: 2%;
   top:1%;
   font-size: 0.7em !important;
@@ -217,7 +217,7 @@ footer span:hover{
 	width:100%;
 	margin: auto;
 	overflow:hidden;
-  height:100%;
+    /*height:100%;  Modified By manug 15/02/2019*/
 }
 #container2{
 	padding-bottom:1%;
@@ -375,4 +375,146 @@ footer span:hover{
 .member_elt_list:hover{
   background-color: #e5e5e5;
   cursor:pointer;
+}
+
+/*****************************************************************************/
+/********************** 15/02/2019 Modified by Manug *************************/
+/*****************************************************************************/
+.dashboard{
+border-right: solid 1px rgb(219,219,219);
+    border-radius: 0 5px 0 0;
+}
+.dashboard ul{
+    width: 100%;
+}
+.dashboard ul li{
+    height: 50px;
+    line-height: 50px;
+    margin-top: 5px;
+    font-size: 1.4em;
+    border-radius: 25px 0px 0px 25px;
+    padding-left: 0.75em;
+}
+.dashboard ul button {
+    position: relative;
+    left: 45px;
+}
+.dashboard ul li:hover{
+    background-color: #eaffef;
+    cursor: pointer;
+}
+.dashboard ul li span{
+    margin-left: 10px;
+}
+nav.pagination nav {
+    display: block;
+    width: 100%;
+}
+.select-menu-ctn{
+    display: inline-block;
+    vertical-align: middle;
+}
+nav.pagination .select{
+    border-radius: 4px;
+    border: solid 1px #ddd;
+    height: 36px;
+    margin: .26rem;
+}
+.content-forms{
+}
+.content-forms-elements{
+    overflow-x: hidden;
+}
+.table .select{
+    height: 30px;
+}
+.table .select select,.control select{
+    height: 36px;
+}
+.field .control{
+    width: 100%;
+}
+.control select{
+    width: 100%;
+}
+div.field div.control.select::after{
+    top: 25px;
+    right:25px;
+}
+
+label.label {
+    padding:.75em;
+}
+.control{
+    display: block;
+    padding: 12px;
+}
+.panel-text{
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-right: solid 1px rgb(219,219,219);
+    border-left: solid 1px rgb(219,219,219);
+    padding-left:0.75em;
+    padding-right:0.75em;
+}
+@media only screen and (max-width: 800px){
+    #container{
+        display: block;
+    }
+    .dashboard{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .table .label,label{
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        max-width: 400px;
+    }
+    .table input,.table select{
+        min-width:400px;
+    }
+    .pagination{
+        width: 100%;
+    }
+}
+.table .label,label{
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    max-width: 430px;
+}
+.table input,.table select{
+    min-width:430px;
+}
+
+.nomargin{
+    margin:0 !important;
+}
+.buttonSaveAndClose{
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+.main-ui{
+    padding-top: 60px;
+}
+#search-barre-landing-page{
+    background-image: url(../images/path@2x.png);
+    background-position-x:98% ;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    opacity: .3;
+}
+#search-barre-landing-page:focus{
+    opacity: .9;
+}
+.form{
+    margin-top: 20px;
+    max-width: 450px;
+    border:solid 1px rgb(219,219,219);
+    padding:.75em;
+}
+.form a{
+    font-weight: bold;
 }

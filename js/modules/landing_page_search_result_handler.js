@@ -1,25 +1,26 @@
 import all_medias from './../helpers/all_medias.js';
 import articles_list from './../helpers/articles_list.js';
 import {media_ui_model} from './../modules/media_ui_model.js';
+import {display_media_pop_up} from './../helpers/display_media_pop_up.js';
 
 const displayMedia = (order_by)=>{
   document.getElementById("data-account-display").innerHTML = "";
   if(order_by === "all"){
   		for (let i = 0; i < all_medias.length; i++){
   				requestAnimationFrame(()=>{
-  					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i]));
+  					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i],display_media_pop_up));
   				});
   		}
       for (let i = 0; i < articles_list.length; i++){
   				requestAnimationFrame(()=>{
-  					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i]));
+  					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i],display_media_pop_up));
   				});
   		}
     }else if(order_by === "images" || order_by === "image"){
       for (let i = 0; i < all_medias.length; i++){
         if(all_medias[i].type == 1){
           requestAnimationFrame(()=>{
-            document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i]));
+            document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i],display_media_pop_up));
           });
         }
   		}
@@ -27,7 +28,7 @@ const displayMedia = (order_by)=>{
       for (let i = 0; i < all_medias.length; i++){
         if(all_medias[i].type == 2){
           requestAnimationFrame(()=>{
-            document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i]));
+            document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i],display_media_pop_up));
           });
         }
   		}
@@ -35,14 +36,14 @@ const displayMedia = (order_by)=>{
       for (let i = 0; i < all_medias.length; i++){
         if(all_medias[i].type == 3){
           requestAnimationFrame(()=>{
-            document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i]));
+            document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i],display_media_pop_up));
           });
         }
   		}
     }else if(order_by === "articles"){
       for (let i = 0; i < articles_list.length; i++){
   				requestAnimationFrame(()=>{
-  					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i]));
+  					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i],display_media_pop_up));
   				});
   		}
     }else{
@@ -56,7 +57,7 @@ const displayMedia = (order_by)=>{
         for(let j = 0; j < words.length; j++){
           if(content.includes(words[j])){
             requestAnimationFrame(()=>{
-    					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i]));
+    					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i],display_media_pop_up));
     				});
             break;
           }
@@ -69,7 +70,7 @@ const displayMedia = (order_by)=>{
         for(let j = 0; j < words.length; j++){
           if(content.includes(words[j])){
             requestAnimationFrame(()=>{
-              document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i]));
+              document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i],display_media_pop_up));
             });
             break;
           }

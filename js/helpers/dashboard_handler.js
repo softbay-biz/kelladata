@@ -3,6 +3,7 @@ import all_medias from './../helpers/all_medias.js';
 import articles_list from './../helpers/articles_list.js';
 import {media_ui_model} from './../modules/media_ui_model.js';
 import {displayMediaClient} from './../modules/displayMediaClient.js';
+import {root_data} from './../modules/root.js';
 
 const displayMedia = (data,statut=11)=>{
   document.getElementById("data-account-display").innerHTML = "";
@@ -28,6 +29,7 @@ const dashboard_handler = (dashboard)=>{
         if(e.target.id === "deconnexion"){
           localStorage.setItem("connected","false");
           callHomepage();
+          root_data();
           return alert("Vous êtes déconnectés!");
         }else if(e.target.id === "new_media"){
           document.getElementById("media_pop_up").classList.toggle("is-active");

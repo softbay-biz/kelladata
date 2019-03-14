@@ -2,9 +2,7 @@ let survey = {
   validity:0,
   section_a:{
   },
-  section_b:{
-  b1:[],b2:[],b3:[],b4:[],b5:[],b6:[],b7:[],b8:[],b9:[]
-  },
+  section_b:[],
   section_c:{c0:[],c1:[],c2:[],c3:[],c4:[],
   c5:[],c6:[],c7:[],c8:[],c9:[]
   },

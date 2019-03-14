@@ -1,6 +1,9 @@
 import tab_temp_survey from './../modules/temp_survey.js';
 import survey from './../helpers/form_modele.js';
+import {forms_handler} from './../modules/forms_handler.js';
 import states from './../states/states.js';
+import form1 from './../modules/forms/form1.js';
+import profil from './../helpers/profil.js';
 import {callHomepage} from './../helpers/callHomepage.js';
 
   const navigation = ()=>{ document.getElementById("navigation").addEventListener('click',(e)=>{
@@ -9,6 +12,19 @@ import {callHomepage} from './../helpers/callHomepage.js';
   const pagesArray = document.getElementsByClassName('pagination-link');
   const survey = document.getElementById("content-forms-elements");
   let current_form = document.getElementById(actualPage);
+  document.getElementById("menu").addEventListener("change",()=>{
+    if(e.target.value === "Deconnexion"){
+      localStorage.setItem("connected","false");
+      callHomepage();
+      return alert("Vous êtes déconnectés!");
+    }else if(e.target.value === "Formulaires"){
+      document.getElementById("content-forms-elements").innerHTML = form1;
+      forms_handler();
+    }else if(e.target.value === "Profil"){
+      document.getElementById("content-forms-elements").innerHTML = profil;
+      forms_handler();
+    }
+  },false);
 
   if(e.target.id === "next"){
     if(actualPage<pagesNumber && states.contrainte_page === true){
@@ -24,11 +40,9 @@ import {callHomepage} from './../helpers/callHomepage.js';
       current_form.style.display = "none";
       document.getElementById((parseInt(actualPage)-1)).style.display = "block";
     }
-  }else if(e.target.id === "deconnexion"){
-    localStorage.setItem("connected","false");
-    callHomepage();
-    return alert("Vous êtes déconnectés!");
   }else if(e.target.id === "close"){
+    document.getElementById("content-forms-elements").innerHTML = "";
+  }else if(e.target.id === "close0"){
     const adapter = new FileSync('db.json')
     // With lowdb/FileAsync
     db.read()

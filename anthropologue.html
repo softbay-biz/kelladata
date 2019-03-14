@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/favicon.jpg" />
+    <link rel="stylesheet" href="css/sharedstyles.css" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/font-awesome.min.css" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/animations.css" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/bulma.css" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/bulma.css.map" media="all" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="css/bulma.min.css" media="all" onload="if(media!='all')media='all'">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/vendors/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<nav id="navbar-top" class="navbar is-fixed-on-top top-barre" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+            <img id="home" src="images/KellaData green@2x.png" width="112" height="28">
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" id="menu_elt_all">
+                All
+            </a>
+
+            <a class="navbar-item" id="menu_elt_images">
+                Images
+            </a>
+            <a class="navbar-item" id="menu_elt_videos">
+                Vidéos
+            </a>
+            <a class="navbar-item" id="menu_elt_audios">
+                Audios
+            </a>
+            <a class="navbar-item" id="menu_elt_articles">
+                Articles
+            </a>
+
+        </div>
+        <div class="control has-icons-left has-icons-right">
+            <input id="search-barre-landing-page" class="input is-medium search-barre-custom"  type="search"/>
+
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" id="signup">
+                        Sign up
+                    </a>
+                    <a class="button is-light" id="login">
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="columns main-ui">
+    <div class="column">
+        <nav class="panel" id="dashboard">
+            <p class="panel-heading">
+                Dashboard
+            </p>
+            <a class="panel-block">
+  <span class="panel-icon">
+    <i class="fas fa-book" aria-hidden="true"></i>
+  </span>
+                <img class="icone-li" src="images/book.svg"> Overview
+            </a>
+
+            <nav class="panel">
+                <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+                    <figure class="image is-128x128">
+                        <img src="images/user.png">
+                    </figure>
+                </a>
+                <span class="panel-text">
+                <ul>
+                    <li>Username : <span> kelladata</span></li>
+                    <li>Type : <span> Anthropologue</span></li>
+                </ul>
+            </span>
+                <div class="panel-block">
+
+                    <button id="deconnexion" class="button is-link is-outlined is-fullwidth">
+                        Deconnexion
+                    </button>
+                </div>
+            </nav>
+        </nav>
+
+    </div>
+
+    <div class="column  is-four-fifths-desktop is-offset-2">
+        <span class="title">Mes Formulaires</span>
+        <div class="columns">
+            <div class="forms-list column">
+                <div class="form">
+                    <a href="">Formulaire 1</a>
+                    <p>Description du formulaire</p>
+                </div>
+                <div class="form">
+                    <a href="">Formulaire 2</a>
+                    <p>Description du formulaire</p>
+                </div>
+                <div class="form">
+                    <a href="">Formulaire 3</a>
+                    <p>Description du formulaire</p>
+                </div>
+                <div class="form">
+                    <a href="">Formulaire 4</a>
+                    <p>Description du formulaire</p>
+                </div>
+            </div>
+            <div class="forms-list column">
+                <div class="form">
+                    <a href="">Formulaire 1</a>
+                    <p>Description du formulaire</p>
+                </div>
+                <div class="form">
+                    <a href="">Formulaire 2</a>
+                    <p>Description du formulaire</p>
+                </div>
+                <div class="form">
+                    <a href="">Formulaire 3</a>
+                    <p>Description du formulaire</p>
+                </div>
+                <div class="form">
+                    <a href="">Formulaire 4</a>
+                    <p>Description du formulaire</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

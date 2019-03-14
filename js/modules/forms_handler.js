@@ -1,8 +1,15 @@
 import states from './../states/states.js';
 import survey from './../helpers/form_modele.js';
 import tab_temp_survey from './../modules/temp_survey.js';
+import {dataBase} from './../node/testNode.js';
 
 const forms_handler = ()=>{
+  //Test db
+    let temp_db = {
+      command:"see"
+    };
+    console.log(dataBase(temp_db));
+  //
     document.getElementById("next").addEventListener("click",()=>{
   //let actualPage = document.getElementById("navigation").getElementsByClassName('is-current')[0].dataset.page;
   let actualPage = 1;
@@ -298,10 +305,11 @@ const forms_handler = ()=>{
 },false);
 //Add people on the family list
 document.getElementById("b_submit").addEventListener('click',()=>{
+  let temptable = new Object();
   let b1 = document.getElementById("b1").value;
-  let b2 = document.getElementById("b2").value;
+  let b2 = document.getElementById("b2").options[document.getElementById("b2").selectedIndex].dataset.val;
   let b3 = document.getElementById("b3").value;
-  let b4 = document.getElementById("b4").value;
+  let b4 = document.getElementById("b4").options[document.getElementById("b2").selectedIndex].dataset.val;;
   let b5 = document.getElementById("b5").value;
   let b6 = document.getElementById("b6").value;
   let b7 = document.getElementById("b7").value;
@@ -311,15 +319,17 @@ document.getElementById("b_submit").addEventListener('click',()=>{
   || b5 === "" || b6 === "" || b8 === ""){
     alert("Veuillez remplir tout les champs");
   }else{
-    survey.section_b.b1.push(b1);
-    survey.section_b.b2.push(b2);
-    survey.section_b.b3.push(b3);
-    survey.section_b.b4.push(b4);
-    survey.section_b.b5.push(b5);
-    survey.section_b.b6.push(b6);
-    survey.section_b.b7.push(b7);
-    survey.section_b.b8.push(b8);
-    survey.section_b.b9.push(b9);
+    temptable.b1 = b1;
+    temptable.b2 = b2;
+    temptable.b3 = b3;
+    temptable.b4 = b4;
+    temptable.b5 = b5;
+    temptable.b6 = b6;
+    temptable.b7 = b7;
+    temptable.b8 = b8;
+    temptable.b9 = b9;
+    survey.section_b.push(temptable);
+    console.log(survey.section_b);
     let temp_table = `
       <tr>
         <td>${b1}</td>
@@ -453,6 +463,7 @@ document.getElementById("h_submit").addEventListener('click',()=>{
   }
 },false);
 document.getElementById("e_submit").addEventListener('click',()=>{
+  let temp_object = new Object();
   let e0 = document.getElementById("e0").value;
   let e1 = document.getElementById("e1").value;
   let e2 = document.getElementById("e2").value;
@@ -497,54 +508,53 @@ document.getElementById("e_submit").addEventListener('click',()=>{
 || e18 === "" || e19 === "" || e20 === "" || e21 === "" || e22 === "" || e23 === ""
 || e24 === ""){
     alert("Veuillez au moins remplir les champs : e1,e4,e11,e13,e15,e16,e18...e24");
-    stay_or_leave_page = 0;
   }else{
-    survey.section_e.e1 = e1;
-    survey.section_e.e2 = e2;
-    survey.section_e.e3 = e3;
-    survey.section_e.e4 = e4;
-    survey.section_e.e5 = e5;
-    survey.section_e.e6 = e6;
-    survey.section_e.e7 = e7;
-    survey.section_e.e8 = e8;
-    survey.section_e.e9 = e9;
-    survey.section_e.e10 = e10;
-    survey.section_e.e11 = e11;
-    survey.section_e.e12 = e12;
-    survey.section_e.e13 = e13;
-    survey.section_e.e14 = e14;
-    survey.section_e.e15 = e15;
-    survey.section_e.e16 = e16;
-    survey.section_e.e17 = e17;
-    survey.section_e.e18 = e18;
-    survey.section_e.e19 = e19;
-    survey.section_e.e20 = e20;
-    survey.section_e.e21 = e21;
-    survey.section_e.e22 = e22;
-    survey.section_e.e23 = e23;
-    survey.section_e.e24 = e24;
-    stay_or_leave_page = 1;
+    temp_object.e1 = e1;
+    temp_object.e2 = e2;
+    temp_object.e3 = e3;
+    temp_object.e4 = e4;
+    temp_object.e5 = e5;
+    temp_object.e6 = e6;
+    temp_object.e7 = e7;
+    temp_object.e8 = e8;
+    temp_object.e9 = e9;
+    temp_object.e10 = e10;
+    temp_object.e11 = e11;
+    temp_object.e12 = e12;
+    temp_object.e13 = e13;
+    temp_object.e14 = e14;
+    temp_object.e15 = e15;
+    temp_object.e16 = e16;
+    temp_object.e17 = e17;
+    temp_object.e18 = e18;
+    temp_object.e19 = e19;
+    temp_object.e20 = e20;
+    temp_object.e21 = e21;
+    temp_object.e22 = e22;
+    temp_object.e23 = e23;
+    temp_object.e24 = e24;
   }
       if(e25 === "" || e26 === "" || e32 === ""){
         alert("Veuillez au moins remplir les champs : e25,e26 et e32");
-        stay_or_leave_page = 0;
+        console.log(survey.section_e);
       }else{
-        survey.section_e.e25 = e25;
-        survey.section_e.e26 = e26;
-        survey.section_e.e27 = e27;
-        survey.section_e.e28 = e28;
-        survey.section_e.e29 = e29;
-        survey.section_e.e30 = e30;
-        survey.section_e.e31 = e31;
-        survey.section_e.e32 = e32;
-        survey.section_e.e33 = e33;
-        survey.section_e.e34 = e34;
-        survey.section_e.e35 = e35;
-        survey.section_e.e36 = e36;
-        survey.section_e.e37 = e37;
-        survey.section_e.e38 = e38;
-        survey.section_e.e39= e39;
-        stay_or_leave_page = 1;
+        temp_object.e25 = e25;
+        temp_object.e26 = e26;
+        temp_object.e27 = e27;
+        temp_object.e28 = e28;
+        temp_object.e29 = e29;
+        temp_object.e30 = e30;
+        temp_object.e31 = e31;
+        temp_object.e32 = e32;
+        temp_object.e33 = e33;
+        temp_object.e34 = e34;
+        temp_object.e35 = e35;
+        temp_object.e36 = e36;
+        temp_object.e37 = e37;
+        temp_object.e38 = e38;
+        temp_object.e39 = e39;
+        survey.section_e.push(temp_object);
+        //temp_object = null;
       }
 },false);
 document.getElementById("c2").addEventListener("change",(e)=>{

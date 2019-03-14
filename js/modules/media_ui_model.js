@@ -1,8 +1,8 @@
-const media_ui_model = (type,infos)=>{
+const media_ui_model = (type,infos,display_media_pop_up)=>{
   if(type == 1){
     return `<div  class="card media-card-custom">
               <div class="card-image">
-                <figure class="image is-4by3" data-type=${infos.type}>
+                <figure class="image is-4by3" data-type=${infos.type} onClick=display_media_pop_up()>
                   <img src="medias/images/image_800px/${infos.link_or_blob}" alt="Placeholder image">
                 </figure>
               </div>

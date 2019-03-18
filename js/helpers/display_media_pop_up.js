@@ -1,5 +1,9 @@
-const display_media_pop_up = ()=>{
-  console.log('dfscv 24');
+const display_media_pop_up = (link)=>{
+  document.getElementById("wrapper-modal").classList.add("is-active");
+  document.getElementById("wrapper-modal-image").src = "medias/images/image_800px/"+link;
+  return document.getElementById("wrapper-modal-image-close").addEventListener("click",()=>{
+    document.getElementById("wrapper-modal").classList.remove("is-active");
+  });
 };
 
 export {display_media_pop_up};

@@ -4,23 +4,24 @@ import {media_ui_model} from './../modules/media_ui_model.js';
 import {display_media_pop_up} from './../helpers/display_media_pop_up.js';
 
 const displayMedia = (order_by)=>{
-  document.getElementById("data-account-display").innerHTML = "";
+  let wrapper = document.getElementById("data-account-display");
+  wrapper.innerHTML = "";
   if(order_by === "all"){
   		for (let i = 0; i < all_medias.length; i++){
   				requestAnimationFrame(()=>{
-  					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i],display_media_pop_up));
+  					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i]));
   				});
   		}
       for (let i = 0; i < articles_list.length; i++){
   				requestAnimationFrame(()=>{
-  					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i],display_media_pop_up));
+  					document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i]));
   				});
   		}
     }else if(order_by === "images" || order_by === "image"){
       for (let i = 0; i < all_medias.length; i++){
         if(all_medias[i].type == 1){
           requestAnimationFrame(()=>{
-            document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i],display_media_pop_up));
+            document.getElementById("data-account-display").insertAdjacentHTML("afterbegin",media_ui_model(all_medias[i].type,all_medias[i]));
           });
         }
   		}
@@ -77,6 +78,12 @@ const displayMedia = (order_by)=>{
         }
       }
     }
+    wrapper.addEventListener("click",(e)=>{
+        if(e.target != e.currentTarget){
+          display_media_pop_up(e.target.dataset.lightbox);
+        }
+      },{passive:true,capture:true});
+
 };
 const landing_page_search_result_handler = (order_by)=>{
   while (all_medias.length === 0 && articles_list === 0) {

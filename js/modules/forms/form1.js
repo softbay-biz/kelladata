@@ -1,9 +1,9 @@
 const form1 = `<h2>ETUDE PILOTE PROGRAMME KELLEWANDA : <br/>INDICATEURS DE SUIVI DU PROGRAMME KELLEWANDA AU CAMEROUN</h2>
-  <div class="q_form" style="display:block;" id=1>
+  <div class="q_form" id=1>
     <h2>SECTION A : INFORMATION SUR QUESTIONNAIRE</h2>
     <div class="content-forms-small-left" >
           <div class="field">
-            <label class="label">Date et heure du début de l’entretien</label>
+            <label class="label">Date et heure du début de l’entretien : A1</label>
             <div class="control">
               <input class="input" id="date" type="date" data-date-inline-picker="true">
             </div>
@@ -14,19 +14,19 @@ const form1 = `<h2>ETUDE PILOTE PROGRAMME KELLEWANDA : <br/>INDICATEURS DE SUIVI
             </div>
           </div>
           <div class="field">
-            <label class="label">Nom ou code de la région</label>
+            <label class="label">Nom ou code de la région : A2</label>
             <div class="control">
               <input class="input" id="a2" type="text" placeholder="Text input">
             </div>
           </div>
             <div class="field">
-              <label class="label">Nom ou code du Département</label>
+              <label class="label">Nom ou code du Département : A3</label>
               <div class="control">
                 <input class="input" id="a3" type="text" placeholder="Text input">
               </div>
             </div>
               <div class="field">
-                <label class="label">Nom ou code de l’Arrondissement</label>
+                <label class="label">Nom ou code de l’Arrondissement : A4</label>
                 <div class="control">
                   <input class="input" id="a4" type="text" placeholder="Text input">
                 </div>
@@ -37,48 +37,48 @@ const form1 = `<h2>ETUDE PILOTE PROGRAMME KELLEWANDA : <br/>INDICATEURS DE SUIVI
           </div>
           <div class="content-forms-small-right" >
             <div class="field">
-              <label class="label">Nom ou code du village</label>
+              <label class="label">Nom ou code du village : A5</label>
               <div class="control">
                 <input class="input" id="a5" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
-              <label class="label">Nom ou code du ménage</label>
+              <label class="label">Nom ou code du ménage : A6</label>
               <div class="control">
                 <input class="input" id="a6" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
-              <label class="label">Numéro du questionnaire</label>
+              <label class="label">Numéro du questionnaire : A7</label>
               <div class="control">
                 <input class="input" id="a7" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
-              <label class="label">Numéro de téléphone du chef du ménage</label>
+              <label class="label">Numéro de téléphone du chef du ménage : A8</label>
               <div class="control">
                 <input class="input" id="a8" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
-              <label class="label">Nom ou code du groupe de collecte</label>
+              <label class="label">Nom ou code du groupe de collecte : A9</label>
               <div class="control">
                 <input class="input" id="a9" type="text" placeholder="Text input">
               </div>
             </div>
           </div>
   </div>
-  <div class="q_form"  id=2>
+  <div class="q_form" id=2>
     <h2>SECTION B : LISTES DES MEMBRES DU MENAGE</h2>
     <h3>NB : Les chiffres placés justes après les variables sont les codes à utiliser pour le remplissage du tableau</h3>
       <div class="table">
-            
-              
+
+
               <div class="columns nomargin">
-                    <div class="column ">     
-                        <div class="label">Membres du ménage</div>
+                    <div class="column ">
+                        <div class="label">Membres du ménage : B1</div>
                         <input id="b1" class="input" type="text" placeholder="Text input">
-                        <div class="label">Code B2 ( B2 : Sexe membre du ménage :M ou F)</div>
+                        <div class="label">B2 : Sexe membre du ménage :M ou F</div>
                         <div class="select">
                               <select id="b2">
                                 <option></option>
@@ -86,11 +86,11 @@ const form1 = `<h2>ETUDE PILOTE PROGRAMME KELLEWANDA : <br/>INDICATEURS DE SUIVI
                                 <option data-val=b202>F</option>
                               </select>
                          </div>
-                         <div class="label">Code B3 (B3 : Age dernier anniversaire (en année révolu))</div>
+                         <div class="label">B3 : Age dernier anniversaire (en année révolu)</div>
                          <div >
                             <input id="b3" class="input" type="number" placeholder="Age">
                          </div>
-                         <div class="label">Code B4 (B4 : Contribution au revenu du ménage : Oui ou Non)</div>
+                         <div class="label">B4 : Contribution au revenu du ménage : Oui ou Non</div>
                          <div class="select">
                             <select id="b4">
                               <option></option>
@@ -98,7 +98,7 @@ const form1 = `<h2>ETUDE PILOTE PROGRAMME KELLEWANDA : <br/>INDICATEURS DE SUIVI
                               <option data-val=b402>Non</option>
                             </select>
                          </div>
-                         <div class="label">Code B5 (B5 : Liens de parenté avec le chef de ménage :<br/> Conjoint(e) ou Fils/Fille ou Frère/Soeur ou Neveu/Nièce ou Petits- fils/filles ou Père/Mère ou Autres)</div>
+                         <div class="label">B5 : Liens de parenté avec le chef de ménage :<br/> Conjoint(e) ou Fils/Fille ou Frère/Soeur ou Neveu/Nièce ou Petits- fils/filles ou Père/Mère ou Autres</div>
                          <div class="select">
                             <select id="b5">
                               <option></option>
@@ -111,10 +111,10 @@ const form1 = `<h2>ETUDE PILOTE PROGRAMME KELLEWANDA : <br/>INDICATEURS DE SUIVI
                               <option>Autres</option>
                             </select>
                         </div>
-                         
+
                     </div>
                     <div class="column ">
-                        <div class="label">Code B6 (B6 : État matrimonial)</div>
+                        <div class="label">État matrimonial : B6</div>
                          <div class="select">
                             <select id="b6">
                               <option></option>
@@ -127,7 +127,7 @@ const form1 = `<h2>ETUDE PILOTE PROGRAMME KELLEWANDA : <br/>INDICATEURS DE SUIVI
                               <option>Union libre</option>
                             </select>
                         </div>
-                         <div class="label">Code B7 (Handicap du membre du ménage)</div>
+                         <div class="label">Handicap du membre du ménage : B7</div>
                           <div class="select">
                             <select id="b7">
                               <option></option>
@@ -138,7 +138,7 @@ const form1 = `<h2>ETUDE PILOTE PROGRAMME KELLEWANDA : <br/>INDICATEURS DE SUIVI
                               <option>Autres</option>
                             </select>
                          </div>
-                         <div class="label">Code B8 (avez-vous une activité ?)</div>
+                         <div class="label">Avez-vous une activité ? : B8</div>
                          <div class="select">
                           <select id="b8">
                             <option></option>
@@ -146,22 +146,22 @@ const form1 = `<h2>ETUDE PILOTE PROGRAMME KELLEWANDA : <br/>INDICATEURS DE SUIVI
                             <option>Non</option>
                           </select>
                          </div>
-                         <div class="label">Code B9 (Code mère de l’enfant de 0 à 4 ans) « ne rien écrire pour les non-concernés »</div>
+                         <div class="label">B9 : Code mère de l’enfant de 0 à 4 ans) « ne rien écrire pour les non-concernés »</div>
                          <div class="select">
                             <select id="b9">
                               <option></option>
                             </select>
                          </div>
                          <div class="label"></div>
-                        
+
                     </div>
-                     
+
               </div>
-              
+
               <div class="control">
                              <button id="b_submit" class="button is-primary">Ajouter</button>
                             </div>
-           
+
 
     </div>
     <table class="table" id="table_temp_family">
@@ -208,7 +208,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                         <option>Université</option>
                         <option>Formation</option>
                         <option>NSP 99</option>
-                      </select>     
+                      </select>
                      </div>
                       <div class="label">C4 : A fréquenté l’école l’année dernière?</div>
                       <div class="select">
@@ -218,8 +218,8 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                             <option>Non</option>
                           </select>
                         </div>
-                      
-                      
+
+
                  </div>
                  <div class="column">
                     <div class="label">C5 : Fréquente actuellement une école ?</div>
@@ -252,7 +252,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                             <option>Etat de santé</option>
                           </select>
                        </div>
-                      
+
                       <div class="label">C9 : Pourquoi ne va-t-il/elle pas à l’école actuellement ou n’a jamais été à l’école ?</div>
                       <div>
                         <input id="c9" class="input" type="text" placeholder="Text input">
@@ -260,17 +260,17 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                  </div>
                 </div>
             </div>
-            
-            
+
+
             <div>
               <div class="control">
                     <button id="c_submit" class="button is-primary">Ajouter</button>
                   </div>
-        
+
 
     </div>
   </div>
-  <div class="q_form" id=4>
+  <div class="q_form"  id=4>
     <h2>SECTION D : SANTE</h2>
     <div class="table">
         <div class="columns nomargin">
@@ -300,10 +300,11 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                         <option>Hôpital privé</option>
                         <option>Automédication</option>
                         <option>Médecine traditionnelle</option>
+                        <option>Rien utilisé</option>
                       </select>
                 </div>
-                
-                
+
+
             </div>
             <div class="column">
                 <div class="label">D5a : Fréquence  de service durant les 15 derniers jours à D4</div>
@@ -312,7 +313,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                       <option></option>
                       <option>Plus</option>
                       <option>Moins</option>
-                      <option>Moyen</option>    
+                      <option>Moyen</option>
                     </select>
                 </div>
                 <div class="label">D5b : Maladies identifiées après diagnostic</div>
@@ -332,21 +333,21 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                 </select>
               </div>
             </div>
-            
-    
+
+
         </div>
-        
+
      <div class="control">
                 <button id="d_submit" class="button is-primary">Ajouter</button>
-      </div>    
-          
+      </div>
+
      </div>
   </div>
   <div class="q_form" id=5>
     <h2>SECTION E : EMPLOI</h2>
     <div class="content-forms-small-left-third">
               <div class="field">
-                <label class="label">Membres du ménage</label>
+                <label class="label">Membres du ménage : E0</label>
                 <div class="control select">
                   <select id="e0">
                     <option></option>
@@ -354,7 +355,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                 </div>
               </div>
               <div class="field">
-                <label class="label">Avez-vous travaillez la semaine dernière ?</label>
+                <label class="label">Avez-vous travaillez la semaine dernière ? : E1</label>
                 <div class="control select">
                   <select id="e1">
                     <option></option>
@@ -365,7 +366,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
               <div class="field">
                 <label class="label">Pourquoi n’avez-vous pas travaillé la semaine dernière ?
-(Raison principale)</label>
+(Raison principale) : E2</label>
                 <div class="control select">
                   <select id="e2">
                     <option></option>
@@ -379,7 +380,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                 </div>
               </div>
               <div class="field">
-                <label class="label">Etes-vous prêt ou disponible pour travailler ?</label>
+                <label class="label">Etes-vous prêt ou disponible pour travailler ? : E3</label>
                 <div class="control select">
                   <select id="e3">
                     <option></option>
@@ -389,14 +390,14 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                 </div>
               </div>
               <div class="field">
-                <label class="label">Combien d’emploi avez-vous eu au cours des 07 derniers jours ?</label>
+                <label class="label">Combien d’emploi avez-vous eu au cours des 07 derniers jours ? : E4</label>
                 <div class="control">
                   <input id="e4" class="input" type="number" placeholder="Text input">
                 </div>
               </div>
               <div class="field">
                 <label class="label">Quel est l’emploi qui vous a le plus occupé ces 07 derniers jours
-(Une seule modalité est possible)</label>
+(Une seule modalité est possible) : E5</label>
                 <div class="control select">
                   <select id="e5">
                     <option></option>
@@ -416,7 +417,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
                 </div>
               </div>
               <div class="field">
-                <label class="label">Quelle était la nature du paiement de cet emploi ?</label>
+                <label class="label">Quelle était la nature du paiement de cet emploi ? : E6</label>
                 <div class="control select">
                   <select id="e6">
                     <option></option>
@@ -432,18 +433,19 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           </div>
           <div class="content-forms-small-left-third">
             <div class="field">
-              <label class="label">Ou travaillez-vous ?</label>
+              <label class="label">Ou travaillez-vous ? : E7</label>
               <div class="control select">
                 <select id="e7">
                   <option></option>
                   <option>Privé</option>
                   <option>Public</option>
                   <option>Parapublic</option>
+                  <option>Pour le compte d'un employeur</option>
                 </select>
               </div>
             </div>
             <div class="field">
-              <label class="label">Quelle est la branche de l’activité principale que vous occupé ?</label>
+              <label class="label">Quelle est la branche de l’activité principale que vous occupé ? : E8</label>
               <div class="control select">
                 <select id="e8">
                   <option></option>
@@ -458,7 +460,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Avez-vous cherché à augmenter vos revenus ?</label>
+              <label class="label">Avez-vous cherché à augmenter vos revenus ? : E9</label>
               <div class="control select">
                 <select id="e9">
                   <option></option>
@@ -468,7 +470,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Comment avez cherché à augmenter vos revenus au cours de la semaine précédente ?</label>
+              <label class="label">Comment avez cherché à augmenter vos revenus au cours de la semaine précédente ? : E10</label>
               <div class="control select">
                 <select id="e10">
                   <option></option>
@@ -480,7 +482,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Etes-vous encore prêts à prendre un travail supplémentaire dans les 04 semaines à venir ?</label>
+              <label class="label">Etes-vous encore prêts à prendre un travail supplémentaire dans les 04 semaines à venir ? : E11</label>
               <div class="control select">
                 <select id="e11">
                   <option></option>
@@ -490,7 +492,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Pourquoi n’avez-vous donc pas cherché du travail au cours de ces 04 dernières semaines ?</label>
+              <label class="label">Pourquoi n’avez-vous donc pas cherché du travail au cours de ces 04 dernières semaines ? : E12</label>
               <div class="control select">
                 <select id="e12">
                   <option></option>
@@ -504,7 +506,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           </div>
           <div class="content-forms-small-left-third">
             <div class="field">
-              <label class="label">Est occupée, toute personne ayant travaillé au moins 03 mois de façon continue au cours des 12 derniers mois. Est-ce votre cas ?</label>
+              <label class="label">Est occupée, toute personne ayant travaillé au moins 03 mois de façon continue au cours des 12 derniers mois. Est-ce votre cas ? : E13</label>
               <div class="control select">
                 <select id="e13">
                   <option></option>
@@ -514,7 +516,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Quelle est la nature de cet emploi que vous avez occupé ?</label>
+              <label class="label">Quelle est la nature de cet emploi que vous avez occupé ? : E14</label>
               <div class="control select">
                 <select id="e14">
                   <option></option>
@@ -526,7 +528,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Quel est l’emploi qui vous a le plus occupé au cours des 07 derniers jours ?</label>
+              <label class="label">Quel est l’emploi qui vous a le plus occupé au cours des 07 derniers jours ? :E15</label>
               <div class="control select">
                 <select id="e15">
                   <option></option>
@@ -541,7 +543,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Avez-vous droit à une pension de retraite dans ce travail ?</label>
+              <label class="label">Avez-vous droit à une pension de retraite dans ce travail ? : E16</label>
               <div class="control select">
                 <select id="e16">
                   <option></option>
@@ -551,7 +553,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Quel type de sécurité sociale avez-vous ?</label>
+              <label class="label">Quel type de sécurité sociale avez-vous ? : E17</label>
               <div class="control select">
                 <select id="e17">
                   <option></option>
@@ -562,7 +564,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Avez-vous droit à des congés payés dans ce travail ?</label>
+              <label class="label">Avez-vous droit à des congés payés dans ce travail ? : E18</label>
               <div class="control select">
                 <select id="e18">
                   <option></option>
@@ -574,13 +576,13 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
           </div>
           <div class="content-forms-small-left-third">
             <div class="field">
-              <label class="label">Quel est l’avantage que vous avez tiré de ce travail ?</label>
+              <label class="label">Quel est l’avantage que vous avez tiré de ce travail ? : E19</label>
               <div class="control">
                 <input id="e19" class="input" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
-              <label class="label">Combien de mois avez-vous exercé dans ce travail ?</label>
+              <label class="label">Combien de mois avez-vous exercé dans ce travail ? : E20</label>
               <div class="control select">
                 <select id="e20">
                   <option></option>
@@ -593,7 +595,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Votre condition de vie a-t-elle changée dans cette profession ?</label>
+              <label class="label">Votre condition de vie a-t-elle changée dans cette profession ? : E21</label>
               <div class="control select">
                 <select id="e21">
                   <option></option>
@@ -603,7 +605,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Quelle est l’emploi qui vous a le plus occupé au cours des douze derniers mois ?</label>
+              <label class="label">Quelle est l’emploi qui vous a le plus occupé au cours des douze derniers mois ? : E22</label>
               <div class="control select">
                 <select id="e22">
                   <option></option>
@@ -625,7 +627,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Dans quelle branche d’activité avez-vous exercé au cours des 12 derniers mois ?</label>
+              <label class="label">Dans quelle branche d’activité avez-vous exercé au cours des 12 derniers mois ? : E23</label>
               <div class="control select">
                 <select id="e23">
                   <option></option>
@@ -642,9 +644,19 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
               </div>
             </div>
             <div class="field">
-              <label class="label">Quel a été votre revenu tiré de cet emploi durant les 30 derniers jours ?</label>
+              <label class="label">Quel a été votre revenu tiré de cet emploi durant les 30 derniers jours ? : E24</label>
               <div class="control">
                 <input id="e24" class="input" type="number" placeholder="Text input">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Est-ce que ce revenu de travail a varié au cours des 12 derniers mois ? : E25</label>
+              <div class="control select">
+                <select id="e25">
+                  <option></option>
+                  <option>Oui</option>
+                  <option>Non</option>
+                </select>
               </div>
             </div>
           </div>
@@ -653,17 +665,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
     <h2>SECTION E : EMPLOI (Suite)</h2>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Est-ce que ce revenu de travail a varié au cours des 12 derniers mois ?</label>
-        <div class="control select">
-          <select id="e25">
-            <option></option>
-            <option>Oui</option>
-            <option>Non</option>
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label class="label">Avez-vous exercé d’autres activités en même temps que l’emploi principal au cours des 12 derniers mois ?</label>
+        <label class="label">Avez-vous exercé d’autres activités en même temps que l’emploi principal au cours des 12 derniers mois ? : E26</label>
         <div class="control select">
           <select id="e26">
             <option></option>
@@ -673,7 +675,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est l’emploi qui vous a le plus occupé après l’emploi principal au cours des 12 derniers mois ?</label>
+        <label class="label">Quel est l’emploi qui vous a le plus occupé après l’emploi principal au cours des 12 derniers mois ? : E27</label>
         <div class="control select">
           <select id="e27">
             <option></option>
@@ -694,7 +696,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Dans quelle branche d’activité avez-vous exercé cet emploi ?</label>
+        <label class="label">Dans quelle branche d’activité avez-vous exercé cet emploi ? : E28</label>
         <div class="control select">
           <select id="e28">
             <option></option>
@@ -709,7 +711,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Cet emploi secondaire a-t-elle amélioré votre condition de vie ?</label>
+        <label class="label">Cet emploi secondaire a-t-elle amélioré votre condition de vie ? : E29</label>
         <div class="control select">
           <select id="e29">
             <option></option>
@@ -721,19 +723,19 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
     </div>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Au cours des 30 derniers jours, quel est le revenu que vous avez eu de cet emploi secondaire ?</label>
+        <label class="label">Au cours des 30 derniers jours, quel est le revenu que vous avez eu de cet emploi secondaire ? : E30</label>
         <div class="control">
-          <input id="e30" class="input" type="number" placeholder="Text input">
+          <input id="e30" class="input" type="number" min=0 placeholder="Text input">
         </div>
       </div>
       <div class="field">
-        <label class="label">Combien de mois avez-vous travaillez dans cet emploi secondaire durant les 12 derniers mois ?</label>
+        <label class="label">Combien de mois avez-vous travaillez dans cet emploi secondaire durant les 12 derniers mois ? : E31</label>
         <div class="control">
           <input id="e31" class="input" type="number" placeholder="Text input">
         </div>
       </div>
       <div class="field">
-        <label class="label">Avant votre emploi principal au cours des 12 derniers mois, avez-vous occupez une autre activité ?</label>
+        <label class="label">Avant votre emploi principal au cours des 12 derniers mois, avez-vous occupez une autre activité ? : E32</label>
         <div class="control select">
           <select id="e32">
             <option></option>
@@ -743,7 +745,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est cet emploi ?</label>
+        <label class="label">Quel est cet emploi ? : E33</label>
         <div class="control">
           <select id="e33">
             <option></option>
@@ -766,7 +768,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Vous avez exercé cet emploi pendant combien de temps ? (Nombre en mois)</label>
+        <label class="label">Vous avez exercé cet emploi pendant combien de temps ? (Nombre en mois) : E34</label>
         <div class="control">
           <input id="e34" class="input" type="number" placeholder="Text input">
         </div>
@@ -774,7 +776,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
     </div>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Dans quelle branche d’activité avez-vous exercé cet emploi ?</label>
+        <label class="label">Dans quelle branche d’activité avez-vous exercé cet emploi ? : E35</label>
         <div class="control">
           <select id="e35">
             <option></option>
@@ -789,7 +791,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Dans cette activité, avez-vous droit à une pension retraite ?</label>
+        <label class="label">Dans cette activité, avez-vous droit à une pension retraite ? : E36</label>
         <div class="control">
           <select id="e36">
             <option></option>
@@ -799,7 +801,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelle était votre condition de vie dans cette activité ?</label>
+        <label class="label">Quelle était votre condition de vie dans cette activité ? : E37</label>
         <div class="control">
           <select id="e37">
             <option></option>
@@ -813,7 +815,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Avez-vous droit à des congés payés dans ce travail ?</label>
+        <label class="label">Avez-vous droit à des congés payés dans ce travail ? : E38</label>
         <div class="control">
           <select id="e38">
             <option></option>
@@ -823,7 +825,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelle était la raison principale de votre départ de l’emploi précédent ?</label>
+        <label class="label">Quelle était la raison principale de votre départ de l’emploi précédent ? : E39</label>
         <div class="control">
           <input id="e39" class="input" type="text" placeholder="Text input">
         </div>
@@ -835,11 +837,11 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
       </div>
     </div>
   </div>
-  <div class="q_form" id=7>
+  <div class="q_form" style="display:block;" id=7>
     <h2>SECTION F : AVOIRS DU MENAGE « cette section concerne le chef du ménage »</h2>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Quelle est votre situation dans ce terrain ?</label>
+        <label class="label">Quelle est votre situation dans ce terrain ? : F1</label>
         <div class="control">
           <select id="f1">
             <option></option>
@@ -853,7 +855,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Est-ce que votre logement dispose des pièces suivantes ?</label>
+        <label class="label">Est-ce que votre logement dispose des pièces suivantes ? : F2a</label>
         <div class="control">
           <select id="f2a">
             <option></option>
@@ -865,7 +867,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Existe-t-il une pièce aménagée pour la cuisine ?</label>
+        <label class="label">Existe-t-il une pièce aménagée pour la cuisine ? : F2b</label>
         <div class="control">
           <select id="f2b">
             <option></option>
@@ -875,7 +877,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelles sont les superficies de vos terres ayant un titre de propriété coutumier ou légal ? (Superficie en hectare ou en décimale)</label>
+        <label class="label">Quelles sont les superficies de vos terres ayant un titre de propriété coutumier ou légal ? (Superficie en hectare ou en décimale) : F3</label>
         <div class="control">
           <select id="f3">
             <option></option>
@@ -885,7 +887,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Comparaison des superficies des terres possédées actuellement à celles possédées (s) il y’a un an ?</label>
+        <label class="label">Comparaison des superficies des terres possédées actuellement à celles possédées (s) il y’a un an ? : F4</label>
         <div class="control">
           <select id="f4">
             <option></option>
@@ -897,7 +899,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">En dehors des terres qui sont votre propriété avec droit coutumier ou légal, est ce que vous :</label>
+        <label class="label">En dehors des terres qui sont votre propriété avec droit coutumier ou légal, est ce que vous : F5</label>
         <div class="control">
           <select id="f5">
             <option></option>
@@ -910,7 +912,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelle est la superficie de ces terres qui ne sont pas votre propriété ?</label>
+        <label class="label">Quelle est la superficie de ces terres qui ne sont pas votre propriété ? : F6</label>
         <div class="control">
           <input id="f6" class="input" type="test" placeholder="Text input">
         </div>
@@ -919,7 +921,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
     <div class="content-forms-small-left-third">
       <div class="field">
         <label class="label">Comparaison des superficies de ces terres à celles donc vous disposez il y’a une année ?
-Nb : Ecrire la superficie à l’espace indiqué</label>
+Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         <div class="control">
           <select id="f7">
             <option></option>
@@ -932,7 +934,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Combien de gros bétail et grand troupeau possédez-vous actuellement ? « voire code 0001 » </label>
+        <label class="label">Combien de gros bétail et grand troupeau possédez-vous actuellement ? « voire code 0001 » : F8</label>
         <div class="control">
           <select id="f8">
             <option></option>
@@ -944,7 +946,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Combien de têtes de gros bétail possédiez-vous il y’a un an ?</label>
+        <label class="label">Combien de têtes de gros bétail possédiez-vous il y’a un an ? : F9</label>
         <div class="control">
           <select id="f9">
             <option></option>
@@ -956,7 +958,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Combien de têtes de bétails moyens possédez-vous actuellement ?</label>
+        <label class="label">Combien de têtes de bétails moyens possédez-vous actuellement ? : F10</label>
         <div class="control">
           <select id="f10">
             <option></option>
@@ -969,7 +971,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Combien de têtes de bétails moyens avez-vous possédez il y’a un an ?</label>
+        <label class="label">Combien de têtes de bétails moyens avez-vous possédez il y’a un an ? : F11</label>
         <div class="control">
           <select id="f11">
             <option></option>
@@ -984,7 +986,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
     </div>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Les avoirs du ménage ci-après sont en état de marche ?</label>
+        <label class="label">Les avoirs du ménage ci-après sont en état de marche ? : F12</label>
         <div class="control">
             <label class="radio">
               <label class="label">Télévision</label>
@@ -1073,7 +1075,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
             </label>
       </div>
       <div class="field">
-        <label class="label">Quel est le système d’énergie propre <br/>au ménage qui fonctionne actuellement ?</label>
+        <label class="label">Quel est le système d’énergie propre <br/>au ménage qui fonctionne actuellement ? : F13</label>
         <div class="control">
           <select id="f13">
             <option></option>
@@ -1089,7 +1091,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Les besoins alimentaires du ménage au cours des 12 derniers mois ont été satisfaits :</label>
+        <label class="label">Les besoins alimentaires du ménage au cours des 12 derniers mois ont été satisfaits : F14</label>
         <div class="control">
           <select id="f14">
             <option></option>
@@ -1101,7 +1103,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Comment était la situation du ménage comparée à celle il y’a un an ?</label>
+        <label class="label">Comment était la situation du ménage comparée à celle il y’a un an ? : F15</label>
         <div class="control">
           <select id="f15">
             <option></option>
@@ -1116,7 +1118,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Qui contribue le plus au besoin du ménage ?</label>
+        <label class="label">Qui contribue le plus au besoin du ménage ? : F17</label>
         <div class="control">
           <select id="f17">
             <option></option>
@@ -1130,7 +1132,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Le ménage dispose-t-il d’un stock de céréales jusqu’à la prochaine récolte ?</label>
+        <label class="label">Le ménage dispose-t-il d’un stock de céréales jusqu’à la prochaine récolte ? : F18</label>
         <div class="control">
           <select id="f18">
             <option></option>
@@ -1140,7 +1142,7 @@ Nb : Ecrire la superficie à l’espace indiqué</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Si non pourquoi ?</label>
+        <label class="label">Si non pourquoi ? : F19</label>
         <div class="control">
           <input id="f19" class="input" type="text" placeholder="Text input">
         </div>

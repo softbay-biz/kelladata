@@ -1,9 +1,11 @@
-const media_ui_model = (type,infos,display_media_pop_up)=>{
+import {display_media_pop_up} from './../helpers/display_media_pop_up.js';
+
+const media_ui_model = (type,infos)=>{
   if(type == 1){
-    return `<div  class="card media-card-custom">
+    return `<div  class="card media-card-custom imagesLightbox">
               <div class="card-image">
-                <figure class="image is-4by3" data-type=${infos.type} onClick=display_media_pop_up()>
-                  <img src="medias/images/image_800px/${infos.link_or_blob}" alt="Placeholder image">
+                <figure class="image is-4by3" data-type=${infos.type}>
+                  <img data-lightbox=${infos.link_or_blob} src="medias/images/image_800px/${infos.link_or_blob}" alt="Placeholder image">
                 </figure>
               </div>
             </div>`;

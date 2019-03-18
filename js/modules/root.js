@@ -1,5 +1,6 @@
 import {sendData} from './../helpers/sendData.js';
 import articles_list from './../helpers/articles_list.js';
+import all_medias from './../helpers/all_medias.js';
 import {media_ui_model} from './media_ui_model.js';
 const form_articles = {
   requestName:btoa(btoa(btoa("getArticles"))),
@@ -13,7 +14,7 @@ const form_medias = {
 };
 const root_data = ()=>{
   //Here we get some
-		sendData(form_articles).then((response)=>{console.log(response);
+		sendData(form_articles).then((response)=>{
 			if(response.error == false){
 				if(articles_list.length === 0){
 					for(let i = 0; i < response.message.length; i++){

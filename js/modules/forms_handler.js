@@ -307,9 +307,9 @@ const forms_handler = ()=>{
 document.getElementById("b_submit").addEventListener('click',()=>{
   let temptable = new Object();
   let b1 = document.getElementById("b1").value;
-  let b2 = document.getElementById("b2").options[document.getElementById("b2").selectedIndex].dataset.val;
+  let b2 = document.getElementById("b2").value;
   let b3 = document.getElementById("b3").value;
-  let b4 = document.getElementById("b4").options[document.getElementById("b2").selectedIndex].dataset.val;;
+  let b4 = document.getElementById("b4").value;
   let b5 = document.getElementById("b5").value;
   let b6 = document.getElementById("b6").value;
   let b7 = document.getElementById("b7").value;
@@ -329,7 +329,6 @@ document.getElementById("b_submit").addEventListener('click',()=>{
     temptable.b8 = b8;
     temptable.b9 = b9;
     survey.section_b.push(temptable);
-    console.log(survey.section_b);
     let temp_table = `
       <tr>
         <td>${b1}</td>
@@ -345,6 +344,7 @@ document.getElementById("b_submit").addEventListener('click',()=>{
     `;
     document.getElementById("table_temp_family").insertAdjacentHTML("afterbegin",temp_table);
     //We add option on section case   while(i>0){
+    console.log(b2);
         let option1 = document.createElement("option");
         option1.text = b1;
         let option2 = document.createElement("option");
@@ -367,8 +367,6 @@ document.getElementById("b_submit").addEventListener('click',()=>{
         }
         if(b2 === "F"){
           document.getElementById("h2").add(option4);
-        }
-        if(b2 === "F"){
           document.getElementById("b9").add(option6);
         }
         if(b8 === "Oui" || b8 === "oui"){
@@ -688,8 +686,22 @@ document.getElementById("e11").addEventListener("change",(e)=>{
 document.getElementById("e13").addEventListener("change",(e)=>{
   if(e.target.value === "Non"){
     document.getElementById("e14").style.visibility = "hidden";
+    document.getElementById("e15").style.visibility = "hidden";
+    document.getElementById("e16").style.visibility = "hidden";
+    document.getElementById("e17").style.visibility = "hidden";
+    document.getElementById("e18").style.visibility = "hidden";
+    document.getElementById("e19").style.visibility = "hidden";
+    document.getElementById("e20").style.visibility = "hidden";
+    document.getElementById("e21").style.visibility = "hidden";
   }else{
     document.getElementById("e14").style.visibility = "visible";
+    document.getElementById("e15").style.visibility = "visible";
+    document.getElementById("e16").style.visibility = "visible";
+    document.getElementById("e17").style.visibility = "visible";
+    document.getElementById("e18").style.visibility = "visible";
+    document.getElementById("e19").style.visibility = "visible";
+    document.getElementById("e20").style.visibility = "visible";
+    document.getElementById("e21").style.visibility = "visible";
   }
 },false);
 document.getElementById("e16").addEventListener("change",(e)=>{
@@ -722,7 +734,6 @@ document.getElementById("e32").addEventListener("change",(e)=>{
     document.getElementById("e36").style.visibility = "hidden";
     document.getElementById("e37").style.visibility = "hidden";
     document.getElementById("e38").style.visibility = "hidden";
-    document.getElementById("e39").style.visibility = "hidden";
   }else{
     document.getElementById("e33").style.visibility = "visible";
     document.getElementById("e34").style.visibility = "visible";
@@ -730,7 +741,6 @@ document.getElementById("e32").addEventListener("change",(e)=>{
     document.getElementById("e36").style.visibility = "visible";
     document.getElementById("e37").style.visibility = "visible";
     document.getElementById("e38").style.visibility = "visible";
-    document.getElementById("e39").style.visibility = "visible";
   }
 },false);
 document.getElementById("b5").addEventListener("change",(e)=>{

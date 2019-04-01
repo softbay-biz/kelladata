@@ -1,5 +1,5 @@
 const form1 = `<h2>ETUDE PILOTE PROGRAMME KELLEWANDA : <br/>INDICATEURS DE SUIVI DU PROGRAMME KELLEWANDA AU CAMEROUN</h2>
-  <div class="q_form" id=1>
+  <div class="q_form" style="display:block;" id=1>
     <h2>SECTION A : INFORMATION SUR QUESTIONNAIRE</h2>
     <div class="content-forms-small-left" >
           <div class="field">
@@ -837,7 +837,7 @@ La partie bleue s’affichera automatiquement pour la suite. Sauf la C1 concerne
       </div>
     </div>
   </div>
-  <div class="q_form" style="display:block;" id=7>
+  <div class="q_form" id=7>
     <h2>SECTION F : AVOIRS DU MENAGE « cette section concerne le chef du ménage »</h2>
     <div class="content-forms-small-left-third">
       <div class="field">
@@ -1154,7 +1154,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
     <div class="content-forms-small-left-third">
       <div class="field">
         <label class="label">Quel est le type principal de matériau du toit utilisé pour la couverture de votre habitation ?
-(Notez le matériau principal) et à observer</label>
+(Notez le matériau principal) et à observer : G1</label>
         <div class="control">
           <select id="g1">
             <option></option>
@@ -1167,7 +1167,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est le matériau principal utilisé pour la construction De votre logement ? (et à observer)</label>
+        <label class="label">Quel est le matériau principal utilisé pour la construction De votre logement ? (et à observer) : G2</label>
         <div class="control">
           <select id="g2">
             <option></option>
@@ -1181,7 +1181,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
       </div>
       <div class="field">
         <label class="label">Quelle est la principale source d’eau de boisson ?(une seule modalité est possible)
-(Si A, allez à G3b. Si B écrivez automatiquement NON G3b)</label>
+(Si A, allez à G3b. Si B écrivez automatiquement NON G3b) : G3</label>
 <label class="label">A) Sources d’eau salubre</label>
       <div class="control">
         <select id="g3a1">
@@ -1216,7 +1216,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est le type de toilette principal utilisé dans le ménage ? (une seule modalité est possible)</label>
+        <label class="label">Quel est le type de toilette principal utilisé dans le ménage ? (une seule modalité est possible) : G4</label>
         <div class="control">
           <select id="g4">
             <option></option>
@@ -1230,7 +1230,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
     </div>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Quelle est la principale source de combustible pour la cuisine ?</label>
+        <label class="label">Quelle est la principale source de combustible pour la cuisine ? : G5</label>
         <div class="control">
           <select id="g5">
             <option></option>
@@ -1244,7 +1244,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est le temps mis pour atteindre les installations les plus proches de votre ménage ?</label>
+        <label class="label">Quel est le temps mis pour atteindre les installations les plus proches de votre ménage ? : G6</label>
         <div class="control">
           <select id="g6a">
             <option></option>
@@ -1278,7 +1278,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
           </div>
         </div>
         <div class="field">
-          <label class="label">Comment appelle-t-on votre lieu de résidence ?</label>
+          <label class="label">Comment appelle-t-on votre lieu de résidence ? : G7</label>
           <div class="control">
             <input id="g7" class="input" type="text" placeholder="Text input">
           </div>
@@ -1287,7 +1287,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
     </div>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Quel est le matériau principal de construction du sol de votre ménage ?  (une seule modalité est possible) et à observer</label>
+        <label class="label">Quel est le matériau principal de construction du sol de votre ménage ?  (une seule modalité est possible) et à observer : G8</label>
         <div class="control">
           <select id="g8">
             <option></option>
@@ -1300,7 +1300,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est le type de logement dans lequel vous habitez ?</label>
+        <label class="label">Quel est le type de logement dans lequel vous habitez ? : G9</label>
         <div class="control">
           <select id="g9">
             <option></option>
@@ -1314,7 +1314,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est le système d’évacuation des ordures dans le ménage ?</label>
+        <label class="label">Quel est le système d’évacuation des ordures dans le ménage ? : 10</label>
         <div class="control">
           <select id="g10">
             <option></option>
@@ -1397,7 +1397,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
     <h2>MODULE I : DEPENSES RETROSPECTIVES DU MENAGE « cette section concerne le chef du ménage »</h2>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Quels ont les dépenses scolaires du ménage pour l’année 2017/2018 ?</label>
+        <label class="label">Quels ont les dépenses scolaires du ménage pour l’année 2017/2018 ? : I1</label>
         <div class="control">
           <select id="i1">
             <option></option>
@@ -1411,7 +1411,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quels sont les dépenses scolaires du ménage pour l’année en cours ?</label>
+        <label class="label">Quels sont les dépenses scolaires du ménage pour l’année en cours ? : I2</label>
         <div class="control">
           <select id="i2">
             <option></option>
@@ -1425,7 +1425,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelles ont été les dépenses de santé du ménage au cours des 30 derniers jours ?</label>
+        <label class="label">Quelles ont été les dépenses de santé du ménage au cours des 30 derniers jours ? : I3</label>
         <div class="control">
           <select id="i3">
             <option></option>
@@ -1440,7 +1440,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
     </div>
     <div class="content-forms-small-left-third">
         <div class="field">
-          <label class="label">Quelles sont les dépenses d’intrants agricoles du ménage pour l’année 2017/2018 ?</label>
+          <label class="label">Quelles sont les dépenses d’intrants agricoles du ménage pour l’année 2017/2018 ? : I4</label>
           <div class="control">
             <select id="i4">
               <option></option>
@@ -1459,7 +1459,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
     <h2>MODULE J : PRODUCTION AGRICOLE DE LA CAMPAGNE 2017/2018 « cette section concerne le chef du ménage. »</h2>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Quels sont les produits agricoles que vous avez cultivés pour l’année 2017-2018 ?</label>
+        <label class="label">Quels sont les produits agricoles que vous avez cultivés pour l’année 2017-2018 ? : J1</label>
         <div class="control">
           <select id="j1">
             <option></option>
@@ -1484,7 +1484,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quels ont été les facilitateurs pour la vente de ces produits ?</label>
+        <label class="label">Quels ont été les facilitateurs pour la vente de ces produits ? : J2</label>
         <div class="control">
           <select id="j2">
             <option></option>
@@ -1497,7 +1497,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Avez-vous utilisé les semences sélectionnées ?</label>
+        <label class="label">Avez-vous utilisé les semences sélectionnées ? : J3</label>
         <div class="control">
           <select id="j3">
             <option></option>
@@ -1507,7 +1507,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Avez-vous reçu les services d’encadrements pour vos produits agricoles 2016/2017 ?</label>
+        <label class="label">Avez-vous reçu les services d’encadrements pour vos produits agricoles 2016/2017 ? : J4</label>
         <div class="control">
           <select id="j4">
             <option></option>
@@ -1517,7 +1517,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Avez-vous utilisé les engrais pour vos produits agricoles ?</label>
+        <label class="label">Avez-vous utilisé les engrais pour vos produits agricoles ? : J5</label>
         <div class="control">
           <select id="j5">
             <option></option>
@@ -1528,7 +1528,7 @@ Nb : Ecrire la superficie à l’espace indiqué : F7</label>
       </div>
       <div class="field">
         <label class="label">Pourquoi n’avez-vous pas utilisé de l’engrais pour vos produits agricoles ?
-Nb : Choisir la raison principale)</label>
+Nb : Choisir la raison principale) : J6</label>
         <div class="control">
           <select id="j6">
             <option></option>
@@ -1542,7 +1542,7 @@ Nb : Choisir la raison principale)</label>
     </div>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Avez-vous sollicité un crédit agricole pour vos produits agricoles ?</label>
+        <label class="label">Avez-vous sollicité un crédit agricole pour vos produits agricoles ? : J7</label>
         <div class="control">
           <select id="j7">
             <option></option>
@@ -1552,7 +1552,7 @@ Nb : Choisir la raison principale)</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Avez-vous obtenu ce crédit agricole ?</label>
+        <label class="label">Avez-vous obtenu ce crédit agricole ? : J8</label>
         <div class="control">
           <select id="j8">
             <option></option>
@@ -1562,7 +1562,7 @@ Nb : Choisir la raison principale)</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Pourquoi n’avez-vous pas sollicité de crédit agricole ?</label>
+        <label class="label">Pourquoi n’avez-vous pas sollicité de crédit agricole ? : J9</label>
         <div class="control">
           <select id="j9">
             <option></option>
@@ -1574,13 +1574,13 @@ Nb : Choisir la raison principale)</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est le nombre d’employé que vous avez utilisé pour le programme agricole 2016/2017 ?</label>
+        <label class="label">Quel est le nombre d’employé que vous avez utilisé pour le programme agricole 2016/2017 ? : J10</label>
         <div class="control">
           <input id="j10" class="input" type="number" placeholder="Text input">
         </div>
       </div>
       <div class="field">
-        <label class="label">Quels sont les matériels que vous avez utilisés pour la production agricole 2016/2017 ?</label>
+        <label class="label">Quels sont les matériels que vous avez utilisés pour la production agricole 2016/2017 ? : J11</label>
         <div class="control">
           <select id="j11">
             <option></option>
@@ -1599,7 +1599,7 @@ Nb : Choisir la raison principale)</label>
     <h2>MODULE K : ENTREPRISES ET ACTIVITES NON AGRICOLES « cette section concerne le chef du ménage. »</h2>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Le ménage/membre possède-t-il les activités/entreprises non agricoles ?</label>
+        <label class="label">Le ménage/membre possède-t-il les activités/entreprises non agricoles ? : K1</label>
         <div class="control">
           <select id="k1">
             <option></option>
@@ -1609,7 +1609,7 @@ Nb : Choisir la raison principale)</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelles sont ces activités non agricoles que possède le ménage/membre ?(Trois entreprises principales sont notées ici)</label>
+        <label class="label">Quelles sont ces activités non agricoles que possède le ménage/membre ?(Trois entreprises principales sont notées ici) : K2</label>
         <div class="control">
           <select id="k2">
             <option></option>
@@ -1631,7 +1631,7 @@ Nb : Choisir la raison principale)</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est le membre du ménage responsable de l’entreprise ?</label>
+        <label class="label">Quel est le membre du ménage responsable de l’entreprise ? : K3</label>
         <div class="control">
           <select id="k3">
             <option></option>
@@ -1639,13 +1639,13 @@ Nb : Choisir la raison principale)</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">L’entreprise fonctionne depuis combien d’année ?(A écrire à la colonne code le nombre d’année, si moins d’un an, écrire 00)</label>
+        <label class="label">L’entreprise fonctionne depuis combien d’année ?(A écrire à la colonne code le nombre d’année, si moins d’un an, écrire 00) : K4</label>
         <div class="control">
           <input id="k4" class="input" type="number" placeholder="Text input">
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est le nombre de mois durant lesquels l’entreprise a fonctionnée ?(A écrire à la colonne code le nombre de mois)</label>
+        <label class="label">Quel est le nombre de mois durant lesquels l’entreprise a fonctionnée ?(A écrire à la colonne code le nombre de mois) : K5</label>
         <div class="control">
           <input id="k5" class="input" type="number" placeholder="Text input">
         </div>
@@ -1653,7 +1653,7 @@ Nb : Choisir la raison principale)</label>
     </div>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Cette entreprise est-elle en activité actuellement ?</label>
+        <label class="label">Cette entreprise est-elle en activité actuellement ? : K6</label>
         <div class="control">
           <select id="k6">
             <option></option>
@@ -1663,28 +1663,28 @@ Nb : Choisir la raison principale)</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quel est l’effectif des personnes qui travaillent actuellement dans l’entreprise ?</label>
+        <label class="label">Quel est l’effectif des personnes qui travaillent actuellement dans l’entreprise ? : K7</label>
         <div class="control">
           <input id="k7" class="input" type="number" placeholder="Text input">
         </div>
       </div>
       <div class="field">
         <label class="label">Quel etait le nombre de personnes qui travaillaient régulièrement dans cette entreprise il y a 12 mois ?
-          (A écrire à la colonne code le nombre de personnes, si elles n’existent pas il y’a 12 mois, écrire 88)
+          (A écrire à la colonne code le nombre de personnes, si elles n’existent pas il y’a 12 mois, écrire 88) : K8
         </label>
         <div class="control">
           <input id="k8" class="input" type="number" placeholder="Text input">
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelle était la dépense totale de l’entreprise par mois ?
+        <label class="label">Quelle était la dépense totale de l’entreprise par mois ? : K9
         </label>
         <div class="control">
           <input id="k9" class="input" type="number" placeholder="Text input">
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelle était la dépense totale de l’entreprise par mois ?
+        <label class="label">Quelle était la dépense totale de l’entreprise par mois ? : K10
         </label>
         <div class="control">
           <input id="k10" class="input" type="number" placeholder="Text input">
@@ -1693,14 +1693,14 @@ Nb : Choisir la raison principale)</label>
     </div>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Combien aviez-vous payez aux impôts et aux taxes par an ?
+        <label class="label">Combien aviez-vous payez aux impôts et aux taxes par an ? : K11
         </label>
         <div class="control">
           <input id="k11" class="input" type="number" placeholder="Text input">
         </div>
       </div>
       <div class="field">
-        <label class="label">Le revenu de votre entreprise a-t-il évolué au cours des 02 dernières années ?</label>
+        <label class="label">Le revenu de votre entreprise a-t-il évolué au cours des 02 dernières années ? : K12</label>
         <div class="control">
           <select id="k12">
             <option></option>
@@ -1710,14 +1710,14 @@ Nb : Choisir la raison principale)</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Si oui, de combien ?
+        <label class="label">Si oui, de combien ? : K13
         </label>
         <div class="control">
           <input id="k13" class="input" type="number" placeholder="Text input">
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelle était la raison principale de cette évolution ?</label>
+        <label class="label">Quelle était la raison principale de cette évolution ? : K14</label>
         <div class="control">
           <select id="k14">
             <option></option>
@@ -1730,7 +1730,7 @@ Nb : Choisir la raison principale)</label>
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelles étaient les autres sources de revenus que vous disposez ?</label>
+        <label class="label">Quelles étaient les autres sources de revenus que vous disposez ? : K15</label>
         <div class="control" id="k15">
           <div class="control">
               <label class="radio">
@@ -1769,7 +1769,7 @@ Nb : Choisir la raison principale)</label>
     <h2>MODULE L : DEPENSES ALIMENTAIRES DU MENAGE « cette section concerne le chef du ménage. »</h2>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Avez-vous fait les dépenses alimentaires du ménage au cours des 15 derniers jours ?</label>
+        <label class="label">Avez-vous fait les dépenses alimentaires du ménage au cours des 15 derniers jours ? : L1</label>
         <div class="control">
           <select id="l1">
             <option></option>
@@ -1781,7 +1781,7 @@ Nb : Choisir la raison principale)</label>
       <div class="field">
         <label class="label">Avez-vous dépensé sur les produits suivants au cours
 des 15 derniers jours ?
-(Nb : Si le produit du ménage vient du champ, inscrire 1, par contre si le produit n’a pas été acheté, inscrire 0)</label>
+(Nb : Si le produit du ménage vient du champ, inscrire 1, par contre si le produit n’a pas été acheté, inscrire 0) : L2</label>
         <div class="control">
           <select id="l2">
             <option></option>
@@ -1804,7 +1804,7 @@ des 15 derniers jours ?
         </div>
       </div>
       <div class="field">
-        <label class="label">Au cours des 15 derniers jours, quels sont les cadeaux alimentaires que vous avez reçus et consommés ?</label>
+        <label class="label">Au cours des 15 derniers jours, quels sont les cadeaux alimentaires que vous avez reçus et consommés ? : L3</label>
         <div class="control">
           <select id="l3">
             <option></option>
@@ -1827,7 +1827,7 @@ des 15 derniers jours ?
         </div>
       </div>
       <div class="field">
-        <label class="label">Ligne pour ménage ne maitrisant pas ses dépenses alimentaires au cours des 15 derniers jours (inscrire 99 à la colonne code)
+        <label class="label">Ligne pour ménage ne maitrisant pas ses dépenses alimentaires au cours des 15 derniers jours (inscrire 99 à la colonne code) : L4
         </label>
         <div class="control">
           <input id="l4" class="input" type="number" placeholder="Text input">
@@ -1839,7 +1839,7 @@ des 15 derniers jours ?
     <h2>MODULE M : DEPENSES NON ALIMENTAIRES DU MENAGE DES 30 JOURS «cette section concerne le chef du ménage.»</h2>
     <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Avez-vous dépensé de l’argent au cours des 30 derniers jours autre que l’alimentation ?</label>
+        <label class="label">Avez-vous dépensé de l’argent au cours des 30 derniers jours autre que l’alimentation ? : M1</label>
         <div class="control">
           <select id="m1">
             <option></option>
@@ -1849,7 +1849,7 @@ des 15 derniers jours ?
         </div>
       </div>
       <div class="field">
-        <label class="label">Quelles sont les dépenses non alimentaires du ménage au cours des 30 derniers jours ? «plusieurs modalités sont possibles»</label>
+        <label class="label">Quelles sont les dépenses non alimentaires du ménage au cours des 30 derniers jours ? «plusieurs modalités sont possibles» : M2</label>
         <div class="control">
             <label class="radio">
               <label class="label">Transport</label>
@@ -1895,7 +1895,7 @@ des 15 derniers jours ?
     </div>
     <div class="content-forms-small-left-third">
     <div class="field">
-      <label class="label">Est-ce que ces dépenses ont évolué ?</label>
+      <label class="label">Est-ce que ces dépenses ont évolué ? : M3</label>
       <div class="control">
         <select id="m3">
           <option></option>
@@ -1905,7 +1905,7 @@ des 15 derniers jours ?
       </div>
     </div>
     <div class="field">
-      <label class="label">Avez-vous utilisé les éléments ci-après au cours des 30 derniers jours (autoconsommation) ?</label>
+      <label class="label">Avez-vous utilisé les éléments ci-après au cours des 30 derniers jours (autoconsommation) ? : M4</label>
       <div class="control">
         <select id="m4">
           <option></option>
@@ -1922,7 +1922,7 @@ des 15 derniers jours ?
       </div>
     </div>
       <div class="field">
-        <label class="label">Combien envoyez-vous hors du ménage au cours des trente derniers jours ?
+        <label class="label">Combien envoyez-vous hors du ménage au cours des trente derniers jours ? : M5
         </label>
         <div class="control">
           <input id="m5" class="input" type="number" placeholder="Text input">
@@ -1935,7 +1935,7 @@ des 15 derniers jours ?
       </h2><h2>cette section concerne le chef du ménage.</h2>
       <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Qu’est-ce que vous pouvez suggérer pour améliorer le secteur de la santé ? (à ne pas lire les modalités de réponses))</label>
+        <label class="label">Qu’est-ce que vous pouvez suggérer pour améliorer le secteur de la santé ? (à ne pas lire les modalités de réponses)) : N1</label>
           <div class="control">
           <label class="radio">
             <label class="label">Création des services de soins spécialisés pour enfants, adultes et personnes de troisième âge</label>
@@ -1962,7 +1962,7 @@ des 15 derniers jours ?
       </div>
       <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Que pouvons-nous faire pour améliorer le secteur de l’éducation dans votre village ?</label>
+        <label class="label">Que pouvons-nous faire pour améliorer le secteur de l’éducation dans votre village ? : N2</label>
           <div class="control">
           <label class="radio">
             <label class="label">Insertion socioprofessionnelle des jeunes après leurs formations</label>
@@ -1993,7 +1993,7 @@ des 15 derniers jours ?
       </div>
       <div class="content-forms-small-left-third">
       <div class="field">
-        <label class="label">Dans quel secteur d’activités souhaiteriez-vous exercer ? (Une seule réponse est possible)</label>
+        <label class="label">Dans quel secteur d’activités souhaiteriez-vous exercer ? (Une seule réponse est possible) : N3</label>
           <div class="control">
           <select id="n3">
             <option></option>
@@ -2011,7 +2011,7 @@ des 15 derniers jours ?
           </div>
       </div>
           <div class="field">
-            <label class="label">Que pensez-vous qu’on puisse faire pour mieux améliorer ce secteur d’activité ?</label>
+            <label class="label">Que pensez-vous qu’on puisse faire pour mieux améliorer ce secteur d’activité ? : N4</label>
               <div class="control">
               <label class="radio">
                 <label class="label">Assurance d’une sécurité sociale</label>
@@ -2045,7 +2045,7 @@ des 15 derniers jours ?
         <h2>MODULE N : DEPENSES ALIMENTAIRES DU MENAGE « cette section concerne le chef du ménage. »</h2>
         <div class="content-forms-small-left-third">
         <div class="field">
-          <label class="label">Quelles sont les actions qui peuvent être menées pour aider les agriculteurs dans votre village ?</label>
+          <label class="label">Quelles sont les actions qui peuvent être menées pour aider les agriculteurs dans votre village ? : N5</label>
             <div class="control">
             <label class="radio">
               <label class="label">Création d’une école d’agricultures</label>
@@ -2097,7 +2097,7 @@ des 15 derniers jours ?
           </div>
           <hr/>
               <div class="field">
-                <label class="label">Que pouvons-nous faire pour améliorer la qualité des logements dans votre village ?</label>
+                <label class="label">Que pouvons-nous faire pour améliorer la qualité des logements dans votre village ? : N6</label>
                   <div class="control">
                   <label class="radio">
                     <label class="label">Construction des logements avec les matériaux locaux</label>

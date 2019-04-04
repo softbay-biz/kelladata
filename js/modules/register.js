@@ -30,7 +30,7 @@ const register = `<div class="register">
 <div class="field" style ="cursor:pointer">
 <label class="label">Cliquez sur le cadre pour choisir une photo de profil</label>
   <center><figure class="image is-128x128">
-  <img id="profile_picture" src="https://bulma.io/images/placeholders/128x128.png">
+  <img id="profil_photo" src="https://bulma.io/images/placeholders/128x128.png">
   </figure></center>
 </div>
 <div class="field">

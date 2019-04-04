@@ -57,6 +57,5 @@ document.addEventListener('DOMContentLoaded',()=>{
 		}
 	}else{
 		callHomepage();
-    root_data();
 	}
 },false);

@@ -1,5 +1,6 @@
 import states from './../states/states.js';
 import login from './../modules/login.js';
+import {root_data} from './../modules/root.js';
 import register from './../modules/register.js';
 import landing_page_search_result from './../modules/landing_page_search_result.js';
 import {landing_page_search_result_handler} from './../modules/landing_page_search_result_handler.js';
@@ -7,6 +8,7 @@ import header from './../componemts/header.js';
 import bottom from './../componemts/bottom.js';
 import removeHomePage from './removeHomePage.js';
 import home from './../modules/home.js';
+import {uploadFiles} from './../helpers/uploadFiles.js';
 import {home_handler} from './../modules/home_handler.js';
 import {get_register_form} from './../componemts/functions/get_register_form.js';
 import {get_login_form} from './../componemts/functions/get_login_form.js';
@@ -29,6 +31,16 @@ const callHomepage = ()=>{
 		}else if(e.target.id === "signup"){
 			states.removeHomePage === true?"":removeHomePage(states);
 			document.getElementById('container').innerHTML = register;
+			const profil_image = document.createElement("input");
+			const profil_photo = document.getElementById("profil_photo");
+			profil_image.type = "file";
+			profil_image.accept = "images/*";
+			profil_photo.addEventListener("click",()=>{
+				profil_image.click();
+			},false);
+			profil_image.addEventListener("change",()=>{
+				uploadFiles(profil_image.files[0],profil_photo);
+			},false);
 			document.getElementById('submitRegister').addEventListener('click',()=>{
 				get_register_form();
 			},false);
@@ -70,6 +82,7 @@ const callHomepage = ()=>{
 		}
 	},
 	false);
+	root_data();
 };
 
 export {callHomepage};

@@ -1,4 +1,5 @@
 import home from './../../modules/home.js';
+import login from './../../modules/login.js';
 import {sendData} from './../../helpers/sendData.js';
 
 function get_register_form(){
@@ -14,6 +15,7 @@ function get_register_form(){
 			confirm_password:document.getElementById("confirm_password").value
 		}
 	};
+
 	form.data.account_type = parseInt(form.data.account_type.options[form.data.account_type.selectedIndex].dataset.id);
 	if(form.data.first_name === "" || form.data.last_name === "" || form.data.email === ""
 		|| form.data.password === "" || form.data.account_type === ""){
@@ -27,11 +29,13 @@ function get_register_form(){
 		if(form.data.password != form.data.confirm_password){
 			return alert("Les deux mots de passe ne se remssemble pas!");
 		}else{
+			if(document.getElementById("profil_photo").dataset.blobImage){
+				form.data.profil_image = document.getElementById("profil_photo").dataset.blobImage;
+			}
 			let register_promise = sendData(form);
-			 return register_promise.then((response)=>{console.log(response);
+			 return register_promise.then((response)=>{
 				 if(response.error == false){
-					 console.log(response.message);
-					  document.getElementById('container').innerHTML = home;
+					  document.getElementById('container').innerHTML = login;
 						alert("Vous serrez notifier par mail apres l'activation de votre compte par l'administrateur.");
 				 }else{
 					 alert(response.message);

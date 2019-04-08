@@ -518,3 +518,6 @@ label.label {
 .form a{
     font-weight: bold;
 }
+#profile_display_image{
+  cursor: pointer;
+}

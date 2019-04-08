@@ -5,6 +5,8 @@ import articles_list from './../helpers/articles_list.js';
 import {media_ui_model} from './../modules/media_ui_model.js';
 import {displayMediaClient} from './../modules/displayMediaClient.js';
 import {root_data} from './../modules/root.js';
+import {sendData} from './sendData.js';
+import {uploadFiles} from './uploadFiles.js';
 
 const displayMedia = (data,statut=11)=>{
   document.getElementById("data-account-display").innerHTML = "";
@@ -60,6 +62,7 @@ const dashboard_handler = (dashboard)=>{
         }else if(e.target.id === "publication_articles_rejected"){
           alert('publication_articles_rejected');
         }else if(e.target.id === "profile_image"){
+          display_profil_informations();
           requestAnimationFrame(()=>{
             profile_pop_up.classList.add("is-active");
           });
@@ -69,7 +72,7 @@ const dashboard_handler = (dashboard)=>{
   },{passive:true,capture:false});
   profile_pop_up.addEventListener("click",(e)=>{
     if(e.target.id === "profile_pop_up_close" || e.target.id === "profile_pop_up_cancel"){
-      requestAnimationFrame(()=>{      
+      requestAnimationFrame(()=>{
         profile_pop_up.classList.remove("is-active");
       });
     }

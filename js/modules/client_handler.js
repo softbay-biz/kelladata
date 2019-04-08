@@ -16,7 +16,7 @@ const client_handler = ()=>{
   },
   false);
   display.addEventListener('click',(e)=>{
-    if(e.target != e.currentTarget){console.log(e.target);
+    if(e.target != e.currentTarget){
       display_media_pop_up(e.target.dataset.lightbox);
       const form_articles_request = {
         requestName:btoa(btoa(btoa("articleRequest"))),

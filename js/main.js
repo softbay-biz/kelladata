@@ -26,6 +26,7 @@ import {get_login_form} from './componemts/functions/get_login_form.js';
 import photograph from './modules/photograph.js';
 import client from './modules/client.js';
 import {client_handler} from './modules/client_handler.js';
+import {display_profile_photo} from './helpers/display_profile_photo.js';
 
 
 document.addEventListener('DOMContentLoaded',()=>{
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 			default:
 
 		}
+		display_profile_photo();
 	}else{
 		callHomepage();
 	}

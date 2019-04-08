@@ -1,5 +1,6 @@
 import home from './../../modules/home.js';
 import login from './../../modules/login.js';
+import {get_login_form} from './../../componemts/functions/get_login_form.js';
 import {sendData} from './../../helpers/sendData.js';
 
 function get_register_form(){

@@ -5,5 +5,6 @@ export const persist_data_user = (data)=>{
   localStorage.setItem("first_name",data.first_name);
   localStorage.setItem("last_name",data.last_name);
   localStorage.setItem("email",data.email);
+  localStorage.setItem("photo",data.photo);
   localStorage.setItem("id",data.id_members);
 };

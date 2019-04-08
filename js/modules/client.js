@@ -24,7 +24,7 @@ Allowed articles
 <nav class="panel">
   <a class="panel-block">
     <figure class="image is-128x128">
-<img src="images/user.png">
+<img id="profile_image" src="images/user.png">
 </figure>
   </a>
   <div class="panel-block">

@@ -30,6 +30,7 @@ import {client_handler} from './modules/client_handler.js';
 
 document.addEventListener('DOMContentLoaded',()=>{
 	if(localStorage.getItem("connected") != null && localStorage.getItem("connected") == "true"){
+		root_data();
 		switch (atob(atob(localStorage.getItem("role")))) {
 			case "1":
 				document.getElementById('container').innerHTML = admin;

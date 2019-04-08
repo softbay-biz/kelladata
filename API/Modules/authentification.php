@@ -30,6 +30,7 @@ function authentification($data){
 					$user['first_name'] = $infos['first_name'];
 					$user['last_name'] = $infos['last_name'];
 					$user['email'] = $infos['email'];
+					$user['photo'] = $infos['photo'];
 
 				}
 				return json_encode(array('message' =>$user,'error'=>false));

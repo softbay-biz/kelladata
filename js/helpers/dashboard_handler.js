@@ -1,5 +1,6 @@
 import {callHomepage} from './callHomepage.js';
 import all_medias from './../helpers/all_medias.js';
+import {display_profil_informations} from './../helpers/display_profil_informations.js';
 import articles_list from './../helpers/articles_list.js';
 import {media_ui_model} from './../modules/media_ui_model.js';
 import {displayMediaClient} from './../modules/displayMediaClient.js';
@@ -24,6 +25,7 @@ const displayMedia = (data,statut=11)=>{
   }
 };
 const dashboard_handler = (dashboard)=>{
+  const profile_pop_up = document.getElementById("profile_pop_up");
   //Event on the dashboard
   dashboard.addEventListener('click',(e)=>{
         if(e.target.id === "deconnexion"){
@@ -57,10 +59,21 @@ const dashboard_handler = (dashboard)=>{
           alert('publication_articles_published');
         }else if(e.target.id === "publication_articles_rejected"){
           alert('publication_articles_rejected');
+        }else if(e.target.id === "profile_image"){
+          requestAnimationFrame(()=>{
+            profile_pop_up.classList.add("is-active");
+          });
         }else{
           e.stopPropagation();
         }
   },{passive:true,capture:false});
+  profile_pop_up.addEventListener("click",(e)=>{
+    if(e.target.id === "profile_pop_up_close" || e.target.id === "profile_pop_up_cancel"){
+      requestAnimationFrame(()=>{      
+        profile_pop_up.classList.remove("is-active");
+      });
+    }
+  },false);
 }
 
 export {dashboard_handler};

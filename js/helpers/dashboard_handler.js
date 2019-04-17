@@ -7,6 +7,7 @@ import {displayMediaClient} from './../modules/displayMediaClient.js';
 import {root_data} from './../modules/root.js';
 import {sendData} from './sendData.js';
 import {uploadFiles} from './uploadFiles.js';
+import {getArticlesAsAdmin} from './getArticlesAsAdmin.js';
 
 const displayMedia = (data,statut=11)=>{
   document.getElementById("data-account-display").innerHTML = "";
@@ -56,11 +57,11 @@ const dashboard_handler = (dashboard)=>{
         }else if(e.target.id === "client_media_display_articles"){
           displayMediaClient(document.getElementById("data-account-display"),"articles");
         }else if(e.target.id === "publication_articles"){
-          alert('publication_articles');
+          getArticlesAsAdmin("all");
         }else if(e.target.id === "publication_articles_published"){
-          alert('publication_articles_published');
+          getArticlesAsAdmin("publish");
         }else if(e.target.id === "publication_articles_rejected"){
-          alert('publication_articles_rejected');
+          getArticlesAsAdmin("rejected");
         }else if(e.target.id === "profile_image"){
           display_profil_informations();
           requestAnimationFrame(()=>{

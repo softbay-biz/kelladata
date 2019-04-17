@@ -1,5 +1,5 @@
 <?php
-function getArticles($data){
+function getArticleInformations($data){
   include 'Helpers/bd.php';
 	$bd = bd();
   if(isset($data->modify) && $data->modify === "yes"){

@@ -39,6 +39,7 @@ function get_login_form(){
 						 document.getElementById('container').innerHTML = anthropologue;
 						 states.removeHeader === true?"":removeHeader(states);
 						 navigation();
+						 display_profile_photo();
 					 }else if(response.message.account_type == 1){
 													 let form0 = {
 												     requestName:btoa(btoa(btoa("membersPendingValidation"))),
@@ -53,23 +54,28 @@ function get_login_form(){
 													     }).catch((error)=>{
 													       //console.log(error);
 													     });
+															 display_profile_photo();
 					 }else if(response.message.account_type == 2){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = publication;
 						 publication_handler();
 						 sup_code_editor();
+						 display_profile_photo();
 					 }else if(response.message.account_type == 5){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = photograph;
 						 photograph_handler();
+						 display_profile_photo();
 					 }else if(response.message.account_type == 6){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = client;
 						 client_handler();
+						 display_profile_photo();
 					 }else{
 						 console.log("Account type not found!");
 
 					 }
+					 display_profile_photo();
 				 }else{
 					 alert(response.message);
 				 }

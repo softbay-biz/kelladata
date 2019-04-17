@@ -4,9 +4,29 @@ import {dashboard_handler} from './../helpers/dashboard_handler.js';
 import {displayArticles} from './../helpers/display_articles.js';
 import all_medias from './../helpers/all_medias.js';
 import articles_list from './../helpers/articles_list.js';
+import {display_media_pop_up} from './../helpers/display_media_pop_up.js';
 
 let title = document.getElementById("publication_title");
 let content = document.getElementById("summernote");
+
+const openArticle = ()=>{
+  document.getElementById("data-account-display").addEventListener("click",(e)=>{
+    if(e.target != e.currentTarget && e.target.dataset.type == 4){
+      console.log(e.target.dataset.id);
+      let form = {
+        requestName:btoa(btoa(btoa("open_article"))),
+        data:{
+          id:e.target.dataset.id
+        }
+      };
+      sendData(form).then((response)=>{
+        console.log(response);
+      }).catch((error)=>{
+        //console.log(error);
+      });
+    }
+  },false);
+};
 
 const resetForm = ()=>{
   document.getElementById("publication_title").value = "";
@@ -14,8 +34,9 @@ const resetForm = ()=>{
 };
 const publication_handler = ()=>{
   dashboard_handler(document.getElementById("dashboard"));
+  openArticle();
   let new_article = document.getElementById('publication_new_article');
-  document.getElementById('data-account-display').innerHTML = "";
+  document.getElementById("data-account-display").innerHTML = "";
   displayArticles(articles_list,localStorage.getItem("id"));
   new_article.addEventListener('click',(e)=>{
     publication_new_article_modal.classList.add("is-active");
@@ -36,6 +57,31 @@ const publication_handler = ()=>{
         let form = {
           requestName:btoa(btoa(btoa("add_article"))),
           data:{
+            statut:"publish",
+            titre:title.value,
+            contenu:content.value,
+            id_auteur:localStorage.getItem("id")
+          }
+        };
+        sendData(form).then((response)=>{
+          alert('Article enregistré avec succès!');
+          resetForm();
+        }).catch((error)=>{
+          //console.log(error);
+        });
+    }else{
+      alert("Veuillez ne pas laisser le titre ou le contenu de l'article vide!");
+    }
+  },false);
+  document.getElementById('publication_save').addEventListener("click",(e)=>{
+    let title = document.getElementById("publication_title");
+    let content = document.getElementById("summernote");
+    let articles_list = document.getElementById('articles-list');
+    if(title.value != "" && content.value != ""){
+        let form = {
+          requestName:btoa(btoa(btoa("add_article"))),
+          data:{
+            statut:"save",
             titre:title.value,
             contenu:content.value,
             id_auteur:localStorage.getItem("id")

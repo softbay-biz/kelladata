@@ -9,7 +9,7 @@ const publication = `
     </button>
   </div>
   <a class="panel-block" id="publication_articles">
-     My articles
+     Articles
   </a>
   <a class="panel-block" id="publication_articles_published">
      Published
@@ -21,7 +21,7 @@ const publication = `
   <nav class="panel">
     <a class="panel-block">
       <figure class="image is-128x128">
-        <img src="images/user.png">
+        <img id="profile_image" src="images/user.png">
       </figure>
     </a>
     <div class="panel-block">
@@ -50,16 +50,13 @@ const publication = `
     </div>
       </section>
       <footer class="modal-card-foot">
-        <button class="button is-primary" id="publication_send">Add the article</button>
-        <button class="button" id="publication_pop_up_cancel">Cancel</button>
+        <button class="button is-link" id="publication_send">Publish</button>
+        <button class="button is-success" id="publication_save">Save</button>
+        <button class="button is-danger" id="publication_pop_up_cancel">Cancel</button>
       </footer>
     </div>
 </div>
-<div class="data-account-display" id="data-account-display">
-    <div id="media_main_loader" class="media_main_loader"> <figure class="image is-128x128">
-              <img src="images/Reload-1s-200px.svg">
-          </figure>
-    </div>
+<div class="data-account-display" id="data-account-display">    
 </div>
 <nav class="navbar is-fixed-bottom" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">

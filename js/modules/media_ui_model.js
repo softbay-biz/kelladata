@@ -30,11 +30,11 @@ const media_ui_model = (type,infos)=>{
   }else if(type == 4){
     return `<div class="tile is-ancestor preview_home_article_elt">
               <div class="tile is-parent">
-                <article data-type=4 data-type=${infos.id_article} class="tile is-child box">
-                  <p data-type=4 data-type=${infos.id_article} class="title">Article</p>
-                  <p class="subtitle"><h4 data-type=4 data-type=${infos.id_article} >${infos.date_publication}</h4></p>
-                  <div data-type=4 data-type=${infos.id_article} ${infos.titre} class="content">
-                    <p data-type=4 data-type=${infos.id_article}> ${infos.titre}</p>
+                <article data-type=4 data-id=${infos.id_article} class="tile is-child box">
+                  <p data-type=4 data-id=${infos.id_article} class="title">Article</p>
+                  <p class="subtitle"><h4 data-type=4 data-id=${infos.id_article} >${infos.date_publication}</h4></p>
+                  <div data-type=4 data-id=${infos.id_article} ${infos.titre} class="content">
+                    <p data-type=4 data-id=${infos.id_article}> ${infos.titre}</p>
                   </div>
                 </article>
               </div>

@@ -47,10 +47,10 @@ const display_profil_informations = ()=>{
   },false);
   if(localStorage.getItem("photo")){
     profile_display_image.src = "medias/images/original_image/"+localStorage.getItem("photo");
-    profile_informations_name.value = localStorage.getItem("last_name");
-    profile_informations_surname.value = localStorage.getItem("first_name");
-    profile_informations_email.value = localStorage.getItem("email");
   }
+  profile_informations_name.value = localStorage.getItem("last_name");
+  profile_informations_surname.value = localStorage.getItem("first_name");
+  profile_informations_email.value = localStorage.getItem("email");
 };
 
 export {display_profil_informations}

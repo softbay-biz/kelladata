@@ -25,7 +25,6 @@ const client_handler = ()=>{
       };
           sendData(form_articles_request).then((response)=>{
             if(response.error == false){
-              console.log(response);
             }else{
             }
           }).catch((error)=>{

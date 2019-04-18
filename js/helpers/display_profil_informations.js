@@ -20,7 +20,7 @@ const display_profil_informations = ()=>{
     source_cover.click();
   },false);
   source_cover.addEventListener("change",()=>{
-    uploadFiles(source_cover.files[0],profile_display_image);
+    uploadFiles(source_cover.files[0],profile_display_image,document.getElementById("profile_image"));
   });
   profile_pop_up_update.addEventListener("click",()=>{
     let form = {

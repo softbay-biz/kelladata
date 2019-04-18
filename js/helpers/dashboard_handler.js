@@ -77,6 +77,12 @@ const dashboard_handler = (dashboard)=>{
         profile_pop_up.classList.remove("is-active");
       });
     }
+    else if(e.target.id === "profile_pop_up_update"){
+      requestAnimationFrame(()=>{
+        profile_pop_up.classList.remove("is-active");
+        alert("Profil temporary updated");
+      });
+    }
   },false);
 }
 

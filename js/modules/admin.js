@@ -15,7 +15,7 @@ const admin = `<nav class="panel dashboard" id="dashboard">
       <i class="fas fa-book" aria-hidden="true"></i>
     </span>
     <figure class="image is-128x128">
-<img src="images/user.png">
+<img id="profile_image" src="images/user.png">
 </figure>
   </a>
   <div class="panel-block">

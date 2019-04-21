@@ -4,23 +4,28 @@ import {dashboard_handler} from './../helpers/dashboard_handler.js';
 import {displayArticles} from './../helpers/display_articles.js';
 import all_medias from './../helpers/all_medias.js';
 import articles_list from './../helpers/articles_list.js';
-import {display_media_pop_up} from './../helpers/display_media_pop_up.js';
+import {display_article_pop_up} from './../helpers/display_article_pop_up.js';
 
-let title = document.getElementById("publication_title");
-let content = document.getElementById("summernote");
+const title = document.getElementById("publication_title");
+const content = document.getElementById("summernote");
 
 const openArticle = ()=>{
   document.getElementById("data-account-display").addEventListener("click",(e)=>{
-    if(e.target != e.currentTarget && e.target.dataset.type == 4){
-      console.log(e.target.dataset.id);
+    if(e.target != e.currentTarget && e.target.classList.contains("read-article")){
       let form = {
-        requestName:btoa(btoa(btoa("open_article"))),
+        requestName:btoa(btoa(btoa("openArticle"))),
         data:{
-          id:e.target.dataset.id
+          modify : "yes",
+          id_article:e.target.dataset.id
         }
       };
       sendData(form).then((response)=>{
-        console.log(response);
+        const contenu = document.getElementById("summernote");
+        const titre = document.getElementById("publication_title");
+        const publication_new_article_modal = document.getElementById("publication_new_article_modal");
+        publication_new_article_modal.classList.add("is-active");
+        contenu.value = response.message[0].contenu;
+        titre.value = response.message[0].titre;
       }).catch((error)=>{
         //console.log(error);
       });

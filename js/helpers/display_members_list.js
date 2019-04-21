@@ -26,8 +26,8 @@ const display_members_list = (response)=>{
               total_actif_user ++;
               if(response.users[i].account_type === "Photographe"){
                 total_actif_photograph ++;
-              }else if(total_actif_anthropologue === "Anthropologue"){
-                total_actif_Anthropologue ++;
+              }else if(response.users[i].account_type === "Anthropologue"){
+                total_actif_anthropologue++;
               }
               let members_temp = `<tr class="member_elt_list">
                                     <td><a>${response.users[i].first_name}</a>

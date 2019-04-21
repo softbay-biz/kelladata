@@ -36,6 +36,9 @@ const media_ui_model = (type,infos)=>{
                   <div data-type=4 data-id=${infos.id_article} ${infos.titre} class="content">
                     <p data-type=4 data-id=${infos.id_article}> ${infos.titre}</p>
                   </div>
+                  <button data-type=4 data-id=${infos.id_article} class="button primary is-outlined is-fullwidth read-article">
+                    Read article
+                  </button>
                 </article>
               </div>
             </div>`;

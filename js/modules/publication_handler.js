@@ -5,6 +5,7 @@ import {displayArticles} from './../helpers/display_articles.js';
 import all_medias from './../helpers/all_medias.js';
 import articles_list from './../helpers/articles_list.js';
 import {display_article_pop_up} from './../helpers/display_article_pop_up.js';
+import {sup_code_editor} from './../vendors/sup_code_editor.js';
 
 const title = document.getElementById("publication_title");
 const content = document.getElementById("summernote");
@@ -24,8 +25,9 @@ const openArticle = ()=>{
         const titre = document.getElementById("publication_title");
         const publication_new_article_modal = document.getElementById("publication_new_article_modal");
         publication_new_article_modal.classList.add("is-active");
-        contenu.value = response.message[0].contenu;
+        $('#summernote').summernote('reset');
         titre.value = response.message[0].titre;
+        $('#summernote').summernote('editor.insertText', response.message[0].contenu);
       }).catch((error)=>{
         //console.log(error);
       });
@@ -89,7 +91,7 @@ const publication_handler = ()=>{
             statut:"save",
             titre:title.value,
             contenu:content.value,
-            id_auteur:localStorage.getItem("id")
+            id_article:localStorage.getItem("id")
           }
         };
         sendData(form).then((response)=>{

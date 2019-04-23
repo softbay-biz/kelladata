@@ -9,10 +9,12 @@ import {sup_code_editor} from './../vendors/sup_code_editor.js';
 
 const title = document.getElementById("publication_title");
 const content = document.getElementById("summernote");
+let article_id = null;
 
 const openArticle = ()=>{
   document.getElementById("data-account-display").addEventListener("click",(e)=>{
     if(e.target != e.currentTarget && e.target.classList.contains("read-article")){
+      article_id = e.target.dataset.id;
       let form = {
         requestName:btoa(btoa(btoa("openArticle"))),
         data:{
@@ -57,6 +59,7 @@ const publication_handler = ()=>{
   },false);
 
   document.getElementById('publication_send').addEventListener("click",(e)=>{
+    article_id = null;
     let title = document.getElementById("publication_title");
     let content = document.getElementById("summernote");
     let articles_list = document.getElementById('articles-list');
@@ -86,16 +89,20 @@ const publication_handler = ()=>{
     let articles_list = document.getElementById('articles-list');
     if(title.value != "" && content.value != ""){
         let form = {
-          requestName:btoa(btoa(btoa("add_article"))),
+          requestName:btoa(btoa(btoa("updateArticle"))),
           data:{
-            statut:"save",
+            id_article:article_id,
             titre:title.value,
             contenu:content.value,
-            id_article:localStorage.getItem("id")
+            id_auteur:localStorage.getItem("id")
           }
         };
         sendData(form).then((response)=>{
-          alert('Article enregistré avec succès!');
+          if(response.error == false){
+            alert('Article sauvegardé avec succès!');
+          }else{
+            alert('Article non sauvegardé : '.response.message);
+          }
           resetForm();
         }).catch((error)=>{
           //console.log(error);

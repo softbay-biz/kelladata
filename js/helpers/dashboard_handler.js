@@ -80,7 +80,6 @@ const dashboard_handler = (dashboard)=>{
     else if(e.target.id === "profile_pop_up_update"){
       requestAnimationFrame(()=>{
         profile_pop_up.classList.remove("is-active");
-        alert("Profil temporary updated");
       });
     }
   },false);

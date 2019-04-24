@@ -16,24 +16,31 @@ const display_profil_informations = ()=>{
   const source_cover = document.createElement("input");
   source_cover.type = "file";
 	source_cover.accept = "images/*";
+  source_cover.dataset.sentinelle = 0;
   profile_display_image.addEventListener('click',()=>{
     source_cover.click();
   },false);
   source_cover.addEventListener("change",()=>{
-    uploadFiles(source_cover.files[0],profile_display_image,document.getElementById("profile_image"));
+     uploadFiles(source_cover.files[0],profile_display_image,document.getElementById("profile_image"));
+     source_cover.dataset.sentinelle = 1;
   });
   profile_pop_up_update.addEventListener("click",()=>{
     let form = {
       requestName:btoa(btoa(btoa("updateDetails"))),
       data:{
-        "1":["first_name",profile_informations_surname.value],
-        "2":["last_name",profile_informations_name.value],
+        a:["first_name",profile_informations_surname.value],
+        b:["last_name",profile_informations_name.value],
         email:profile_informations_email.value,
         id:localStorage.getItem("id")
       }
     };
+    if(source_cover.dataset.sentinelle == 1){
+      form.data.c = ["image",document.getElementById("profile_image").src];
+    }
     let updateDetails_promise = sendData(form);
      updateDetails_promise.then((response)=>{
+       source_cover.dataset.sentinelle = 0;
+       console.log(response);
        if(response.error == false){
          updateLocalInfos();
          alert("Profile mis à jour avec succès!");

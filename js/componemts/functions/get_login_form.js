@@ -6,6 +6,7 @@ import {photograph_handler} from './../../modules/photograph_handler.js';
 import {navigation} from './../../modules/navigation.js';
 import {client_handler} from './../../modules/client_handler.js';
 import removeHeader from './../../helpers/removeHeader.js';
+import {display_profile_photo} from './../../helpers/display_profile_photo.js';
 import states from './../../states/states.js';
 import {admin_handler} from './../../modules/admin_handler.js';
 import {publication_handler} from './../../modules/publication_handler.js';
@@ -39,7 +40,6 @@ function get_login_form(){
 						 document.getElementById('container').innerHTML = anthropologue;
 						 states.removeHeader === true?"":removeHeader(states);
 						 navigation();
-						 display_profile_photo();
 					 }else if(response.message.account_type == 1){
 													 let form0 = {
 												     requestName:btoa(btoa(btoa("membersPendingValidation"))),
@@ -54,23 +54,19 @@ function get_login_form(){
 													     }).catch((error)=>{
 													       //console.log(error);
 													     });
-															 display_profile_photo();
 					 }else if(response.message.account_type == 2){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = publication;
 						 publication_handler();
 						 sup_code_editor();
-						 display_profile_photo();
 					 }else if(response.message.account_type == 5){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = photograph;
 						 photograph_handler();
-						 display_profile_photo();
 					 }else if(response.message.account_type == 6){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = client;
 						 client_handler();
-						 display_profile_photo();
 					 }else{
 						 console.log("Account type not found!");
 

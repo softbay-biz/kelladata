@@ -54,10 +54,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 				document.getElementById('container').innerHTML = client;
 				client_handler();
 				break;
-			default:
+			default:break;
 
 		}
 		display_profile_photo();
+
 	}else{
 		callHomepage();
 	}

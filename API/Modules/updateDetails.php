@@ -3,6 +3,7 @@ function updateDetails($data){
 	include 'Helpers/isEmailExist.php';
 	include 'Helpers/bd.php';
 	include 'Helpers/encrypt_password.php';
+	include 'Helpers/uploadImage.php';
 
 	$bd = bd();
 	$response = array();
@@ -31,7 +32,7 @@ function updateDetails2($id,$email,$table,$bd){
 	}else if($table[0] == "image"){
 		//
 		$imageName = imageFromString($table[1]);
-		updateInformations("image",$imageName,$id,$bd);
+		updateInformations("photo",$imageName,$id,$bd);
 	}else if($table[0] == "password"){
 		//
 		$mdp = complex_mdp($table[1]);

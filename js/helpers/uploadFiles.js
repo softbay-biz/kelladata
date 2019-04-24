@@ -3,10 +3,12 @@ const uploadFiles = function (files,preview_container,preview_container_second =
 		let reader = new FileReader();
     	reader.addEventListener("load", function(){
     			preview_container.src = this.result;
+					elt = this.result;
 					if(preview_container_second != null){
 						preview_container_second.src = this.result;
 					}
     	},false);
     	reader.readAsDataURL(files);
+			return elt;
     }
 export {uploadFiles};

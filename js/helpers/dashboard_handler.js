@@ -8,6 +8,7 @@ import {root_data} from './../modules/root.js';
 import {sendData} from './sendData.js';
 import {uploadFiles} from './uploadFiles.js';
 import {getArticlesAsAdmin} from './getArticlesAsAdmin.js';
+import {display_members_list} from './../helpers/display_members_list.js';
 
 const displayMedia = (data,statut=11)=>{
   document.getElementById("data-account-display").innerHTML = "";
@@ -62,6 +63,19 @@ const dashboard_handler = (dashboard)=>{
           getArticlesAsAdmin("publish");
         }else if(e.target.id === "publication_articles_rejected"){
           getArticlesAsAdmin("rejected");
+        }else if(e.target.id === "manage_members"){
+            let form0 = {
+            requestName:btoa(btoa(btoa("membersPendingValidation"))),
+            data:{
+            }
+          };
+          sendData(form0).then((response)=>{
+            display_members_list(response);
+          }).catch((error)=>{
+            //console.log(error);
+          });
+        }else if(e.target.id === "manage_articles_request"){
+          console.log("manage_articles_request");
         }else if(e.target.id === "profile_image"){
           display_profil_informations();
           requestAnimationFrame(()=>{

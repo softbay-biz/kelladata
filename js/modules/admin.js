@@ -2,18 +2,16 @@ const admin = `<nav class="panel dashboard" id="dashboard">
 <p class="panel-heading">
   Dashboard
 </p>
-<a class="panel-block">
-  <span class="panel-icon">
-    <i class="fas fa-book" aria-hidden="true"></i>
-  </span>
-  <img class="icone-li" src="images/book.svg"> Overview
+<a id="manage_members" class="panel-block">
+ Manage members
 </a>
+<a id="manage_articles_request" class="panel-block">
+ Manage articles request
+</a>
+
 
 <nav class="panel">
   <a class="panel-block">
-    <span class="panel-icon">
-      <i class="fas fa-book" aria-hidden="true"></i>
-    </span>
     <figure class="image is-128x128">
 <img id="profile_image" src="images/user.png">
 </figure>

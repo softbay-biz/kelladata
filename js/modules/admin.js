@@ -41,19 +41,8 @@ const admin = `<nav class="panel dashboard" id="dashboard">
 
         </tbody>
       </table>
-        <table class="table">
-        <thead>
-          <tr>
-            <th><abbr title="User">First name</abbr></th>
-            <th><abbr title="User">Last name</abbr></th>
-            <th><abbr title="Role">Role</abbr></th>
-            <th><abbr title="Email">Email</abbr></th>
-            <th><abbr title="Action">Action</abbr></th>
-          </tr>
-        </thead>
-        <tbody id="admin_members_list">
-
-        </tbody>
+        <table class="table" id="admin_members_list">
+        
       </table>
 </div>`;
 

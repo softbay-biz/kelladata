@@ -1,6 +1,16 @@
 const display_members_list = (response)=>{
   let table_list = document.getElementById("admin_members_list");
-  table_list.innerHTML = "";
+  table_list.innerHTML = `<thead>
+    <tr>
+      <th><abbr title="User">First name</abbr></th>
+      <th><abbr title="User">Last name</abbr></th>
+      <th><abbr title="Role">Role</abbr></th>
+      <th><abbr title="Email">Email</abbr></th>
+      <th><abbr title="Action">Action</abbr></th>
+    </tr>
+  </thead>
+  <tbody>
+  `;
   if(response.error === false){
     let total_actif_user = 0;
     let total_actif_anthropologue = 0;
@@ -20,7 +30,7 @@ const display_members_list = (response)=>{
                                     </td>
                                   </tr>`;
               requestAnimationFrame(()=>{
-                table_list.insertAdjacentHTML("afterbegin",members_temp);
+                table_list.innerHTML += members_temp;
               });
             }else{
               total_actif_user ++;
@@ -42,7 +52,8 @@ const display_members_list = (response)=>{
                                     </td>
                                   </tr>`;
               requestAnimationFrame(()=>{
-                table_list.insertAdjacentHTML("afterbegin",members_temp);
+                table_list.innerHTML += members_temp;
+                table_list.innerHTML += `</tbody>`;
               });
             }
     }
@@ -52,7 +63,7 @@ const display_members_list = (response)=>{
                 document.getElementById("total_actif_photograph").innerHTML = total_actif_photograph;
               });
   }else{
-    console.log(response.message);
+    //console.log(response.message);
   }
 
 }

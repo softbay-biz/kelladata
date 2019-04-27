@@ -1,5 +1,6 @@
 import {sendData} from './../../js/helpers/sendData.js';
 import {display_members_list} from './../../js/helpers/display_members_list.js';
+import {display_articles_request_list} from './../../js/helpers/display_articles_request_list.js';
 import {dashboard_handler} from './../helpers/dashboard_handler.js';
 
 const admin_handler = ()=>{
@@ -22,6 +23,28 @@ const admin_handler = ()=>{
         return sendData(form).then((response)=>{
             return sendData(form0).then((response)=>{
               display_members_list(response);
+            }).catch((error)=>{
+              //console.log(error);
+            });
+        }).catch((error)=>{
+          //console.log(error);
+        });
+      }else if(e.target.id == "admin_action_article_request"){
+        let temp_statut = parseInt(e.target.dataset.statut)==0?1:0;
+        let form = {
+      		requestName:btoa(btoa(btoa("validateArticleRequestToRead"))),
+          data:{id:e.target.dataset.id,
+            statut:temp_statut
+          }
+      	};
+        return sendData(form).then((response)=>{
+          let formTemp = {
+            requestName:btoa(btoa(btoa("articlesPendingRequestToRead"))),
+            data:{
+            }
+          };
+            return sendData(formTemp).then((response)=>{
+              display_articles_request_list(response);
             }).catch((error)=>{
               //console.log(error);
             });

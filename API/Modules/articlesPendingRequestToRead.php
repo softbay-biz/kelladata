@@ -13,19 +13,16 @@ function articlesPendingRequestToRead(){
 			if($request->rowCount() < 1){
 				return json_encode(array('message' => 'Not found','error'=>true));
 			}else{
-				$articlesRequestToRead['users'] = array();
+				$articlesRequestToRead['articlesRequestToRead'] = array();
 				while($infos = $request->fetch()){
-						array_push($articlesRequestToRead['users'],array(
-																		"id" => $infos["id_members"],
-																    "first_name" => $infos["first_name"],
-																    "last_name" => $infos["last_name"],
-																		"email" => $infos["email"],
-																		"account_type" => $tab_temp[$infos["account_type"]-1],
-																		"photo" => $infos["photo"],
-																		"activation" => $infos["activation"]
+						array_push($articlesRequestToRead['articlesRequestToRead'],array(
+																		"id_articles_request_allow" => $infos["id_articles_request_allow"],
+																    "id_members" => $infos["id_members"],
+																    "id_article" => $infos["id_article"],
+																		"statut" => $infos["statut"]
 																));
-				}$user['error'] = false;
-				return json_encode($user);
+				}
+				return json_encode(array('message' => $articlesRequestToRead,'error'=>false));
 	}
 }
 ?>

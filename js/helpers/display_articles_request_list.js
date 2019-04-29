@@ -10,7 +10,7 @@ const display_articles_request_list = (response)=>{
   </thead>
   <tbody>
   `;
-  if(response.error === false){
+  if(response.error === false){console.log(response);
     let long = response.message.articlesRequestToRead.length;
     for(let i=0;i<long;i++){
       if(parseInt(response.message.articlesRequestToRead[i].statut) === 0){

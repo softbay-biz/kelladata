@@ -10,16 +10,16 @@ const display_articles_request_list = (response)=>{
   </thead>
   <tbody>
   `;
-  if(response.error === false){console.log(response);
+  if(response.error === false){
     let long = response.message.articlesRequestToRead.length;
     for(let i=0;i<long;i++){
       if(parseInt(response.message.articlesRequestToRead[i].statut) === 0){
               let members_temp = `<tr class="member_elt_list">
-                                    <td><a></a>
+                                    <td><a>${response.message.articlesRequestToRead[i].title}</a>
                                     </td>
-                                    <td><a></a>
+                                    <td><a>${response.message.articlesRequestToRead[i].first_name} ${response.message.articlesRequestToRead[i].last_name}</a>
                                     </td>
-                                    <td><a></a>
+                                    <td><a>${response.message.articlesRequestToRead[i].email}</a>
                                     </td>
                                     <td>
                                         <a id="admin_action_article_request" data-statut=${response.message.articlesRequestToRead[i].statut} data-id=${response.message.articlesRequestToRead[i].id_articles_request_allow} class="button is-link">Accept</a>
@@ -30,11 +30,11 @@ const display_articles_request_list = (response)=>{
               });
             }else{
               let members_temp = `<tr class="member_elt_list">
-                                    <td><a></a>
+                                    <td><a>${response.message.articlesRequestToRead[i].title}</a>
                                     </td>
-                                    <td><a></a>
+                                    <td><a>${response.message.articlesRequestToRead[i].first_name} ${response.message.articlesRequestToRead[i].last_name}</a>
                                     </td>
-                                    <td><a></a>
+                                    <td><a>${response.message.articlesRequestToRead[i].email}</a>
                                     </td>
                                     <td>
                                         <a id="admin_action_article_request" data-statut=${response.message.articlesRequestToRead[i].statut} data-id=${response.message.articlesRequestToRead[i].id_articles_request_allow} class="button is-danger">Block</a>

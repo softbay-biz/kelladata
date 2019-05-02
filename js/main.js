@@ -12,6 +12,7 @@ import {publication_handler} from './modules/publication_handler.js';
 import register from './modules/register.js';
 import login from './modules/login.js';
 import admin from './modules/admin.js';
+import expert from './modules/expert.js';
 import {root_data} from './modules/root.js';
 import {sup_code_editor} from './vendors/sup_code_editor.js';
 import publication from './modules/publication.js';
@@ -41,6 +42,9 @@ document.addEventListener('DOMContentLoaded',()=>{
 				document.getElementById('container').innerHTML = publication;
 				publication_handler();
 				sup_code_editor();
+				break;
+			case "3":
+				document.getElementById('container').innerHTML = expert;
 				break;
 			case "4":
 				document.getElementById('container').innerHTML = anthropologue;

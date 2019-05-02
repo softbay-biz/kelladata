@@ -4,12 +4,15 @@ function requestToReadArticle($data){
     include 'Helpers/isRequestToReadArticleExist.php';
     $bd = bd();
     $request = isRequestToReadArticleExist($data->id_article,$bd);
-    
+
     if($request['exist'] == true){
       if($request['statut'] == 0){
         return json_encode(array('message' => 'Une requête de lecture pour cet article est toujours en cours de validation!','error'=>false));
       }else if($request['statut'] == 1){
-        return json_encode(array('message' => 'Lecture...','error'=>false));
+        $request = $bd->prepare('SELECT * FROM articles WHERE id_article = ?');
+        $request->execute([strip_tags($data->id_article)]);
+        $response = $request->fetch();
+        return json_encode(array('message' => $response['contenu'],'error'=>false));
       }
     }else{
       $req = $bd->prepare('INSERT INTO articles_request_allow(id_members,id_article,statut)

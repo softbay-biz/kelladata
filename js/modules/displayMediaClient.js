@@ -45,6 +45,12 @@ const displayMediaClient = (contener,order_by)=>{
   					contener.insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i]));
   				});
   		}
+    }else if(order_by === "articles_open"){
+      for (let i = 0; i < articles_list.length; i++){
+  				requestAnimationFrame(()=>{
+  					contener.insertAdjacentHTML("afterbegin",media_ui_model(4,articles_list[i]));
+  				});
+  		}
     }else{
       let words = order_by.split(" ");
       let content = new Array();

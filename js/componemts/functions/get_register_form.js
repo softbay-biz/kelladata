@@ -2,6 +2,7 @@ import home from './../../modules/home.js';
 import login from './../../modules/login.js';
 import {get_login_form} from './../../componemts/functions/get_login_form.js';
 import {sendData} from './../../helpers/sendData.js';
+import {callHomepage} from './../../helpers/callHomepage.js';
 
 function get_register_form(){
 
@@ -24,19 +25,19 @@ function get_register_form(){
 				return alert("Veuillez choisir un type de compte!");
 			}
 			else{
-				return alert("Veuillez remplir tout les champs!");
+				//return alert("Veuillez remplir tout les champs!");
 			}
 	}else{
 		if(form.data.password != form.data.confirm_password){
 			return alert("Les deux mots de passe ne se remssemble pas!");
 		}else{
-			if(document.getElementById("profil_photo").dataset.blobImage){
-				form.data.profil_image = document.getElementById("profil_photo").dataset.blobImage;
+			if(document.getElementById("profil_photo").src != "https://bulma.io/images/placeholders/128x128.png"){
+				form.data.profil_image = document.getElementById("profil_photo").src;
 			}
 			let register_promise = sendData(form);
 			 return register_promise.then((response)=>{
 				 if(response.error == false){
-					  document.getElementById('container').innerHTML = login;
+					  callHomepage();
 						alert("Vous serrez notifier par mail apres l'activation de votre compte par l'administrateur.");
 				 }else{
 					 alert(response.message);

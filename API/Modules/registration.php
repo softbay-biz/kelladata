@@ -9,7 +9,7 @@ function registration($data){
 if(isset($data->first_name) AND isset($data->account_type) AND isset($data->last_name) AND isset($data->email) AND isset($data->password)){
 					$firstName = strip_tags($data->first_name);
 					$lastName = strip_tags($data->last_name);
-					$profil_image = imageFromString($data->profil_image);
+					$profil_image = isset($data->profil_image)?imageFromString($data->profil_image):null;
 					$email = strip_tags($data->email);
 					$account_type = strip_tags($data->account_type);
 					$password = complex_mdp($data->password);

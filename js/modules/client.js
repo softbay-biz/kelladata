@@ -17,9 +17,6 @@ Audios
 <a id="client_media_display_articles" class="panel-block">
 Articles
 </a>
-<a id="client_media_display_allowed_articles" class="panel-block">
-Allowed articles
-</a>
 
 <nav class="panel">
   <a class="panel-block">

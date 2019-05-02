@@ -27,6 +27,7 @@ import {get_login_form} from './componemts/functions/get_login_form.js';
 import photograph from './modules/photograph.js';
 import client from './modules/client.js';
 import {client_handler} from './modules/client_handler.js';
+import {expert_handler} from './modules/expert_handler.js';
 import {display_profile_photo} from './helpers/display_profile_photo.js';
 
 
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 				break;
 			case "3":
 				document.getElementById('container').innerHTML = expert;
+				expert_handler();
 				break;
 			case "4":
 				document.getElementById('container').innerHTML = anthropologue;

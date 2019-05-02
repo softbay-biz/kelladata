@@ -6,6 +6,7 @@ import {photograph_handler} from './../../modules/photograph_handler.js';
 import {navigation} from './../../modules/navigation.js';
 import expert from './../../modules/expert.js';
 import {client_handler} from './../../modules/client_handler.js';
+import {expert_handler} from './../../modules/expert_handler.js';
 import removeHeader from './../../helpers/removeHeader.js';
 import {display_profile_photo} from './../../helpers/display_profile_photo.js';
 import states from './../../states/states.js';
@@ -71,6 +72,7 @@ function get_login_form(){
 					 }else if(response.message.account_type == 3){
 						 persist_data_user(response.message);
 						 document.getElementById('container').innerHTML = expert;
+						 expert_handler();
 					 }else{
 						 console.log("Account type not found!");
 

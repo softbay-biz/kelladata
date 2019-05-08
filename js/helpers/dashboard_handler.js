@@ -48,6 +48,14 @@ const dashboard_handler = (dashboard)=>{
           displayMedia(all_medias,0);
         }else if(e.target.id === "photograph_rejected"){
           displayMedia(all_medias,-1);
+        }else if(e.target.id === "expert_images"){
+          displayMediaClient(document.getElementById("data-account-display"),"images");
+        }else if(e.target.id === "expert_videos"){
+          displayMediaClient(document.getElementById("data-account-display"),"videos");
+        }else if(e.target.id === "expert_audios"){
+          displayMediaClient(document.getElementById("data-account-display"),"audios");
+        }else if(e.target.id === "expert_surveys"){
+          alert("expert_surveys");
         }else if(e.target.id === "client_media_display_all"){
           displayMediaClient(document.getElementById("data-account-display"),"all");
         }else if(e.target.id === "client_media_display_images"){

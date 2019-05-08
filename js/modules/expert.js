@@ -2,18 +2,15 @@ const expert = `<nav class="panel dashboard" id="dashboard">
 <p class="panel-heading">
   Dashboard
 </p>
-<a  class="panel-block">
- Articles
-</a>
-<a  class="panel-block">
+<a id="expert_images" class="panel-block">
  Images
 </a>
-<a  class="panel-block">
+<a id="expert_audios" class="panel-block">
  Audios
-</a><a  class="panel-block">
+</a><a id="expert_videos" class="panel-block">
  Vidéos
 </a>
-</a><a  class="panel-block">
+</a><a id="expert_surveys" class="panel-block">
  Surveys
 </a>
 
@@ -30,7 +27,8 @@ const expert = `<nav class="panel dashboard" id="dashboard">
   </div>
 </nav>
 </nav>
-<div class="data-account-display">
-</div>`;
+<div class="data-account-display" id="data-account-display">
+</div>
+`;
 
 export default expert;

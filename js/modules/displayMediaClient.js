@@ -1,9 +1,33 @@
 import all_medias from './../helpers/all_medias.js';
 import articles_list from './../helpers/articles_list.js';
 import {media_ui_model} from './../modules/media_ui_model.js';
+import {sendData} from './../helpers/sendData.js';
 
-const displayMediaClient = (contener,order_by)=>{
+const displayMediaClient = (contener,order_by,expert=null)=>{
   contener.innerHTML = "";
+  if(expert === "expert"){
+    const form_medias = {
+      requestName:btoa(btoa(btoa("getMedias"))),
+      data:{
+        expert:true,
+        type:order_by
+      }
+    };
+    sendData(form_medias).then((response)=>{
+      let mediaList = response.message;
+      let taille = mediaList.length;
+    			if(response.error == false){
+    					for(let i = 0; i < taille; i++){
+                  requestAnimationFrame(()=>{
+                    contener.insertAdjacentHTML("afterbegin",media_ui_model(mediaList[i].type,mediaList[i]));
+                  });
+    					}
+    			}else{
+    			}
+    		}).catch((error)=>{
+    			//console.log(error);
+    		});
+  }else{
   if(order_by === "all"){
   		for (let i = 0; i < all_medias.length; i++){
   				requestAnimationFrame(()=>{
@@ -82,6 +106,7 @@ const displayMediaClient = (contener,order_by)=>{
         }
       }
     }
+  }
 };
 
 export {displayMediaClient};

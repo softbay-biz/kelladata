@@ -3,8 +3,13 @@ function getMedias($data){
   include 'Helpers/bd.php';
 	$bd = bd();
 	 try{
-			$request = $bd->prepare('SELECT * FROM media');
-	        $request->execute();
+      if(isset($data->expert) && strip_tags($data->expert) == true){
+        $request = $bd->prepare('SELECT * FROM media WHERE type = ?');
+        $request->execute([strip_tags($data->type)]);
+      }else{
+        $request = $bd->prepare('SELECT * FROM media WHERE statut = 1');
+        $request->execute();
+      }
 			}catch(Exception $e){
 				return json_encode(array('message' => 'Database connection error!','error'=>true));
 			}

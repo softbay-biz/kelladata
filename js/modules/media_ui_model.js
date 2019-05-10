@@ -5,14 +5,14 @@ const media_ui_model = (type,infos)=>{
     return `<div  class="card media-card-custom imagesLightbox">
               <div class="card-image">
                 <figure class="image is-4by3" data-type=${infos.type}>
-                  <img data-lightbox=${infos.link_or_blob} src="medias/images/image_800px/${infos.link_or_blob}" alt="Placeholder image">
+                  <img data-id=${infos.id} data-type=${infos.type} data-lightbox=${infos.link_or_blob} src="medias/images/image_800px/${infos.link_or_blob}" alt="Placeholder image">
                 </figure>
               </div>
             </div>`;
   }else if(type == 2){
     return `<div class="card media-card-custom">
               <div class="card-image">
-              <video controls data-type=${infos.type}>
+              <video controls data-id=${infos.id} data-type=${infos.type}>
                 <source src="medias/videos/${infos.link_or_blob}"
                         type="video/mp4">
               </video>
@@ -22,7 +22,7 @@ const media_ui_model = (type,infos)=>{
     return `<div  class="card media-card-custom">
               <figure data-type=${infos.type}>
                 <figcaption>${infos.name}</figcaption>
-                <audio controls="controls">
+                <audio data-id=${infos.id} controls="controls">
                  <source src="medias/audios/${infos.link_or_blob}" />
                 </audio>
               </figure>

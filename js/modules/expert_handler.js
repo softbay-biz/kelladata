@@ -15,6 +15,7 @@ const expert_handler = ()=>{
       const form_articles_request = {
         requestName:btoa(btoa(btoa("x"))),
         data:{
+          id_media:,
           validate : 1
         }
       };
@@ -30,6 +31,7 @@ const expert_handler = ()=>{
       const form_articles_request = {
         requestName:btoa(btoa(btoa("x"))),
         data:{
+          id_media:,
           validate : 0
         }
       };

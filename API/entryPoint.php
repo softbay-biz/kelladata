@@ -9,7 +9,7 @@ if(1/*domainOrigin() === true*/){
 	$requestName = base64_decode(base64_decode(base64_decode(strip_tags($dataReceive->requestName))));
 	$allowedModules = ['registration','authentification','membersPendingValidation','updateDetails','add_article','add_media',
 'getMedias','getArticles','getArticleInformations','openArticle','updateArticle','requestToReadArticle',
-'articlesPendingRequestToRead','validateArticleRequestToRead'];
+'articlesPendingRequestToRead','validateArticleRequestToRead','validateBlockMedia'];
 	//Switching following the type of the request
 	if(in_array($requestName,$allowedModules,true) === true){
 		include "Modules/{$requestName}.php";

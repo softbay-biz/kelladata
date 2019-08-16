@@ -7,7 +7,8 @@ const getArticlesAsAdmin = (order_by)=>{
   const form_articles = {
     requestName:btoa(btoa(btoa("getArticles"))),
     data:{
-      modify : "yes"
+      modify : "yes",
+      order_by:order_by
     }
   };
   let tempLoader = `<div id="media_main_loader" class="media_main_loader"> <figure class="image is-128x128">

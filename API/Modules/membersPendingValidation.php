@@ -5,8 +5,8 @@ function membersPendingValidation(){
 	 try{
 			$request = $bd->prepare('SELECT *
 									  FROM members
-									  WHERE 
-									        (account_type != 1 )');
+									  WHERE account_type != 1
+										ORDER BY id_members DESC');
 	        $request->execute();
 			}catch(Exception $e){
 				return json_encode(array('message' => 'Database connection error!','error'=>true));

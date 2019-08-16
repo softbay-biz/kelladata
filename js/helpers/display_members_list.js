@@ -26,7 +26,7 @@ const display_members_list = (response)=>{
                                     </td>
                                     <td>${response.users[i].email}</td>
                                     <td>
-                                        <a id="admin_action_member" data-activation=${response.users[i].activation} data-id=${response.users[i].id} class="button is-link">Accept</a>
+                                        <a id="admin_action_member" data-activation=${response.users[i].activation} data-email=${response.users[i].email} data-id=${response.users[i].id} class="button is-link">Accept</a>
                                     </td>
                                   </tr>`;
               requestAnimationFrame(()=>{

@@ -1,4 +1,5 @@
 import {sendData} from './../../js/helpers/sendData.js';
+import {sendMail} from './../../js/modules/sendMail.js';
 import {display_members_list} from './../../js/helpers/display_members_list.js';
 import {display_articles_request_list} from './../../js/helpers/display_articles_request_list.js';
 import {dashboard_handler} from './../helpers/dashboard_handler.js';
@@ -13,7 +14,17 @@ const admin_handler = ()=>{
   dashboard_handler(document.getElementById("dashboard"));
   table_list.addEventListener("click",(e)=>{
       if(e.target.id == "admin_action_member"){
-        let temp_activation = parseInt(e.target.dataset.activation)==0?1:0;
+        let act = parseInt(e.target.dataset.activation);
+        let temp_activation = 0;
+        if(act == 0){
+          temp_activation = 1;
+          //Compte désactivé
+          sendMail(e.target.dataset.email,'Votre compte a été activé');
+        }else{
+          temp_activation = 0;
+          //Compte activé
+          sendMail(e.target.dataset.email,'Votre compte a été désactivé');
+        }
         let form = {
       		requestName:btoa(btoa(btoa("updateDetails"))),
           data:{email:"none",id:e.target.dataset.id,

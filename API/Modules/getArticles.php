@@ -3,11 +3,20 @@ function getArticles($data){
   include 'Helpers/bd.php';
 	$bd = bd();
   if(isset($data->modify) && $data->modify === "yes"){
-    try{
-     $request = $bd->prepare('SELECT * FROM articles');
-         $request->execute();
-     }catch(Exception $e){
-       return json_encode(array('message' => 'Database connection error!','error'=>true));
+     if(isset($data->order_by)){
+       try{
+        $request = $bd->prepare('SELECT * FROM articles WHERE statut = ?');
+            $request->execute([strip_tags($data->order_by)]);
+        }catch(Exception $e){
+          return json_encode(array('message' => 'Database connection error!','error'=>true));
+        }
+     }else{
+       try{
+        $request = $bd->prepare('SELECT * FROM articles');
+            $request->execute();
+        }catch(Exception $e){
+          return json_encode(array('message' => 'Database connection error!','error'=>true));
+        }
      }
   }else{
     try{

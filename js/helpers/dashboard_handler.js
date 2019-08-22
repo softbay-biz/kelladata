@@ -1,7 +1,9 @@
 import {callHomepage} from './callHomepage.js';
 import all_medias from './../helpers/all_medias.js';
 import {display_profil_informations} from './../helpers/display_profil_informations.js';
+import {getSurveys} from './../modules/getSurveys.js';
 import articles_list from './../helpers/articles_list.js';
+import {displaySurveys} from './../helpers/displaySurveys.js';
 import {media_ui_model} from './../modules/media_ui_model.js';
 import {displayMediaClient} from './../modules/displayMediaClient.js';
 import {root_data} from './../modules/root.js';
@@ -55,7 +57,7 @@ const dashboard_handler = (dashboard)=>{
         }else if(e.target.id === "expert_audios"){
           displayMediaClient(document.getElementById("data-account-display"),3,"expert");
         }else if(e.target.id === "expert_surveys"){
-          alert("expert_surveys");
+          getSurveys();          
         }else if(e.target.id === "client_media_display_all"){
           displayMediaClient(document.getElementById("data-account-display"),"all");
         }else if(e.target.id === "client_media_display_images"){

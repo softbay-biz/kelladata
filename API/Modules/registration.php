@@ -28,7 +28,6 @@ if(isset($data->first_name) AND isset($data->account_type) AND isset($data->last
 																																						 'photo' => $profil_image,
 																																						 'password' => $password,
 																																						 'account_type' => $account_type
-
                         ));
                         return json_encode(array('message' => 'New account added!','error'=>false));
                     }catch(Exception $i){

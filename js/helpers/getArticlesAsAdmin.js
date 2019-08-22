@@ -19,10 +19,12 @@ const getArticlesAsAdmin = (order_by)=>{
   sendData(form_articles).then((response)=>{
     if(response.error == false){
       wrapper.innerHTML = "";
-      for(let i = 0; i < 4; i++){
+      let tailleTab = response.message.length - 1;
+      for(let i = 0; i < tailleTab; i++){
           wrapper.insertAdjacentHTML("afterbegin",media_ui_model(4,response.message[i]));
       }
     }else{
+      wrapper.innerHTML = "<center><h1><strong>Articles non trouvés.</strong></h1></center>";
     }
   }).catch((error)=>{
     //console.log(error);

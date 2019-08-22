@@ -7,13 +7,13 @@ function sendData(formDataToSend){
                    });
                   xhrSendAnnonce.addEventListener("load", () =>
                    {
-                        let response = JSON.parse(xhrSendAnnonce.responseText);
+                        let response = JSON.parse(xhrSendAnnonce.response);
 													resolve(response);
                    });
                   xhrSendAnnonce.addEventListener("error",()=>{
                     //console.log(e.error);
                   });
-             xhrSendAnnonce.responseType = "text";
+             //xhrSendAnnonce.responseType = "text";
 	           xhrSendAnnonce.open('POST',urlToSend, true);
 	          xhrSendAnnonce.send(JSON.stringify(formDataToSend));
 				});

@@ -42,6 +42,21 @@ const media_ui_model = (type,infos)=>{
                 </article>
               </div>
             </div>`;
+  }else if(type == 5){
+    return `<div class="tile is-ancestor preview_home_article_elt">
+              <div class="tile is-parent">
+                <article data-type=4 data-id=${infos._id} class="tile is-child box">
+                  <p data-type=4 data-id=${infos._id} class="title">Questionnaire</p>
+                  <p class="subtitle"><h4 data-type=4 data-id=${infos._id} ><strong>Ajouté le</strong> ${infos.createdAt}</h4></p>
+                  <div data-type=4 data-id=${infos._id} class="content">
+                    <p data-type=4 data-id=${infos._id}> </p>
+                  </div>
+                  <button data-type=4 data-id=${infos._id} class="button primary is-outlined is-fullwidth read-article">
+                    Ouvrir le questionnaire
+                  </button>
+                </article>
+              </div>
+            </div>`;
   }
 };
 

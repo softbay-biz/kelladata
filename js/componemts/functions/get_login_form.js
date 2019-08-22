@@ -49,6 +49,7 @@ function get_login_form(){
 												     }
 												   };
 													 persist_data_user(response.message);
+													 display_profile_photo();
 													 document.getElementById('container').innerHTML = admin;
 													 admin_handler();
 															 return sendData(form0).then((response)=>{
@@ -75,7 +76,6 @@ function get_login_form(){
 						 expert_handler();
 					 }else{
 						 console.log("Account type not found!");
-
 					 }
 					 display_profile_photo();
 				 }else{

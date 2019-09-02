@@ -383,9 +383,13 @@ footer span:hover{
 .dashboard{
 border-right: solid 1px rgb(219,219,219);
     border-radius: 0 5px 0 0;
+    width:15%!;
 }
 .dashboard ul{
     width: 100%;
+}
+.dashboard a{
+    font-size: 0.8em;
 }
 .dashboard ul li{
     height: 50px;
@@ -464,7 +468,6 @@ label.label {
         display: block;
     }
     .dashboard{
-        width: 100%;
         display: block;
         text-align: center;
     }

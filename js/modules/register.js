@@ -1,20 +1,23 @@
 const register = `<div class="register">
    <div class="field">
-  <label class="label">First name</label>
+   <a class="navbar-item" href="#">
+     <img id="home" src="images/KellaData green@2x.png" width="112" height="28">
+   </a>
+  <label class="label">Votre prénom</label>
   <div class="control">
-    <input id="first_name" class="input" type="text" placeholder="First name">
+    <input id="first_name" class="input" type="text" placeholder="">
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Last name</label>
+  <label class="label">Votre nom</label>
   <div class="control has-icons-right">
-    <input id="last_name" class="input " type="text" placeholder="Last name">
+    <input id="last_name" class="input " type="text" placeholder="">
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Account type</label>
+  <label class="label">Type de compte</label>
   <div class="control">
     <div class="select">
       <select id="account_type">
@@ -27,27 +30,21 @@ const register = `<div class="register">
     </div>
   </div>
 </div>
-<div class="field" style ="cursor:pointer">
-<label class="label">Cliquez sur le cadre pour choisir une photo de profil</label>
-  <center><figure class="image is-128x128">
-  <img id="profil_photo" src="https://bulma.io/images/placeholders/128x128.png">
-  </figure></center>
-</div>
 <div class="field">
   <label class="label">Email</label>
   <div class="control">
-    <input id="email" class="input " type="email" placeholder="address@email.com">
+    <input id="email" class="input " type="email" placeholder="Adresse email">
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Password</label>
+  <label class="label">Mot de passe</label>
   <div class="control">
-    <input id="password" class="input " type="password" placeholder="password">
+    <input id="password" class="input " type="password" placeholder="Mot de passe">
   </div>
 </div>
 <div class="field">
-  <label class="label">Confirm password</label>
+  <label class="label">Confirmer le mot de passe</label>
   <div class="control has-icons-right">
     <input id="confirm_password" class="input " type="password" placeholder="password">
   </div>
@@ -56,8 +53,16 @@ const register = `<div class="register">
 
 <div class="field is-grouped">
   <div class="control">
-    <button id="submitRegister" class="button is-link">Submit</button>
+    <button id="submitRegister" class="button is-link">S'inscrire'</button>
   </div>
 </div>
 </div>`;
+/*
+<div class="field" style ="cursor:pointer">
+<label class="label">Cliquez sur le cadre pour choisir une photo de profil</label>
+  <center><figure class="image is-128x128">
+  <img id="profil_photo" src="https://bulma.io/images/placeholders/128x128.png">
+  </figure></center>
+</div>
+*/
 export default register;

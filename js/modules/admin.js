@@ -1,12 +1,12 @@
 const admin = `<nav class="panel dashboard" id="dashboard">
 <p class="panel-heading">
   Dashboard
-</p>
+</a>
 <a id="manage_members" class="panel-block">
- Manage members
+ Demandes d'adhésion
 </a>
 <a id="manage_articles_request" class="panel-block">
- Manage articles request
+ Requête de lecture
 </a>
 
 
@@ -42,7 +42,7 @@ const admin = `<nav class="panel dashboard" id="dashboard">
         </tbody>
       </table>
         <table class="table" id="admin_members_list">
-        
+
       </table>
 </div>`;
 

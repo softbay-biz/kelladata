@@ -19,7 +19,7 @@ const header = `<nav id="navbar-top" class="navbar is-fixed-on-top top-barre" ro
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item" id="menu_elt_all">
-        All
+        Tous
       </a>
 
       <a class="navbar-item" id="menu_elt_images">
@@ -44,10 +44,10 @@ const header = `<nav id="navbar-top" class="navbar is-fixed-on-top top-barre" ro
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary" id="signup">
-            Sign up
+            S'inscrire
           </a>
           <a class="button is-light" id="login">
-            Log in
+            Se connecter
           </a>
         </div>
       </div>
